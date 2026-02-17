@@ -1,0 +1,674 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards-Advance</title>
+    <link rel="stylesheet" href="../../../assets/css/component/userinterface/accordians.css" />
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+      <div class="ph-header">
+        <h4 class="ph-title mb-0">
+          Accordians
+          <i class="bi bi-play-circle ph-play pt-1"></i>
+        </h4>
+
+        <div class="ph-actions">
+          <div class="ph-search-container" id="phSearch">
+            <div class="ph-search-wrapper">
+              <button type="button" class="ph-search-trigger">
+                <i class="bi bi-search"></i>
+              </button>
+
+              <input type="text" class="ph-search-input" placeholder="Search leads..." />
+
+              <span class="ph-search-close">
+                <i class="bi bi-x"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="ph-tools">
+            <i class="bi bi-funnel ph-icon"></i>
+            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-three-dots-vertical ph-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <main class="content-area">
+        <div>
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">01. Working Process</h6>
+            <div class="acc-theme-saas style-process">
+              <div class="accordion" id="acc1">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c1_1"
+                    >
+                      <span class="accordian-numbers">01</span> Consultation
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                    </button>
+                  </h2>
+                  <div id="c1_1" class="accordion-collapse collapse show" data-bs-parent="#acc1">
+                    <div class="accordion-body">
+                      During the initial consultation, we will discuss your business goals, target
+                      audience, and current strategies.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c1_2"
+                    >
+                      <span class="accordian-numbers">02</span> Strategy Development
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                    </button>
+                  </h2>
+                  <div id="c1_2" class="accordion-collapse collapse" data-bs-parent="#acc1">
+                    <div class="accordion-body">
+                      We create a roadmap tailored to your specific market position and growth
+                      objectives.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 2: Purple Pills -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">02. Rounded Tabs</h6>
+            <div class="acc-theme-saas style-purple">
+              <div class="accordion" id="acc2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c2_1"
+                    >
+                      Section-1
+                    </button>
+                  </h2>
+                  <div id="c2_1" class="accordion-collapse collapse show" data-bs-parent="#acc2">
+                    <div class="accordion-body">
+                      Vivamus eu est vel felis dignissim tempor. Nulla facilisi.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c2_2"
+                    >
+                      Section-2
+                    </button>
+                  </h2>
+                  <div id="c2_2" class="accordion-collapse collapse" data-bs-parent="#acc2">
+                    <div class="accordion-body">
+                      Phasellus nec mi aliquet, sollicitudin neque eget, consectetur libero.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 3: Left Timeline -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">03. Timeline Connected</h6>
+            <div class="acc-theme-saas style-timeline-left">
+              <div class="accordion" id="acc3">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c3_1"
+                    >
+                      <span class="icon-wrapper"><span class="smart-icon"></span></span>
+                      Section 1
+                    </button>
+                  </h2>
+                  <div id="c3_1" class="accordion-collapse collapse show" data-bs-parent="#acc3">
+                    <div class="accordion-body">Content for section 1.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c3_2"
+                    >
+                      <span class="icon-wrapper"><span class="smart-icon"></span></span>
+                      Section 2
+                    </button>
+                  </h2>
+                  <div id="c3_2" class="accordion-collapse collapse" data-bs-parent="#acc3">
+                    <div class="accordion-body">Content for section 2.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 4: Side Track Fill -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">04. Side Track</h6>
+            <div class="acc-theme-saas style-orange-track">
+              <div class="accordion" id="acc4">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c4_1"
+                    >
+                      Phase 1: Planning
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                    </button>
+                  </h2>
+                  <div id="c4_1" class="accordion-collapse collapse show" data-bs-parent="#acc4">
+                    <div class="accordion-body">Initial gathering of requirements.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c4_2"
+                    >
+                      Phase 2: Design
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                    </button>
+                  </h2>
+                  <div id="c4_2" class="accordion-collapse collapse" data-bs-parent="#acc4">
+                    <div class="accordion-body">Creating wireframes and visual assets.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 5: Minimal Thin -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">05. Minimal Thin</h6>
+            <div class="acc-theme-saas style-minimal-blue">
+              <div class="accordion" id="acc5">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c5_1"
+                    >
+                      Why is the sky blue?
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                    </button>
+                  </h2>
+                  <div id="c5_1" class="accordion-collapse collapse show" data-bs-parent="#acc5">
+                    <div class="accordion-body">
+                      Rayleigh scattering of sunlight by the atmosphere.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c5_2"
+                    >
+                      Will we ever discover aliens?
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                    </button>
+                  </h2>
+                  <div id="c5_2" class="accordion-collapse collapse" data-bs-parent="#acc5">
+                    <div class="accordion-body">
+                      The universe is vast, making it statistically likely.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 6: Left Floating Tab -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">06. Floating Tab</h6>
+            <div class="acc-theme-saas style-red-tab">
+              <div class="accordion" id="acc6">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c6_1"
+                    >
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                      What is Lorem Ipsum?
+                    </button>
+                  </h2>
+                  <div id="c6_1" class="accordion-collapse collapse show" data-bs-parent="#acc6">
+                    <div class="accordion-body">
+                      Simply dummy text of the printing and typesetting industry.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c6_2"
+                    >
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                      Where does it come from?
+                    </button>
+                  </h2>
+                  <div id="c6_2" class="accordion-collapse collapse" data-bs-parent="#acc6">
+                    <div class="accordion-body">
+                      Contrary to popular belief, it has roots in classical Latin.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 7: Active Fill -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">07. Active Solid Fill</h6>
+            <div class="acc-theme-saas style-active-fill">
+              <div class="accordion" id="acc7">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c7_1"
+                    >
+                      Expense Management
+                    </button>
+                  </h2>
+                  <div id="c7_1" class="accordion-collapse collapse show" data-bs-parent="#acc7">
+                    <div class="accordion-body">
+                      Monitor and categorize business expenses to maintain financial health.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c7_2"
+                    >
+                      Budget Planning
+                    </button>
+                  </h2>
+                  <div id="c7_2" class="accordion-collapse collapse" data-bs-parent="#acc7">
+                    <div class="accordion-body">
+                      Forecast future revenue and allocate resources effectively.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 8: Dark Contrast Bars -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">08. Dark Contrast Bars</h6>
+            <div class="acc-theme-saas style-dark-bars">
+              <div class="accordion" id="acc8">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c8_1"
+                    >
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                      Is there a 24/7 response?
+                    </button>
+                  </h2>
+                  <div id="c8_1" class="accordion-collapse collapse show" data-bs-parent="#acc8">
+                    <div class="accordion-body">Yes, our team is available round the clock.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c8_2"
+                    >
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                      How are concerns handled?
+                    </button>
+                  </h2>
+                  <div id="c8_2" class="accordion-collapse collapse" data-bs-parent="#acc8">
+                    <div class="accordion-body">All issues are logged in our ticketing system.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 9: Dotted Tree -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">09. Dotted Tree</h6>
+            <div class="acc-theme-saas style-dotted">
+              <div class="accordion" id="acc9">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c9_1"
+                    >
+                      Section 1
+                    </button>
+                  </h2>
+                  <div id="c9_1" class="accordion-collapse collapse show" data-bs-parent="#acc9">
+                    <div class="accordion-body">Lorem ipsum dolor sit amet.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c9_2"
+                    >
+                      Section 2
+                    </button>
+                  </h2>
+                  <div id="c9_2" class="accordion-collapse collapse" data-bs-parent="#acc9">
+                    <div class="accordion-body">Consectetur adipiscing elit.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 10: Gradient Schedule -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">10. Gradient Schedule</h6>
+            <div class="acc-theme-saas style-schedule-red">
+              <div class="accordion" id="acc10">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c10_1"
+                    >
+                      <span class="time-slot">10:15</span>
+                      <span>Keynote Speech</span>
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                    </button>
+                  </h2>
+                  <div id="c10_1" class="accordion-collapse collapse show" data-bs-parent="#acc10">
+                    <div class="accordion-body">Introduction to the conference theme.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c10_2"
+                    >
+                      <span class="time-slot">11:00</span>
+                      <span>Networking Break</span>
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                    </button>
+                  </h2>
+                  <div id="c10_2" class="accordion-collapse collapse" data-bs-parent="#acc10">
+                    <div class="accordion-body">Coffee and refreshments in the main hall.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 11: Unified Outline -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">11. Unified Outline</h6>
+            <div class="acc-theme-saas style-unified">
+              <div class="accordion" id="acc11">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c11_1"
+                    >
+                      Accordion Item 1
+                    </button>
+                  </h2>
+                  <div id="c11_1" class="accordion-collapse collapse show" data-bs-parent="#acc11">
+                    <div class="accordion-body">Content for item 1.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c11_2"
+                    >
+                      Accordion Item 2
+                    </button>
+                  </h2>
+                  <div id="c11_2" class="accordion-collapse collapse" data-bs-parent="#acc11">
+                    <div class="accordion-body">Content for item 2.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 12: Left Border Card -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">12. Left Border Card</h6>
+            <div class="acc-theme-saas style-left-border">
+              <div class="accordion" id="acc12">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c12_1"
+                    >
+                      <i class="bi bi-globe me-2"></i> Section 1
+                    </button>
+                  </h2>
+                  <div id="c12_1" class="accordion-collapse collapse show" data-bs-parent="#acc12">
+                    <div class="accordion-body">Global settings and configurations.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c12_2"
+                    >
+                      <i class="bi bi-briefcase me-2"></i> Section 2
+                    </button>
+                  </h2>
+                  <div id="c12_2" class="accordion-collapse collapse" data-bs-parent="#acc12">
+                    <div class="accordion-body">Portfolio details and assets.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 13: Gradient Glass -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">13. Gradient Glass</h6>
+            <div class="acc-theme-saas style-glass">
+              <div class="accordion" id="acc13">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c13_1"
+                    >
+                      Section 1
+                    </button>
+                  </h2>
+                  <div id="c13_1" class="accordion-collapse collapse show" data-bs-parent="#acc13">
+                    <div class="accordion-body">Transparent glassmorphism effect.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c13_2"
+                    >
+                      Section 2
+                    </button>
+                  </h2>
+                  <div id="c13_2" class="accordion-collapse collapse" data-bs-parent="#acc13">
+                    <div class="accordion-body">Second glass panel content.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 14: Boxed Left Icon -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">14. Boxed Left Icon</h6>
+            <div class="acc-theme-saas style-boxed-left">
+              <div class="accordion" id="acc14">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c14_1"
+                    >
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                      What is the return policy?
+                    </button>
+                  </h2>
+                  <div id="c14_1" class="accordion-collapse collapse show" data-bs-parent="#acc14">
+                    <div class="accordion-body">30-day money back guarantee on all items.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c14_2"
+                    >
+                      <span class="icon-box"><span class="smart-icon"></span></span>
+                      Do you ship internationally?
+                    </button>
+                  </h2>
+                  <div id="c14_2" class="accordion-collapse collapse" data-bs-parent="#acc14">
+                    <div class="accordion-body">Yes, we ship to over 100 countries worldwide.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STYLE 15: Simple Boxed -->
+          <section class="mb-5">
+            <h6 class="text-uppercase text-muted fw-bold small mb-3">15. Simple Boxed</h6>
+            <div class="acc-theme-saas style-simple">
+              <div class="accordion" id="acc15">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c15_1"
+                    >
+                      Accordion Tab 1
+                    </button>
+                  </h2>
+                  <div id="c15_1" class="accordion-collapse collapse show" data-bs-parent="#acc15">
+                    <div class="accordion-body">This is the content of Tab 1.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#c15_2"
+                    >
+                      Accordion Tab 2
+                    </button>
+                  </h2>
+                  <div id="c15_2" class="accordion-collapse collapse" data-bs-parent="#acc15">
+                    <div class="accordion-body">This is the content of Tab 2.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../../assets/js/layout.js"></script>
+  </body>
+</html>

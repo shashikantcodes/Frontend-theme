@@ -1,7 +1,7 @@
-/* --- GLOBAL CLOSE BUTTON --- */
+/* --- GLOBAL ANIMATED CLOSE BUTTON --- */
 .btn-close-custom {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: 1px solid transparent;
   background: transparent;
@@ -14,7 +14,7 @@
   color: var(--color-text-light);
 }
 .btn-close-custom i {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1;
 }
 .btn-close-custom:hover {
@@ -23,404 +23,362 @@
   color: var(--color-danger);
 }
 
-/* =========================================
-           STYLE 1: MODERN CRM PROFILE (Revised)
-           ========================================= */
-.offcanvas-crm.offcanvas {
-  width: 480px !important;
-  border: none;
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-  background: var(--color-bg-card);
-}
-
-/* Modern Gradient Header using variables */
-.offcanvas-crm .crm-header {
-  padding: 24px 32px;
-  background: linear-gradient(180deg, var(--header-bg) 0%, var(--color-bg-card) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid var(--color-border);
-}
-
-/* Refined Icon Box */
-.offcanvas-crm .crm-icon-box {
-  width: 48px;
-  height: 48px;
-  background: var(--color-bg-card);
-  color: var(--color-primary);
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--color-border);
-  font-size: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
-}
-
-/* Modern Form Fields */
-.offcanvas-crm .input-group-modern {
-  background: var(--color-bg-soft);
-  border: 1px solid var(--color-border);
-  border-radius: 12px;
-  padding: 10px 16px;
-  transition: all 0.2s ease;
-  display: flex;
-  flex-direction: column;
-}
-.offcanvas-crm .input-group-modern:focus-within {
-  background: var(--color-bg-card);
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.1);
-}
-.offcanvas-crm .label-modern {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-text-light);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 2px;
-}
-.offcanvas-crm .input-modern {
-  border: none;
-  background: transparent;
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--color-text-main);
-  padding: 0;
-  outline: none;
+/* --- STYLISH TRIGGER BUTTONS (FINAL TOUCH) --- */
+.demo-section {
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
 }
-
-/* Footer */
-.offcanvas-crm .crm-footer {
-  padding: 24px 32px;
+.demo-card {
   background: var(--color-bg-card);
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  border-top: 1px solid var(--color-border);
-}
-.offcanvas-crm .btn-crm-action {
-  padding: 10px 24px;
-  border-radius: 10px;
-  font-weight: 600;
-  transition: 0.2s;
-  border: none;
-  font-size: 0.9rem;
-}
-.offcanvas-crm .btn-crm-cancel {
-  background: var(--color-bg-soft);
-  color: var(--color-text-light);
   border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
-.offcanvas-crm .btn-crm-cancel:hover {
-  background: var(--color-border);
+.demo-title {
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--color-text-main);
-}
-.offcanvas-crm .btn-crm-save {
-  background: var(--color-primary);
-  color: #fff;
-}
-.offcanvas-crm .btn-crm-save:hover {
-  background: var(--color-primary-hover);
-  transform: translateY(-1px);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* =========================================
-           STYLE 2: NOTIFICATION (Dynamic Theme)
-           ========================================= */
-.offcanvas-notif.offcanvas {
-  width: 40% !important; /* UPDATED: 40% Width */
-  border: none;
+.btn-trigger {
   background: var(--color-bg-card);
-}
-.offcanvas-notif .notif-header {
-  padding: 16px 24px;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  padding: 16px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  width: 100%;
+  text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--color-primary);
-  background: var(--color-bg-card);
-}
-.offcanvas-notif .btn-close-custom:hover {
-  background: var(--color-bg-soft);
-  color: var(--color-primary);
-}
-
-/* Exact Badge Styling */
-.offcanvas-notif .badge-container {
-  background-color: var(--color-primary);
-  color: #fff;
-  padding: 4px 6px 4px 12px;
-  border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: 10px;
-  line-height: 1;
-}
-.offcanvas-notif .badge-count {
-  background-color: #fff;
-  color: var(--color-primary);
-  border-radius: 50px;
-  padding: 2px 7px;
-  font-size: 0.8rem;
-  font-weight: 800;
-  min-width: 20px;
-  text-align: center;
-}
-
-/* Tabs & Lists */
-.offcanvas-notif .tabs-row {
-  display: flex;
-  padding: 0 16px;
-  border-bottom: 1px solid var(--color-border);
-  gap: 20px;
-  background: var(--color-bg-card);
-}
-.offcanvas-notif .tab-link {
-  padding: 14px 4px;
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.offcanvas-notif .tab-link.active {
-  color: var(--color-primary);
-  border-bottom-color: var(--color-primary);
-  font-weight: 600;
-}
-.offcanvas-notif .tab-link i {
-  font-size: 1rem;
-}
-.offcanvas-notif .mark-all-link {
-  margin-left: auto;
-  color: var(--color-primary);
-  font-size: 0.85rem;
-  padding-top: 14px;
-  text-decoration: none;
-}
-
-.offcanvas-notif .notif-body {
-  background: var(--color-bg-card);
-  overflow-y: auto;
-  flex-grow: 1;
-}
-.offcanvas-notif .notif-item {
-  padding: 16px 24px;
-  border-bottom: 1px solid var(--color-border);
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
   position: relative;
-  background: var(--color-bg-card);
-  transition: background 0.2s;
+  overflow: hidden;
 }
-.offcanvas-notif .notif-item:hover {
-  background: var(--color-bg-soft);
-}
-.offcanvas-notif .red-dot {
-  width: 8px;
-  height: 8px;
-  background: var(--color-danger);
-  border-radius: 50%;
+/* Left accent bar on hover */
+.btn-trigger::before {
+  content: '';
   position: absolute;
-  left: 16px;
-  top: 16px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--color-primary);
+  opacity: 0;
+  transition: opacity 0.2s;
 }
-.offcanvas-notif .icon-wrapper {
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid var(--color-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-primary);
+.btn-trigger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  border-color: var(--color-primary);
 }
-.offcanvas-notif .icon-wrapper i {
-  font-size: 1.1rem;
+.btn-trigger:hover::before {
+  opacity: 1;
 }
-.offcanvas-notif .time-stamp {
-  font-size: 0.85rem;
+.btn-trigger i {
+  transition: transform 0.2s;
   color: var(--color-text-light);
 }
-
-.offcanvas-notif .notif-footer {
-  padding: 16px;
-  text-align: center;
-  border-top: 1px solid var(--color-border);
-  background: var(--color-bg-card);
-}
-.offcanvas-notif .footer-link {
+.btn-trigger:hover i {
+  transform: translateX(3px);
   color: var(--color-primary);
-  font-size: 0.9rem;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
 }
 
 /* =========================================
-           STYLE 3: PROFESSIONAL FORM (Root Theme Integrated)
+           3. CORE OFFCANVAS ENGINE
            ========================================= */
-.offcanvas-form.offcanvas {
-  width: 550px !important;
-  border: none;
+.offcanvas-premium {
   background: var(--color-bg-card);
-  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.1);
+  border: none;
+  box-shadow: -5px 0 30px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
-.offcanvas-form .form-header {
+/* 40% Width Enforcement */
+@media (min-width: 992px) {
+  .offcanvas-premium.offcanvas-end {
+    width: 40% !important;
+  }
+  .offcanvas-premium.offcanvas-start {
+    width: 30% !important;
+  }
+}
+@media (max-width: 991px) {
+  .offcanvas-premium.offcanvas-end {
+    width: 90% !important;
+  }
+  .offcanvas-premium.offcanvas-start {
+    width: 85% !important;
+  }
+}
+
+/* Header Layout */
+.premium-header {
+  flex-shrink: 0;
   padding: 24px 32px;
-  /* Using Theme Header BG but customized for form header look */
+  border-bottom: 1px solid var(--color-border);
   background: var(--header-bg);
-  color: var(--color-text-main);
-  position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-bottom: 1px solid var(--color-border);
+  align-items: center;
 }
-/* Accent line using Primary Color */
-.offcanvas-form .form-header::after {
+
+/* HEADER STYLE: PRO FORM GRADIENT BORDER */
+.premium-header.form-style {
+  position: relative;
+  border-bottom: none; /* Remove default border to show gradient */
+  padding-bottom: 24px;
+}
+.premium-header.form-style::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--color-primary);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-info));
 }
 
-.offcanvas-form .form-title {
-  margin: 0;
-  font-weight: 700;
-  color: var(--color-text-main);
-  letter-spacing: -0.5px;
-}
-.offcanvas-form .form-subtitle {
-  margin-bottom: 0;
-  color: var(--color-text-light);
-  font-size: 0.9rem;
-  margin-top: 4px;
-}
-
-.offcanvas-form .btn-close-form {
-  color: var(--color-text-light);
-  background: transparent;
-  border: 1px solid var(--color-border);
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
+/* HEADER STYLE: CRM ICON */
+.crm-header-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(63, 81, 181, 0.1); /* Based on default primary hue */
+  color: var(--color-primary);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.offcanvas-form .btn-close-form i {
-  font-size: 1.2rem;
-  line-height: 1;
-}
-.offcanvas-form .btn-close-form:hover {
-  color: var(--color-primary);
-  background: var(--color-bg-soft);
-  border-color: var(--color-primary);
-  transform: rotate(90deg);
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
-/* Body takes remaining space */
-.offcanvas-form .form-body {
-  padding: 32px 40px;
-  overflow-y: auto;
+.premium-body {
   flex-grow: 1;
-  background: var(--color-bg-card);
+  overflow-y: auto;
+  padding: 28px;
+  color: var(--color-text-main);
+  background: var(--color-bg-card) !important;
+}
+.premium-footer {
+  flex-shrink: 0;
+  padding: 24px 32px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-soft);
+  margin-top: auto;
 }
 
-.offcanvas-form .form-label-pro {
+/* =========================================
+           4. COMPONENT STYLES
+           ========================================= */
+
+/* CRM */
+.crm-avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--color-bg-soft);
+  color: var(--color-primary);
+  border-radius: 20px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  border: 2px solid var(--color-border);
+}
+.input-group-smart {
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  transition: 0.2s;
+}
+.input-group-smart:focus-within {
+  background: var(--color-bg-card);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.label-smart {
   font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-light);
   font-weight: 700;
-  margin-bottom: 8px;
+  color: var(--color-text-light);
+  text-transform: uppercase;
   display: block;
 }
-.offcanvas-form .form-control-pro {
-  background-color: var(--color-bg-soft);
+.input-smart {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: var(--color-text-main);
+  outline: none;
+}
+
+/* Notification */
+.premium-header.notif-style {
+  padding: 14px 24px;
+  border-bottom: 2px solid var(--color-primary);
+}
+.notif-badge {
+  background: var(--color-primary);
+  color: #fff;
+  padding: 2px 10px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.notif-badge span {
+  background: #fff;
+  color: var(--color-primary);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.notif-tabs {
+  display: flex;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--color-border);
+  gap: 20px;
+  flex-shrink: 0;
+  background: var(--color-bg-card);
+}
+.notif-tab {
+  padding: 14px 4px;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.notif-tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  font-weight: 700;
+}
+.notif-mark-read {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  align-self: center;
+  text-decoration: none;
+}
+.notif-list-item {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  background: var(--color-bg-card);
+}
+.notif-list-item:hover {
+  background: var(--color-bg-soft);
+}
+.notif-icon-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  position: relative;
+}
+.notif-red-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-danger);
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  border: 1px solid var(--color-bg-card);
+}
+.notif-text {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* Pro Form */
+.form-label-bold {
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+}
+.form-input-pro {
+  background: var(--search-input-bg);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 12px 16px;
-  font-size: 0.95rem;
   color: var(--color-text-main);
   width: 100%;
+  font-weight: 500;
   transition: 0.2s;
 }
-.offcanvas-form .form-control-pro:focus {
-  background-color: var(--color-bg-card);
+.form-input-pro:focus {
+  background: var(--color-bg-card);
   border-color: var(--color-primary);
   outline: none;
-  box-shadow: 0 0 0 4px rgba(63, 81, 181, 0.1); /* Generic shadow, works on all themes mostly */
+  box-shadow: 0 0 0 4px rgba(63, 81, 181, 0.1);
 }
 
-/* Sticky Footer */
-.offcanvas-form .form-footer {
-  padding: 20px 40px;
-  background: var(--header-bg); /* Matching header for symmetry */
-  border-top: 1px solid var(--color-border);
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  flex-shrink: 0;
-  margin-top: auto;
-}
-.offcanvas-form .btn-pro-secondary {
+/* Utility */
+.offcanvas-utility {
   background: var(--color-bg-card);
-  border: 1px solid var(--color-border);
-  color: var(--color-text-light);
-  padding: 10px 24px;
-  border-radius: 8px;
-  font-weight: 600;
+  color: var(--color-text-main);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border: none;
 }
-.offcanvas-form .btn-pro-secondary:hover {
-  background: var(--color-bg-soft);
+.offcanvas-utility .offcanvas-header {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--color-border);
   color: var(--color-text-main);
 }
-.offcanvas-form .btn-pro-primary {
-  background: var(--color-primary);
-  color: #fff; /* Keeping white text for contrast on primary */
-  border: none;
-  padding: 10px 30px;
-  border-radius: 8px;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.offcanvas-utility .offcanvas-body {
+  color: var(--color-text-main);
+  background: var(--color-bg-card) !important;
 }
-.offcanvas-form .btn-pro-primary:hover {
-  background: var(--color-primary-hover);
+.offcanvas-top {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: auto;
+  min-height: 250px;
 }
-
-/* Demo Buttons */
-.btn-panel {
-  padding: 15px 30px;
-  border-radius: 15px;
-  font-weight: 700;
-  transition: 0.3s;
-  border: none;
-}
-.btn-panel:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+.offcanvas-bottom {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: auto;
+  max-height: 80vh;
 }

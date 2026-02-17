@@ -1,0 +1,985 @@
+/* =========================================
+           2. COMMON UTILS & ANIMATIONS
+           ========================================= */
+.acc-theme-saas .accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.acc-theme-saas .accordion-body {
+  color: var(--color-text-light);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* --- SMART ICON SYSTEM (Robust Lines for Plus/Minus) --- */
+.smart-icon {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  transition: transform var(--transition-speed) ease;
+}
+
+/* The lines */
+.smart-icon::before,
+.smart-icon::after {
+  content: '';
+  position: absolute;
+  background-color: currentColor;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition:
+    opacity var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+/* Horizontal Line (Always visible) */
+.smart-icon::before {
+  width: 100%;
+  height: 2px;
+}
+
+/* Vertical Line (Visible on Plus, Hidden on Minus) */
+.smart-icon::after {
+  width: 2px;
+  height: 100%;
+}
+
+/* Active State Logic: Rotate Wrapper & Hide Vertical Line */
+.accordion-button:not(.collapsed) .smart-icon {
+  transform: rotate(180deg);
+}
+.accordion-button:not(.collapsed) .smart-icon::after {
+  opacity: 0; /* Makes it a Minus */
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Icon Container Helper */
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-speed);
+}
+
+/* =========================================
+           STYLE 1: WORKING PROCESS (Refined)
+           ========================================= */
+.acc-theme-saas.style-process .accordion-item {
+  border: 1px solid var(--color-border);
+  border-bottom: 4px solid var(--color-border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background-color: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.acc-theme-saas.style-process .accordion-button {
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  padding: 1.5rem 2rem;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Active State: Uses Primary Color with Contrast Text */
+.acc-theme-saas.style-process .accordion-button:not(.collapsed) {
+  background-color: var(--color-primary) !important;
+  color: var(--text-on-primary);
+  border-bottom-color: transparent;
+}
+
+.acc-theme-saas.style-process .accordian-numbers {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-right: 1.5rem;
+  opacity: 0.3;
+  font-family: monospace;
+}
+.acc-theme-saas.style-process .accordion-button:not(.collapsed) .accordian-numbers {
+  opacity: 0.8;
+}
+
+.acc-theme-saas.style-process .accordion-button::after {
+  content: none;
+}
+
+.acc-theme-saas.style-process .icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  margin-left: auto;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-card);
+}
+
+.acc-theme-saas.style-process .accordion-button:not(.collapsed) .icon-box {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle white overlay */
+  border-color: transparent;
+  color: var(--text-on-primary);
+}
+/* Special adjustment for Yellow theme to ensure contrast on the icon button */
+[data-theme='yellow'] .acc-theme-saas.style-process .accordion-button:not(.collapsed) .icon-box {
+  background-color: rgba(0, 0, 0, 0.1); /* Dark overlay for yellow */
+}
+
+/* =========================================
+           STYLE 2: PURPLE PILLS
+           ========================================= */
+.acc-theme-saas.style-purple .accordion-item {
+  border: none;
+  background: transparent;
+  margin-bottom: 0.8rem;
+}
+
+.acc-theme-saas.style-purple .accordion-button {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+  border-radius: 50px !important;
+  padding: 1rem 2rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.acc-theme-saas.style-purple .accordion-button::after {
+  background-image: none;
+  content: '\F282'; /* Chevron */
+  font-family: 'Bootstrap-Icons';
+  color: inherit;
+  transition: transform var(--transition-speed);
+}
+.acc-theme-saas.style-purple .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+.acc-theme-saas.style-purple .accordion-collapse {
+  background: var(--color-bg-card);
+  border-radius: 20px;
+  margin-top: 8px;
+  padding: 15px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
+}
+
+/* =========================================
+           STYLE 3: LEFT TIMELINE
+           ========================================= */
+.acc-theme-saas.style-timeline-left .accordion-item {
+  border: none;
+  background: transparent;
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 1rem;
+}
+
+.acc-theme-saas.style-timeline-left::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: -20px;
+  width: 2px;
+  background: var(--color-border);
+  z-index: 0;
+}
+.acc-theme-saas.style-timeline-left .accordion-item:last-child::before {
+  bottom: 50%;
+}
+
+.acc-theme-saas.style-timeline-left .accordion-button {
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+  font-weight: 600;
+  border-radius: 8px !important;
+  box-shadow: var(--shadow-sm);
+  padding-left: 1.5rem;
+}
+
+/* Icon Wrapper Left */
+.acc-theme-saas.style-timeline-left .icon-wrapper {
+  position: absolute;
+  left: -20px;
+  top: 15px;
+  width: 34px;
+  height: 34px;
+  background: var(--color-bg-card);
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+
+/* When Active: Icon fills up */
+.acc-theme-saas.style-timeline-left .accordion-button:not(.collapsed) {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+.acc-theme-saas.style-timeline-left .accordion-button:not(.collapsed) ~ .icon-wrapper,
+        /* Bootstrap structure places toggle inside button, so we handle icon change differently or via JS, but here we use CSS on icon-wrapper if it was outside. 
+           Since it's inside button in HTML structure: */
+        .acc-theme-saas.style-timeline-left .accordion-button:not(.collapsed) .icon-wrapper {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+}
+
+.acc-theme-saas.style-timeline-left .accordion-header {
+  position: relative;
+}
+.acc-theme-saas.style-timeline-left .accordion-button::after {
+  display: none;
+}
+
+/* =========================================
+           STYLE 4: SIDE TRACK FILL
+           ========================================= */
+.acc-theme-saas.style-orange-track {
+  background-color: var(--color-primary);
+  padding: 2px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.acc-theme-saas.style-orange-track .accordion-item {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+[data-theme='yellow'] .acc-theme-saas.style-orange-track .accordion-item {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.acc-theme-saas.style-orange-track::after {
+  content: '';
+  position: absolute;
+  right: 40px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 0;
+}
+[data-theme='yellow'] .acc-theme-saas.style-orange-track::after {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.acc-theme-saas.style-orange-track .accordion-button {
+  background: transparent;
+  color: var(--text-on-primary);
+  font-weight: 600;
+  padding: 1.5rem;
+  padding-right: 70px;
+}
+
+.acc-theme-saas.style-orange-track .accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+  color: var(--text-on-primary);
+}
+[data-theme='yellow'] .acc-theme-saas.style-orange-track .accordion-button:not(.collapsed) {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.acc-theme-saas.style-orange-track .icon-box {
+  position: absolute;
+  right: 29px;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--text-on-primary);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  color: var(--text-on-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+[data-theme='yellow'] .acc-theme-saas.style-orange-track .icon-box {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.acc-theme-saas.style-orange-track .accordion-button::after {
+  display: none;
+}
+
+.acc-theme-saas.style-orange-track .accordion-body {
+  color: var(--text-on-primary);
+  padding: 0 1.5rem 1.5rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+[data-theme='yellow'] .acc-theme-saas.style-orange-track .accordion-body {
+  opacity: 0.85;
+}
+
+/* =========================================
+           STYLE 5: MINIMAL THIN
+           ========================================= */
+.acc-theme-saas.style-minimal-blue {
+  background: var(--color-bg-card);
+  border-radius: 8px;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.acc-theme-saas.style-minimal-blue .accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  background: transparent;
+}
+.acc-theme-saas.style-minimal-blue .accordion-item:last-child {
+  border-bottom: none;
+}
+
+.acc-theme-saas.style-minimal-blue .accordion-button {
+  background: transparent;
+  color: var(--color-text-light);
+  padding: 1.5rem 0;
+  font-size: 1.05rem;
+}
+
+.acc-theme-saas.style-minimal-blue .accordion-button:not(.collapsed) {
+  color: var(--color-primary);
+  box-shadow: none;
+}
+
+.acc-theme-saas.style-minimal-blue .icon-box {
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--color-secondary);
+  border-radius: 50%;
+  color: var(--color-secondary);
+  margin-left: auto;
+}
+
+.acc-theme-saas.style-minimal-blue .accordion-button:not(.collapsed) .icon-box {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.acc-theme-saas.style-minimal-blue .accordion-button::after {
+  display: none;
+}
+
+/* =========================================
+           STYLE 6: LEFT FLOATING TAB
+           ========================================= */
+.acc-theme-saas.style-red-tab {
+  background: var(--color-danger);
+  padding: 2rem;
+  border-radius: 12px;
+}
+/* Fallback mapping for themes */
+[data-theme='default'] .acc-theme-saas.style-red-tab {
+  background: var(--color-primary);
+}
+[data-theme='dark'] .acc-theme-saas.style-red-tab {
+  background: var(--color-bg-soft);
+}
+[data-theme='yellow'] .acc-theme-saas.style-red-tab {
+  background: var(--color-warning);
+}
+
+.acc-theme-saas.style-red-tab .accordion-item {
+  border: none;
+  margin-bottom: 1rem;
+  overflow: visible;
+  background: transparent;
+}
+
+.acc-theme-saas.style-red-tab .accordion-button {
+  margin-left: 25px;
+  background: var(--color-bg-card);
+  border-radius: 4px !important;
+  padding: 1.25rem;
+  color: var(--color-text-main);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.acc-theme-saas.style-red-tab .icon-box {
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  background-color: var(--color-bg-card);
+  border-radius: 50%;
+  box-shadow: var(--shadow-sm);
+  z-index: 10;
+  color: var(--color-text-light);
+}
+
+.acc-theme-saas.style-red-tab .accordion-button:not(.collapsed) .icon-box {
+  color: var(--color-primary);
+}
+.acc-theme-saas.style-red-tab .accordion-button::after {
+  display: none;
+}
+
+.acc-theme-saas.style-red-tab .accordion-body {
+  color: var(--text-on-primary);
+  opacity: 0.9;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-left: 25px;
+  margin-top: 10px;
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+}
+[data-theme='dark'] .acc-theme-saas.style-red-tab .accordion-body {
+  opacity: 0.85;
+  background: rgba(255, 255, 255, 0.05);
+}
+[data-theme='yellow'] .acc-theme-saas.style-red-tab .accordion-body {
+  opacity: 0.8;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================
+           STYLE 7: ACTIVE SOLID FILL
+           ========================================= */
+.acc-theme-saas.style-active-fill .accordion-item {
+  border: 1px solid var(--color-border);
+  margin-bottom: 0.8rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--color-bg-card);
+}
+
+.acc-theme-saas.style-active-fill .accordion-button {
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+  font-weight: 600;
+  padding: 1.25rem;
+}
+
+.acc-theme-saas.style-active-fill .accordion-button:not(.collapsed) {
+  background: var(--color-primary);
+  color: var(--text-on-primary);
+  box-shadow: none;
+  border-left: 6px solid rgba(0, 0, 0, 0.2);
+}
+
+.acc-theme-saas.style-active-fill .accordion-button::after {
+  background-image: none;
+  content: '\F282';
+  font-family: 'Bootstrap-Icons';
+  color: var(--color-text-light);
+  transition: transform var(--transition-speed);
+}
+.acc-theme-saas.style-active-fill .accordion-button:not(.collapsed)::after {
+  color: inherit;
+  transform: rotate(180deg);
+}
+
+/* =========================================
+           STYLE 8: DARK CONTRAST BARS
+           ========================================= */
+.acc-theme-saas.style-dark-bars .accordion-item {
+  background: transparent;
+  border: none;
+  margin-bottom: 0.8rem;
+}
+
+.acc-theme-saas.style-dark-bars .accordion-button {
+  background: var(--color-text-main);
+  color: var(--color-bg-card); /* White Text on Dark BG */
+  border-radius: 6px !important;
+  justify-content: flex-start;
+  padding: 1rem 1.5rem;
+}
+[data-theme='dark'] .acc-theme-saas.style-dark-bars .accordion-button {
+  background: var(--color-bg-soft);
+  color: var(--color-text-main);
+}
+
+.acc-theme-saas.style-dark-bars .icon-box {
+  margin-right: 15px;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  color: inherit;
+}
+[data-theme='dark'] .acc-theme-saas.style-dark-bars .icon-box {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.acc-theme-saas.style-dark-bars .accordion-button:not(.collapsed) .icon-box {
+  background-color: var(--color-success);
+  color: #fff;
+}
+.acc-theme-saas.style-dark-bars .accordion-button::after {
+  display: none;
+}
+
+/* =========================================
+           STYLE 9: DOTTED TREE
+           ========================================= */
+.acc-theme-saas.style-dotted .accordion-item {
+  border: none;
+  background: transparent;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 50px;
+}
+
+.acc-theme-saas.style-dotted::before {
+  content: '';
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  border-left: 2px dotted var(--color-secondary);
+  opacity: 0.5;
+}
+
+.acc-theme-saas.style-dotted .accordion-button {
+  background: transparent;
+  padding: 0;
+  color: var(--color-text-main);
+  font-weight: 700;
+  box-shadow: none;
+  font-size: 1.1rem;
+}
+
+.acc-theme-saas.style-dotted .accordion-header::before {
+  content: '\F285'; /* Chevron Right */
+  font-family: 'Bootstrap-Icons';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+  border-radius: 4px;
+  transition: all var(--transition-speed);
+}
+
+.acc-theme-saas.style-dotted
+  .accordion-item:has(.accordion-button:not(.collapsed))
+  .accordion-header::before {
+  content: '\F282'; /* Chevron Down */
+  background: var(--color-primary);
+  color: var(--text-on-primary);
+  border-color: var(--color-primary);
+}
+.acc-theme-saas.style-dotted .accordion-button::after {
+  display: none;
+}
+
+/* =========================================
+           STYLE 10: GRADIENT SCHEDULE
+           ========================================= */
+.acc-theme-saas.style-schedule-red {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  padding: 10px;
+  border-radius: 12px;
+  color: var(--text-on-primary);
+}
+
+.acc-theme-saas.style-schedule-red .accordion-item {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+[data-theme='yellow'] .acc-theme-saas.style-schedule-red .accordion-item {
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+}
+
+.acc-theme-saas.style-schedule-red .accordion-button {
+  background: transparent;
+  color: var(--text-on-primary);
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 1.5rem 1rem;
+  font-weight: 600;
+}
+
+.acc-theme-saas.style-schedule-red .accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: none;
+  color: var(--text-on-primary);
+}
+[data-theme='yellow'] .acc-theme-saas.style-schedule-red .accordion-button:not(.collapsed) {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.acc-theme-saas.style-schedule-red .icon-box {
+  width: 24px;
+  height: 24px;
+  color: inherit;
+  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+[data-theme='yellow'] .acc-theme-saas.style-schedule-red .icon-box {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.acc-theme-saas.style-schedule-red .accordion-button:not(.collapsed) .icon-box {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+[data-theme='yellow']
+  .acc-theme-saas.style-schedule-red
+  .accordion-button:not(.collapsed)
+  .icon-box {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.acc-theme-saas.style-schedule-red .accordion-body {
+  color: var(--text-on-primary);
+  padding: 0 1rem 1.5rem 140px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+[data-theme='yellow'] .acc-theme-saas.style-schedule-red .accordion-body {
+  opacity: 0.85;
+}
+.acc-theme-saas.style-schedule-red .accordion-button::after {
+  display: none;
+}
+
+/* =========================================
+           STYLE 11: UNIFIED OUTLINE
+           ========================================= */
+.acc-theme-saas.style-unified {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--color-bg-card);
+}
+
+.acc-theme-saas.style-unified .accordion-item {
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 0;
+}
+.acc-theme-saas.style-unified .accordion-item:last-child {
+  border-bottom: none;
+}
+
+.acc-theme-saas.style-unified .accordion-button {
+  color: var(--color-text-main);
+  font-weight: 600;
+  background: var(--color-bg-card);
+}
+[data-theme='dark'] .acc-theme-saas.style-unified .accordion-button {
+  color: var(--color-text-main) !important;
+  background: var(--color-bg-card) !important;
+  opacity: 1 !important;
+}
+[data-theme='dark'] .acc-theme-saas.style-unified .accordion-button::after {
+  color: var(--color-primary) !important;
+  opacity: 1 !important;
+}
+[data-theme='yellow'] .acc-theme-saas.style-unified .accordion-button {
+  color: var(--color-text-main) !important;
+  opacity: 1 !important;
+}
+[data-theme='yellow'] .acc-theme-saas.style-unified .accordion-button::after {
+  color: var(--color-primary) !important;
+  opacity: 1 !important;
+}
+
+.acc-theme-saas.style-unified .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background: var(--color-bg-soft);
+  color: var(--color-primary);
+}
+[data-theme='dark'] .acc-theme-saas.style-unified .accordion-item {
+  border-color: var(--color-border);
+}
+[data-theme='dark'] .acc-theme-saas.style-unified .accordion-button:not(.collapsed) {
+  background: var(--color-bg-soft) !important;
+  color: var(--color-primary) !important;
+  opacity: 1 !important;
+}
+[data-theme='yellow'] .acc-theme-saas.style-unified .accordion-button {
+  color: var(--color-text-main) !important;
+  opacity: 1 !important;
+}
+[data-theme='yellow'] .acc-theme-saas.style-unified .accordion-button::after {
+  color: var(--color-primary) !important;
+  opacity: 1 !important;
+}
+
+.acc-theme-saas.style-unified .accordion-button::after {
+  width: 24px;
+  height: 24px;
+  background-image: none;
+  content: '+';
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--color-text-main);
+  transition: transform var(--transition-speed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.acc-theme-saas.style-unified .accordion-button:not(.collapsed)::after {
+  content: '−';
+  transform: rotate(0deg);
+  color: var(--color-primary);
+}
+
+.acc-theme-saas.style-unified .accordion-body {
+  color: var(--color-text-main);
+  opacity: 0.9;
+  font-weight: 500;
+  line-height: 1.6;
+  background: var(--color-bg-soft);
+  padding: 1rem 1.5rem;
+  margin: 0;
+  border-radius: 0;
+}
+[data-theme='dark'] .acc-theme-saas.style-unified .accordion-body {
+  opacity: 0.95;
+  color: var(--color-text-main);
+  background: var(--color-bg-soft);
+  padding: 1rem 1.5rem;
+  margin: 0;
+  border-radius: 0;
+}
+[data-theme='yellow'] .acc-theme-saas.style-unified .accordion-body {
+  opacity: 0.8;
+  background: var(--color-bg-soft);
+  margin: 0;
+  border-radius: 0;
+}
+
+/* =========================================
+           STYLE 12: LEFT BORDER CARD
+           ========================================= */
+.acc-theme-saas.style-left-border .accordion-item {
+  border: none;
+  background: var(--color-bg-card);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1rem;
+  border-left: 5px solid var(--color-danger);
+  border-radius: 4px;
+}
+[data-theme='dark'] .acc-theme-saas.style-left-border .accordion-item {
+  border-left-color: var(--color-primary);
+}
+[data-theme='yellow'] .acc-theme-saas.style-left-border .accordion-item {
+  border-left-color: var(--color-warning);
+}
+
+.acc-theme-saas.style-left-border .accordion-button {
+  padding: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  background: transparent;
+}
+
+.acc-theme-saas.style-left-border .accordion-button:not(.collapsed) {
+  color: var(--color-danger);
+  box-shadow: none;
+}
+[data-theme='dark'] .acc-theme-saas.style-left-border .accordion-button:not(.collapsed) {
+  color: var(--color-primary);
+}
+
+.acc-theme-saas.style-left-border .accordion-button::after {
+  background-image: none;
+  content: '\F282';
+  font-family: 'Bootstrap-Icons';
+  color: var(--color-text-light);
+  transition: transform var(--transition-speed);
+}
+.acc-theme-saas.style-left-border .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+  color: inherit;
+}
+
+.acc-theme-saas.style-left-border .accordion-body {
+  color: var(--color-text-main);
+  opacity: 0.9;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0 1.5rem 1.5rem;
+}
+[data-theme='dark'] .acc-theme-saas.style-left-border .accordion-body {
+  opacity: 0.85;
+}
+[data-theme='yellow'] .acc-theme-saas.style-left-border .accordion-body {
+  opacity: 0.8;
+}
+
+/* =========================================
+           GLOBAL TEXT MUTED FIX FOR DARK MODE
+           ========================================= */
+[data-theme='dark'] .text-muted {
+  color: var(--color-text-light) !important;
+  opacity: 0.8;
+}
+[data-theme='yellow'] .text-muted {
+  color: var(--color-text-light) !important;
+  opacity: 0.7;
+}
+
+/* =========================================
+           STYLE 13: GRADIENT GLASS
+           ========================================= */
+.acc-theme-saas.style-glass {
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.acc-theme-saas.style-glass .accordion-item {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  margin-bottom: 0.5rem;
+  backdrop-filter: blur(10px);
+  border-radius: 6px;
+}
+[data-theme='yellow'] .acc-theme-saas.style-glass .accordion-item {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.acc-theme-saas.style-glass .accordion-button {
+  background: transparent;
+  color: var(--text-on-primary);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.acc-theme-saas.style-glass .accordion-button:not(.collapsed) {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: none;
+  color: var(--text-on-primary);
+}
+[data-theme='yellow'] .acc-theme-saas.style-glass .accordion-button:not(.collapsed) {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.acc-theme-saas.style-glass .accordion-button::after {
+  background-image: none;
+  content: '\F282';
+  font-family: 'Bootstrap-Icons';
+  color: inherit;
+  transition: transform var(--transition-speed);
+}
+.acc-theme-saas.style-glass .accordion-button:not(.collapsed)::after {
+  transform: rotate(180deg);
+}
+
+.acc-theme-saas.style-glass .accordion-body {
+  color: var(--text-on-primary);
+  opacity: 0.9;
+  font-weight: 500;
+  padding: 0 1.5rem 1.5rem;
+}
+[data-theme='yellow'] .acc-theme-saas.style-glass .accordion-body {
+  opacity: 0.85;
+}
+
+/* =========================================
+           STYLE 14: BOXED LEFT ICON
+           ========================================= */
+.acc-theme-saas.style-boxed-left .accordion-item {
+  border: 1px solid var(--color-border);
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  background: var(--color-bg-card);
+}
+
+.acc-theme-saas.style-boxed-left .accordion-button {
+  padding-left: 3.5rem;
+  font-weight: 600;
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+}
+
+.acc-theme-saas.style-boxed-left .icon-box {
+  position: absolute;
+  left: 15px;
+  width: 26px;
+  height: 26px;
+  background-color: var(--color-bg-soft);
+  color: var(--color-text-light);
+  border-radius: 50%;
+}
+
+.acc-theme-saas.style-boxed-left .accordion-button:not(.collapsed) .icon-box {
+  background-color: var(--color-success);
+  color: #ffffff;
+}
+.acc-theme-saas.style-boxed-left .accordion-button::after {
+  display: none;
+}
+
+/* =========================================
+           STYLE 15: SIMPLE BOXED
+           ========================================= */
+.acc-theme-saas.style-simple .accordion-item {
+  border: 1px solid var(--color-border);
+  margin-bottom: -1px;
+  background: var(--color-bg-card);
+}
+.acc-theme-saas.style-simple .accordion-item:first-child {
+  border-radius: 4px 4px 0 0;
+}
+.acc-theme-saas.style-simple .accordion-item:last-child {
+  border-radius: 0 0 4px 4px;
+}
+
+.acc-theme-saas.style-simple .accordion-button {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 15px;
+  background: var(--color-bg-soft);
+  color: var(--color-text-main);
+  font-weight: 600;
+}
+
+.acc-theme-saas.style-simple .accordion-button:not(.collapsed) {
+  background: var(--color-bg-card);
+  box-shadow: none;
+  color: var(--color-primary);
+}
+
+.acc-theme-saas.style-simple .accordion-button::after {
+  background-image: none;
+  content: '\F285'; /* Chevron Right */
+  font-family: 'Bootstrap-Icons';
+  color: var(--color-secondary);
+  transform: none;
+  transition: transform var(--transition-speed);
+}
+
+.acc-theme-saas.style-simple .accordion-button:not(.collapsed)::after {
+  content: '\F282'; /* Chevron Down */
+  color: var(--color-primary);
+}
