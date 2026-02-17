@@ -1,0 +1,426 @@
+/* --- GLOBAL CLOSE BUTTON --- */
+.btn-close-custom {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  padding: 0;
+  color: var(--color-text-light);
+}
+.btn-close-custom i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.btn-close-custom:hover {
+  transform: rotate(90deg);
+  background: var(--color-bg-soft);
+  color: var(--color-danger);
+}
+
+/* =========================================
+           STYLE 1: MODERN CRM PROFILE (Revised)
+           ========================================= */
+.offcanvas-crm.offcanvas {
+  width: 480px !important;
+  border: none;
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.08);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background: var(--color-bg-card);
+}
+
+/* Modern Gradient Header using variables */
+.offcanvas-crm .crm-header {
+  padding: 24px 32px;
+  background: linear-gradient(180deg, var(--header-bg) 0%, var(--color-bg-card) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Refined Icon Box */
+.offcanvas-crm .crm-icon-box {
+  width: 48px;
+  height: 48px;
+  background: var(--color-bg-card);
+  color: var(--color-primary);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Modern Form Fields */
+.offcanvas-crm .input-group-modern {
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 10px 16px;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.offcanvas-crm .input-group-modern:focus-within {
+  background: var(--color-bg-card);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(63, 81, 181, 0.1);
+}
+.offcanvas-crm .label-modern {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 2px;
+}
+.offcanvas-crm .input-modern {
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  padding: 0;
+  outline: none;
+  width: 100%;
+}
+
+/* Footer */
+.offcanvas-crm .crm-footer {
+  padding: 24px 32px;
+  background: var(--color-bg-card);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  border-top: 1px solid var(--color-border);
+}
+.offcanvas-crm .btn-crm-action {
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.2s;
+  border: none;
+  font-size: 0.9rem;
+}
+.offcanvas-crm .btn-crm-cancel {
+  background: var(--color-bg-soft);
+  color: var(--color-text-light);
+  border: 1px solid var(--color-border);
+}
+.offcanvas-crm .btn-crm-cancel:hover {
+  background: var(--color-border);
+  color: var(--color-text-main);
+}
+.offcanvas-crm .btn-crm-save {
+  background: var(--color-primary);
+  color: #fff;
+}
+.offcanvas-crm .btn-crm-save:hover {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+}
+
+/* =========================================
+           STYLE 2: NOTIFICATION (Dynamic Theme)
+           ========================================= */
+.offcanvas-notif.offcanvas {
+  width: 40% !important; /* UPDATED: 40% Width */
+  border: none;
+  background: var(--color-bg-card);
+}
+.offcanvas-notif .notif-header {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color-primary);
+  background: var(--color-bg-card);
+}
+.offcanvas-notif .btn-close-custom:hover {
+  background: var(--color-bg-soft);
+  color: var(--color-primary);
+}
+
+/* Exact Badge Styling */
+.offcanvas-notif .badge-container {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 4px 6px 4px 12px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+  line-height: 1;
+}
+.offcanvas-notif .badge-count {
+  background-color: #fff;
+  color: var(--color-primary);
+  border-radius: 50px;
+  padding: 2px 7px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Tabs & Lists */
+.offcanvas-notif .tabs-row {
+  display: flex;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--color-border);
+  gap: 20px;
+  background: var(--color-bg-card);
+}
+.offcanvas-notif .tab-link {
+  padding: 14px 4px;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.offcanvas-notif .tab-link.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  font-weight: 600;
+}
+.offcanvas-notif .tab-link i {
+  font-size: 1rem;
+}
+.offcanvas-notif .mark-all-link {
+  margin-left: auto;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  padding-top: 14px;
+  text-decoration: none;
+}
+
+.offcanvas-notif .notif-body {
+  background: var(--color-bg-card);
+  overflow-y: auto;
+  flex-grow: 1;
+}
+.offcanvas-notif .notif-item {
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  background: var(--color-bg-card);
+  transition: background 0.2s;
+}
+.offcanvas-notif .notif-item:hover {
+  background: var(--color-bg-soft);
+}
+.offcanvas-notif .red-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-danger);
+  border-radius: 50%;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+.offcanvas-notif .icon-wrapper {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+}
+.offcanvas-notif .icon-wrapper i {
+  font-size: 1.1rem;
+}
+.offcanvas-notif .time-stamp {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.offcanvas-notif .notif-footer {
+  padding: 16px;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+.offcanvas-notif .footer-link {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================================
+           STYLE 3: PROFESSIONAL FORM (Root Theme Integrated)
+           ========================================= */
+.offcanvas-form.offcanvas {
+  width: 550px !important;
+  border: none;
+  background: var(--color-bg-card);
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.offcanvas-form .form-header {
+  padding: 24px 32px;
+  /* Using Theme Header BG but customized for form header look */
+  background: var(--header-bg);
+  color: var(--color-text-main);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--color-border);
+}
+/* Accent line using Primary Color */
+.offcanvas-form .form-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-primary);
+}
+
+.offcanvas-form .form-title {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-text-main);
+  letter-spacing: -0.5px;
+}
+.offcanvas-form .form-subtitle {
+  margin-bottom: 0;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.offcanvas-form .btn-close-form {
+  color: var(--color-text-light);
+  background: transparent;
+  border: 1px solid var(--color-border);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.offcanvas-form .btn-close-form i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.offcanvas-form .btn-close-form:hover {
+  color: var(--color-primary);
+  background: var(--color-bg-soft);
+  border-color: var(--color-primary);
+  transform: rotate(90deg);
+}
+
+/* Body takes remaining space */
+.offcanvas-form .form-body {
+  padding: 32px 40px;
+  overflow-y: auto;
+  flex-grow: 1;
+  background: var(--color-bg-card);
+}
+
+.offcanvas-form .form-label-pro {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+.offcanvas-form .form-control-pro {
+  background-color: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  width: 100%;
+  transition: 0.2s;
+}
+.offcanvas-form .form-control-pro:focus {
+  background-color: var(--color-bg-card);
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(63, 81, 181, 0.1); /* Generic shadow, works on all themes mostly */
+}
+
+/* Sticky Footer */
+.offcanvas-form .form-footer {
+  padding: 20px 40px;
+  background: var(--header-bg); /* Matching header for symmetry */
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+.offcanvas-form .btn-pro-secondary {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-light);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.offcanvas-form .btn-pro-secondary:hover {
+  background: var(--color-bg-soft);
+  color: var(--color-text-main);
+}
+.offcanvas-form .btn-pro-primary {
+  background: var(--color-primary);
+  color: #fff; /* Keeping white text for contrast on primary */
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+.offcanvas-form .btn-pro-primary:hover {
+  background: var(--color-primary-hover);
+}
+
+/* Demo Buttons */
+.btn-panel {
+  padding: 15px 30px;
+  border-radius: 15px;
+  font-weight: 700;
+  transition: 0.3s;
+  border: none;
+}
+.btn-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}

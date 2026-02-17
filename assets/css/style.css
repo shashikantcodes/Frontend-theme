@@ -427,13 +427,9 @@ body.sidebar-is-collapsed #toggle-sidebar-desktop {
   cursor: pointer;
 }
 .top-icon-btn.bi-wallet2 {
-  color: #6366f1;
+  color: var(--color-primary);
 }
-.top-icon-btn.bi-gear,
-.top-icon-btn.bi-question-circle,
-.top-icon-btn.bi-bell {
-  color: #8fa0c9;
-}
+
 .user-avatar-circle {
   width: 32px;
   height: 32px;
@@ -477,7 +473,7 @@ body.sidebar-is-collapsed #toggle-sidebar-desktop {
   background: transparent;
   border: none;
   font-size: 1.2rem;
-  color: var(--color-text-main);
+  color: var(--color-primary);
   cursor: pointer;
 }
 
@@ -546,8 +542,8 @@ body.sidebar-is-collapsed #toggle-sidebar-desktop {
 .has-submenu.open > .nav-link .arrow {
   transform: rotate(180deg);
 }
-/* ---------------------------------- Sidebar and topar styling-----start */
-/* ---------------------------------- pag Headerr styling-----Start */
+/* ---------------------------------- Sidebar and topar styling-----end */
+/* ---------------------------------- page Headerr styling-----Start */
 .ph-header {
   background-color: var(--color-bg-card);
   border-bottom: 1px solid var(--color-border);
@@ -684,6 +680,282 @@ body.sidebar-is-collapsed #toggle-sidebar-desktop {
 .ph-search-container.active .ph-search-close {
   display: block;
 }
+/* ---------------------------------- page Headerr styling-----end */
+/* ---------------------------------- Top Profile Widget --Styling----- Start */
+/* =========================================
+   TOP PROFILE WIDGET (TPW) - Scoped Styles
+   ========================================= */
+
+/* 1. Main Dropdown Container */
+.tpw-container .tpw-menu {
+  width: 340px; /* Fixed width like screenshot */
+  padding: 0; /* Remove default padding */
+  border-radius: 5px;
+  margin-top: 12px !important;
+  border: 1px solid var(--color-border, #e5e7eb);
+  background-color: var(--color-bg-card, #fff);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Keeps corners rounded */
+}
+
+/* 2. Trigger Avatar (Small) */
+.tpw-container .tpw-trigger-avatar {
+  width: 35px;
+  height: 35px;
+  background-color: var(--color-primary, #3f51b5);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* 3. Header Section (Inside Menu) */
+.tpw-container .tpw-section-header {
+  padding: 15px;
+  background-color: var(--color-bg-card, #fff);
+}
+
+/* Big Avatar */
+.tpw-container .tpw-avatar-lg {
+  width: 55px;
+  height: 55px;
+  background-color: var(--color-primary, #3f51b5);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* 4. Typography & Links */
+.tpw-container .tpw-name-link {
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary, #3f51b5);
+  text-decoration: none;
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+.tpw-container .tpw-name-link:hover {
+  text-decoration: underline;
+}
+
+.tpw-container .tpw-email {
+  font-size: 13px;
+  color: var(--color-text-light, #6b7280);
+}
+
+.tpw-container .tpw-meta {
+  font-size: 12px;
+  color: var(--color-text-light, #6b7280);
+  line-height: 1.5;
+}
+
+.tpw-container .tpw-link {
+  color: var(--color-primary, #3f51b5);
+  text-decoration: none;
+}
+
+/* 5. Custom Divider (Full Width Border) */
+.tpw-container .tpw-divider {
+  height: 1px;
+  background-color: var(--color-border, #e5e7eb);
+  width: 100%;
+}
+
+/* 6. Menu Items */
+.tpw-container .tpw-item {
+  padding: 12px 20px;
+  font-size: 14px;
+  color: var(--color-text-main, #333);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+
+.tpw-container .tpw-item:hover {
+  background-color: var(--color-bg-soft, #f9fafb);
+  color: var(--color-primary, #3f51b5);
+}
+
+.tpw-container .tpw-icon {
+  font-size: 18px;
+  color: #9ca3af; /* Default Grey Icon */
+}
+
+/* Hover par icon color change */
+.tpw-container .tpw-item:hover .tpw-icon {
+  color: var(--color-primary, #3f51b5);
+}
+/* ---------------------------------- Top Profile Widget --Styling----- End */
+/* Notification Dropdown Styling Start */
+/* =========================================
+   NOTIFICATION DROPDOWN (NTF) - Scoped Styles
+   ========================================= */
+
+/* 1. Main Dropdown Container */
+.ntf-container .ntf-menu {
+  width: 450px; /* Wider dropdown as per screenshot */
+  border-radius: 4px; /* Sharper corners */
+  border: 1px solid var(--color-border, #e5e7eb);
+  background-color: var(--color-bg-card, #fff);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* 2. Header Styles */
+.ntf-container .ntf-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+}
+
+.ntf-container .ntf-badge {
+  background-color: #3b82f6 !important; /* Specific blue from screenshot */
+  font-weight: 500;
+  font-size: 11px;
+  padding: 4px 10px;
+}
+
+/* 3. Tabs Styles */
+.ntf-container .ntf-tabs {
+  padding-top: 8px;
+  background-color: var(--color-bg-card, #fff);
+}
+
+.ntf-container .ntf-tab-btn {
+  background: none;
+  border: none;
+  padding: 8px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-light, #6b7280);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px; /* Overlap border */
+  transition: all 0.2s;
+}
+
+.ntf-container .ntf-tab-btn.active {
+  color: #3b82f6; /* Active Blue */
+  border-bottom-color: #3b82f6;
+}
+
+.ntf-container .ntf-tab-btn:hover:not(.active) {
+  color: var(--color-text-main, #333);
+}
+
+.ntf-container .ntf-count {
+  background-color: #e5e7eb;
+  color: #4b5563;
+  border-radius: 50%;
+  padding: 0 6px;
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+.ntf-container .ntf-mark-read {
+  font-size: 11px;
+  text-decoration: none;
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+/* 4. Notification List Styles */
+.ntf-container .ntf-body {
+  max-height: 400px; /* Scrollable area height */
+  overflow-y: auto;
+}
+
+.ntf-container .ntf-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: var(--color-text-main, #333);
+  border-bottom: 1px solid var(--color-border, #f3f4f6);
+  transition: background 0.1s;
+  position: relative;
+}
+
+.ntf-container .ntf-item:hover {
+  background-color: var(--color-bg-soft, #f9fafb);
+}
+
+/* Icon Wrapper */
+.ntf-container .ntf-icon-wrapper {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #3b82f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3b82f6;
+  margin-right: 12px;
+  flex-shrink: 0;
+  font-size: 16px;
+  position: relative;
+}
+
+/* Red Dot */
+.ntf-container .ntf-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #ef4444; /* Red */
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none; /* Hidden by default */
+}
+
+/* Unread State */
+.ntf-container .ntf-item.unread .ntf-dot {
+  display: block;
+}
+
+/* Content */
+.ntf-container .ntf-content {
+  flex-grow: 1;
+}
+
+.ntf-container .ntf-time {
+  font-size: 13px;
+  color: var(--color-text-light, #6b7280);
+}
+
+/* 5. Footer Styles */
+.ntf-container .ntf-show-all-link {
+  font-size: 13px;
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+.ntf-container .ntf-show-all-link:hover {
+  text-decoration: underline;
+}
+
+/* Custom Scrollbar for the list */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+/* Notification dropdown styling end */
 /* =========================================
    GLOBAL THEMED SCROLLBAR
 ========================================= */

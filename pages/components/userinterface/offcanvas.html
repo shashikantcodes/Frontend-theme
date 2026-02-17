@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards-Advance</title>
+    <link rel="stylesheet" href="../../../assets/css/component/userinterface/offcanvas.css" />
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+      <div class="ph-header">
+        <h4 class="ph-title mb-0">
+          Offcanvas
+          <i class="bi bi-play-circle ph-play pt-1"></i>
+        </h4>
+
+        <div class="ph-actions">
+          <div class="ph-search-container" id="phSearch">
+            <div class="ph-search-wrapper">
+              <button type="button" class="ph-search-trigger">
+                <i class="bi bi-search"></i>
+              </button>
+
+              <input type="text" class="ph-search-input" placeholder="Search leads..." />
+
+              <span class="ph-search-close">
+                <i class="bi bi-x"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="ph-tools">
+            <i class="bi bi-funnel ph-icon"></i>
+            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-three-dots-vertical ph-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <main class="content-area">
+        <div class="d-flex flex-wrap justify-content-center gap-4">
+          <!-- Button 1 -->
+          <button
+            class="btn-panel text-white"
+            style="background: var(--color-primary)"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#crmPanel"
+          >
+            1. Modern CRM
+          </button>
+
+          <!-- Button 2 -->
+          <button
+            class="btn-panel text-white"
+            style="background: var(--color-secondary)"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#notifPanel"
+          >
+            2. Notifications
+          </button>
+
+          <!-- Button 3 -->
+          <button
+            class="btn-panel text-white"
+            style="background: var(--color-text-main)"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#formPanel"
+          >
+            3. Pro Form
+          </button>
+        </div>
+      </main>
+    </div>
+    <!-- STYLE 1: MODERN CRM PROFILE -->
+    <div class="offcanvas offcanvas-end offcanvas-crm" tabindex="-1" id="crmPanel">
+      <div class="offcanvas-header crm-header">
+        <div class="d-flex align-items-center gap-3">
+          <div class="crm-icon-box">
+            <i class="bi bi-person-lines-fill"></i>
+          </div>
+          <div>
+            <h5 class="m-0 fw-bold" style="letter-spacing: -0.5px; color: var(--color-text-main)">
+              User Profile
+            </h5>
+            <small style="color: var(--color-text-light); font-weight: 500">Account Settings</small>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="btn-close-custom"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="offcanvas-body p-4" style="background: var(--color-bg-card)">
+        <div class="mb-4 input-group-modern">
+          <label class="label-modern">Full Name</label>
+          <input type="text" class="input-modern" value="Sarah Jenkins" />
+        </div>
+        <div class="mb-4 input-group-modern">
+          <label class="label-modern">Work Email</label>
+          <input type="email" class="input-modern" value="sarah.j@company.com" />
+        </div>
+        <div class="mb-4 input-group-modern">
+          <label class="label-modern">Role</label>
+          <input
+            type="text"
+            class="input-modern"
+            value="Senior Administrator"
+            readonly
+            style="opacity: 0.7"
+          />
+        </div>
+      </div>
+
+      <div class="crm-footer">
+        <button class="btn-crm-action btn-crm-cancel" data-bs-dismiss="offcanvas">Cancel</button>
+        <button class="btn-crm-action btn-crm-save">Save Changes</button>
+      </div>
+    </div>
+
+    <!-- STYLE 2: NOTIFICATION (EXACT BADGE) -->
+    <div class="offcanvas offcanvas-end offcanvas-notif" tabindex="-1" id="notifPanel">
+      <div class="notif-header">
+        <div class="d-flex align-items-center">
+          <h6 class="m-0 fw-bold" style="color: var(--color-text-main); font-size: 1.05rem">
+            Your Notifications
+          </h6>
+          <!-- Exact Pill Design -->
+          <div class="badge-container">Unread <span class="badge-count">2</span></div>
+        </div>
+        <button
+          type="button"
+          class="btn-close-custom"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <div class="tabs-row">
+        <a class="tab-link active">
+          <i class="bi bi-grid-fill"></i>
+          View All
+        </a>
+        <a class="tab-link">
+          <i class="bi bi-list-check"></i>
+          Tasks <span class="ms-1" style="color: var(--color-text-light)">0</span>
+        </a>
+        <a class="tab-link">
+          <i class="bi bi-bell-fill"></i>
+          Notifications <span class="ms-1" style="color: var(--color-text-light)">2</span>
+        </a>
+        <a href="#" class="mark-all-link">Mark All As Read</a>
+      </div>
+      <div class="notif-body">
+        <!-- Item 1 -->
+        <div class="notif-item">
+          <div class="red-dot"></div>
+          <div class="icon-wrapper">
+            <i class="bi bi-download"></i>
+          </div>
+          <div class="time-stamp">10/02/2026 3:42 am</div>
+        </div>
+        <!-- Item 2 -->
+        <div class="notif-item">
+          <div class="red-dot"></div>
+          <div class="icon-wrapper">
+            <i class="bi bi-download"></i>
+          </div>
+          <div class="time-stamp">09/02/2026 4:01 pm</div>
+        </div>
+      </div>
+      <div class="notif-footer">
+        <a href="#" class="footer-link">
+          <i class="bi bi-box-arrow-up-right"></i>
+          Show All Notifications
+        </a>
+      </div>
+    </div>
+
+    <!-- STYLE 3: PROFESSIONAL FORM (Theme Integrated & Sticky Footer) -->
+    <div class="offcanvas offcanvas-end offcanvas-form" tabindex="-1" id="formPanel">
+      <!-- Header adapts to theme (Dark/Light/Yellow) -->
+      <div class="form-header">
+        <div>
+          <h4 class="form-title">Create New Project</h4>
+          <p class="form-subtitle">Enter project details and assignment.</p>
+        </div>
+        <button type="button" class="btn-close-form" data-bs-dismiss="offcanvas" aria-label="Close">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+      <!-- Form Content (Scrolls) -->
+      <div class="form-body">
+        <div class="mb-4">
+          <label class="form-label-pro">Project Name</label>
+          <input type="text" class="form-control-pro" placeholder="e.g. Website Redesign" />
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <label class="form-label-pro">Client</label>
+            <input type="text" class="form-control-pro" placeholder="Client Name" />
+          </div>
+          <div class="col-md-6 mb-4">
+            <label class="form-label-pro">Priority</label>
+            <select class="form-control-pro">
+              <option>Medium</option>
+              <option>High</option>
+              <option>Urgent</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label-pro">Description</label>
+          <textarea
+            class="form-control-pro"
+            rows="8"
+            placeholder="Brief project overview..."
+          ></textarea>
+        </div>
+        <!-- Extra content to test scroll -->
+        <div class="text-muted small mt-4" style="color: var(--color-text-light) !important">
+          <p>Ensure all mandatory fields are filled before submitting.</p>
+        </div>
+      </div>
+
+      <!-- Sticky Footer -->
+      <div class="form-footer">
+        <button class="btn btn-pro-secondary" data-bs-dismiss="offcanvas">Cancel</button>
+        <button class="btn btn-pro-primary">Create Project</button>
+      </div>
+    </div>
+    <script src="../../../assets/js/layout.js"></script>
+  </body>
+</html>

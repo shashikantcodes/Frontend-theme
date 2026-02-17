@@ -29,7 +29,148 @@
     <i class="bi bi-wallet2 top-icon-btn" title="Wallet"></i>
     <i class="bi bi-gear top-icon-btn" title="Settings"></i>
     <i class="bi bi-question-circle top-icon-btn" title="Help"></i>
-    <i class="bi bi-bell top-icon-btn" title="Notifications"></i>
+
+    <!-- Notification Dropdown Start -->
+    <div class="dropdown ntf-container">
+      <button
+        class="btn p-0 border-0"
+        type="button"
+        data-bs-toggle="dropdown"
+        data-bs-auto-close="outside"
+        aria-expanded="false"
+      >
+        <i class="bi bi-bell top-icon-btn ntf-trigger-icon" title="Notifications"></i>
+      </button>
+
+      <div class="dropdown-menu dropdown-menu-end ntf-menu p-0">
+        <div class="ntf-header d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center gap-2">
+            <h6 class="mb-0 fw-bold">Your Notifications</h6>
+            <span class="badge rounded-pill bg-primary ntf-badge">Unread 2</span>
+          </div>
+          <button class="btn btn-sm text-muted p-0 border-0"><i class="bi bi-x-lg"></i></button>
+        </div>
+
+        <div class="ntf-tabs d-flex align-items-center justify-content-between px-3 border-bottom">
+          <div class="d-flex gap-3">
+            <button class="ntf-tab-btn active"><i class="bi bi-eye me-1"></i> View All</button>
+            <button class="ntf-tab-btn text-muted">
+              <i class="bi bi-calendar-check me-1"></i> Tasks <span class="ntf-count">0</span>
+            </button>
+            <button class="ntf-tab-btn text-muted">
+              <i class="bi bi-bell me-1"></i> Notifications <span class="ntf-count">2</span>
+            </button>
+          </div>
+          <a href="#" class="ntf-mark-read">Mark All As Read</a>
+        </div>
+
+        <div class="ntf-body custom-scrollbar">
+          <a href="#" class="ntf-item unread">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">10/02/2026 3:42 am</div>
+            </div>
+          </a>
+
+          <a href="#" class="ntf-item unread">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">09/02/2026 4:01 pm</div>
+            </div>
+          </a>
+
+          <a href="#" class="ntf-item">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">09/02/2026 1:57 pm</div>
+            </div>
+          </a>
+
+          <a href="#" class="ntf-item">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">09/02/2026 10:35 am</div>
+            </div>
+          </a>
+
+          <a href="#" class="ntf-item">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">08/02/2026 11:48 pm</div>
+            </div>
+          </a>
+
+          <a href="#" class="ntf-item">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">07/02/2026 4:07 pm</div>
+            </div>
+          </a>
+          <a href="#" class="ntf-item">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">07/02/2026 2:44 pm</div>
+            </div>
+          </a>
+          <a href="#" class="ntf-item">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">07/02/2026 2:43 pm</div>
+            </div>
+          </a>
+          <a href="#" class="ntf-item">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">07/02/2026 10:38 am</div>
+            </div>
+          </a>
+          <a href="#" class="ntf-item">
+            <div class="ntf-icon-wrapper">
+              <i class="bi bi-upload"></i>
+              <span class="ntf-dot"></span>
+            </div>
+            <div class="ntf-content">
+              <div class="ntf-time">07/02/2026 10:30 am</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="ntf-footer text-center py-2 border-top">
+          <a href="#" class="ntf-show-all-link">
+            <i class="bi bi-box-arrow-up-right me-1"></i> Show All Notifications
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- notification Dropdown End -->
+    <!-- theme Selector start -->
     <div class="dropdown">
       <button class="theme-switch-btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
         <i class="bi bi-palette"></i>
@@ -47,8 +188,73 @@
         </li>
       </ul>
     </div>
+    <!-- theme Selector end -->
+    <!-- Top Profile Widget start -->
+    <div class="dropdown tpw-container">
+      <button
+        class="btn p-0 border-0"
+        type="button"
+        data-bs-toggle="dropdown"
+        data-bs-display="static"
+        aria-expanded="false"
+      >
+        <div class="tpw-trigger-avatar">VS</div>
+      </button>
 
-    <div class="user-avatar-circle">VS</div>
+      <ul class="dropdown-menu dropdown-menu-end tpw-menu">
+        <li class="tpw-section-header">
+          <div class="d-flex align-items-start">
+            <div class="flex-shrink-0 pt-1">
+              <div class="tpw-avatar-lg">VS</div>
+            </div>
+
+            <div class="flex-grow-1 ms-3">
+              <a href="#" class="tpw-name-link">Vikas Saraswat</a>
+              <div class="tpw-email">vikas.saraswat@cpuniverse.in</div>
+
+              <div class="tpw-meta mt-2">
+                <span>A/C Manager :</span> <strong class="text-body">Lokesh Verma</strong>
+              </div>
+              <div class="tpw-meta">
+                <span>Mobile Number :</span>
+              </div>
+              <div class="tpw-meta">
+                <span>Ticket Id :</span>
+                <a href="#" class="tpw-link">ticket@nopaperforms.com</a>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li><div class="tpw-divider"></div></li>
+
+        <li>
+          <a class="dropdown-item tpw-item" href="#">
+            <i class="bi bi-shield-check tpw-icon"></i>
+            <span>Security Settings</span>
+          </a>
+        </li>
+
+        <li><div class="tpw-divider"></div></li>
+
+        <li>
+          <a class="dropdown-item tpw-item" href="#">
+            <i class="bi bi-file-lock tpw-icon"></i>
+            <span>Change Password</span>
+          </a>
+        </li>
+
+        <li><div class="tpw-divider"></div></li>
+
+        <li>
+          <a class="dropdown-item tpw-item" href="#">
+            <i class="bi bi-box-arrow-right tpw-icon"></i>
+            <span>Sign Out</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Top Profile Widget end -->
   </div>
 </header>
 
