@@ -259,7 +259,7 @@
   border-bottom-color: rgba(0, 0, 0, 0.1);
 }
 
-.acc-theme-saas.style-orange-track::after {
+/* .acc-theme-saas.style-orange-track::after {
   content: '';
   position: absolute;
   right: 40px;
@@ -268,10 +268,10 @@
   width: 2px;
   background: rgba(255, 255, 255, 0.3);
   z-index: 0;
-}
-[data-theme='yellow'] .acc-theme-saas.style-orange-track::after {
+} */
+/* [data-theme='yellow'] .acc-theme-saas.style-orange-track::after {
   background: rgba(0, 0, 0, 0.1);
-}
+} */
 
 .acc-theme-saas.style-orange-track .accordion-button {
   background: transparent;
