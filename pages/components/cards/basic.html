@@ -1,0 +1,1862 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards-Basic</title>
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+      <div class="ph-header">
+        <h4 class="ph-title mb-0">
+          Basic
+          <i class="bi bi-play-circle ph-play pt-1"></i>
+        </h4>
+
+        <div class="ph-actions">
+          <div class="ph-search-container" id="phSearch">
+            <div class="ph-search-wrapper">
+              <button type="button" class="ph-search-trigger">
+                <i class="bi bi-search"></i>
+              </button>
+
+              <input type="text" class="ph-search-input" placeholder="Search leads..." />
+
+              <span class="ph-search-close">
+                <i class="bi bi-x"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="ph-tools">
+            <i class="bi bi-funnel ph-icon"></i>
+            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-three-dots-vertical ph-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <main class="content-area">
+        <div class="container-xxxl py-4">
+          <!-- ==========================================================
+               PAGE: Cards / Basic
+               Purpose: Premium showcase of reusable card patterns.
+               Notes:
+               - All UI blocks use theme variables (see style.css)
+               - Reusable card utilities live in assets/css/component.css
+          =========================================================== -->
+
+          <!-- =============================
+               HERO / INTRO
+          ============================== -->
+          <div class="row align-items-center mb-3">
+            <div class="col-12 col-lg-8">
+              <h2 class="mb-1" style="color: var(--color-text-main); font-weight: 900">
+                Premium card layouts
+              </h2>
+              <p class="mb-0" style="color: var(--color-text-light)">
+                Pick any block from below and reuse it anywhere—without writing new CSS.
+              </p>
+            </div>
+            <div class="col-12 col-lg-4 mt-3 mt-lg-0 d-flex gap-2 justify-content-lg-end">
+              <button class="ui-btn-ghost">Preview</button>
+              <button class="ui-btn-primary">Create</button>
+            </div>
+          </div>
+
+          <!-- =============================
+               PAGE NAVIGATION (Jump Tabs)
+          ============================== -->
+          <div class="mb-4 ui-sticky-nav" id="nav">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <div
+                  class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3"
+                >
+                  <div>
+                    <h4>Navigation</h4>
+                    <p>Jump to a section. Use this as a reusable navigation block on any page.</p>
+                  </div>
+                  <div class="ui-tabs">
+                    <a class="ui-tab active" href="#highlights">Highlights</a>
+                    <a class="ui-tab" href="#masonry">Masonry</a>
+                    <a class="ui-tab" href="#products">Products</a>
+                    <a class="ui-tab" href="#pricing">Pricing</a>
+                    <a class="ui-tab" href="#blog">Blog</a>
+                    <a class="ui-tab" href="#messages">Messages</a>
+                    <a class="ui-tab" href="#notifications">Notifications</a>
+                    <a class="ui-tab" href="#groups">Groups</a>
+                    <a class="ui-tab" href="#features">Features</a>
+                    <a class="ui-tab" href="#lists">Lists</a>
+                    <a class="ui-tab" href="#variations">Variations</a>
+                    <a class="ui-tab" href="#grid">Grid</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: HIGHLIGHTS
+               Tip: Use these as the default card patterns.
+          ============================== -->
+          <div class="row g-4" id="highlights">
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-img-lg">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80"
+                    alt="Fresh Food"
+                  />
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge ui-badge-primary"
+                      ><i class="bi bi-lightning-charge"></i> Featured</span
+                    >
+                    <span class="ui-meta"><i class="bi bi-clock"></i> 6 min</span>
+                  </div>
+                  <h5 class="ui-card-title">Healthy Selections</h5>
+                  <p class="ui-card-description">
+                    Premium cards with theme variables, perfect spacing, and modern hover.
+                  </p>
+                  <div class="ui-card-actions-between">
+                    <a class="ui-link" href="#">Details</a>
+                    <button class="ui-btn-primary">Explore</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-accent">
+                <div class="ui-card-header">
+                  <div class="ui-meta-row">
+                    <div>
+                      <h5 class="ui-card-title m-0">Team update</h5>
+                      <small class="ui-card-subtitle">Weekly summary</small>
+                    </div>
+                    <span class="ui-badge">v2.4</span>
+                  </div>
+                </div>
+                <div class="ui-card-content">
+                  <p class="ui-card-description">
+                    Status cards are easy: compose title, meta, divider and actions with reusable
+                    utilities.
+                  </p>
+                  <div class="ui-divider"></div>
+                  <div class="row g-3">
+                    <div class="col-6">
+                      <div class="ui-kpi">
+                        <div class="ui-kpi-value">128</div>
+                        <div class="ui-kpi-label">New leads</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="ui-kpi">
+                        <div class="ui-kpi-value">76%</div>
+                        <div class="ui-kpi-label">Conversion</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-card-footer">
+                  <span class="ui-meta"><i class="bi bi-shield-check"></i> Verified</span>
+                  <button class="ui-btn-ghost">View</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-gradient">
+                <div class="ui-card-content">
+                  <div class="d-flex align-items-center gap-3 mb-3">
+                    <div class="ui-avatar ui-avatar-soft"><i class="bi bi-stars"></i></div>
+                    <div>
+                      <h5 class="ui-card-title mb-0">Pro plan</h5>
+                      <div class="ui-muted">For teams building fast</div>
+                    </div>
+                  </div>
+                  <div class="ui-price mb-2">
+                    <div class="ui-price-amount">₹799</div>
+                    <div class="ui-price-period">/month</div>
+                  </div>
+                  <p class="ui-card-description mb-3">
+                    Access premium components, reusable utilities, and a clean design system.
+                  </p>
+                  <div class="ui-card-actions-between">
+                    <a href="#" class="ui-link">Compare</a>
+                    <button class="ui-btn-primary">Upgrade</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-compact ui-card-img-sm">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1541288097308-7b8e3f58c4c6?auto=format&fit=crop&w=1200&q=80"
+                    alt="Waffles"
+                  />
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge ui-badge-danger"
+                      ><i class="bi bi-fire"></i> Trending</span
+                    >
+                    <span class="ui-meta"><i class="bi bi-heart"></i> 2.1k</span>
+                  </div>
+                  <h5 class="ui-card-title">Breakfast Waffles</h5>
+                  <p class="ui-card-description">
+                    Smaller image card with compact padding for dense dashboards.
+                  </p>
+                  <div class="ui-card-actions">
+                    <button class="ui-btn-primary w-100">Order now</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card">
+                <div class="ui-card-header">
+                  <div class="ui-meta-row">
+                    <h5 class="ui-card-title m-0">Quick actions</h5>
+                    <span class="ui-meta"><i class="bi bi-three-dots"></i></span>
+                  </div>
+                </div>
+                <div class="ui-card-content">
+                  <p class="ui-card-description mb-3">
+                    List + actions pattern. Works great for admin panels.
+                  </p>
+                  <ul class="ui-list-group-flush">
+                    <li class="ui-list-item d-flex justify-content-between">
+                      <span>Daily report</span>
+                      <span class="ui-badge ui-badge-primary">NEW</span>
+                    </li>
+                    <li class="ui-list-item d-flex justify-content-between">
+                      <span>Team meeting</span>
+                      <span class="ui-muted">→</span>
+                    </li>
+                    <li class="ui-list-item d-flex justify-content-between">
+                      <span>Export data</span>
+                      <span class="ui-muted">→</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="ui-card-footer">
+                  <a href="#" class="ui-link">Learn more</a>
+                  <button class="ui-btn-ghost">Run</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-soft">
+                <div class="ui-card-content">
+                  <span class="ui-label-header">Support</span>
+                  <h5 class="ui-card-title">Need help?</h5>
+                  <p class="ui-card-description mb-3">
+                    A clean info card for notices, tips and announcements.
+                  </p>
+                  <div class="ui-card-actions-between">
+                    <button class="ui-btn-ghost">Contact</button>
+                    <button class="ui-btn-primary">Open ticket</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: MASONRY
+          ============================== -->
+          <div class="row mt-4 mb-4" id="masonry">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Card masonry (gallery style)</h4>
+                <p>Responsive columns with a clean fallback on mobile.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-masonry">
+            <div class="ui-masonry-item">
+              <div class="ui-card ui-card-cover">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1400&q=80"
+                    alt="Masonry 1"
+                  />
+                </div>
+                <div class="ui-card-overlay"></div>
+                <div class="ui-cover-content">
+                  <div class="ui-meta-row">
+                    <span class="ui-badge ui-badge-primary">Recipe</span>
+                    <span class="ui-meta">8 min</span>
+                  </div>
+                  <h5 class="ui-cover-title">Masonry hero</h5>
+                  <p class="ui-cover-subtitle">Auto columns + responsive fallback.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-masonry-item">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">Alignment</span>
+                    <span class="ui-meta"><i class="bi bi-text-left"></i></span>
+                  </div>
+                  <h5 class="ui-card-title">Text alignment</h5>
+                  <p class="ui-card-description mb-3">
+                    Keep title/description consistent and readable across layouts.
+                  </p>
+                  <div class="ui-mini-list">
+                    <div class="ui-mini-item ui-row">
+                      <span>Left</span><span class="ui-muted">Default</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <span>Center</span><span class="ui-muted">Hero cards</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <span>Right</span><span class="ui-muted">KPIs</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-masonry-item">
+              <div class="ui-card ui-card-img-sm">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1400&q=80"
+                    alt="Masonry 2"
+                  />
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge ui-badge-primary">Blog</span>
+                    <span class="ui-meta"><i class="bi bi-book"></i> 4 min</span>
+                  </div>
+                  <h5 class="ui-card-title">Quick read</h5>
+                  <p class="ui-card-description">Compact card for feeds and lists.</p>
+                  <a class="ui-link" href="#">Open article</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-masonry-item">
+              <div class="ui-card ui-card-compact ui-card-outline">
+                <div class="ui-card-content">
+                  <span class="ui-label-header">Placeholder</span>
+                  <h5 class="ui-card-title">Outline (dashed)</h5>
+                  <p class="ui-card-description">Use this for empty states or add-new tiles.</p>
+                  <button class="ui-btn-ghost w-100">Add item</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-masonry-item">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">Status</span>
+                    <span class="ui-meta"><i class="bi bi-check2-circle"></i> Live</span>
+                  </div>
+                  <h5 class="ui-card-title">Daily summary</h5>
+                  <p class="ui-card-description mb-3">
+                    Compact KPIs that fit nicely inside masonry columns.
+                  </p>
+                  <div class="ui-stat-grid">
+                    <div class="ui-stat">
+                      <div class="ui-stat-title">Orders</div>
+                      <div class="ui-stat-value">128</div>
+                      <div class="ui-stat-trend"><i class="bi bi-arrow-up"></i> +6.2%</div>
+                    </div>
+                    <div class="ui-stat">
+                      <div class="ui-stat-title">Returns</div>
+                      <div class="ui-stat-value">3</div>
+                      <div class="ui-stat-trend down"><i class="bi bi-arrow-down"></i> -0.8%</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-card-footer">
+                  <span class="ui-meta"><i class="bi bi-clock"></i> Updated</span>
+                  <button class="ui-btn-ghost">View</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-masonry-item">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge ui-badge-primary">Notice</span>
+                    <span class="ui-meta"><i class="bi bi-info-circle"></i> UI</span>
+                  </div>
+                  <div class="ui-notice ui-notice-primary mb-3">
+                    <div style="font-weight: 900; color: var(--color-text-main)">Tip</div>
+                    <div class="ui-muted">Masonry looks best when cards have mixed heights.</div>
+                  </div>
+                  <div class="ui-notice">
+                    <div style="font-weight: 900; color: var(--color-text-main)">Reminder</div>
+                    <div class="ui-muted">Use reusable classes—avoid one-off CSS per card.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-masonry-item">
+              <div class="ui-card ui-card-img-sm">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1517705008128-361805f42e86?auto=format&fit=crop&w=1400&q=80"
+                    alt="Masonry product"
+                  />
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">Product</span>
+                    <span class="ui-meta"><i class="bi bi-star-fill"></i> 4.7</span>
+                  </div>
+                  <h5 class="ui-card-title">Minimal desk lamp</h5>
+                  <p class="ui-card-description mb-3">
+                    Small product card that adapts well to columns.
+                  </p>
+                  <div class="ui-card-actions-between">
+                    <div class="ui-price">
+                      <div class="ui-price-amount">₹1,299</div>
+                      <div class="ui-price-period">one-time</div>
+                    </div>
+                    <button class="ui-btn-primary ui-btn-fluid-sm">Buy</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-masonry-item">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">Chips</span>
+                    <span class="ui-meta"><i class="bi bi-ui-checks"></i> UI</span>
+                  </div>
+                  <h5 class="ui-card-title">Quick filters</h5>
+                  <p class="ui-card-description mb-3">
+                    Small utility card to balance masonry height.
+                  </p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ui-chip ui-chip-soft">Today</span>
+                    <span class="ui-chip ui-chip-soft">Week</span>
+                    <span class="ui-chip ui-chip-soft">Month</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ui-masonry-item">
+              <div class="ui-card ui-card-compact ui-card-soft">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">CTA</span>
+                    <span class="ui-meta"><i class="bi bi-lightning-charge"></i> Quick</span>
+                  </div>
+                  <h5 class="ui-card-title">Create a report</h5>
+                  <p class="ui-card-description mb-3">
+                    One-line CTA card for dashboards and empty gaps.
+                  </p>
+                  <button class="ui-btn-primary w-100">New report</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: PRODUCTS
+          ============================== -->
+          <div class="row mt-4 mb-4" id="products">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Products grid + horizontal variations</h4>
+                <p>Product cards, horizontal layouts, and clean CTA patterns.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="ui-card ui-card-horizontal">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80"
+                    alt="Watch"
+                  />
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">Product</span>
+                    <span class="ui-meta"><i class="bi bi-truck"></i> Free delivery</span>
+                  </div>
+                  <h5 class="ui-card-title">Smart watch</h5>
+                  <p class="ui-card-description mb-3">
+                    Horizontal layout for dense pages and lists.
+                  </p>
+                  <div class="ui-card-actions-between">
+                    <div class="ui-price">
+                      <div class="ui-price-amount">₹4,999</div>
+                      <div class="ui-price-period">offer</div>
+                    </div>
+                    <button class="ui-btn-primary">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="ui-card ui-card-horizontal">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=1200&q=80"
+                    alt="Workspace"
+                  />
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge ui-badge-primary">Template</span>
+                    <span class="ui-meta"><i class="bi bi-download"></i> 2.4k</span>
+                  </div>
+                  <h5 class="ui-card-title">Workspace kit</h5>
+                  <p class="ui-card-description mb-3">
+                    Card caps + media blocks with clean typography.
+                  </p>
+                  <div class="d-flex gap-2">
+                    <button class="ui-btn-ghost">Preview</button>
+                    <button class="ui-btn-primary">Use</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-img-sm">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1200&q=80"
+                    alt="Shoes"
+                  />
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">Product</span>
+                    <span class="ui-meta"><i class="bi bi-star-fill"></i> 4.6</span>
+                  </div>
+                  <h5 class="ui-card-title">Runner shoes</h5>
+                  <p class="ui-card-description mb-3">Grid product card variant.</p>
+                  <div class="ui-card-actions-between">
+                    <span class="ui-meta"><i class="bi bi-cart"></i> In stock</span>
+                    <button class="ui-btn-primary">Buy</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-img-sm">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=1200&q=80"
+                    alt="Perfume"
+                  />
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge ui-badge-primary">New</span>
+                    <span class="ui-meta"><i class="bi bi-heart"></i> 1.2k</span>
+                  </div>
+                  <h5 class="ui-card-title">Perfume</h5>
+                  <p class="ui-card-description mb-3">Use badges + meta rows for consistency.</p>
+                  <button class="ui-btn-ghost w-100">Add to wishlist</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-img-sm ui-card-outline">
+                <div class="ui-card-content">
+                  <span class="ui-label-header">Card variations</span>
+                  <h5 class="ui-card-title">Solid / label / outline</h5>
+                  <p class="ui-card-description mb-3">
+                    Mix these variants without writing new CSS.
+                  </p>
+                  <div class="d-flex gap-2 flex-wrap">
+                    <span class="ui-chip ui-chip-soft">Solid</span>
+                    <span class="ui-chip ui-chip-soft">Label</span>
+                    <span class="ui-chip ui-chip-soft">Outline</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: MESSAGES
+          ============================== -->
+          <div class="row mt-4 mb-4" id="messages">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Message center (chat + notices)</h4>
+                <p>Notification cards, notices, and chat bubbles.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: MESSAGE CENTER (Notices + Chat)
+               Tip: Copy this block anywhere you need a message center.
+          ============================== -->
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-4">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">System</span>
+                    <span class="ui-meta"><i class="bi bi-info-circle"></i></span>
+                  </div>
+                  <div class="ui-notice ui-notice-primary mb-3">
+                    <div style="font-weight: 900; color: var(--color-text-main)">Update</div>
+                    <div class="ui-muted">New reusable classes added for premium UI.</div>
+                  </div>
+                  <div class="ui-notice">
+                    <div style="font-weight: 900; color: var(--color-text-main)">Reminder</div>
+                    <div class="ui-muted">Use theme variables; avoid per-card CSS.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-8">
+              <div class="ui-card">
+                <div class="ui-card-header">
+                  <div class="ui-meta-row">
+                    <h5 class="ui-card-title m-0">Chat thread</h5>
+                    <span class="ui-meta"><i class="bi bi-emoji-smile"></i> UI</span>
+                  </div>
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-chat">
+                    <div class="ui-chat-row">
+                      <div class="ui-avatar">CP</div>
+                      <div>
+                        <div class="ui-chat-bubble">Can we add card masonry and product grids?</div>
+                        <div class="ui-chat-meta">Client • 12:11</div>
+                      </div>
+                    </div>
+                    <div class="ui-chat-row me">
+                      <div>
+                        <div class="ui-chat-bubble">
+                          Added: masonry, pricing, blog, products, tiles, chat & notices.
+                        </div>
+                        <div class="ui-chat-meta" style="text-align: right">You • 12:12</div>
+                      </div>
+                    </div>
+                    <div class="ui-chat-row">
+                      <div class="ui-avatar ui-avatar-soft"><i class="bi bi-stars"></i></div>
+                      <div>
+                        <div class="ui-chat-bubble">
+                          All patterns are reusable and theme-compatible.
+                        </div>
+                        <div class="ui-chat-meta">Mio • 12:13</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-card-footer">
+                  <button class="ui-btn-ghost">Clear</button>
+                  <button class="ui-btn-primary">Reply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: COLORED TILES
+               Tip: Use for quick links / shortcuts.
+          ============================== -->
+          <div class="row mt-4 mb-4" id="tiles">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Colored tiles (premium quick links)</h4>
+                <p>Use tiles for shortcuts, dashboards and status surfaces.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="ui-card ui-tile ui-tile-purple">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span
+                      class="ui-badge"
+                      style="
+                        background: rgba(255, 255, 255, 0.16);
+                        border-color: rgba(255, 255, 255, 0.25);
+                        color: #fff;
+                      "
+                      >Dashboard</span
+                    >
+                    <i class="bi bi-arrow-up-right" style="opacity: 0.9"></i>
+                  </div>
+                  <h5 class="ui-tile-title">Quick overview</h5>
+                  <div class="ui-tile-subtitle">Stats, KPIs and widgets</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="ui-card ui-tile ui-tile-green">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span
+                      class="ui-badge"
+                      style="
+                        background: rgba(255, 255, 255, 0.16);
+                        border-color: rgba(255, 255, 255, 0.25);
+                        color: #fff;
+                      "
+                      >Leads</span
+                    >
+                    <i class="bi bi-arrow-up-right" style="opacity: 0.9"></i>
+                  </div>
+                  <h5 class="ui-tile-title">Manage pipeline</h5>
+                  <div class="ui-tile-subtitle">Stages, filters, export</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="ui-card ui-tile ui-tile-orange">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span
+                      class="ui-badge"
+                      style="
+                        background: rgba(255, 255, 255, 0.16);
+                        border-color: rgba(255, 255, 255, 0.25);
+                        color: #fff;
+                      "
+                      >Campaign</span
+                    >
+                    <i class="bi bi-arrow-up-right" style="opacity: 0.9"></i>
+                  </div>
+                  <h5 class="ui-tile-title">Launch promos</h5>
+                  <div class="ui-tile-subtitle">Templates & automation</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="ui-card ui-tile ui-tile-blue">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span
+                      class="ui-badge"
+                      style="
+                        background: rgba(255, 255, 255, 0.16);
+                        border-color: rgba(255, 255, 255, 0.25);
+                        color: #fff;
+                      "
+                      >Support</span
+                    >
+                    <i class="bi bi-arrow-up-right" style="opacity: 0.9"></i>
+                  </div>
+                  <h5 class="ui-tile-title">Help center</h5>
+                  <div class="ui-tile-subtitle">Tickets, docs, FAQs</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: PRICING
+          ============================== -->
+          <div class="row mt-4 mb-4" id="pricing">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Pricing table (3 plans)</h4>
+                <p>3-column pricing row with reusable list + CTA patterns.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-outline">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">Starter</span>
+                    <span class="ui-meta"><i class="bi bi-people"></i> Solo</span>
+                  </div>
+                  <h5 class="ui-card-title">Launch</h5>
+                  <div class="ui-price mb-2">
+                    <div class="ui-price-amount">₹0</div>
+                    <div class="ui-price-period">/month</div>
+                  </div>
+                  <p class="ui-card-description mb-3">
+                    Clean defaults for getting started quickly.
+                  </p>
+                  <div class="ui-mini-list">
+                    <div class="ui-mini-item ui-row">
+                      <span>1 workspace</span><span class="ui-muted">✓</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <span>Basic reports</span><span class="ui-muted">✓</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <span>Email support</span><span class="ui-muted">✓</span>
+                    </div>
+                  </div>
+                  <button class="ui-btn-ghost w-100 mt-3">Choose Starter</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-label ui-card-solid-primary">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge ui-badge-primary"
+                      ><i class="bi bi-stars"></i> Most Popular</span
+                    >
+                    <span class="ui-meta"><i class="bi bi-lightning-charge"></i> Pro</span>
+                  </div>
+                  <h5 class="ui-card-title">Scale</h5>
+                  <div class="ui-price mb-2">
+                    <div class="ui-price-amount">₹799</div>
+                    <div class="ui-price-period">/month</div>
+                  </div>
+                  <p class="ui-card-description mb-3">
+                    Premium components, reusable utilities & design system.
+                  </p>
+                  <div class="ui-mini-list">
+                    <div class="ui-mini-item ui-row">
+                      <span>10 workspaces</span><span class="ui-muted">✓</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <span>Advanced reports</span><span class="ui-muted">✓</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <span>Priority support</span><span class="ui-muted">✓</span>
+                    </div>
+                  </div>
+                  <button class="ui-btn-primary w-100 mt-3">Choose Pro</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-4">
+              <div class="ui-card ui-card-solid ui-card-accent">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge">Enterprise</span>
+                    <span class="ui-meta"><i class="bi bi-shield-lock"></i> SSO</span>
+                  </div>
+                  <h5 class="ui-card-title">Custom</h5>
+                  <div class="ui-price mb-2">
+                    <div class="ui-price-amount">₹2,499</div>
+                    <div class="ui-price-period">/month</div>
+                  </div>
+                  <p class="ui-card-description mb-3">
+                    For orgs that need compliance and custom workflows.
+                  </p>
+                  <div class="ui-mini-list">
+                    <div class="ui-mini-item ui-row">
+                      <span>Unlimited workspaces</span><span class="ui-muted">✓</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <span>Audit logs</span><span class="ui-muted">✓</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <span>Dedicated manager</span><span class="ui-muted">✓</span>
+                    </div>
+                  </div>
+                  <button class="ui-btn-ghost w-100 mt-3">Contact sales</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: BLOG / AUTHOR / PRODUCT
+          ============================== -->
+          <div class="row mt-4 mb-4" id="blog">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Blog, author & product cards</h4>
+                <p>Use these for feeds, profiles, product lists, and marketing pages.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-7">
+              <!-- Blog / Author / Product grid (avoid ultra-narrow masonry columns on desktop) -->
+              <div class="row g-4">
+                <div class="col-12">
+                  <div class="ui-card ui-card-horizontal">
+                    <div class="ui-card-img-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
+                        alt="Blog"
+                      />
+                    </div>
+                    <div class="ui-card-content">
+                      <div class="ui-meta-row mb-2">
+                        <span class="ui-badge ui-badge-primary">Blog</span>
+                        <span class="ui-meta"><i class="bi bi-calendar"></i> Feb 2026</span>
+                      </div>
+                      <h5 class="ui-card-title">Design systems that scale</h5>
+                      <p class="ui-card-description mb-3">
+                        Reusable classes, consistent spacing, and theme variables.
+                      </p>
+                      <div class="ui-card-actions-between">
+                        <span class="ui-meta"><i class="bi bi-eye"></i> 18.2k</span>
+                        <a class="ui-link" href="#">Read more</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="ui-card">
+                    <div class="ui-card-header">
+                      <div class="ui-row-left">
+                        <div class="ui-avatar">VS</div>
+                        <div class="min-width-0">
+                          <div style="font-weight: 900; color: var(--color-text-main)">
+                            Vishal Sharma
+                          </div>
+                          <div class="ui-muted ui-ellipsis">Product designer • Theme author</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ui-card-content">
+                      <p class="ui-card-description mb-3">
+                        Profile / author cards for team members with quick actions.
+                      </p>
+                      <div class="ui-stat-grid">
+                        <div class="ui-stat">
+                          <div class="ui-stat-title">Projects</div>
+                          <div class="ui-stat-value">18</div>
+                        </div>
+                        <div class="ui-stat">
+                          <div class="ui-stat-title">Followers</div>
+                          <div class="ui-stat-value">12.4k</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ui-card-footer">
+                      <button class="ui-btn-ghost">Message</button>
+                      <button class="ui-btn-primary">Follow</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="ui-card ui-card-img-sm">
+                    <div class="ui-card-img-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1200&q=80"
+                        alt="Product"
+                      />
+                    </div>
+                    <div class="ui-card-content">
+                      <div class="ui-meta-row mb-2">
+                        <span class="ui-badge">Product</span>
+                        <span class="ui-meta"><i class="bi bi-star-fill"></i> 4.8</span>
+                      </div>
+                      <h5 class="ui-card-title">Creator camera</h5>
+                      <p class="ui-card-description">
+                        Compact product card with price and actions.
+                      </p>
+                      <div class="ui-card-actions-between">
+                        <div class="ui-price">
+                          <div class="ui-price-amount">₹19,999</div>
+                          <div class="ui-price-period">one-time</div>
+                        </div>
+                        <button class="ui-btn-primary ui-btn-fluid-sm">Buy</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="ui-card ui-card-cover">
+                    <div class="ui-card-img-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=80"
+                        alt="Caps"
+                      />
+                    </div>
+                    <div class="ui-card-overlay"></div>
+                    <div class="ui-cover-content">
+                      <div class="ui-meta-row">
+                        <span class="ui-badge ui-badge-primary">Caps</span>
+                        <span class="ui-meta">Overlay</span>
+                      </div>
+                      <h5 class="ui-cover-title">Image caps & overlay</h5>
+                      <p class="ui-cover-subtitle">Text alignment stays readable on media.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+              <div class="ui-card">
+                <div class="ui-card-header">
+                  <div class="ui-meta-row">
+                    <h5 class="ui-card-title m-0">Navigation + alignment</h5>
+                    <span class="ui-badge">UI</span>
+                  </div>
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-tabs mb-3">
+                    <button class="ui-tab active">Default</button>
+                    <button class="ui-tab">Outline</button>
+                    <button class="ui-tab">Label</button>
+                    <button class="ui-tab">Solid</button>
+                  </div>
+                  <div class="ui-notice ui-notice-primary mb-3">
+                    <div style="font-weight: 900; color: var(--color-text-main)">Tip</div>
+                    <div class="ui-muted">Tabs are reusable; you can wire them later with JS.</div>
+                  </div>
+                  <div class="ui-notice ui-notice-danger">
+                    <div style="font-weight: 900; color: var(--color-text-main)">Notice</div>
+                    <div class="ui-muted">All styles remain theme-friendly via CSS variables.</div>
+                  </div>
+                </div>
+                <div class="ui-card-footer">
+                  <button class="ui-btn-ghost">Reset</button>
+                  <button class="ui-btn-primary">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: NOTIFICATIONS + CHAT (Cards)
+          ============================== -->
+          <div class="row mt-4 mb-4" id="notifications">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Notifications & chat style</h4>
+                <p>Feed-style notifications + chat UI in reusable blocks.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="ui-card">
+                <div class="ui-card-header">
+                  <div class="ui-meta-row">
+                    <h5 class="ui-card-title m-0">Notifications</h5>
+                    <span class="ui-badge ui-badge-primary">3 New</span>
+                  </div>
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-mini-list">
+                    <div class="ui-mini-item ui-row">
+                      <div class="ui-row-left">
+                        <div class="ui-icon-bubble ui-icon-bubble-primary">
+                          <i class="bi bi-bell"></i>
+                        </div>
+                        <div class="min-width-0">
+                          <div
+                            class="ui-ellipsis"
+                            style="font-weight: 900; color: var(--color-text-main)"
+                          >
+                            New signup
+                          </div>
+                          <div class="ui-muted ui-ellipsis">A new user joined from campaign</div>
+                        </div>
+                      </div>
+                      <span class="ui-meta">1m</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <div class="ui-row-left">
+                        <div class="ui-icon-bubble"><i class="bi bi-chat-dots"></i></div>
+                        <div class="min-width-0">
+                          <div
+                            class="ui-ellipsis"
+                            style="font-weight: 900; color: var(--color-text-main)"
+                          >
+                            Message
+                          </div>
+                          <div class="ui-muted ui-ellipsis">“Please share the report link.”</div>
+                        </div>
+                      </div>
+                      <span class="ui-meta">8m</span>
+                    </div>
+                    <div class="ui-mini-item ui-row">
+                      <div class="ui-row-left">
+                        <div class="ui-icon-bubble ui-icon-bubble-danger">
+                          <i class="bi bi-shield-exclamation"></i>
+                        </div>
+                        <div class="min-width-0">
+                          <div
+                            class="ui-ellipsis"
+                            style="font-weight: 900; color: var(--color-text-main)"
+                          >
+                            Security
+                          </div>
+                          <div class="ui-muted ui-ellipsis">New device login detected</div>
+                        </div>
+                      </div>
+                      <span class="ui-meta">1h</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-card-footer">
+                  <button class="ui-btn-ghost">Mark all</button>
+                  <button class="ui-btn-primary">Open inbox</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="ui-card">
+                <div class="ui-card-header">
+                  <div class="ui-meta-row">
+                    <h5 class="ui-card-title m-0">Chat</h5>
+                    <span class="ui-badge">Online</span>
+                  </div>
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-chat">
+                    <div class="ui-chat-row">
+                      <div class="ui-avatar ui-avatar-soft"><i class="bi bi-person"></i></div>
+                      <div>
+                        <div class="ui-chat-bubble">
+                          Basic cards page looks premium. Add more sections?
+                        </div>
+                        <div class="ui-chat-meta">Mio • 12:01</div>
+                      </div>
+                    </div>
+                    <div class="ui-chat-row me">
+                      <div>
+                        <div class="ui-chat-bubble">
+                          Yes, add pricing, blog, products, tiles and masonry too.
+                        </div>
+                        <div class="ui-chat-meta" style="text-align: right">You • 12:02</div>
+                      </div>
+                    </div>
+                    <div class="ui-chat-row">
+                      <div class="ui-avatar">VS</div>
+                      <div>
+                        <div class="ui-chat-bubble">
+                          Done. Everything uses reusable classes + theme vars.
+                        </div>
+                        <div class="ui-chat-meta">Vishal • 12:03</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-card-footer">
+                  <button class="ui-btn-ghost">Attach</button>
+                  <button class="ui-btn-primary">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: CARD GROUPS
+          ============================== -->
+          <div class="row mt-4 mb-4" id="groups">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Card groups & grid variations</h4>
+                <p>Default / outline / label variations in a responsive grid.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-card-group">
+            <div class="ui-card ui-card-compact">
+              <div class="ui-card-content">
+                <div class="ui-meta-row mb-2">
+                  <span class="ui-badge">Default</span>
+                  <span class="ui-meta"><i class="bi bi-grid"></i> Grid</span>
+                </div>
+                <h5 class="ui-card-title">Default card</h5>
+                <p class="ui-card-description">Standard look with hover and clean spacing.</p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-compact ui-card-outline">
+              <div class="ui-card-content">
+                <div class="ui-meta-row mb-2">
+                  <span class="ui-badge">Outline</span>
+                  <span class="ui-meta"><i class="bi bi-border"></i> Dashed</span>
+                </div>
+                <h5 class="ui-card-title">Outline card</h5>
+                <p class="ui-card-description">Great for placeholders and optional items.</p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-compact ui-card-label">
+              <div class="ui-card-content">
+                <div class="ui-meta-row mb-2">
+                  <span class="ui-badge">Label</span>
+                  <span class="ui-meta"><i class="bi bi-tag"></i> Left bar</span>
+                </div>
+                <h5 class="ui-card-title">Label card</h5>
+                <p class="ui-card-description">Simple emphasis using a left accent.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: UTILITIES (Building blocks)
+          ============================== -->
+          <div class="row mt-4 mb-4" id="utilities">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Reusable building blocks</h4>
+                <p>Overlay cards + stats + progress + chips (composable).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-6">
+              <div class="ui-card ui-card-cover">
+                <div class="ui-card-img-wrapper">
+                  <img
+                    src="https://images.unsplash.com/photo-1528823872057-9c018a7a7553?auto=format&fit=crop&w=1400&q=80"
+                    alt="Cover"
+                  />
+                </div>
+                <div class="ui-card-overlay"></div>
+                <div class="ui-cover-content">
+                  <div class="ui-meta-row mb-2">
+                    <span class="ui-badge ui-badge-primary"
+                      ><i class="bi bi-compass"></i> Collection</span
+                    >
+                    <span class="ui-badge"><i class="bi bi-geo-alt"></i> Studio</span>
+                  </div>
+                  <h5 class="ui-cover-title">Cover / overlay cards</h5>
+                  <p class="ui-cover-subtitle">Hero style cards for featured sections.</p>
+                  <div class="d-flex gap-2 mt-3">
+                    <button class="ui-btn-primary">Open</button>
+                    <button class="ui-btn-ghost">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-meta-row mb-3">
+                    <div class="d-flex align-items-center gap-2">
+                      <div class="ui-icon-bubble ui-icon-bubble-primary">
+                        <i class="bi bi-graph-up"></i>
+                      </div>
+                      <div>
+                        <div class="ui-label-header mb-1" style="margin-top: 0">Performance</div>
+                        <h5 class="ui-card-title mb-0">Progress & targets</h5>
+                      </div>
+                    </div>
+                    <span class="ui-badge">Today</span>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <div class="ui-stat">
+                        <div class="ui-stat-title">Active users</div>
+                        <div class="ui-stat-value">12,480</div>
+                        <div class="ui-stat-trend"><i class="bi bi-arrow-up"></i> +8.2%</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <div class="ui-stat">
+                        <div class="ui-stat-title">Churn</div>
+                        <div class="ui-stat-value">1.4%</div>
+                        <div class="ui-stat-trend down"><i class="bi bi-arrow-down"></i> -0.3%</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="ui-divider"></div>
+
+                  <div class="ui-row mb-2">
+                    <span class="ui-meta"><i class="bi bi-bullseye"></i> Monthly target</span>
+                    <span class="ui-meta">72%</span>
+                  </div>
+                  <div class="ui-progress ui-progress-soft">
+                    <div class="ui-progress-bar" style="width: 72%"></div>
+                  </div>
+
+                  <div class="ui-row mt-3">
+                    <span class="ui-meta"><i class="bi bi-people"></i> Team seats</span>
+                    <span class="ui-meta">18 / 25</span>
+                  </div>
+                  <div class="ui-progress">
+                    <div class="ui-progress-bar" style="width: 72%"></div>
+                  </div>
+
+                  <div class="d-flex gap-2 mt-3">
+                    <button class="ui-btn-ghost">Report</button>
+                    <button class="ui-btn-primary">Optimize</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: FEATURE CARDS
+          ============================== -->
+          <div class="row mt-4 mb-4" id="features">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Icon feature cards</h4>
+                <p>Icon + title + description + CTA patterns.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-row-left mb-2">
+                    <div class="ui-icon-bubble ui-icon-bubble-primary">
+                      <i class="bi bi-shield-check"></i>
+                    </div>
+                    <div class="min-width-0">
+                      <div class="ui-card-title mb-0">Security</div>
+                      <div class="ui-muted ui-ellipsis">Policy & audit logs</div>
+                    </div>
+                  </div>
+                  <p class="ui-card-description mb-3">Role based access with detailed events.</p>
+                  <div class="ui-card-actions-between">
+                    <a class="ui-link" href="#">Configure</a>
+                    <button class="ui-btn-ghost">Open</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-row-left mb-2">
+                    <div class="ui-icon-bubble"><i class="bi bi-palette"></i></div>
+                    <div class="min-width-0">
+                      <div class="ui-card-title mb-0">Themes</div>
+                      <div class="ui-muted ui-ellipsis">Light / Dark / Yellow</div>
+                    </div>
+                  </div>
+                  <p class="ui-card-description mb-3">All components inherit your CSS variables.</p>
+                  <div class="d-flex gap-2">
+                    <span class="ui-chip ui-chip-soft"><i class="bi bi-sun"></i> Light</span>
+                    <span class="ui-chip ui-chip-soft"><i class="bi bi-moon"></i> Dark</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-row-left mb-2">
+                    <div class="ui-icon-bubble ui-icon-bubble-danger">
+                      <i class="bi bi-exclamation-triangle"></i>
+                    </div>
+                    <div class="min-width-0">
+                      <div class="ui-card-title mb-0">Alerts</div>
+                      <div class="ui-muted ui-ellipsis">Warnings & notices</div>
+                    </div>
+                  </div>
+                  <p class="ui-card-description mb-3">Use badges, chips and soft backgrounds.</p>
+                  <div class="ui-meta-row">
+                    <span class="ui-badge ui-badge-danger">High</span>
+                    <span class="ui-meta"><i class="bi bi-clock"></i> 2m ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="ui-card ui-card-compact">
+                <div class="ui-card-content">
+                  <div class="ui-row-left mb-2">
+                    <div class="ui-icon-bubble ui-icon-bubble-primary">
+                      <i class="bi bi-box-seam"></i>
+                    </div>
+                    <div class="min-width-0">
+                      <div class="ui-card-title mb-0">Modules</div>
+                      <div class="ui-muted ui-ellipsis">Composable sections</div>
+                    </div>
+                  </div>
+                  <p class="ui-card-description mb-3">Build any layout by composing blocks.</p>
+                  <button class="ui-btn-primary w-100">Browse</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: LISTS + LOADING STATES
+          ============================== -->
+          <div class="row mt-4 mb-4" id="lists">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Lists, mini-cards & loading states</h4>
+                <p>Activity feeds, mini list items, and skeleton loaders.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-12 col-lg-5">
+              <div class="ui-card">
+                <div class="ui-card-header">
+                  <div class="ui-meta-row">
+                    <h5 class="ui-card-title m-0">Recent activity</h5>
+                    <span class="ui-badge ui-badge-primary"
+                      ><i class="bi bi-check2-circle"></i> Live</span
+                    >
+                  </div>
+                </div>
+                <div class="ui-card-content">
+                  <div class="ui-mini-list">
+                    <div class="ui-mini-item">
+                      <div class="ui-row">
+                        <div class="ui-row-left">
+                          <div class="ui-avatar">AM</div>
+                          <div class="min-width-0">
+                            <div
+                              class="ui-ellipsis"
+                              style="font-weight: 800; color: var(--color-text-main)"
+                            >
+                              Invoice paid
+                            </div>
+                            <div class="ui-muted ui-ellipsis">#INV-4821 • via UPI</div>
+                          </div>
+                        </div>
+                        <span class="ui-badge ui-badge-primary">+₹2,400</span>
+                      </div>
+                    </div>
+                    <div class="ui-mini-item">
+                      <div class="ui-row">
+                        <div class="ui-row-left">
+                          <div class="ui-avatar ui-avatar-soft"><i class="bi bi-phone"></i></div>
+                          <div class="min-width-0">
+                            <div
+                              class="ui-ellipsis"
+                              style="font-weight: 800; color: var(--color-text-main)"
+                            >
+                              New lead
+                            </div>
+                            <div class="ui-muted ui-ellipsis">Campaign: Summer</div>
+                          </div>
+                        </div>
+                        <button class="ui-btn-ghost">Open</button>
+                      </div>
+                    </div>
+                    <div class="ui-mini-item">
+                      <div class="ui-row">
+                        <div class="ui-row-left">
+                          <div class="ui-icon-bubble"><i class="bi bi-cloud-arrow-down"></i></div>
+                          <div class="min-width-0">
+                            <div
+                              class="ui-ellipsis"
+                              style="font-weight: 800; color: var(--color-text-main)"
+                            >
+                              Export ready
+                            </div>
+                            <div class="ui-muted ui-ellipsis">CSV generated</div>
+                          </div>
+                        </div>
+                        <a class="ui-link" href="#">Download</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="ui-card-footer">
+                  <span class="ui-meta"><i class="bi bi-clock-history"></i> Updated 1m ago</span>
+                  <button class="ui-btn-primary">See all</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-7">
+              <div class="row g-4">
+                <div class="col-12 col-md-6">
+                  <div class="ui-card ui-card-compact">
+                    <div class="ui-card-content">
+                      <div class="ui-meta-row mb-2">
+                        <span class="ui-badge">Loading</span>
+                        <span class="ui-meta"><i class="bi bi-arrow-repeat"></i> Sync</span>
+                      </div>
+                      <div class="ui-skeleton" style="height: 14px; width: 65%"></div>
+                      <div class="ui-skeleton mt-2" style="height: 10px; width: 92%"></div>
+                      <div class="ui-skeleton mt-2" style="height: 10px; width: 85%"></div>
+                      <div class="ui-divider"></div>
+                      <div class="ui-skeleton" style="height: 40px"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <div class="ui-card ui-card-compact">
+                    <div class="ui-card-content">
+                      <div class="ui-row-left mb-2">
+                        <div class="ui-icon-bubble ui-icon-bubble-primary">
+                          <i class="bi bi-kanban"></i>
+                        </div>
+                        <div>
+                          <div class="ui-card-title mb-0">Tasks</div>
+                          <div class="ui-muted">Sprint board</div>
+                        </div>
+                      </div>
+                      <div class="ui-stat-grid">
+                        <div class="ui-stat">
+                          <div class="ui-stat-title">Todo</div>
+                          <div class="ui-stat-value">14</div>
+                        </div>
+                        <div class="ui-stat">
+                          <div class="ui-stat-title">Done</div>
+                          <div class="ui-stat-value">38</div>
+                        </div>
+                      </div>
+                      <div class="ui-divider"></div>
+                      <div class="ui-row mb-2">
+                        <span class="ui-meta"><i class="bi bi-check2-square"></i> Completion</span>
+                        <span class="ui-meta">73%</span>
+                      </div>
+                      <div class="ui-progress">
+                        <div class="ui-progress-bar" style="width: 73%"></div>
+                      </div>
+                      <button class="ui-btn-primary w-100 mt-3">Open board</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12">
+                  <div class="ui-card ui-card-cover">
+                    <div class="ui-card-img-wrapper">
+                      <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80"
+                        alt="Cover 2"
+                      />
+                    </div>
+                    <div class="ui-card-overlay"></div>
+                    <div class="ui-cover-content">
+                      <div class="ui-meta-row">
+                        <span class="ui-badge ui-badge-primary"
+                          ><i class="bi bi-camera"></i> Gallery</span
+                        >
+                        <span class="ui-meta"><i class="bi bi-heart-fill"></i> 18k</span>
+                      </div>
+                      <h5 class="ui-cover-title">Mixed grid layouts</h5>
+                      <p class="ui-cover-subtitle">Combine cover cards, lists and KPIs.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: STYLE VARIATIONS
+          ============================== -->
+          <div class="row mt-4 mb-4" id="variations">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Style variation</h4>
+                <p>Solid / Label / Outline variants for semantic colors (theme-ready).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-grid-cards">
+            <div class="ui-card ui-card-variant ui-card-solid-primary">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Primary card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-solid-secondary">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Secondary card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-solid-success">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Success card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-solid-danger">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Danger card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-solid-warning">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Warning card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-solid-info">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Info card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-divider"></div>
+
+          <div class="ui-grid-cards">
+            <div class="ui-card ui-card-variant ui-card-label-primary">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Primary card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-label-secondary">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Secondary card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-label-success">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Success card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-label-danger">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Danger card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-label-warning">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Warning card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-label-info">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Info card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-divider"></div>
+
+          <div class="ui-grid-cards">
+            <div class="ui-card ui-card-variant ui-card-outline-primary">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Primary card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-outline-secondary">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Secondary card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-outline-success">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Success card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-outline-danger">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Danger card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-outline-warning">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Warning card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+            <div class="ui-card ui-card-variant ui-card-outline-info">
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Info card title</h5>
+                <p class="ui-card-description">
+                  Some quick example text to build on the card title and make up.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- =============================
+               SECTION: GRID CARD
+          ============================== -->
+          <div class="row mt-4 mb-4" id="grid">
+            <div class="col-12">
+              <div class="ui-section-header">
+                <h4>Grid Card</h4>
+                <p>Responsive grid cards (3 columns desktop, 2 tablet, 1 mobile).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-grid-cards">
+            <div class="ui-card ui-grid-card ui-card-img-sm">
+              <div class="ui-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80"
+                  alt="Grid 1"
+                />
+              </div>
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Card title</h5>
+                <p class="ui-card-description">
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content.
+                </p>
+              </div>
+            </div>
+
+            <div class="ui-card ui-grid-card ui-card-img-sm">
+              <div class="ui-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=80"
+                  alt="Grid 2"
+                />
+              </div>
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Card title</h5>
+                <p class="ui-card-description">
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content.
+                </p>
+              </div>
+            </div>
+
+            <div class="ui-card ui-grid-card ui-card-img-sm">
+              <div class="ui-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1400&q=80"
+                  alt="Grid 3"
+                />
+              </div>
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Card title</h5>
+                <p class="ui-card-description">
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content.
+                </p>
+              </div>
+            </div>
+
+            <div class="ui-card ui-grid-card ui-card-img-sm">
+              <div class="ui-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=80"
+                  alt="Grid 4"
+                />
+              </div>
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Card title</h5>
+                <p class="ui-card-description">
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content.
+                </p>
+              </div>
+            </div>
+
+            <div class="ui-card ui-grid-card ui-card-img-sm">
+              <div class="ui-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80"
+                  alt="Grid 5"
+                />
+              </div>
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Card title</h5>
+                <p class="ui-card-description">
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content.
+                </p>
+              </div>
+            </div>
+
+            <div class="ui-card ui-grid-card ui-card-img-sm">
+              <div class="ui-card-img-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1400&q=80"
+                  alt="Grid 6"
+                />
+              </div>
+              <div class="ui-card-content">
+                <h5 class="ui-card-title">Card title</h5>
+                <p class="ui-card-description">
+                  This is a longer card with supporting text below as a natural lead-in to
+                  additional content.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../../assets/js/layout.js"></script>
+  </body>
+</html>

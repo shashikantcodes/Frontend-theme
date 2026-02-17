@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Cards - Premium Dashboard</title>
+
+    <!-- Project Layout Script (Handles CSS/JS/Sidebar/Topbar loading) -->
+    <script src="../../../assets/js/layout.js" defer></script>
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+      
+      <!-- Page Header -->
+      <div class="ph-header">
+        <h4 class="ph-title mb-0">
+          Advanced Cards
+          <i class="bi bi-stars ph-play pt-1" title="Premium Features"></i>
+        </h4>
+
+        <div class="ph-actions">
+          <div class="ph-search-container" id="phSearch">
+            <div class="ph-search-wrapper">
+              <button type="button" class="ph-search-trigger">
+                <i class="bi bi-search"></i>
+              </button>
+              <input type="text" class="ph-search-input" placeholder="Search cards..." />
+              <span class="ph-search-close"><i class="bi bi-x"></i></span>
+            </div>
+          </div>
+          <div class="ph-tools">
+            <i class="bi bi-funnel ph-icon" title="Filter"></i>
+            <i class="bi bi-arrow-clockwise ph-icon" title="Refresh"></i>
+            <i class="bi bi-three-dots-vertical ph-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <main class="content-area">
+        <div class="container-xxl flex-grow-1 container-p-y">
+          <!-- Row 1: Employee List, Transactions, Shared Event -->
+          <div class="row g-6 mb-6">
+            <!-- [CARD 1] Employee List -->
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0 me-2">Employee List</h5>
+                  <div class="dropdown">
+                    <button class="btn text-body-secondary p-0" type="button" data-bs-toggle="dropdown">
+                      <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);">Featured Employees</a>
+                      <a class="dropdown-item" href="javascript:void(0);">Based on Task</a>
+                      <a class="dropdown-item" href="javascript:void(0);">See All</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body pt-4">
+                  <ul class="p-0 m-0">
+                    <li class="d-flex align-items-center mb-6">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="https://i.pravatar.cc/150?u=alberta" alt="User" class="rounded" width="40">
+                      </div>
+                      <div class="d-flex w-100 align-items-center gap-2 text-nowrap">
+                        <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
+                          <div>
+                            <h6 class="mb-0 fw-normal">Alberta</h6>
+                            <small class="text-muted">UI Designer</small>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-1">
+                            <h6 class="mb-0 fw-normal">100h:</h6>
+                            <span class="text-body-secondary">138h</span>
+                          </div>
+                        </div>
+                        <div class="chart-progress-radial" data-series="85" data-color="#696cff"></div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-6">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="https://i.pravatar.cc/150?u=paul" alt="User" class="rounded" width="40">
+                      </div>
+                      <div class="d-flex w-100 align-items-center gap-2 text-nowrap">
+                        <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
+                          <div>
+                            <h6 class="mb-0 fw-normal">Paul</h6>
+                            <small class="text-muted">Branding</small>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-1">
+                            <h6 class="mb-0 fw-normal">121h:</h6>
+                            <span class="text-body-secondary">109h</span>
+                          </div>
+                        </div>
+                        <div class="chart-progress-radial" data-series="70" data-color="#ffab00"></div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="https://i.pravatar.cc/150?u=nannie" alt="User" class="rounded" width="40">
+                      </div>
+                      <div class="d-flex w-100 align-items-center gap-2 text-nowrap">
+                        <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
+                          <div>
+                            <h6 class="mb-0 fw-normal">Nannie</h6>
+                            <small class="text-muted">iOS Developer</small>
+                          </div>
+                          <div class="user-progress d-flex align-items-center gap-1">
+                            <h6 class="mb-0 fw-normal">112h:</h6>
+                            <span class="text-body-secondary">160h</span>
+                          </div>
+                        </div>
+                        <div class="chart-progress-radial" data-series="25" data-color="#696cff"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- [CARD 2] Transactions -->
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0 me-2">Transactions</h5>
+                  <div class="dropdown">
+                    <button class="btn text-body-secondary p-0" type="button" data-bs-toggle="dropdown">
+                      <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end">
+                      <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
+                      <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
+                      <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body pt-4">
+                  <ul class="p-0 m-0">
+                    <li class="d-flex align-items-center mb-6">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <span class="avatar-initial rounded bg-label-primary p-2"><i class="bx bxl-paypal fs-4"></i></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <small class="text-muted d-block">Paypal</small>
+                          <h6 class="fw-normal mb-0">Send money</h6>
+                        </div>
+                        <div class="user-progress d-flex align-items-center gap-1">
+                          <h6 class="fw-normal mb-0 text-success">+82.6</h6>
+                          <span class="text-body-secondary">USD</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-6">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <span class="avatar-initial rounded bg-label-success p-2"><i class="bx bx-wallet fs-4"></i></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <small class="text-muted d-block">Wallet</small>
+                          <h6 class="fw-normal mb-0">Mac'D</h6>
+                        </div>
+                        <div class="user-progress d-flex align-items-center gap-1">
+                          <h6 class="fw-normal mb-0 text-success">+270.69</h6>
+                          <span class="text-body-secondary">USD</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <span class="avatar-initial rounded bg-label-info p-2"><i class="bx bx-chart fs-4"></i></span>
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <small class="text-muted d-block">Transfer</small>
+                          <h6 class="fw-normal mb-0">Refund</h6>
+                        </div>
+                        <div class="user-progress d-flex align-items-center gap-1">
+                          <h6 class="fw-normal mb-0 text-success">+637.91</h6>
+                          <span class="text-body-secondary">USD</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- [CARD 3] Shared Event -->
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100 overflow-hidden">
+                <div class="card-header flex-grow-0 pt-4">
+                  <div class="d-flex align-items-center">
+                    <div class="avatar flex-shrink-0 me-3">
+                      <img src="https://i.pravatar.cc/150?u=olivia" alt="User" class="rounded-circle" width="40">
+                    </div>
+                    <div class="d-flex w-100 flex-wrap justify-content-between gap-1">
+                      <div class="me-2 text-nowrap">
+                        <h6 class="mb-0">Olivia Shared Event</h6>
+                        <small class="text-muted">07 Sep 2026 at 10:30 AM</small>
+                      </div>
+                      <div class="dropdown">
+                        <button class="btn text-body-secondary p-0" type="button" data-bs-toggle="dropdown">
+                          <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="position-relative">
+                    <img class="img-fluid object-fit-cover w-100" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Event" height="150">
+                    <div class="position-absolute start-0 bottom-0 mb-n4 ms-4">
+                        <span class="featured-date d-inline-block rounded shadow-lg text-center py-1 px-3 bg-white">
+                        <span class="mb-0 h5 d-block">12</span>
+                        <span class="text-primary small fw-bold text-uppercase">Dec</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body mt-4">
+                  <h6 class="text-truncate mb-2">How To Excel In A Technical Terminology?</h6>
+                  <div class="d-flex gap-2 flex-wrap mb-4">
+                    <span class="badge bg-label-success small">Technical</span>
+                    <span class="badge bg-label-primary small">Excel</span>
+                    <span class="badge bg-label-info small">Account</span>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between mt-4">
+                    <div class="avatar-group d-flex align-items-center">
+                       <li class="avatar pull-up" style="width: 32px; height: 32px;"><img class="rounded-circle border border-2 border-white" src="https://i.pravatar.cc/100?u=1" alt="Avatar"></li>
+                       <li class="avatar pull-up" style="width: 32px; height: 32px;"><img class="rounded-circle border border-2 border-white" src="https://i.pravatar.cc/100?u=2" alt="Avatar"></li>
+                       <li class="avatar pull-up" style="width: 32px; height: 32px;"><img class="rounded-circle border border-2 border-white" src="https://i.pravatar.cc/100?u=3" alt="Avatar"></li>
+                    </div>
+                    <a href="javascript:;" class="btn btn-sm btn-primary">Join Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2: Payment Data, Business Sharks, Upgrade Plan -->
+          <div class="row g-6 mb-6">
+            <!-- [CARD 4] Payment Data -->
+            <div class="col-md-6 col-xxl-4">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <h5 class="card-title m-0 me-2">Payment Data</h5>
+                    <div class="dropdown">
+                      <button class="btn text-body-secondary p-0" type="button" data-bs-toggle="dropdown">
+                        <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body pt-3">
+                    <small class="text-muted d-block mb-1">Price</small>
+                    <div class="d-flex align-items-center mb-4">
+                      <h4 class="text-primary me-2 mb-0">$455.60</h4>
+                      <span class="badge bg-label-primary">35% OFF</span>
+                    </div>
+                    <form class="row g-4" onsubmit="return false">
+                      <div class="col-12">
+                        <small class="d-block mb-2 fw-medium">Choose payment method:</small>
+                        <div class="row g-4">
+                          <div class="col-6">
+                            <div class="form-check custom-option custom-option-basic">
+                                <label class="form-check-label custom-option-content p-2" for="radioPaypal">
+                                  <input class="form-check-input" type="radio" name="payMethod" id="radioPaypal" checked>
+                                  <span class="d-block text-center mt-1">Paypal</span>
+                                </label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-check custom-option custom-option-basic">
+                                <label class="form-check-label custom-option-content p-2" for="radioCC">
+                                  <input class="form-check-input" type="radio" name="payMethod" id="radioCC">
+                                  <span class="d-block text-center mt-1">Credit Card</span>
+                                </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Card Number">
+                      </div>
+                      <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary w-100">Add Card</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+            </div>
+
+            <!-- [CARD 5] Business Sharks -->
+            <div class="col-md-6 col-xxl-4">
+                <div class="card h-100">
+                  <div class="card-header d-flex align-items-center justify-content-between">
+                    <h5 class="card-title m-0 me-2">Business Sharks</h5>
+                    <div class="dropdown">
+                      <button class="btn text-body-secondary p-0" type="button" data-bs-toggle="dropdown">
+                        <i class="bx bx-dots-vertical-rounded fs-4"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="small text-muted mb-4">Focus on items and featured that we use in life without them.</p>
+                    <h6 class="fw-normal mb-3">Basic price is $30</h6>
+                    <div class="d-flex flex-column gap-3">
+                      <div class="form-check custom-option custom-option-basic px-3 py-2 border rounded">
+                         <input class="form-check-input" type="checkbox" id="checkBrand" checked>
+                         <label class="form-check-label d-flex justify-content-between w-100 ms-2" for="checkBrand">
+                           <span class="fw-medium">Branding</span>
+                           <span class="badge bg-label-success">+ $30</span>
+                         </label>
+                      </div>
+                      <div class="form-check custom-option custom-option-basic px-3 py-2 border rounded">
+                         <input class="form-check-input" type="checkbox" id="checkApp">
+                         <label class="form-check-label d-flex justify-content-between w-100 ms-2" for="checkApp">
+                           <span class="fw-medium">App Building</span>
+                           <span class="badge bg-label-primary">+ $125</span>
+                         </label>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between mt-5 mb-4 border-top pt-4">
+                      <span class="fw-medium">Total Amount</span>
+                      <span class="h5 text-primary mb-0">$99</span>
+                    </div>
+                    <button class="btn btn-primary w-100">Purchase</button>
+                  </div>
+                </div>
+            </div>
+
+            <!-- [CARD 6] Upgrade Plan -->
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="card-header d-flex align-items-center justify-content-between">
+                  <h5 class="card-title m-0 me-2">Upgrade Your Plan</h5>
+                </div>
+                <div class="card-body text-center">
+                  <div class="avatar avatar-lg bg-label-primary mx-auto mb-4 p-4" style="width: 80px; height: 80px;">
+                    <i class="bx bx-rocket fs-1"></i>
+                  </div>
+                  <h4 class="mb-1">Premium</h4>
+                  <div class="d-flex justify-content-center align-items-start mb-4">
+                    <span class="h6 mt-1 me-1">$</span>
+                    <h1 class="mb-0 text-primary">2,124</h1>
+                    <sub class="ms-1 fw-normal text-muted small">/year</sub>
+                  </div>
+                  <ul class="list-unstyled text-start mb-4 ps-4">
+                    <li class="mb-2"><i class="bx bx-check text-success me-2"></i> 100GB Cloud Storage</li>
+                    <li class="mb-2"><i class="bx bx-check text-success me-2"></i> Priority Support</li>
+                    <li><i class="bx bx-check text-success me-2"></i> Custom Domain</li>
+                  </ul>
+                  <button class="btn btn-primary w-100">Upgrade Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 4: Statistics Table, Delivery Performance -->
+          <div class="row g-6 mb-6">
+            <!-- [CARD 13] Statistics Table -->
+            <div class="col-xl-8 col-lg-12">
+              <div class="card h-100">
+                <div class="card-body p-0">
+                  <div class="table-responsive text-nowrap">
+                    <table class="table table-hover align-middle mb-0">
+                      <thead>
+                        <tr class="text-muted small fw-bold text-uppercase">
+                          <th class="ps-4">Country</th>
+                          <th>Users</th>
+                          <th>Transactions</th>
+                          <th>Progress</th>
+                          <th class="text-center">Bounce</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-border-bottom-0">
+                        <tr>
+                          <td class="ps-4">
+                            <div class="d-flex align-items-center">
+                              <span class="fs-4 me-2">🇺🇸</span>
+                              <h6 class="mb-0 fw-normal">USA</h6>
+                            </div>
+                          </td>
+                          <td>2.4k</td>
+                          <td>$13,500</td>
+                          <td style="width: 150px;">
+                            <div class="premium-progress"><div class="premium-progress-bar bg-success" style="width: 85%"></div></div>
+                          </td>
+                          <td class="text-center text-success fw-bold">12.5%</td>
+                        </tr>
+                        <tr>
+                          <td class="ps-4">
+                            <div class="d-flex align-items-center">
+                              <span class="fs-4 me-2">🇮🇳</span>
+                              <h6 class="mb-0 fw-normal">India</h6>
+                            </div>
+                          </td>
+                          <td>1.8k</td>
+                          <td>$8,200</td>
+                          <td>
+                            <div class="premium-progress"><div class="premium-progress-bar bg-primary" style="width: 65%"></div></div>
+                          </td>
+                          <td class="text-center text-warning fw-bold">24.1%</td>
+                        </tr>
+                        <tr>
+                            <td class="ps-4">
+                              <div class="d-flex align-items-center">
+                                <span class="fs-4 me-2">🇧🇷</span>
+                                <h6 class="mb-0 fw-normal">Brazil</h6>
+                              </div>
+                            </td>
+                            <td>1.2k</td>
+                            <td>$5,100</td>
+                            <td>
+                              <div class="premium-progress"><div class="premium-progress-bar bg-info" style="width: 45%"></div></div>
+                            </td>
+                            <td class="text-center text-danger fw-bold">32.8%</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- [CARD 14] Delivery Statistics -->
+            <div class="col-xl-4 col-lg-12">
+              <div class="card h-100">
+                <div class="card-header border-0 pb-0 d-flex justify-content-between">
+                  <h5 class="card-title mb-1">Delivery Performance</h5>
+                  <div class="dropdown">
+                    <button class="btn p-0" type="button" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded fs-4"></i></button>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div><h3 class="mb-0">94.2%</h3><small class="text-muted">On-time Delivery</small></div>
+                    <div class="text-end"><h3 class="mb-0">2.1k</h3><small class="text-muted">Total Parcels</small></div>
+                  </div>
+                  <div id="deliveryChart" style="min-height: 180px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 5: Recent Transactions, Website Stats, Top Products -->
+          <div class="row g-6 mb-6">
+            <!-- [CARD 15] Recent Transactions -->
+            <div class="col-xl-4 col-lg-6">
+              <div class="card h-100">
+                <div class="card-header d-flex justify-content-between align-items-center pb-2">
+                  <h5 class="card-title mb-0">Recent Transactions</h5>
+                  <button class="btn p-0"><i class="bx bx-dots-vertical-rounded fs-4"></i></button>
+                </div>
+                <div class="card-body">
+                  <ul class="list-unstyled p-0 m-0">
+                    <li class="d-flex align-items-center mb-6">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="https://i.pravatar.cc/150?u=30" class="rounded-circle" />
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0 fw-normal">John Doe</h6>
+                          <small class="text-muted">Purchased Premium</small>
+                        </div>
+                        <div class="user-progress text-success fw-bold">+$124.0</div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center mb-6">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="https://i.pravatar.cc/150?u=31" class="rounded-circle" />
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0 fw-normal">Sarah K.</h6>
+                          <small class="text-muted">Refund Request</small>
+                        </div>
+                        <div class="user-progress text-danger fw-bold">-$45.2</div>
+                      </div>
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <div class="avatar flex-shrink-0 me-3">
+                        <img src="https://i.pravatar.cc/150?u=32" class="rounded-circle" />
+                      </div>
+                      <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                        <div class="me-2">
+                          <h6 class="mb-0 fw-normal">Mike Rose</h6>
+                          <small class="text-muted">Monthly Sub</small>
+                        </div>
+                        <div class="user-progress text-success fw-bold">+$29.9</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- [CARD 16] Website Statistics -->
+            <div class="col-xl-4 col-lg-6">
+              <div class="card h-100">
+                <div class="card-header d-flex justify-content-between align-items-center pb-0">
+                  <div><h5 class="card-title mb-0">8.72%</h5><small class="text-muted">Bounce Rate</small></div>
+                  <span class="text-success fw-medium"><i class="bx bx-chevron-up"></i> 12%</span>
+                </div>
+                <div class="card-body p-0 overflow-hidden">
+                  <div id="websiteStatsChart" style="min-height: 180px;"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- [CARD 17] Top Products -->
+            <div class="col-xl-4 col-lg-6">
+              <div class="card h-100">
+                <div class="card-header d-flex justify-content-between align-items-center pb-2">
+                  <h5 class="card-title mb-0">Top Products</h5>
+                  <button class="btn p-0"><i class="bx bx-dots-vertical-rounded fs-4"></i></button>
+                </div>
+                <div class="card-body">
+                  <div class="d-flex align-items-center mb-6">
+                    <div class="avatar flex-shrink-0 me-3">
+                      <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-laptop"></i></span>
+                    </div>
+                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                      <div class="me-2">
+                        <h6 class="mb-0 fw-normal">MacBook Pro</h6>
+                        <small class="text-muted">45 Sold today</small>
+                      </div>
+                      <div class="user-progress fw-bold">$2,499</div>
+                    </div>
+                  </div>
+                   <div class="d-flex align-items-center mb-6">
+                    <div class="avatar flex-shrink-0 me-3">
+                      <span class="avatar-initial rounded bg-label-success"><i class="bx bx-phone"></i></span>
+                    </div>
+                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                      <div class="me-2">
+                        <h6 class="mb-0 fw-normal">iPhone 15</h6>
+                        <small class="text-muted">30 Sold today</small>
+                      </div>
+                      <div class="user-progress fw-bold">$999</div>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div class="avatar flex-shrink-0 me-3">
+                      <span class="avatar-initial rounded bg-label-info"><i class="bx bx-watch"></i></span>
+                    </div>
+                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                      <div class="me-2">
+                        <h6 class="mb-0 fw-normal">Apple Watch</h6>
+                        <small class="text-muted">12 Sold today</small>
+                      </div>
+                      <div class="user-progress fw-bold">$399</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 6: Activity Timeline & Finance Summary -->
+          <div class="row g-6 mb-6">
+            <!-- [CARD 18] Activity Timeline -->
+            <div class="col-xl-4 col-lg-6">
+              <div class="card h-100">
+                <div class="card-header d-flex align-items-center justify-content-between pb-2">
+                  <h5 class="card-title mb-0">Activity Timeline</h5>
+                </div>
+                <div class="card-body">
+                  <ul class="timeline">
+                    <li class="timeline-item timeline-item-transparent ps-4">
+                      <span class="timeline-point timeline-point-primary"></span>
+                      <div class="timeline-event">
+                        <div class="timeline-header mb-1">
+                          <h6 class="mb-0">Project meeting with team</h6>
+                          <small class="text-muted">12:30 PM</small>
+                        </div>
+                        <p class="mb-2">Discussing new design patterns for dashboard.</p>
+                      </div>
+                    </li>
+                    <li class="timeline-item timeline-item-transparent ps-4">
+                      <span class="timeline-point timeline-point-success"></span>
+                      <div class="timeline-event">
+                        <div class="timeline-header mb-1">
+                          <h6 class="mb-0">Client proposal sent</h6>
+                          <small class="text-muted">02:15 PM</small>
+                        </div>
+                        <p class="mb-0">Awaiting feedback on the premium plan.</p>
+                      </div>
+                    </li>
+                    <li class="timeline-item timeline-item-transparent ps-4 border-0">
+                      <span class="timeline-point timeline-point-warning"></span>
+                      <div class="timeline-event pb-0">
+                        <div class="timeline-header mb-1">
+                          <h6 class="mb-0">New design system review</h6>
+                          <small class="text-muted">04:00 PM</small>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- [CARD 19] Finance Summary -->
+            <div class="col-xl-8 col-lg-12">
+              <div class="card h-100">
+                <div class="card-header border-0 pb-0 d-flex justify-content-between align-items-center">
+                  <h5 class="card-title mb-0">Finance Summary</h5>
+                  <div class="d-flex gap-3">
+                    <div class="text-end"><h6 class="mb-0">$12,456</h6><small class="text-muted">Income</small></div>
+                    <div class="text-end"><h6 class="mb-0">$8,720</h6><small class="text-muted">Expense</small></div>
+                  </div>
+                </div>
+                <div class="card-body p-0">
+                  <div id="financeSummaryChart" style="min-height: 280px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- [CARD 20] Footer Stats -->
+          <div class="row">
+            <div class="col-12">
+               <div class="card bg-label-primary border-0 shadow-none">
+                  <div class="card-body d-flex align-items-center justify-content-between flex-wrap gap-4">
+                    <div>
+                      <h5 class="mb-1 text-primary">Premium Performance Insights</h5>
+                      <p class="mb-0 text-primary">All data is synchronized in real-time with your cloud storage.</p>
+                    </div>
+                    <button class="btn btn-primary px-4">Download Full Report</button>
+                  </div>
+               </div>
+            </div>
+          </div>
+
+        </div> <!-- End Container -->
+      </main>
+
+    </div> <!-- End Main Wrapper -->
+
+    <!-- Scripts Section -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+      $(function () {
+        console.log('Sneat Style Advanced Cards Initialized');
+
+        // 1. Radial Progress Charts (Employee List)
+        $('.chart-progress-radial').each(function () {
+          var series = parseInt($(this).data('series')) || 0;
+          var color = $(this).data('color') || '#696cff';
+          var options = {
+            series: [series],
+            chart: { height: 60, width: 45, type: 'radialBar', sparkline: { enabled: true } },
+            plotOptions: {
+              radialBar: {
+                hollow: { size: '30%' },
+                dataLabels: { show: false },
+                track: { background: 'rgba(0,0,0,0.05)' }
+              }
+            },
+            colors: [color],
+            stroke: { lineCap: 'round' }
+          };
+          new ApexCharts(this, options).render();
+        });
+
+        // 2. Order Statistics Chart (Donut)
+        var orderChartOptions = {
+          series: [45, 25, 30],
+          chart: { type: 'donut', height: 140 },
+          labels: ['Electronic', 'Fashion', 'Decor'],
+          colors: ['#696cff', '#71dd37', '#03c3ec'],
+          dataLabels: { enabled: false },
+          legend: { show: false },
+          plotOptions: {
+            pie: {
+              donut: {
+                size: '75%',
+                labels: {
+                  show: true,
+                  value: { fontSize: '1rem', fontWeight: '600', offsetY: -5 },
+                  total: { show: true, label: '38%', fontSize: '0.7rem' }
+                }
+              }
+            }
+          }
+        };
+        if($('#orderStatisticsChart').length) {
+            new ApexCharts(document.querySelector("#orderStatisticsChart"), orderChartOptions).render();
+        }
+
+        // 3. Earning Reports Chart (Bar)
+        var earningOptions = {
+          series: [{ name: 'Earnings', data: [30, 45, 35, 50, 40, 60, 55] }],
+          chart: { type: 'bar', height: 140, toolbar: { show: false }, sparkline: { enabled: true } },
+          plotOptions: { bar: { borderRadius: 4, columnWidth: '50%', distributed: true } },
+          dataLabels: { enabled: false },
+          colors: ['#696cff', '#696cff', '#696cff', '#696cff', '#696cff', '#696cff', '#696cff'],
+          tooltip: { enabled: false }
+        };
+        if($('#earningReportsChart').length) {
+            new ApexCharts(document.querySelector("#earningReportsChart"), earningOptions).render();
+        }
+
+        // 4. Delivery Statistics (Area)
+        var deliveryOptions = {
+          series: [{ name: 'Deliveries', data: [100, 200, 150, 300, 250, 400, 350] }],
+          chart: { type: 'area', height: 180, toolbar: { show: false }, sparkline: { enabled: true } },
+          colors: ['#696cff'],
+          fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.1 } },
+          stroke: { curve: 'smooth', width: 2 }
+        };
+        if($('#deliveryChart').length) {
+            new ApexCharts(document.querySelector("#deliveryChart"), deliveryOptions).render();
+        }
+
+        // 5. Website Stats (Line)
+        var websiteOptions = {
+          series: [{ name: 'Clicks', data: [10, 40, 30, 80, 50, 120, 70] }],
+          chart: { type: 'line', height: 180, toolbar: { show: false }, sparkline: { enabled: true } },
+          colors: ['#71dd37'],
+          stroke: { curve: 'smooth', width: 3, lineCap: 'round' }
+        };
+        if($('#websiteStatsChart').length) {
+            new ApexCharts(document.querySelector("#websiteStatsChart"), websiteOptions).render();
+        }
+
+        // 6. Finance Summary (Area Stacked)
+        var financeOptions = {
+          series: [
+            { name: 'Income', data: [400, 600, 500, 900, 700, 1100, 800, 1200, 900, 1300, 1100, 1400] },
+            { name: 'Expense', data: [300, 500, 400, 700, 600, 900, 700, 1000, 800, 1100, 900, 1200] }
+          ],
+          chart: { type: 'area', height: 280, toolbar: { show: false } },
+          colors: ['#696cff', '#ff3e1d'],
+          dataLabels: { enabled: false },
+          stroke: { curve: 'smooth', width: 2 },
+          xaxis: { categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'] },
+          grid: { borderColor: 'rgba(0,0,0,0.05)', padding: { top: 0, bottom: 0, left: 10, right: 10 } }
+        };
+        if($('#financeSummaryChart').length) {
+            new ApexCharts(document.querySelector("#financeSummaryChart"), financeOptions).render();
+        }
+
+      });
+    </script>
+  </body>
+</html>

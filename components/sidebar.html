@@ -1,0 +1,378 @@
+<button id="toggle-sidebar-desktop" class="d-none d-md-flex">
+  <i class="bi bi-list fs-5"></i>
+</button>
+
+<nav id="sidebar">
+  <div class="sidebar-header">
+    <div class="logo-text d-flex align-items-center">
+      <i class="bi bi-patch-check text-danger me-2 collapsed-logo"></i>
+      <span class="logo-img">
+        <img
+          src="https://crm.betterstudy.in/uploads/company/3fcabb9e264dac6715236d1fb36d9385.png"
+          alt=""
+        />
+      </span>
+    </div>
+    <button class="btn btn-close-mobile d-md-none ms-auto" id="close-mobile">
+      <i class="bi bi-x-lg"></i>
+    </button>
+  </div>
+
+  <div class="search-container">
+    <div class="search-wrapper">
+      <i class="bi bi-search"></i>
+      <input type="text" class="search-box-sidebar" placeholder="Search For Menu" />
+    </div>
+  </div>
+
+  <ul class="list-unstyled mt-2" id="sidebar-nav">
+    <!-- Dashboard -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-grid-1x2 menu-icon"></i>
+        <span class="menu-text">Dashboard</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Main Overview</a></li>
+        <li><a href="#" class="nav-link">Performance</a></li>
+      </ul>
+    </li>
+
+    <!-- Components -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-box-seam menu-icon"></i>
+        <span class="menu-text">Components</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+
+      <ul class="submenu">
+        <!-- Cards -->
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="nav-link toggle-submenu">
+            <i class="bi bi-card-text menu-icon"></i>
+            <span class="menu-text">Cards</span>
+            <i class="bi bi-chevron-down arrow"></i>
+          </a>
+
+          <ul class="submenu">
+            <li><a href="pages/components/cards/basic.html" class="nav-link">Basic</a></li>
+            <li><a href="pages/components/cards/advance.html" class="nav-link">Advance</a></li>
+            <li><a href="pages/components/cards/statics.html" class="nav-link">Statistics</a></li>
+            <li><a href="pages/components/cards/login.html" class="nav-link">Login</a></li>
+            <li>
+              <a href="pages/components/cards/gamifications.html" class="nav-link">Gamifications</a>
+            </li>
+            <li><a href="pages/components/cards/actions.html" class="nav-link">Actions</a></li>
+          </ul>
+        </li>
+
+        <!-- User Interface -->
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="nav-link toggle-submenu">
+            <i class="bi bi-window menu-icon"></i>
+            <span class="menu-text">User Interface</span>
+            <i class="bi bi-chevron-down arrow"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="#" class="nav-link">Accordion</a></li>
+            <li><a href="#" class="nav-link">Alerts</a></li>
+            <li><a href="#" class="nav-link">Badges</a></li>
+            <li><a href="#" class="nav-link">Buttons</a></li>
+            <li><a href="#" class="nav-link">Carousel</a></li>
+            <li><a href="#" class="nav-link">Collapse</a></li>
+            <li><a href="#" class="nav-link">Dropdowns</a></li>
+            <li><a href="#" class="nav-link">Footer</a></li>
+            <li><a href="#" class="nav-link">List Groups</a></li>
+          </ul>
+        </li>
+
+        <!-- Extended UI -->
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="nav-link toggle-submenu">
+            <i class="bi bi-layers menu-icon"></i>
+            <span class="menu-text">Extended UI</span>
+            <i class="bi bi-chevron-down arrow"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="#" class="nav-link">Avatar</a></li>
+            <li><a href="#" class="nav-link">BlockUI</a></li>
+            <li><a href="#" class="nav-link">Drag & Drop</a></li>
+            <li><a href="#" class="nav-link">Media Player</a></li>
+            <li><a href="#" class="nav-link">Perfect Scrollbar</a></li>
+            <li><a href="#" class="nav-link">Star Ratings</a></li>
+            <li><a href="#" class="nav-link">SweetAlert2</a></li>
+            <li><a href="#" class="nav-link">Text Divider</a></li>
+          </ul>
+        </li>
+
+        <!-- Icons -->
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="nav-link toggle-submenu">
+            <i class="bi bi-star menu-icon"></i>
+            <span class="menu-text">Icons</span>
+            <i class="bi bi-chevron-down arrow"></i>
+          </a>
+          <ul class="submenu">
+            <li><a href="#" class="nav-link">Boxicons</a></li>
+            <li><a href="#" class="nav-link">Font Awesome</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- FORMS & TABLES -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-ui-checks-grid menu-icon"></i>
+        <span class="menu-text">Forms & Tables</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+
+      <ul class="submenu">
+        <!-- Form Elements -->
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="nav-link toggle-submenu">
+            <i class="bi bi-input-cursor-text menu-icon"></i>
+            <span class="menu-text">Form Elements</span>
+            <i class="bi bi-chevron-down arrow"></i>
+          </a>
+
+          <ul class="submenu">
+            <li><a href="#" class="nav-link">Basic Inputs</a></li>
+            <li><a href="#" class="nav-link">Input Groups</a></li>
+            <li><a href="#" class="nav-link">Custom Options</a></li>
+            <li><a href="#" class="nav-link">Editors</a></li>
+            <li><a href="#" class="nav-link">File Upload</a></li>
+            <li><a href="#" class="nav-link">Pickers</a></li>
+            <li><a href="#" class="nav-link">Select & Tags</a></li>
+            <li><a href="#" class="nav-link">Sliders</a></li>
+            <li><a href="#" class="nav-link">Switches</a></li>
+            <li><a href="#" class="nav-link">Extras</a></li>
+          </ul>
+        </li>
+
+        <!-- Form Layouts -->
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="nav-link toggle-submenu">
+            <i class="bi bi-layout-text-window menu-icon"></i>
+            <span class="menu-text">Form Layouts</span>
+            <i class="bi bi-chevron-down arrow"></i>
+          </a>
+
+          <ul class="submenu">
+            <li><a href="#" class="nav-link">Vertical Form</a></li>
+            <li><a href="#" class="nav-link">Horizontal Form</a></li>
+            <li><a href="#" class="nav-link">Sticky Actions</a></li>
+          </ul>
+        </li>
+
+        <!-- Form Wizard -->
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="nav-link toggle-submenu">
+            <i class="bi bi-ui-radios-grid menu-icon"></i>
+            <span class="menu-text">Form Wizard</span>
+            <i class="bi bi-chevron-down arrow"></i>
+          </a>
+
+          <ul class="submenu">
+            <li><a href="#" class="nav-link">Numbered</a></li>
+            <li><a href="#" class="nav-link">Icons</a></li>
+          </ul>
+        </li>
+
+        <!-- Form Validation -->
+        <li>
+          <a href="#" class="nav-link">
+            <i class="bi bi-check2-square menu-icon"></i>
+            <span class="menu-text">Form Validation</span>
+          </a>
+        </li>
+
+        <!-- Tables -->
+        <li>
+          <a href="#" class="nav-link">
+            <i class="bi bi-table menu-icon"></i>
+            <span class="menu-text">Tables</span>
+          </a>
+        </li>
+
+        <!-- Datatables -->
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="nav-link toggle-submenu">
+            <i class="bi bi-grid-3x3-gap menu-icon"></i>
+            <span class="menu-text">Datatables</span>
+            <i class="bi bi-chevron-down arrow"></i>
+          </a>
+
+          <ul class="submenu">
+            <li><a href="#" class="nav-link">Basic</a></li>
+            <li>
+              <a href="/pages/form& Tables/datatables/advancetable.html" class="nav-link"
+                >Advanced</a
+              >
+            </li>
+            <li><a href="#" class="nav-link">Extensions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+
+    <!-- Calendar Pro -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-calendar3 menu-icon"></i>
+        <span class="menu-text">Calendar Pro</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Today's Schedule</a></li>
+        <li><a href="#" class="nav-link">Events</a></li>
+      </ul>
+    </li>
+
+    <!-- Application Manager -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-file-earmark-text menu-icon"></i>
+        <span class="menu-text">Application Manager</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">View Applications</a></li>
+        <li><a href="#" class="nav-link">Verification</a></li>
+      </ul>
+    </li>
+
+    <!-- Marketing -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-megaphone menu-icon"></i>
+        <span class="menu-text">Marketing</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Campaigns</a></li>
+        <li><a href="#" class="nav-link">Lead Sources</a></li>
+      </ul>
+    </li>
+
+    <!-- Campaign Manager -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-graph-up menu-icon"></i>
+        <span class="menu-text">Campaign Manager</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Manage Ads</a></li>
+        <li><a href="#" class="nav-link">Tracking</a></li>
+      </ul>
+    </li>
+
+    <!-- Query Manager -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-question-circle menu-icon"></i>
+        <span class="menu-text">Query Manager</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Unresolved Queries</a></li>
+        <li><a href="#" class="nav-link">Query Categories</a></li>
+      </ul>
+    </li>
+
+    <!-- Payment Manager -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-currency-rupee menu-icon"></i>
+        <span class="menu-text">Payment Manager</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Transactions</a></li>
+        <li><a href="#" class="nav-link">Refunds</a></li>
+      </ul>
+    </li>
+
+    <!-- Reports and Analytics -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-pie-chart menu-icon"></i>
+        <span class="menu-text">Reports and Analytics</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Enrollment Reports</a></li>
+        <li><a href="#" class="nav-link">Revenue Reports</a></li>
+      </ul>
+    </li>
+
+    <!-- Template Manager -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-window menu-icon"></i>
+        <span class="menu-text">Template Manager</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Email Templates</a></li>
+        <li><a href="#" class="nav-link">SMS Templates</a></li>
+      </ul>
+    </li>
+
+    <!-- User Access Control -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-lock menu-icon"></i>
+        <span class="menu-text">User Access Control</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Permissions</a></li>
+        <li><a href="#" class="nav-link">Role Setup</a></li>
+      </ul>
+    </li>
+
+    <!-- Post Application -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-person-vcard menu-icon"></i>
+        <span class="menu-text">Post Application</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li><a href="#" class="nav-link">Status Tracking</a></li>
+        <li><a href="#" class="nav-link">Enrollment Docs</a></li>
+      </ul>
+    </li>
+
+    <!-- Settings with Hierarchy -->
+    <li class="has-submenu">
+      <a href="javascript:void(0)" class="nav-link toggle-submenu">
+        <i class="bi bi-gear menu-icon"></i>
+        <span class="menu-text">Settings</span>
+        <i class="bi bi-chevron-down arrow"></i>
+      </a>
+      <ul class="submenu">
+        <li class="has-submenu">
+          <a href="javascript:void(0)" class="nav-link toggle-submenu">
+            <span class="menu-text">Institute Configuration</span>
+            <i class="bi bi-chevron-down arrow"></i>
+          </a>
+          <!-- Submenu with hierarchy indent and card style -->
+          <ul class="submenu">
+            <li><a href="#" class="nav-link">User Allocation Logic</a></li>
+            <li><a href="#" class="nav-link">Lead Fields</a></li>
+            <li><a href="#" class="nav-link">Enrolment Mapping</a></li>
+            <li><a href="#" class="nav-link">Discount Logs</a></li>
+          </ul>
+        </li>
+        <li><a href="#" class="nav-link">Payment response</a></li>
+        <li><a href="#" class="nav-link">Extensions</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

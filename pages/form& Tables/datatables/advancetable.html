@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards-Advance</title>
+    <link rel="stylesheet" href="../../../assets/css/form&tables/table.css" />
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+      <div class="ph-header">
+        <h4 class="ph-title mb-0">
+          Advance table
+          <i class="bi bi-play-circle ph-play pt-1"></i>
+        </h4>
+
+        <div class="ph-actions">
+          <div class="ph-search-container" id="phSearch">
+            <div class="ph-search-wrapper">
+              <button type="button" class="ph-search-trigger">
+                <i class="bi bi-search"></i>
+              </button>
+
+              <input type="text" class="ph-search-input" placeholder="Search leads..." />
+
+              <span class="ph-search-close">
+                <i class="bi bi-x"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="ph-tools">
+            <i class="bi bi-funnel ph-icon"></i>
+            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-three-dots-vertical ph-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <main class="content-area">
+        <div class="ui-section-header mb-3">
+          <h4>Table Style 1: Load More</h4>
+          <p>Click button to show more rows.</p>
+        </div>
+
+        <div class="yajra-card">
+          <div class="yajra-table-wrapper">
+            <table id="leadsTable1" class="table yajra-table-main">
+              <thead>
+                <tr>
+                  <th style="width: 40px">
+                    <input type="checkbox" id="selectAll1" class="global-select-all" />
+                  </th>
+                  <th>Registered Name</th>
+                  <th>Registered Email</th>
+                  <th>Registered Mobile</th>
+                  <th>User Registration Date</th>
+                  <th>Lead Stage</th>
+                  <th>Lead Owner</th>
+                  <th>State</th>
+                  <th>City</th>
+                  <th>Primary Registra</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div class="yajra-footer">
+            <div class="footer-left">
+              <button class="yajra-btn" id="btnLoadMore1">
+                <i class="fa-solid fa-arrows-rotate"></i> <span>Show More Leads</span>
+              </button>
+            </div>
+
+            <div class="footer-right d-flex flex-wrap align-items-center gap-3">
+              <button
+                class="btn btn-sm btn-secondary opacity-75 fw-bold"
+                id="btnShowTotal1"
+                style="font-size: 11px"
+              >
+                Show Total Records
+              </button>
+              <span class="yajra-badge d-none" id="totalBadge1">Total Records: 0</span>
+
+              <div
+                class="d-flex align-items-center gap-2 text-muted fw-semibold"
+                style="font-size: 12px"
+              >
+                Rows:
+                <select class="form-select yajra-select w-auto py-0" id="selectRows1">
+                  <option value="10">10</option>
+                  <option value="20" selected>20</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-section-header mb-3 mt-5">
+          <h4>Table Style 2: Pagination</h4>
+          <p>Standard Previous/Next navigation.</p>
+        </div>
+
+        <div class="yajra-card">
+          <div class="yajra-table-wrapper">
+            <table id="leadsTable2" class="table yajra-table-main">
+              <thead>
+                <tr>
+                  <th style="width: 40px">
+                    <input type="checkbox" id="selectAll2" class="global-select-all" />
+                  </th>
+                  <th>Registered Name</th>
+                  <th>Registered Email</th>
+                  <th>Registered Mobile</th>
+                  <th>User Registration Date</th>
+                  <th>Lead Stage</th>
+                  <th>Lead Owner</th>
+                  <th>State</th>
+                  <th>City</th>
+                  <th>Primary Registra</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div class="yajra-footer">
+            <div class="footer-left">
+              <div class="d-flex gap-2">
+                <button class="yajra-btn" id="btnPrev2" disabled>
+                  <i class="fa-solid fa-chevron-left"></i> <span>Prev</span>
+                </button>
+                <button class="yajra-btn" id="btnNext2">
+                  <span>Next</span> <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="footer-right d-flex flex-wrap align-items-center gap-3">
+              <button
+                class="btn btn-sm btn-secondary opacity-75 fw-bold"
+                id="btnShowTotal2"
+                style="font-size: 11px"
+              >
+                Show Total Records
+              </button>
+              <span class="yajra-badge d-none" id="totalBadge2">Total Records: 0</span>
+              <div
+                class="d-flex align-items-center gap-2 text-muted fw-semibold"
+                style="font-size: 12px"
+              >
+                Rows:
+                <select class="form-select yajra-select w-auto py-0" id="selectRows2">
+                  <option value="10">10</option>
+                  <option value="20" selected>20</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../../../assets/js/layout.js"></script>
+  </body>
+</html>

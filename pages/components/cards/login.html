@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards-Advance</title>
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+
+      <main class="content-area">
+        <div class="login-page-wrapper">
+          <!-- LEFT PANEL: Static Image -->
+          <div class="left-panel">
+            <div class="slide-content">
+              <img
+                src="https://logincdn.npfs.co/static/v1/images/collexo_slide_1.png?1763041299"
+                alt="Collexo Dashboard"
+                class="slide-image"
+              />
+              <h1 class="slide-title">Collect, manage, and track fee payments seamlessly</h1>
+              <p class="slide-text">
+                Know how Collexo, a Unified Suite for fee collections and payments, can empower you
+                to automate fee processes while improving cash flow.
+              </p>
+              <a href="#" class="btn-schedule">Schedule a Demo</a>
+            </div>
+          </div>
+
+          <!-- RIGHT PANEL: LOGIN FORM -->
+          <div class="right-panel">
+            <div class="login-box">
+              <!-- Logo -->
+              <span class="logo-img">
+                <img
+                  src="https://crm.betterstudy.in/uploads/company/3fcabb9e264dac6715236d1fb36d9385.png"
+                  alt=""
+                />
+              </span>
+
+              <!-- Card -->
+              <div class="login-card">
+                <!-- 1. Password Login Form (Default) -->
+                <form id="passwordLoginForm">
+                  <!-- Email Input -->
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="emailInput"
+                      placeholder="Enter Your Official Email"
+                    />
+                    <label for="emailInput">Enter Your Official Email</label>
+                  </div>
+
+                  <!-- Password Input -->
+                  <div class="form-floating position-relative">
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="passwordInput"
+                      placeholder="Your Password"
+                    />
+                    <label for="passwordInput">Your Password</label>
+                    <!-- Updated to use Font Awesome Icon -->
+                    <span class="password-toggle" onclick="togglePassword()">
+                      <i class="fa-regular fa-eye-slash" id="toggleIcon"></i>
+                    </span>
+                  </div>
+
+                  <!-- Links (Forgot Password Only) -->
+                  <div class="form-links">
+                    <a href="javascript:void(0)" onclick="showView('forgot')">Forgot Password?</a>
+                  </div>
+
+                  <!-- Sign In Button -->
+                  <button type="button" class="btn btn-signin">Sign In</button>
+
+                  <!-- Trouble Text -->
+                  <div class="trouble-text">
+                    Trouble Signing in? Connect with your Administrator
+                  </div>
+                </form>
+
+                <!-- 2. Forgot Password Form -->
+                <form id="forgotPasswordForm" class="d-none">
+                  <div class="alert-warning-custom">
+                    To reset your password, enter your registered email id.
+                  </div>
+
+                  <!-- Email Input -->
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="forgotEmailInput"
+                      placeholder="Enter Your Official Email"
+                    />
+                    <label for="forgotEmailInput">Enter Your Official Email</label>
+                  </div>
+
+                  <a href="javascript:void(0)" class="back-link" onclick="showView('password')"
+                    >Back to login</a
+                  >
+
+                  <!-- Submit Button -->
+                  <button type="button" class="btn btn-signin">Submit</button>
+                </form>
+              </div>
+
+              <!-- Footer -->
+              <div class="login-footer">
+                <div style="margin-bottom: 15px">
+                  Not an existing client? <a href="#">Schedule a Demo</a>
+                </div>
+
+                <!-- Social Icons (Updated to Font Awesome) -->
+                <div class="social-icons-row">
+                  <a href="#" class="social-icon-circle" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <!-- Switched to standard Twitter icon -->
+                  <a href="#" class="social-icon-circle" title="Twitter">
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                  <a href="#" class="social-icon-circle" title="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="#" class="social-icon-circle" title="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="#" class="social-icon-circle" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </div>
+
+                <!-- Bottom Links -->
+                <div class="bottom-links">
+                  <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Use</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../../assets/js/layout.js"></script>
+    <script>
+      // --- 1. View Switching Logic ---
+      function showView(viewName) {
+        // Hide all forms
+        document.getElementById('passwordLoginForm').classList.add('d-none');
+        document.getElementById('forgotPasswordForm').classList.add('d-none');
+
+        // Show requested form
+        if (viewName === 'password') {
+          document.getElementById('passwordLoginForm').classList.remove('d-none');
+        } else if (viewName === 'forgot') {
+          document.getElementById('forgotPasswordForm').classList.remove('d-none');
+        }
+      }
+
+      // --- 2. Password Toggle (Updated for Font Awesome) ---
+      function togglePassword() {
+        const passwordInput = document.getElementById('passwordInput');
+        const icon = document.getElementById('toggleIcon');
+
+        if (passwordInput.type === 'password') {
+          passwordInput.type = 'text';
+          // Switch to eye open
+          icon.classList.remove('fa-eye-slash');
+          icon.classList.add('fa-eye');
+        } else {
+          passwordInput.type = 'password';
+          // Switch to eye closed
+          icon.classList.remove('fa-eye');
+          icon.classList.add('fa-eye-slash');
+        }
+      }
+    </script>
+  </body>
+</html>
