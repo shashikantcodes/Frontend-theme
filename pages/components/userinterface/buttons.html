@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards-Advance</title>
+    <link rel="stylesheet" href="../../../assets/css/component/userinterface/buttons.css" />
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+      <div class="ph-header">
+        <h4 class="ph-title mb-0">
+          Buttons
+
+          <i class="bx bx-joystick-button ph-play"></i>
+        </h4>
+
+        <div class="ph-actions">
+          <div class="ph-search-container" id="phSearch">
+            <div class="ph-search-wrapper">
+              <button type="button" class="ph-search-trigger">
+                <i class="bi bi-search"></i>
+              </button>
+
+              <input type="text" class="ph-search-input" placeholder="Search leads..." />
+
+              <span class="ph-search-close">
+                <i class="bi bi-x"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="ph-tools">
+            <i class="bi bi-funnel ph-icon"></i>
+            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-three-dots-vertical ph-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <main class="content-area">
+        <div class="layout-container">
+          <!-- 1. Basic Buttons -->
+          <section class="custom-card">
+            <div class="custom-card-header">
+              <h2>Solid / Primary Colors</h2>
+              <span class="badge">Standard</span>
+            </div>
+            <div class="custom-card-body gap-md">
+              <button class="btn btn-primary">Primary Action</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-success">Success</button>
+              <button class="btn btn-danger">Danger</button>
+              <button class="btn btn-warning">Warning</button>
+              <button class="btn btn-info">Info</button>
+              <button class="btn btn-dark">Dark</button>
+            </div>
+          </section>
+
+          <!-- 2. Outline Buttons -->
+          <section class="custom-card">
+            <div class="custom-card-header">
+              <h2>Outline Style</h2>
+              <span class="badge">Ghost</span>
+            </div>
+            <div class="custom-card-body gap-md">
+              <button class="btn btn-outline-primary">Primary</button>
+              <button class="btn btn-outline-secondary">Secondary</button>
+              <button class="btn btn-outline-success">Success</button>
+              <button class="btn btn-outline-danger">Danger</button>
+              <button class="btn btn-outline-warning">Warning</button>
+              <button class="btn btn-outline-info">Info</button>
+            </div>
+          </section>
+
+          <!-- 3. Soft / Tinted Buttons -->
+          <section class="custom-card">
+            <div class="custom-card-header">
+              <h2>Soft Background</h2>
+              <span class="badge">Modern</span>
+            </div>
+            <div class="custom-card-body gap-md">
+              <button class="btn btn-soft-primary">Primary</button>
+              <button class="btn btn-soft-success">Success</button>
+              <button class="btn btn-soft-danger">Danger</button>
+              <button class="btn btn-soft-warning">Warning</button>
+              <button class="btn btn-soft-info">Info</button>
+              <button class="btn btn-soft-dark">Dark</button>
+            </div>
+          </section>
+
+          <!-- 4. Gradient Buttons -->
+          <section class="custom-card">
+            <div class="custom-card-header">
+              <h2>Gradient & Vivid</h2>
+            </div>
+            <div class="custom-card-body gap-md">
+              <button class="btn btn-gradient-primary">Cosmic Blue</button>
+              <button class="btn btn-gradient-sunset">Sunset Orange</button>
+              <button class="btn btn-gradient-nature">Lush Green</button>
+              <button class="btn btn-gradient-royal">Royal Purple</button>
+            </div>
+          </section>
+
+          <!-- 5. 3D & Elevation -->
+          <section class="custom-card">
+            <div class="custom-card-header">
+              <h2>3D Press & Shadow</h2>
+            </div>
+            <div class="custom-card-body gap-md">
+              <button class="btn btn-3d">Hard Shadow</button>
+              <button
+                class="btn btn-3d"
+                style="background: var(--color-danger); border-color: var(--color-danger)"
+              >
+                Delete
+              </button>
+              <button class="btn btn-lift">Hover Lift</button>
+              <button class="btn btn-lift">Interact</button>
+            </div>
+          </section>
+
+          <!-- 6. SOCIAL MEDIA SUITE (NEW) -->
+          <section class="custom-card" style="grid-column: 1 / -1">
+            <div class="custom-card-header">
+              <h2>Social Media Suite</h2>
+              <span class="badge">Brands</span>
+            </div>
+            <div class="custom-card-body gap-md">
+              <!-- Row 1: Basic -->
+              <div class="social-section-title">Basic</div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; width: 100%">
+                <button class="btn-social sb-solid sb-facebook">
+                  <i class="bx bxl-facebook"></i> Facebook
+                </button>
+                <button class="btn-social sb-solid sb-twitter">
+                  <i class="bx bxl-twitter"></i> Twitter
+                </button>
+                <button class="btn-social sb-solid sb-google">
+                  <i class="bx bxl-google"></i> Google+
+                </button>
+                <button class="btn-social sb-solid sb-instagram">
+                  <i class="bx bxl-instagram"></i> Instagram
+                </button>
+              </div>
+
+              <!-- Row 2: Label (Soft) -->
+              <div class="social-section-title">Label</div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; width: 100%">
+                <button class="btn-social sb-soft sb-linkedin">
+                  <i class="bx bxl-linkedin"></i> Linkedin
+                </button>
+                <button class="btn-social sb-soft sb-github">
+                  <i class="bx bxl-github"></i> Github
+                </button>
+                <button class="btn-social sb-soft sb-pinterest">
+                  <i class="bx bxl-pinterest-alt"></i> Pinterest
+                </button>
+                <button class="btn-social sb-soft sb-slack">
+                  <i class="bx bxl-slack"></i> Slack
+                </button>
+              </div>
+
+              <!-- Row 3: Outline -->
+              <div class="social-section-title">Outline</div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; width: 100%">
+                <button class="btn-social sb-outline sb-dribbble">
+                  <i class="bx bxl-dribbble"></i> Dribbble
+                </button>
+                <button class="btn-social sb-outline sb-reddit">
+                  <i class="bx bxl-reddit"></i> Reddit
+                </button>
+                <button class="btn-social sb-outline sb-youtube">
+                  <i class="bx bxl-youtube"></i> Youtube
+                </button>
+                <button class="btn-social sb-outline sb-vimeo">
+                  <i class="bx bxl-vimeo"></i> Vimeo
+                </button>
+              </div>
+
+              <!-- Row 4: Basic Icons -->
+              <div class="social-section-title">Basic Icons</div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; width: 100%">
+                <button class="btn-social sb-solid sb-icon sb-facebook">
+                  <i class="bx bxl-facebook"></i>
+                </button>
+                <button class="btn-social sb-solid sb-icon sb-twitter">
+                  <i class="bx bxl-twitter"></i>
+                </button>
+                <button class="btn-social sb-solid sb-icon sb-google">
+                  <i class="bx bxl-google"></i>
+                </button>
+                <button class="btn-social sb-solid sb-icon sb-instagram">
+                  <i class="bx bxl-instagram"></i>
+                </button>
+              </div>
+
+              <!-- Row 5: Label Icons -->
+              <div class="social-section-title">Label Icons</div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; width: 100%">
+                <button class="btn-social sb-soft sb-icon sb-linkedin">
+                  <i class="bx bxl-linkedin"></i>
+                </button>
+                <button class="btn-social sb-soft sb-icon sb-github">
+                  <i class="bx bxl-github"></i>
+                </button>
+                <button class="btn-social sb-soft sb-icon sb-pinterest">
+                  <i class="bx bxl-pinterest-alt"></i>
+                </button>
+                <button class="btn-social sb-soft sb-icon sb-slack">
+                  <i class="bx bxl-slack"></i>
+                </button>
+              </div>
+
+              <!-- Row 6: Outline Icons -->
+              <div class="social-section-title">Outline Icons</div>
+              <div style="display: flex; gap: 1rem; flex-wrap: wrap; width: 100%">
+                <button class="btn-social sb-outline sb-icon sb-dribbble">
+                  <i class="bx bxl-dribbble"></i>
+                </button>
+                <button class="btn-social sb-outline sb-icon sb-reddit">
+                  <i class="bx bxl-reddit"></i>
+                </button>
+                <button class="btn-social sb-outline sb-icon sb-youtube">
+                  <i class="bx bxl-youtube"></i>
+                </button>
+                <button class="btn-social sb-outline sb-icon sb-vimeo">
+                  <i class="bx bxl-vimeo"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7. Shapes & Sizes (MODIFIED FOR NO RADIUS) -->
+          <section class="custom-card">
+            <div class="custom-card-header">
+              <h2>Sizes & Geometry</h2>
+            </div>
+            <div class="custom-card-body gap-md align-center">
+              <button class="btn btn-primary btn-sm">Small</button>
+              <button class="btn btn-primary">Default</button>
+              <button class="btn btn-primary btn-lg">Large</button>
+
+              <!-- Pill changed to Block Style -->
+              <button class="btn btn-block-style">Outlined Box</button>
+
+              <button class="btn btn-warning btn-square"><i class="bx bxs-bell"></i></button>
+              <button class="btn btn-sharp-box btn-success"><i class="bx bx-check"></i></button>
+            </div>
+          </section>
+
+          <!-- 8. Special Effects -->
+          <section class="custom-card">
+            <div class="custom-card-header">
+              <h2>Special Effects</h2>
+              <span class="badge">FX</span>
+            </div>
+            <div class="custom-card-body gap-md bg-pattern">
+              <button class="btn btn-glass">Glassmorphism</button>
+              <button class="btn btn-neon">Neon Glow</button>
+              <button class="btn btn-border-anim">
+                <span>Animated Border</span>
+              </button>
+            </div>
+          </section>
+
+          <!-- 9. State Buttons (Loading, Toggle) -->
+          <section class="custom-card">
+            <div class="custom-card-header">
+              <h2>States & Toggles</h2>
+            </div>
+            <div class="custom-card-body gap-md">
+              <!-- Loading State -->
+              <button class="btn btn-primary btn-loading">
+                <span class="spinner"></span> Processing...
+              </button>
+
+              <!-- Toggle Button -->
+              <button class="btn btn-toggle" onclick="this.classList.toggle('active')">
+                <i class="bx bxs-microphone-off"></i>
+                <span>Mute</span>
+              </button>
+
+              <!-- Minimal Text -->
+              <button class="btn btn-text-primary">Text Link</button>
+            </div>
+          </section>
+
+          <!-- 10. Groups & Floating -->
+          <section class="custom-card">
+            <div class="custom-card-header">
+              <h2>Groups & Toolbar</h2>
+            </div>
+            <div class="custom-card-body" style="justify-content: space-between">
+              <div class="btn-group">
+                <button class="btn active">Left</button>
+                <button class="btn">Middle</button>
+                <button class="btn">Right</button>
+              </div>
+
+              <div class="btn-toolbar">
+                <button class="btn btn-square"><i class="bx bx-bold"></i></button>
+                <button class="btn btn-square"><i class="bx bx-italic"></i></button>
+                <button class="btn btn-square"><i class="bx bx-underline"></i></button>
+                <button class="btn btn-square"><i class="bx bx-align-left"></i></button>
+              </div>
+
+              <button class="btn btn-fab">
+                <i class="bx bx-plus"></i>
+              </button>
+            </div>
+          </section>
+
+          <!-- =========================================
+             11. ADVANCED BUTTONS (NEW SECTION)
+             ========================================= -->
+          <section class="custom-card" style="grid-column: 1 / -1; margin-bottom: 4rem">
+            <div class="custom-card-header">
+              <h2>Advanced / Experimental Buttons</h2>
+              <span class="badge">Custom CSS</span>
+            </div>
+            <div
+              class="custom-card-body gap-md align-center"
+              style="
+                background: var(--color-bg-soft);
+                padding: 3rem;
+                justify-content: center;
+                gap: 2rem;
+              "
+            >
+              <!-- 1. 3D Rotate -->
+              <button class="adv-btn-1">BUTTON</button>
+
+              <!-- 2. Gradient Scale -->
+              <button class="adv-btn-2">
+                <span class="button-content">Download </span>
+              </button>
+
+              <!-- 3. Whatsapp -->
+              <button class="adv-btn-3">
+                <p>Follow me</p>
+                <i class="bx bxl-whatsapp"></i>
+              </button>
+
+              <!-- 4. HELLO Red -->
+              <button class="adv-btn-4">
+                <span>H</span><span>E</span><span>L</span><span>L</span><span>O</span>
+              </button>
+
+              <!-- 5. Glitch Hover -->
+              <button class="adv-btn-5">HOVER ME</button>
+
+              <!-- 6. Valorant -->
+              <div class="adv-btn-6-wrapper">
+                <button class="adv-btn-6">BUTTON</button>
+              </div>
+
+              <!-- 7. Share Card -->
+              <button class="adv-btn-7">
+                <i class="bx bxs-share-alt icon"></i>
+                Share
+              </button>
+
+              <!-- 8. Back -->
+              <button class="adv-btn-8">
+                <i class="bx bx-arrow-back"></i>
+                <span>Back</span>
+              </button>
+
+              <!-- 9. Anatomy -->
+              <button class="adv-btn-9">
+                <div class="icon">
+                  <span class="text-icon hide">Icon</span>
+                  <div
+                    style="
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 24px;
+                      height: 24px;
+                    "
+                  >
+                    <i class="bx bx-edit-alt" style="font-size: 1.2rem"></i>
+                  </div>
+                </div>
+                <span class="title"> Anatomy </span>
+                <div class="padding-left hide">
+                  <div class="padding-left-line">
+                    <span class="padding-left-text">Left Padding</span>
+                  </div>
+                </div>
+                <div class="padding-right hide">
+                  <div class="padding-right-line">
+                    <span class="padding-right-text">Right Padding</span>
+                  </div>
+                </div>
+                <div class="background hide"><span class="background-text">Background</span></div>
+                <div class="border hide"><span class="border-text">Border Radius</span></div>
+              </button>
+
+              <!-- 10. Squeeze Me -->
+              <button class="adv-btn-10">Squeeze me</button>
+
+              <!-- 11. Radial Mask -->
+              <button class="adv-btn-11">
+                <span class="text-container"><span class="text">Button</span></span>
+              </button>
+
+              <!-- 12. Next CTA -->
+              <button class="adv-btn-12">
+                <span class="span">NEXT</span>
+                <span class="second">
+                  <svg
+                    width="50px"
+                    height="20px"
+                    viewBox="0 0 66 43"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <path
+                        class="one"
+                        d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        class="two"
+                        d="M20.1543933,3.89485454 L23.9763149,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                        fill="#FFFFFF"
+                      ></path>
+                      <path
+                        class="three"
+                        d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                        fill="#FFFFFF"
+                      ></path>
+                    </g>
+                  </svg>
+                </span>
+              </button>
+
+              <!-- 13. Press Me Neumorphic -->
+              <button class="adv-btn-13">
+                <div class="button-outer">
+                  <div class="button-inner">
+                    <span>Press me</span>
+                  </div>
+                </div>
+              </button>
+
+              <!-- 14. Long Shadow -->
+              <button class="adv-btn-14">Button</button>
+
+              <!-- 15. Back to Top Text -->
+              <button class="adv-btn-15">
+                <div class="text"><span>Back</span><span>to</span><span>top</span></div>
+                <div class="clone"><span>Back</span><span>to</span><span>top</span></div>
+                <i class="bx bx-up-arrow-alt"></i>
+              </button>
+
+              <!-- 16. Download Slider -->
+              <button class="adv-btn-16" type="button">
+                <span class="button__text">Download</span>
+                <span class="button__icon"><i class="bx bxs-download"></i></span>
+              </button>
+
+              <!-- 17. Refresh Spin -->
+              <button type="button" class="adv-btn-17">
+                <i class="bx bx-refresh"></i>
+                Refresh
+              </button>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../../assets/js/layout.js"></script>
+  </body>
+</html>

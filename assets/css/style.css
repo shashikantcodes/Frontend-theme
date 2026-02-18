@@ -34,7 +34,8 @@
   --text-on-primary: #ffffff;
   --color-text-main: #1f2937;
   --color-text-light: #6b7280;
-
+  --btn-shadow-dark: rgba(0, 0, 0, 0.25);
+  --btn-shadow-light: rgba(0, 0, 0, 0.15);
   --color-border: #e5e7eb;
   --color-bg-soft: #f9fafb;
 
@@ -61,7 +62,8 @@
   /* BRAND COLORS */
   --color-primary: #6366f1;
   --color-primary-hover: #4f46e5;
-
+  --btn-shadow-dark: rgba(0, 0, 0, 0.6);
+  --btn-shadow-light: rgba(99, 102, 241, 0.25); /* primary glow */
   --color-secondary: #94a3b8;
   --color-success: #22c55e;
   --color-warning: #fbbf24;
@@ -111,7 +113,7 @@
   --color-border: #f3e5c3;
   --color-bg-soft: #fff7e6;
   --header-bg: #fff3d6;
-
+  --btn-shadow-light: rgba(255, 189, 46, 0.35);
   --search-input-bg: #fff3d6;
 
   /* SIDEBAR */
