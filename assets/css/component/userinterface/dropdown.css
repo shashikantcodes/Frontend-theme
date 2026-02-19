@@ -1,0 +1,556 @@
+/* Text Utilities */
+.text-theme {
+  color: var(--color-text-main) !important;
+}
+.text-light-theme {
+  color: var(--color-text-light) !important;
+}
+.bg-card-theme {
+  background-color: var(--color-bg-card) !important;
+}
+.bg-soft-theme {
+  background-color: var(--color-bg-soft) !important;
+}
+.border-theme {
+  border-color: var(--color-border) !important;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.fs-7 {
+  font-size: 0.85rem;
+}
+.fs-8 {
+  font-size: 0.75rem;
+}
+
+/* Dropdown Base Logic */
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.custom-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  min-width: 280px;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px -5px var(--btn-shadow-dark);
+  z-index: 1050;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.custom-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Shared Menu Item Styles */
+.menu-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text-main);
+  transition: background 0.15s;
+  text-decoration: none;
+}
+.menu-item:hover {
+  background-color: var(--sidebar-hover);
+}
+.menu-item.active {
+  background-color: var(--nested-dark-bg);
+  color: var(--color-primary);
+}
+
+/* Dark Mode Hover Fix */
+[data-theme='dark'] .menu-item:hover {
+  background-color: var(--color-bg-soft); /* Better contrast in dark mode */
+}
+
+/* Common Toggle Button Styles */
+.dropdown-toggle-custom {
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border-radius: 8px;
+}
+.dropdown-toggle-custom:hover {
+  background-color: var(--color-bg-soft);
+  border-color: var(--color-secondary);
+}
+
+/* =========================================
+           DROPDOWN 1: PROFILE & ACCOUNT CSS
+           ========================================= */
+.dd-profile-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-bg-soft);
+}
+.dd-avatar-lg {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-bg-card);
+}
+.dd-avatar-trigger-btn {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  position: relative;
+}
+.dd-avatar-trigger-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--color-border);
+  transition: border-color 0.2s;
+  object-fit: cover;
+}
+.dd-avatar-trigger-btn:hover .dd-avatar-trigger-img,
+.dd-avatar-trigger-btn.show .dd-avatar-trigger-img {
+  border-color: var(--color-primary);
+}
+.dd-custom-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-secondary);
+  position: relative;
+}
+.menu-item.active .dd-custom-radio {
+  border-color: var(--color-primary);
+}
+.menu-item.active .dd-custom-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+.dd-acc-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(100, 116, 139, 0.1);
+  border-radius: 50%;
+}
+
+/* =========================================
+           DROPDOWN 2: NOTIFICATIONS CSS
+           ========================================= */
+.dd-notif-trigger {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+  position: relative;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.dd-notif-trigger:hover {
+  background: var(--color-bg-soft);
+  border-color: var(--color-secondary);
+}
+.dd-badge-float {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  font-size: 0.65rem;
+  padding: 0.25em 0.5em;
+  border: 2px solid var(--color-bg-main);
+}
+.dd-notif-list {
+  max-height: 350px;
+  overflow-y: auto;
+}
+.dd-notif-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.dd-avatar-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.bg-info-soft {
+  background-color: rgba(6, 182, 212, 0.1);
+  color: var(--color-info);
+}
+.bg-success-soft {
+  background-color: rgba(22, 163, 74, 0.1);
+  color: var(--color-success);
+}
+.bg-warning-soft {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+}
+
+/* =========================================
+           DROPDOWN 3: TEAM SWITCHER CSS
+           ========================================= */
+.dd-team-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.dd-team-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+/* =========================================
+           DROPDOWN 4: SHARE & INVITE CSS
+           ========================================= */
+.dd-share-btn-primary {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.dd-share-btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  color: white;
+}
+.dd-nav-tabs {
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 16px;
+  display: flex;
+  gap: 16px;
+}
+.dd-nav-link {
+  padding: 10px 4px;
+  color: var(--color-text-light);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.dd-nav-link.active {
+  color: var(--color-text-main);
+  border-color: var(--color-primary);
+}
+.dd-qr-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background-color: var(--color-bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+}
+.dd-role-badge {
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-secondary);
+  font-weight: normal;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+}
+
+/* =========================================
+           DROPDOWN 5: SEARCH AUTO CSS
+           ========================================= */
+.dd-search-trigger-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  background-color: var(--color-bg-card);
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.dd-search-trigger-box:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--btn-shadow-light);
+}
+/* Removing Outline as requested */
+.dd-search-trigger-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  color: var(--color-text-main);
+  outline: none;
+  box-shadow: none;
+  font-size: 0.95rem;
+  margin-left: 8px;
+}
+.dd-user-list {
+  max-height: 250px;
+  overflow-y: auto;
+}
+.dd-avatar-sm-text {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.bg-red-soft {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+.bg-blue-soft {
+  background: rgba(63, 81, 181, 0.1);
+  color: #3f51b5;
+}
+
+/* =========================================
+           DROPDOWN 6: FILTER CSS
+           ========================================= */
+.dd-filter-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 12px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  color: var(--color-text-main);
+}
+
+/* =========================================
+           DROPDOWN 7: SIMPLE MULTI-SELECT CSS
+           ========================================= */
+.dd-multi-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+  border-radius: 8px;
+  color: var(--color-text-main);
+}
+.dd-custom-checkbox {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  transition: all 0.2s;
+}
+.menu-item.active .dd-custom-checkbox,
+.dd-custom-checkbox.checked {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+.menu-item.active .dd-custom-checkbox::after,
+.dd-custom-checkbox.checked::after {
+  content: '✓';
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+}
+.dd-badge-pill {
+  background-color: rgba(63, 81, 181, 0.1);
+  color: var(--color-primary);
+  border: 1px solid rgba(63, 81, 181, 0.2);
+  padding: 2px 8px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* =========================================
+           DROPDOWN 8: COUNTRY PHONE CSS
+           ========================================= */
+.dd-phone-group {
+  display: flex;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  width: 100%;
+  transition: border 0.2s;
+}
+.dd-phone-group:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--btn-shadow-light);
+}
+.dd-flag-btn {
+  border: none;
+  background: transparent;
+  border-right: 1px solid var(--color-border) !important;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-text-main);
+  cursor: pointer;
+}
+.dd-phone-input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  color: var(--color-text-main);
+  outline: none;
+  font-weight: 600;
+  padding: 0;
+}
+.dd-modern-search-wrapper {
+  position: relative;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-card);
+}
+.dd-modern-search-icon {
+  position: absolute;
+  left: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-light);
+}
+.dd-modern-search-input {
+  width: 100%;
+  padding: 8px 12px 8px 36px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background-color: var(--search-input-bg);
+  color: var(--color-text-main);
+  outline: none;
+}
+.dd-modern-search-input:focus {
+  border-color: var(--color-primary);
+}
+
+/* =========================================
+           DROPDOWN 9: SIMPLE MENU CSS
+           ========================================= */
+.dd-simple-trigger {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  width: 100%;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* =========================================
+           DROPDOWN 10: ADVANCED MULTI CSS
+           ========================================= */
+.dd-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+  min-height: 24px;
+}
+.dd-tag-chip {
+  background-color: var(--color-secondary);
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dd-tag-close {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.dd-tag-close:hover {
+  opacity: 1;
+}
+
+/* =========================================
+           DROPDOWN 11: TEMPLATES CSS
+           ========================================= */
+.dd-file-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.icon-pdf {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+.icon-xls {
+  background: rgba(25, 135, 84, 0.1);
+  color: #198754;
+}
+.icon-fig {
+  background: rgba(162, 89, 255, 0.1);
+  color: #a259ff;
+}
+.icon-zip {
+  background: rgba(255, 193, 7, 0.1);
+  color: #ffc107;
+}
+.dd-shortcut {
+  background: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-family: monospace;
+  color: var(--color-text-light);
+}

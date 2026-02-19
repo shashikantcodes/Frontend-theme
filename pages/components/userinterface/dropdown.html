@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards-Advance</title>
+    <link rel="stylesheet" href="../../../assets/css/component/userinterface/dropdown.css" />
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+      <div class="ph-header">
+        <h4 class="ph-title mb-0">
+          Dropdowns
+          <i class="bx bx-joystick-button ph-play"></i>
+        </h4>
+
+        <div class="ph-actions">
+          <div class="ph-search-container" id="phSearch">
+            <div class="ph-search-wrapper">
+              <button type="button" class="ph-search-trigger">
+                <i class="bi bi-search"></i>
+              </button>
+
+              <input type="text" class="ph-search-input" placeholder="Search leads..." />
+
+              <span class="ph-search-close">
+                <i class="bi bi-x"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="ph-tools">
+            <i class="bi bi-funnel ph-icon"></i>
+            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-three-dots-vertical ph-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <main class="content-area">
+        <div class="container">
+          <div class="row g-5">
+            <!-- DROPDOWN 1: PROFILE & ACCOUNT -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">1. Profile & Account</label>
+              <div class="custom-dropdown">
+                <!-- Trigger -->
+                <button class="dd-avatar-trigger-btn dropdown-toggle-custom" data-target="dd-1">
+                  <img
+                    src="https://i.pravatar.cc/150?u=1"
+                    class="dd-avatar-trigger-img"
+                    alt="Profile"
+                  />
+                </button>
+
+                <!-- Menu -->
+                <div id="dd-1" class="custom-menu">
+                  <div class="dd-profile-header">
+                    <img src="https://i.pravatar.cc/150?u=1" class="dd-avatar-lg" />
+                    <div>
+                      <div class="fw-bold fs-7">Lily Rose</div>
+                      <div class="fs-8 text-light-theme">@lilyrose</div>
+                      <div class="badge bg-primary rounded-pill mt-1" style="font-size: 0.65rem">
+                        PRO
+                      </div>
+                    </div>
+                  </div>
+                  <div class="py-2">
+                    <div class="menu-item"><i class="bi bi-person"></i> My Profile</div>
+                    <div class="menu-item"><i class="bi bi-gear"></i> Settings</div>
+                    <div class="menu-item"><i class="bi bi-credit-card"></i> Billing</div>
+                  </div>
+                  <div class="border-top border-theme p-2">
+                    <div class="fs-8 text-light-theme px-3 py-1 fw-bold">SWITCH ACCOUNT</div>
+                    <div class="menu-item active rounded-3 mx-2" onclick="toggleRadio(this)">
+                      <img
+                        src="https://i.pravatar.cc/150?u=1"
+                        class="rounded-circle me-2"
+                        width="24"
+                        height="24"
+                      />
+                      <div class="flex-grow-1 fs-7">Personal</div>
+                      <div class="dd-custom-radio"></div>
+                    </div>
+                    <div class="menu-item rounded-3 mx-2" onclick="toggleRadio(this)">
+                      <img
+                        src="https://i.pravatar.cc/150?u=2"
+                        class="rounded-circle me-2"
+                        width="24"
+                        height="24"
+                      />
+                      <div class="flex-grow-1 fs-7">Business Team</div>
+                      <div class="dd-custom-radio"></div>
+                    </div>
+                    <div class="menu-item rounded-3 mx-2" onclick="toggleRadio(this)">
+                      <div class="dd-acc-icon me-2"><i class="bi bi-plus"></i></div>
+                      <div class="flex-grow-1 fs-7">Add Account</div>
+                    </div>
+                  </div>
+                  <div class="p-2 border-top border-theme">
+                    <button class="btn btn-sm w-100 text-danger text-start px-3 hover-bg-soft">
+                      <i class="bi bi-box-arrow-right me-2"></i> Log out
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 2: NOTIFICATIONS -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">2. Notifications</label>
+              <div class="custom-dropdown">
+                <!-- Trigger -->
+                <button class="dd-notif-trigger dropdown-toggle-custom" data-target="dd-2">
+                  <i class="bi bi-bell fs-5"></i>
+                  <span class="badge rounded-pill bg-danger dd-badge-float">5</span>
+                </button>
+
+                <!-- Menu -->
+                <div id="dd-2" class="custom-menu" style="left: 0">
+                  <div
+                    class="d-flex justify-content-between align-items-center px-3 py-3 border-bottom border-theme"
+                  >
+                    <span class="fw-bold">Notifications</span>
+                    <span class="fs-8 text-primary cursor-pointer">Mark all read</span>
+                  </div>
+                  <div class="custom-scrollbar dd-notif-list">
+                    <div
+                      class="menu-item align-items-start gap-3 border-bottom border-theme bg-soft-theme"
+                    >
+                      <img src="https://i.pravatar.cc/150?u=3" class="rounded-circle" width="36" />
+                      <div class="flex-grow-1">
+                        <div class="fs-7"><span class="fw-bold">Tariq</span> commented</div>
+                        <div class="fs-8 text-light-theme mt-1">2m ago</div>
+                      </div>
+                      <div class="dd-notif-dot"></div>
+                    </div>
+                    <div
+                      class="menu-item align-items-start gap-3 border-bottom border-theme bg-soft-theme"
+                    >
+                      <div class="dd-avatar-circle bg-success-soft">
+                        <i class="bi bi-check-lg"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="fs-7"><span class="fw-bold">Task</span> completed</div>
+                        <div class="fs-8 text-light-theme mt-1">15m ago</div>
+                      </div>
+                      <div class="dd-notif-dot"></div>
+                    </div>
+                    <div class="menu-item align-items-start gap-3 border-bottom border-theme">
+                      <div class="dd-avatar-circle bg-info-soft">
+                        <i class="bi bi-person-plus"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="fs-7"><span class="fw-bold">Johan</span> joined</div>
+                        <div class="fs-8 text-light-theme mt-1">1h ago</div>
+                      </div>
+                    </div>
+                    <div class="menu-item align-items-start gap-3 border-bottom border-theme">
+                      <div class="dd-avatar-circle bg-warning-soft">
+                        <i class="bi bi-exclamation-triangle"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="fs-7"><span class="fw-bold">Storage</span> 90% full</div>
+                        <div class="fs-8 text-light-theme mt-1">1d ago</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2 border-top border-theme text-center">
+                    <button class="btn btn-sm text-primary fw-bold w-100">View all</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 3: TEAM SWITCHER -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">3. Team Switcher</label>
+              <div class="custom-dropdown">
+                <!-- Trigger -->
+                <button
+                  class="btn dropdown-toggle-custom w-100 d-flex justify-content-between align-items-center p-2 bg-soft-theme border-theme text-theme"
+                  data-target="dd-3"
+                >
+                  <div class="d-flex align-items-center">
+                    <span
+                      class="dd-team-dot"
+                      style="background: #06b6d4"
+                      id="team-active-dot"
+                    ></span>
+                    <span id="team-active-text" class="fw-bold fs-7">Daytona-crew</span>
+                  </div>
+                  <i class="bi bi-chevron-down fs-8 text-light-theme"></i>
+                </button>
+
+                <!-- Menu -->
+                <div id="dd-3" class="custom-menu">
+                  <div class="dd-modern-search-wrapper">
+                    <i class="bi bi-search dd-modern-search-icon"></i>
+                    <input
+                      type="text"
+                      class="dd-modern-search-input"
+                      placeholder="Find team..."
+                      onkeyup="filterList(this, '.dd-team-item', '.t-name')"
+                    />
+                  </div>
+                  <div class="custom-scrollbar dd-team-list">
+                    <div class="py-2">
+                      <div class="fs-8 text-light-theme px-3 py-1 fw-bold text-uppercase">
+                        Personal
+                      </div>
+                      <div
+                        class="menu-item dd-team-item"
+                        onclick="selectTeam(this, '#64748b', 'My Space')"
+                      >
+                        <span class="dd-team-dot" style="background: #64748b"></span>
+                        <span class="t-name fs-7">My Space</span>
+                      </div>
+
+                      <div class="fs-8 text-light-theme px-3 py-1 fw-bold text-uppercase mt-2">
+                        Teams
+                      </div>
+                      <div
+                        class="menu-item dd-team-item active"
+                        onclick="selectTeam(this, '#06b6d4', 'Daytona-crew')"
+                      >
+                        <span class="dd-team-dot" style="background: #06b6d4"></span>
+                        <span class="t-name fs-7">Daytona-crew</span>
+                        <i class="bi bi-check ms-auto fs-7 text-primary"></i>
+                      </div>
+                      <div
+                        class="menu-item dd-team-item"
+                        onclick="selectTeam(this, '#6366f1', 'Backend-Ops')"
+                      >
+                        <span class="dd-team-dot" style="background: #6366f1"></span>
+                        <span class="t-name fs-7">Backend-Ops</span>
+                      </div>
+                      <div
+                        class="menu-item dd-team-item"
+                        onclick="selectTeam(this, '#f59e0b', 'Design-Sys')"
+                      >
+                        <span class="dd-team-dot" style="background: #f59e0b"></span>
+                        <span class="t-name fs-7">Design-Sys</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-2 border-top border-theme">
+                    <div class="menu-item rounded-3">
+                      <i class="bi bi-plus-circle"></i> Create Team
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 4: SHARE & INVITE -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">4. Share & Invite</label>
+              <div class="custom-dropdown">
+                <!-- Trigger -->
+                <button class="dd-share-btn-primary dropdown-toggle-custom" data-target="dd-4">
+                  <span>Share</span> <i class="bi bi-share-fill"></i>
+                </button>
+
+                <!-- Menu -->
+                <div id="dd-4" class="custom-menu">
+                  <div class="dd-nav-tabs mt-2">
+                    <div class="dd-nav-link active" onclick="switchTab(this, 'tab-share')">
+                      Share
+                    </div>
+                    <div class="dd-nav-link" onclick="switchTab(this, 'tab-priv')">Privacy</div>
+                  </div>
+
+                  <div id="tab-share" class="tab-content p-3">
+                    <div class="d-flex gap-3 align-items-center mb-3">
+                      <div class="dd-qr-box"><i class="bi bi-qr-code"></i></div>
+                      <div class="flex-grow-1">
+                        <div
+                          class="d-flex border border-theme rounded overflow-hidden mb-2 align-items-center"
+                        >
+                          <span class="bg-soft-theme px-2 py-1 text-light-theme"
+                            ><i class="bi bi-link-45deg"></i
+                          ></span>
+                          <input
+                            type="text"
+                            value="admin-dash/82q..."
+                            class="border-0 bg-transparent px-2 w-100 text-theme fs-7"
+                            readonly
+                            style="outline: none"
+                          />
+                        </div>
+                        <button class="dd-share-btn-primary py-1 fs-7">Copy Link</button>
+                      </div>
+                    </div>
+                    <label class="fs-8 fw-bold mb-1 text-theme">Invite by email</label>
+                    <div class="d-flex gap-2 mb-3">
+                      <input
+                        type="email"
+                        class="form-control form-control-sm bg-soft-theme border-theme text-theme"
+                        placeholder="name@company.com"
+                      />
+                      <button class="btn btn-sm btn-theme-outline">Send</button>
+                    </div>
+
+                    <div class="fs-8 fw-bold mb-2 text-light-theme">Access</div>
+                    <div class="d-flex flex-column gap-2">
+                      <div
+                        class="d-flex justify-content-between align-items-center bg-soft-theme p-2 rounded"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <img
+                            src="https://i.pravatar.cc/150?u=5"
+                            class="rounded-circle"
+                            width="24"
+                          />
+                          <span class="fs-8 text-theme">kuchkarov@pix...</span>
+                        </div>
+                        <span class="dd-role-badge">Owner</span>
+                      </div>
+                      <div
+                        class="d-flex justify-content-between align-items-center bg-soft-theme p-2 rounded"
+                      >
+                        <div class="d-flex align-items-center gap-2">
+                          <img
+                            src="https://i.pravatar.cc/150?u=6"
+                            class="rounded-circle"
+                            width="24"
+                          />
+                          <span class="fs-8 text-theme">design-lead...</span>
+                        </div>
+                        <span class="dd-role-badge">Editor</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="tab-priv" class="tab-content p-3 d-none text-center text-light-theme">
+                    <i class="bi bi-shield-lock fs-1 mb-2"></i>
+                    <p class="fs-7">This project is Private.</p>
+                  </div>
+
+                  <div class="p-2 border-top border-theme">
+                    <button class="btn btn-sm w-100 text-primary text-start fs-7">
+                      <i class="bi bi-link me-2"></i> Copy invite link
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 5: USER SEARCH AUTO (FIXED) -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">5. User Search Auto</label>
+              <div class="custom-dropdown">
+                <!-- Trigger IS the Input -->
+                <div class="dd-search-trigger-box dropdown-toggle-custom" data-target="dd-5">
+                  <i class="bi bi-search text-light-theme fs-6"></i>
+                  <input
+                    type="text"
+                    class="dd-search-trigger-input"
+                    placeholder="Search users..."
+                    onkeyup="filterList(this, '.dd-user-item', '.u-name')"
+                  />
+                </div>
+
+                <!-- Menu -->
+                <div id="dd-5" class="custom-menu">
+                  <div class="dd-user-list custom-scrollbar">
+                    <div class="menu-item gap-3 dd-user-item">
+                      <div class="dd-avatar-sm-text bg-red-soft">PC</div>
+                      <div>
+                        <div class="fw-bold fs-7 u-name">Penelope Cabrera</div>
+                        <div class="fs-8 text-light-theme">cabrera@gmail.com</div>
+                      </div>
+                    </div>
+                    <div class="menu-item gap-3 active dd-user-item">
+                      <div class="dd-avatar-sm-text bg-blue-soft">CG</div>
+                      <div>
+                        <div class="fw-bold fs-7 u-name">Caleb Gates</div>
+                        <div class="fs-8 text-light-theme">caleb@gmail.com</div>
+                      </div>
+                      <i class="bi bi-arrow-right ms-auto fs-7"></i>
+                    </div>
+                    <div class="menu-item gap-3 dd-user-item">
+                      <div class="dd-avatar-sm-text bg-success-soft">EM</div>
+                      <div>
+                        <div class="fw-bold fs-7 u-name">Elon Musk</div>
+                        <div class="fs-8 text-light-theme">elon@x.com</div>
+                      </div>
+                    </div>
+                    <div class="menu-item gap-3 dd-user-item">
+                      <div class="dd-avatar-sm-text bg-warning-soft">JB</div>
+                      <div>
+                        <div class="fw-bold fs-7 u-name">Jeff Bezos</div>
+                        <div class="fs-8 text-light-theme">jeff@amazon.com</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 6: FILTER & SORT -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">6. Filter & Sort</label>
+              <div class="custom-dropdown">
+                <!-- Trigger -->
+                <button
+                  class="dd-filter-btn dropdown-toggle-custom"
+                  data-target="dd-6"
+                  id="filter-btn"
+                >
+                  <div class="d-flex align-items-center gap-2 text-warning fs-7">
+                    <i class="bi bi-exclamation-triangle"></i> <span>Outstanding</span>
+                  </div>
+                  <i class="bi bi-chevron-down fs-8 text-light-theme"></i>
+                </button>
+
+                <!-- Menu -->
+                <div id="dd-6" class="custom-menu">
+                  <div
+                    class="menu-item"
+                    onclick="selectFilter(this, 'All Invoices', 'bi-stack', '')"
+                  >
+                    <i class="bi bi-stack"></i> All Invoices
+                  </div>
+                  <div
+                    class="menu-item active"
+                    onclick="
+                      selectFilter(this, 'Outstanding', 'bi-exclamation-triangle', 'text-warning')
+                    "
+                  >
+                    <i class="bi bi-exclamation-triangle"></i> Outstanding
+                  </div>
+                  <div
+                    class="menu-item"
+                    onclick="selectFilter(this, 'Overdue', 'bi-clock', 'text-danger')"
+                  >
+                    <i class="bi bi-clock"></i> Overdue
+                  </div>
+                  <div
+                    class="menu-item"
+                    onclick="selectFilter(this, 'Paid', 'bi-check-circle', 'text-success')"
+                  >
+                    <i class="bi bi-check-circle"></i> Paid
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 7: SIMPLE MULTI-SELECT (FIXED BADGE) -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">7. Simple Multi-Select</label>
+              <div class="custom-dropdown">
+                <!-- Trigger -->
+                <button class="dd-multi-trigger dropdown-toggle-custom" data-target="dd-7">
+                  <span class="fs-8 text-light-theme">Select items</span>
+                  <span id="simple-multi-label" class="dd-badge-pill">1 Selected</span>
+                  <i class="bi bi-chevron-down fs-8 ms-auto"></i>
+                </button>
+
+                <!-- Menu -->
+                <div id="dd-7" class="custom-menu">
+                  <div class="menu-item" onclick="toggleSimpleMulti(this)">
+                    <div class="dd-custom-checkbox"></div>
+                    Widget
+                  </div>
+                  <div class="menu-item active" onclick="toggleSimpleMulti(this)">
+                    <div class="dd-custom-checkbox"></div>
+                    Event Screen
+                  </div>
+                  <div class="menu-item" onclick="toggleSimpleMulti(this)">
+                    <div class="dd-custom-checkbox"></div>
+                    Email Marketing
+                  </div>
+                  <div class="menu-item" onclick="toggleSimpleMulti(this)">
+                    <div class="dd-custom-checkbox"></div>
+                    Analytics
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 8: COUNTRY PHONE -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">8. Country & Phone</label>
+              <div class="custom-dropdown">
+                <!-- Integrated Trigger & Input -->
+                <div class="dd-phone-group">
+                  <button class="dd-flag-btn dropdown-toggle-custom" data-target="dd-8">
+                    <span id="selected-flag" class="fs-5">🇳🇬</span>
+                    <i class="bi bi-chevron-down fs-8 text-light-theme"></i>
+                  </button>
+                  <div class="flex-grow-1 position-relative">
+                    <label
+                      class="text-light-theme position-absolute"
+                      style="top: 4px; left: 12px; font-size: 0.65rem"
+                      >Phone number*</label
+                    >
+                    <div class="d-flex align-items-center px-3 pt-4 pb-2 h-100">
+                      <span id="selected-code" class="fw-bold me-2 text-theme">+234</span>
+                      <input type="tel" class="dd-phone-input" placeholder="1234 567" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Menu -->
+                <div id="dd-8" class="custom-menu">
+                  <div class="dd-modern-search-wrapper">
+                    <i class="bi bi-search dd-modern-search-icon"></i>
+                    <input
+                      type="text"
+                      class="dd-modern-search-input"
+                      placeholder="Search..."
+                      onkeyup="filterList(this, '.dd-country-item', '.c-name')"
+                    />
+                  </div>
+                  <div class="custom-scrollbar dd-notif-list">
+                    <div
+                      class="menu-item dd-country-item"
+                      onclick="selectCountry(this, '🇩🇪', '+49')"
+                    >
+                      <span class="fs-5 me-2">🇩🇪</span>
+                      <div class="flex-grow-1">
+                        <div class="fw-bold fs-7 c-name">Germany</div>
+                        <div class="fs-8 text-light-theme">+49</div>
+                      </div>
+                    </div>
+                    <div
+                      class="menu-item dd-country-item active"
+                      onclick="selectCountry(this, '🇳🇬', '+234')"
+                    >
+                      <span class="fs-5 me-2">🇳🇬</span>
+                      <div class="flex-grow-1">
+                        <div class="fw-bold fs-7 c-name">Nigeria</div>
+                        <div class="fs-8 text-light-theme">+234</div>
+                      </div>
+                      <i class="bi bi-check text-primary"></i>
+                    </div>
+                    <div
+                      class="menu-item dd-country-item"
+                      onclick="selectCountry(this, '🇺🇸', '+1')"
+                    >
+                      <span class="fs-5 me-2">🇺🇸</span>
+                      <div class="flex-grow-1">
+                        <div class="fw-bold fs-7 c-name">United States</div>
+                        <div class="fs-8 text-light-theme">+1</div>
+                      </div>
+                    </div>
+                    <div
+                      class="menu-item dd-country-item"
+                      onclick="selectCountry(this, '🇮🇳', '+91')"
+                    >
+                      <span class="fs-5 me-2">🇮🇳</span>
+                      <div class="flex-grow-1">
+                        <div class="fw-bold fs-7 c-name">India</div>
+                        <div class="fs-8 text-light-theme">+91</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 9: SIMPLE MENU -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">9. Simple Menu</label>
+              <div class="custom-dropdown">
+                <!-- Trigger -->
+                <button class="dd-simple-trigger dropdown-toggle-custom" data-target="dd-9">
+                  <img src="https://i.pravatar.cc/150?u=8" class="rounded-circle" width="32" />
+                  <div class="text-start flex-grow-1">
+                    <div class="fw-bold lh-1 fs-7">Personal</div>
+                    <small class="text-success" style="font-size: 0.65rem">Pro plan</small>
+                  </div>
+                  <i class="bi bi-chevron-down fs-8 text-light-theme"></i>
+                </button>
+
+                <!-- Menu -->
+                <div id="dd-9" class="custom-menu">
+                  <div class="p-3 border-bottom border-theme bg-soft-theme">
+                    <small class="text-light-theme fs-7">jasim@gmail.com</small>
+                  </div>
+                  <div class="py-2">
+                    <div class="menu-item"><i class="bi bi-newspaper"></i> Upgrade plan</div>
+                    <div class="menu-item active"><i class="bi bi-graph-up"></i> Activity</div>
+                    <div class="menu-item"><i class="bi bi-gear"></i> Settings</div>
+                  </div>
+                  <div class="border-top border-theme py-2">
+                    <div class="menu-item">
+                      <i class="bi bi-question-circle"></i> Help & Support
+                    </div>
+                    <div class="menu-item"><i class="bi bi-box-arrow-right"></i> Log out</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 10: ADVANCED MULTI-SELECT -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">10. Advanced Multi-Select</label>
+              <div class="custom-dropdown">
+                <!-- Trigger -->
+                <div
+                  class="dd-multi-trigger dropdown-toggle-custom"
+                  data-target="dd-10"
+                  style="min-height: 42px"
+                >
+                  <div class="dd-tag-container" id="adv-tags">
+                    <span class="text-light-theme fs-8" id="adv-placeholder"
+                      >Select countries...</span
+                    >
+                  </div>
+                  <i class="bi bi-chevron-down fs-8 text-light-theme ms-2"></i>
+                </div>
+
+                <!-- Menu -->
+                <div id="dd-10" class="custom-menu">
+                  <div class="dd-modern-search-wrapper">
+                    <i class="bi bi-search dd-modern-search-icon"></i>
+                    <input
+                      type="text"
+                      class="dd-modern-search-input"
+                      placeholder="Search..."
+                      onkeyup="filterList(this, '.dd-multi-item', '.m-name')"
+                    />
+                  </div>
+                  <div class="p-2 border-bottom border-theme">
+                    <div class="menu-item rounded-2 py-2" onclick="toggleSelectAllAdv(this)">
+                      <div
+                        class="d-flex align-items-center justify-content-center bg-primary text-white rounded-circle me-2"
+                        style="width: 20px; height: 20px"
+                      >
+                        <i class="bi bi-dash"></i>
+                      </div>
+                      <span class="fw-bold fs-7">Select all</span>
+                    </div>
+                  </div>
+                  <div class="custom-scrollbar dd-notif-list" id="adv-list">
+                    <div
+                      class="menu-item dd-multi-item active"
+                      data-value="Bahamas"
+                      onclick="toggleCheckAdv(this)"
+                    >
+                      <div class="dd-custom-checkbox me-2"></div>
+                      <span class="fs-5 me-2">🇧🇸</span> <span class="m-name fs-7">Bahamas</span>
+                    </div>
+                    <div
+                      class="menu-item dd-multi-item"
+                      data-value="Bahrain"
+                      onclick="toggleCheckAdv(this)"
+                    >
+                      <div class="dd-custom-checkbox me-2"></div>
+                      <span class="fs-5 me-2">🇧🇭</span> <span class="m-name fs-7">Bahrain</span>
+                    </div>
+                    <div
+                      class="menu-item dd-multi-item"
+                      data-value="Canada"
+                      onclick="toggleCheckAdv(this)"
+                    >
+                      <div class="dd-custom-checkbox me-2"></div>
+                      <span class="fs-5 me-2">🇨🇦</span> <span class="m-name fs-7">Canada</span>
+                    </div>
+                    <div
+                      class="menu-item dd-multi-item"
+                      data-value="France"
+                      onclick="toggleCheckAdv(this)"
+                    >
+                      <div class="dd-custom-checkbox me-2"></div>
+                      <span class="fs-5 me-2">🇫🇷</span> <span class="m-name fs-7">France</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DROPDOWN 11: TEMPLATES LIBRARY -->
+            <div class="col-md-4 col-sm-6">
+              <label class="fw-bold text-light-theme mb-2 fs-8">11. Templates Library</label>
+              <div class="custom-dropdown">
+                <!-- Trigger -->
+                <button class="dd-simple-trigger dropdown-toggle-custom" data-target="dd-11">
+                  <i class="bi bi-search text-light-theme"></i>
+                  <span class="flex-grow-1 text-light-theme fs-7 text-start"
+                    >Search templates...</span
+                  >
+                  <span class="dd-shortcut">⌘ K</span>
+                </button>
+
+                <!-- Menu -->
+                <div id="dd-11" class="custom-menu">
+                  <div class="p-2 border-bottom border-theme">
+                    <input
+                      type="text"
+                      class="form-control border-0 bg-transparent shadow-none text-theme fw-bold fs-7"
+                      placeholder="Type command..."
+                      autofocus
+                      onkeyup="filterList(this, '.menu-item.searchable', '.search-text')"
+                    />
+                  </div>
+                  <div class="custom-scrollbar dd-notif-list">
+                    <div class="fs-8 text-light-theme px-3 pt-3 pb-1">Files</div>
+                    <div class="menu-item gap-3 searchable">
+                      <div class="dd-file-icon icon-pdf">
+                        <i class="bi bi-file-earmark-pdf"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="fw-bold fs-7 search-text">Guide_V2.pdf</div>
+                        <div class="fs-8 text-light-theme">2 MB</div>
+                      </div>
+                    </div>
+                    <div class="menu-item gap-3 searchable">
+                      <div class="dd-file-icon icon-xls">
+                        <i class="bi bi-file-earmark-excel"></i>
+                      </div>
+                      <div class="flex-grow-1">
+                        <div class="fw-bold fs-7 search-text">Q4_Report.xlsx</div>
+                        <div class="fs-8 text-light-theme">1 MB</div>
+                      </div>
+                    </div>
+                    <div class="fs-8 text-light-theme px-3 pt-2">Tools</div>
+                    <div class="menu-item gap-3 searchable">
+                      <i class="bi bi-plus-lg"></i>
+                      <span class="fs-7 search-text">Create New Template</span>
+                    </div>
+                    <div class="menu-item gap-3 searchable">
+                      <i class="bi bi-upload"></i>
+                      <span class="fs-7 search-text">Upload a file</span>
+                    </div>
+                  </div>
+                  <div
+                    class="p-2 border-top border-theme bg-soft-theme d-flex justify-content-between px-3"
+                  >
+                    <span class="fs-8 text-light-theme">Select</span>
+                    <span class="fs-8 text-light-theme">↵ Enter</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../../../assets/js/layout.js"></script>
+    <script>
+      // === GLOBAL: THEME SETTER ===
+      function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+      }
+
+      // === GLOBAL: CLICK HANDLER ===
+      document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('.dropdown-toggle-custom');
+        const menu = e.target.closest('.custom-menu');
+        const tagClose = e.target.closest('.dd-tag-close');
+
+        // Prevent closing when removing tag
+        if (tagClose) return;
+        // Prevent closing when interacting inside menu (unless it's a selection item)
+        if (e.target.closest('input') && menu) return;
+
+        // DROPDOWN 5 SPECIAL CASE (Input Trigger)
+        if (trigger && trigger.dataset.target === 'dd-5' && e.target.tagName === 'INPUT') {
+          const targetMenu = document.getElementById('dd-5');
+          // Close others
+          document.querySelectorAll('.custom-menu').forEach((m) => {
+            if (m !== targetMenu) m.classList.remove('show');
+          });
+          targetMenu.classList.add('show'); // Always open on click
+          return;
+        }
+
+        // STANDARD TOGGLE LOGIC
+        if (trigger) {
+          const targetId = trigger.getAttribute('data-target');
+          const targetMenu = document.getElementById(targetId);
+
+          // Close others
+          document.querySelectorAll('.custom-menu').forEach((m) => {
+            if (m !== targetMenu) m.classList.remove('show');
+          });
+
+          // Toggle current
+          targetMenu.classList.toggle('show');
+
+          // Auto-focus search inputs if present
+          const searchInput = targetMenu.querySelector('input[autofocus]');
+          if (targetMenu.classList.contains('show') && searchInput) {
+            setTimeout(() => searchInput.focus(), 100);
+          }
+        }
+        // CLICK OUTSIDE
+        else if (!menu) {
+          document.querySelectorAll('.custom-menu').forEach((m) => m.classList.remove('show'));
+        }
+      });
+
+      // === COMMON: LIST FILTER ===
+      function filterList(input, itemSelector, textSelector) {
+        const val = input.value.toLowerCase();
+        let container = input.closest('.custom-menu');
+
+        // Handle Dropdown 5 (Input outside menu)
+        if (!container) {
+          const trigger = input.closest('.dropdown-toggle-custom');
+          if (trigger) {
+            const targetId = trigger.getAttribute('data-target');
+            container = document.getElementById(targetId);
+          }
+        }
+
+        if (!container) return;
+
+        container.querySelectorAll(itemSelector).forEach((item) => {
+          const text = item.querySelector(textSelector).innerText.toLowerCase();
+          item.style.display = text.includes(val) ? 'flex' : 'none';
+        });
+      }
+
+      // === DROPDOWN 1: RADIO LOGIC ===
+      function toggleRadio(el) {
+        const container = el.closest('.border-top');
+        container.querySelectorAll('.menu-item').forEach((i) => i.classList.remove('active'));
+        el.classList.add('active');
+      }
+
+      // === DROPDOWN 3: TEAM SELECT ===
+      function selectTeam(el, color, name) {
+        const container = el.closest('.custom-menu');
+        container.querySelectorAll('.dd-team-item').forEach((i) => {
+          i.classList.remove('active');
+          if (i.querySelector('.bi-check')) i.querySelector('.bi-check').remove();
+        });
+        el.classList.add('active');
+        const check = document.createElement('i');
+        check.className = 'bi bi-check ms-auto fs-7 text-primary';
+        el.appendChild(check);
+
+        document.getElementById('team-active-dot').style.background = color;
+        document.getElementById('team-active-text').innerText = name;
+        container.classList.remove('show');
+      }
+
+      // === DROPDOWN 4: TABS ===
+      function switchTab(el, targetId) {
+        const container = el.closest('.custom-menu');
+        container.querySelectorAll('.dd-nav-link').forEach((l) => l.classList.remove('active'));
+        el.classList.add('active');
+        container.querySelectorAll('.tab-content').forEach((c) => c.classList.add('d-none'));
+        document.getElementById(targetId).classList.remove('d-none');
+      }
+
+      // === DROPDOWN 6: FILTER SELECT ===
+      function selectFilter(el, text, icon, colorClass) {
+        el.parentElement
+          .querySelectorAll('.menu-item')
+          .forEach((i) => i.classList.remove('active'));
+        el.classList.add('active');
+        const btn = document.getElementById('filter-btn');
+        btn.innerHTML = `<div class="d-flex align-items-center gap-2 ${colorClass} fs-7"><i class="bi ${icon}"></i> <span>${text}</span></div><i class="bi bi-chevron-down fs-8 text-light-theme"></i>`;
+        el.parentElement.classList.remove('show');
+      }
+
+      // === DROPDOWN 7: SIMPLE MULTI ===
+      function toggleSimpleMulti(el) {
+        el.classList.toggle('active');
+        const count = el.parentElement.querySelectorAll('.active').length;
+        document.getElementById('simple-multi-label').innerText = count + ' Selected';
+      }
+
+      // === DROPDOWN 8: COUNTRY SELECT ===
+      function selectCountry(el, flag, code) {
+        el.parentElement.querySelectorAll('.dd-country-item').forEach((i) => {
+          i.classList.remove('active');
+          if (i.querySelector('.bi-check')) i.querySelector('.bi-check').remove();
+        });
+        el.classList.add('active');
+        const check = document.createElement('i');
+        check.className = 'bi bi-check text-primary';
+        el.appendChild(check);
+
+        document.getElementById('selected-flag').innerText = flag;
+        document.getElementById('selected-code').innerText = code;
+        el.closest('.custom-menu').classList.remove('show');
+      }
+
+      // === DROPDOWN 10: ADVANCED MULTI (TAGS) ===
+      // Initial Render
+      renderAdvTags();
+
+      function toggleCheckAdv(el) {
+        el.classList.toggle('active');
+        renderAdvTags();
+      }
+
+      function toggleSelectAllAdv(el) {
+        const items = document.getElementById('adv-list').querySelectorAll('.dd-multi-item');
+        const allActive = Array.from(items).every((i) => i.classList.contains('active'));
+        items.forEach((i) => {
+          if (allActive) i.classList.remove('active');
+          else i.classList.add('active');
+        });
+        renderAdvTags();
+      }
+
+      function renderAdvTags() {
+        const container = document.getElementById('adv-tags');
+        const items = document.querySelectorAll('#adv-list .dd-multi-item.active');
+        container.innerHTML = '';
+
+        if (items.length === 0) {
+          container.innerHTML =
+            '<span class="text-light-theme fs-8" id="adv-placeholder">Select countries...</span>';
+          return;
+        }
+
+        items.forEach((item) => {
+          const val = item.getAttribute('data-value');
+          const tag = document.createElement('div');
+          tag.className = 'dd-tag-chip';
+          tag.innerHTML = `<span>${val}</span> <i class="bi bi-x dd-tag-close" onclick="removeAdvTag(event, '${val}')"></i>`;
+          container.appendChild(tag);
+        });
+      }
+
+      function removeAdvTag(e, val) {
+        e.stopPropagation(); // Stop dropdown toggle
+        const item = document.querySelector(`#adv-list .dd-multi-item[data-value="${val}"]`);
+        if (item) {
+          item.classList.remove('active');
+          renderAdvTags();
+        }
+      }
+    </script>
+  </body>
+</html>
