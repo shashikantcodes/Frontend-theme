@@ -112,83 +112,17 @@
   }
   .offcanvas-premium.offcanvas-start {
     width: 30% !important;
+    z-index: 1150;
   }
 }
 @media (max-width: 991px) {
-  .offcanvas-premium.offcanvas-end {
+  /* .offcanvas-premium.offcanvas-end {
     width: 90% !important;
-  }
+  } */
   .offcanvas-premium.offcanvas-start {
     width: 85% !important;
   }
 }
-/* ===== MAKE OFFCANVAS RESPECT LAYOUT ===== */
-.offcanvas {
-  z-index: 1200 !important;
-}
-
-.offcanvas-backdrop {
-  z-index: 1190 !important;
-}
-.offcanvas-premium {
-  position: fixed;
-  top: 0;
-  height: 100vh;
-}
-
-/* LEFT OFFCANVAS */
-.offcanvas-premium.offcanvas-start {
-  left: var(--sidebar-width);
-  transform: translateX(-100%);
-}
-
-.offcanvas-premium.offcanvas-start.show {
-  transform: translateX(0);
-}
-
-/* COLLAPSED SIDEBAR SUPPORT */
-body.sidebar-is-collapsed .offcanvas-premium.offcanvas-start {
-  left: var(--sidebar-collapsed-width);
-}
-
-/* RIGHT OFFCANVAS (no change needed normally) */
-.offcanvas-premium.offcanvas-end {
-  right: 0;
-}
-/* ===== MAKE OFFCANVAS LAYOUT-BASED ===== */
-
-#main-wrapper {
-  position: relative;
-}
-
-/* Override Bootstrap default fixed behavior */
-#main-wrapper .offcanvas-premium {
-  position: absolute !important;
-  top: 0;
-  height: 100vh;
-  z-index: 1105;
-}
-
-/* LEFT PANEL */
-#main-wrapper .offcanvas-start {
-  left: 0;
-  transform: translateX(-100%);
-}
-
-#main-wrapper .offcanvas-start.show {
-  transform: translateX(0);
-}
-
-/* RIGHT PANEL */
-/* #main-wrapper .offcanvas-end {
-  right: -40px;
-  transform: translateX(100%);
-}
-
-#main-wrapper .offcanvas-end.show {
-  transform: translateX(0);
-} */
-
 /* Header Layout */
 .premium-header {
   flex-shrink: 0;
@@ -449,6 +383,10 @@ body.sidebar-is-collapsed .offcanvas-premium.offcanvas-start {
   border-bottom-right-radius: 20px;
   height: auto;
   min-height: 250px;
+}
+.offcanvas.show:not(.hiding),
+.offcanvas.showing {
+  z-index: 1150;
 }
 .offcanvas-bottom {
   border-top-left-radius: 20px;
