@@ -164,6 +164,144 @@
             </div>
           </div>
         </div>
+        <!-- Third table -->
+        <div class="ui-section-header mb-3 mt-5">
+          <h4>Table Style 3: Combo Mode</h4>
+          <p>Show More Leads aur Prev/Next dono ek sath.</p>
+        </div>
+
+        <div class="yajra-card">
+          <div class="yajra-table-wrapper">
+            <table id="leadsTable3" class="table yajra-table-main">
+              <thead>
+                <tr>
+                  <th style="width: 40px">
+                    <input type="checkbox" id="selectAll3" class="global-select-all" />
+                  </th>
+                  <th>Registered Name</th>
+                  <th>Registered Email</th>
+                  <th>Registered Mobile</th>
+                  <th>User Registration Date</th>
+                  <th>Lead Stage</th>
+                  <th>Lead Owner</th>
+                  <th>State</th>
+                  <th>City</th>
+                  <th>Primary Registra</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div class="yajra-footer">
+            <div class="footer-left d-flex flex-wrap align-items-center gap-3">
+              <button class="yajra-btn" id="btnLoadMore3">
+                <i class="fa-solid fa-arrows-rotate"></i> <span>Show More Leads</span>
+              </button>
+
+              <div class="d-flex gap-2 border-start ps-3 border-secondary border-opacity-25">
+                <button class="yajra-btn" id="btnPrev3" disabled>
+                  <i class="fa-solid fa-chevron-left"></i> <span>Prev</span>
+                </button>
+                <button class="yajra-btn" id="btnNext3">
+                  <span>Next</span> <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="footer-right d-flex flex-wrap align-items-center gap-3">
+              <button
+                class="btn btn-sm btn-secondary opacity-75 fw-bold"
+                id="btnShowTotal3"
+                style="font-size: 11px"
+              >
+                Show Total Records
+              </button>
+              <span class="yajra-badge d-none" id="totalBadge3">Total Records: 0</span>
+
+              <div
+                class="d-flex align-items-center gap-2 text-muted fw-semibold"
+                style="font-size: 12px"
+              >
+                Rows:
+                <select class="form-select yajra-select w-auto py-0" id="selectRows3">
+                  <option value="10">10</option>
+                  <option value="20" selected>20</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fourth table  -->
+        <div class="ui-section-header mb-3 mt-5">
+          <h4>Table Style 4: Pro Features</h4>
+          <p>Click row to expand. Select checkboxes for bulk actions. Smart pagination included.</p>
+        </div>
+
+        <div class="yajra-card position-relative overflow-visible">
+          <div id="bulkActionBar4" class="bulk-action-bar">
+            <div class="fw-bold">
+              <i class="bi bi-check2-square me-2"></i>
+              <span id="selectedCount4">0</span> Leads Selected
+            </div>
+            <div class="d-flex gap-2">
+              <button class="btn btn-sm btn-light text-dark fw-semibold">Change Stage</button>
+              <button class="btn btn-sm btn-danger fw-semibold">Delete Selected</button>
+            </div>
+          </div>
+
+          <div class="yajra-table-wrapper" style="max-height: 550px">
+            <table id="leadsTable4" class="table yajra-table-main">
+              <thead>
+                <tr>
+                  <th style="width: 40px">
+                    <input type="checkbox" id="selectAll4" class="global-select-all" />
+                  </th>
+                  <th style="width: 30px"></th>
+                  <th>Registered Name</th>
+                  <th>Registered Email</th>
+                  <th>Registered Mobile</th>
+                  <th>User Registration Date</th>
+                  <th>Lead Stage</th>
+                  <th>Lead Owner</th>
+                  <th>State</th>
+                  <th>City</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div class="yajra-footer">
+            <div class="footer-left d-flex flex-wrap align-items-center gap-2">
+              <button class="yajra-btn" id="btnPrev4" disabled>
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+
+              <div id="pageNumbers4" class="d-flex align-items-center gap-1"></div>
+
+              <button class="yajra-btn" id="btnNext4">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="footer-right d-flex flex-wrap align-items-center gap-3">
+              <span class="yajra-badge" id="totalBadge4">Total Records: 0</span>
+              <div
+                class="d-flex align-items-center gap-2 text-muted fw-semibold"
+                style="font-size: 12px"
+              >
+                Rows:
+                <select class="form-select yajra-select w-auto py-0" id="selectRows4">
+                  <option value="10">10</option>
+                  <option value="20" selected>20</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <script src="../../../assets/js/layout.js"></script>
