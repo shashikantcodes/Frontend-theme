@@ -76,7 +76,7 @@
 
 /* Dark Mode Hover Fix */
 [data-theme='dark'] .menu-item:hover {
-  background-color: var(--color-bg-soft); /* Better contrast in dark mode */
+  background-color: var(--color-bg-soft);
 }
 
 /* Common Toggle Button Styles */
@@ -95,7 +95,7 @@
 
 /* =========================================
            DROPDOWN 1: PROFILE & ACCOUNT CSS
-           ========================================= */
+  ========================================= */
 .dd-profile-header {
   padding: 16px;
   border-bottom: 1px solid var(--color-border);
@@ -184,6 +184,20 @@
   background: var(--color-bg-soft);
   border-color: var(--color-secondary);
 }
+
+.dd-notif-header {
+  background: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
+  transition: 0.2s ease;
+}
+
+.dd-notif-header span:first-child {
+  color: var(--color-text-main);
+}
+
+.dd-notif-header .text-primary {
+  color: var(--color-primary) !important;
+}
 .dd-badge-float {
   position: absolute;
   top: -2px;
@@ -242,7 +256,7 @@
 
 /* =========================================
            DROPDOWN 4: SHARE & INVITE CSS
-           ========================================= */
+ ========================================= */
 .dd-share-btn-primary {
   background-color: var(--color-primary);
   color: var(--text-on-primary);
@@ -263,6 +277,7 @@
 .dd-nav-tabs {
   border-bottom: 1px solid var(--color-border);
   padding: 0 16px;
+  background: var(--color-bg-card);
   display: flex;
   gap: 16px;
 }
@@ -285,10 +300,16 @@
   background-color: var(--color-bg-soft);
   display: flex;
   align-items: center;
+  border: 1px solid var(--color-border);
   justify-content: center;
   font-size: 1.5rem;
   color: var(--color-text-main);
 }
+.custom-menu input[type='email']::placeholder {
+  color: var(--color-text-light);
+  opacity: 1;
+}
+
 .dd-role-badge {
   background-color: var(--color-bg-card);
   color: var(--color-text-main);
