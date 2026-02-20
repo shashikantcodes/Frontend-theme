@@ -460,6 +460,13 @@ $('#leadsTable4 tbody').on('change', '.row-checkbox', function () {
   updateBulkActionBar();
 });
 
+// NAYA EVENT: Blue Bar se saari selection clear karne ke liye
+$('#clearSelection4').on('click', function () {
+  $('#selectAll4').prop('checked', false);
+  $('#leadsTable4 tbody .row-checkbox').prop('checked', false);
+  updateBulkActionBar();
+});
+
 // Pagination Clicks (Prev/Next/Numbers)
 $('#btnPrev4').on('click', () => table4.page('previous').draw('page'));
 $('#btnNext4').on('click', () => table4.page('next').draw('page'));
@@ -472,4 +479,282 @@ $('#pageNumbers4').on('click', '.page-number-btn', function () {
 // Rows Per Page
 $('#selectRows4').on('change', function () {
   table4.page.len(parseInt($(this).val())).draw();
+}); // ============================================================
+//  STYLE 5: MODERN DASHBOARD (LIST & GRID VIEW) (#leadsTable5)
+// ============================================================
+
+const generateModernLeads = () => {
+  const names = [
+    'Tahani Al-Hashemi',
+    'Alexe Jordan',
+    'Shouq Al-Kumaiti',
+    'Khalid Zaabi',
+    'Gany Halpal',
+    'Dibbondho',
+    'Hamasy Singhal',
+    'Rahul Verma',
+    'John Doe',
+    'Sarah Miller',
+  ];
+  const companies = [
+    'Zendesk',
+    'Quicken Loans',
+    'Audi',
+    'Etsy',
+    'Tesla',
+    'Western Union',
+    'Google',
+    'Microsoft',
+  ];
+  const colors = [
+    '#0f766e',
+    '#be123c',
+    '#000000',
+    '#d97706',
+    '#be123c',
+    '#ca8a04',
+    '#1a73e8',
+    '#0078d4',
+  ];
+
+  // Data array size increased to 100
+  return Array.from({ length: 100 }, (_, i) => {
+    const nameStr = names[i % names.length];
+    const compIdx = i % companies.length;
+    return {
+      id: 1000 + i,
+      name: `${nameStr} - ${i + 1}`,
+      initials: nameStr
+        .split(' ')
+        .map((n) => n[0])
+        .join(''),
+      time: i % 2 === 0 ? 'Today at 12:40PM' : 'Yesterday at 10:45AM',
+      email: `${nameStr.split(' ')[0].toLowerCase()}${i}@gmail.com`,
+      phone: `+97150${Math.floor(100000 + Math.random() * 900000)}`,
+      company: companies[compIdx],
+      companyUrl: `${companies[compIdx].toLowerCase().replace(' ', '')}.com`,
+      companyColor: colors[compIdx],
+      companyInitial: companies[compIdx].substring(0, 2).toUpperCase(),
+      industry: 'Technology',
+      status: i % 4 === 0 ? 'New' : i % 5 === 0 ? 'Sold' : 'In Progress',
+    };
+  });
+};
+
+$(document).ready(function () {
+  if (!$.fn.DataTable.isDataTable('#leadsTable5')) {
+    const selectedLeads5 = new Set();
+    let currentView5 = 'list';
+
+    const getActionMenuHtml = () => `
+      <div class="d-flex align-items-center">
+        <button class="tb-action-btn" title="Call"><i class="fa-solid fa-phone"></i></button>
+        <button class="tb-action-btn" title="History"><i class="fa-solid fa-clock-rotate-left"></i></button>
+        <div class="dropdown d-inline-block">
+          <button class="tb-action-btn" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-ellipsis"></i></button>
+          <ul class="dropdown-menu dropdown-menu-end tb5-dropdown-menu">
+            <li><a class="dropdown-item" href="#"><i class="fa-regular fa-eye me-2"></i> View Profile</a></li>
+            <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen-to-square me-2"></i> Edit Record</a></li>
+            <li><hr class="dropdown-divider" style="border-color: var(--color-border);"></li>
+            <li><a class="dropdown-item text-danger" href="#"><i class="fa-regular fa-trash-can me-2"></i> Delete</a></li>
+          </ul>
+        </div>
+      </div>
+    `;
+
+    const table5 = $('#leadsTable5').DataTable({
+      dom: 't',
+      scrollX: false,
+      data: generateModernLeads(),
+      pageLength: 20, // Default rows 20
+      ordering: true,
+      columns: [
+        {
+          data: 'id',
+          orderable: false,
+          width: '40px',
+          render: (d) => `<input type="checkbox" class="row-checkbox5" value="${d}">`,
+        },
+        {
+          data: 'name',
+          render: (d, t, r) =>
+            `<div class="d-flex align-items-center gap-3"><div class="tb-avatar">${r.initials}</div><div><a href="#" class="tb-link">${d}</a><span class="tb-subtext">${r.time}</span></div></div>`,
+        },
+        {
+          data: 'email',
+          render: (d, t, r) =>
+            `<div><div class="tb-maintext d-flex align-items-center gap-2"><i class="fa-regular fa-envelope tb5-text-light"></i> ${d}</div><span class="tb-subtext d-flex align-items-center gap-2"><i class="fa-solid fa-phone tb5-text-light"></i> ${r.phone}</span></div>`,
+        },
+        {
+          data: 'company',
+          render: (d, t, r) =>
+            `<div class="d-flex align-items-center gap-2"><div class="tb-company-logo" style="background-color: ${r.companyColor};">${r.companyInitial}</div><div><div class="tb-maintext">${d}</div><span class="tb-subtext">${r.companyUrl}</span></div></div>`,
+        },
+        { data: 'industry', render: (d) => `<span class="tb-maintext">${d}</span>` },
+        {
+          data: 'status',
+          render: (d) =>
+            `<span class="tb-badge ${d === 'New' ? 'new' : d === 'Sold' ? 'sold' : 'in-progress'}">${d}</span>`,
+        },
+        { data: null, orderable: false, render: () => getActionMenuHtml() },
+      ],
+
+      rowCallback: function (row, data) {
+        if (selectedLeads5.has(data.id.toString())) {
+          $(row).addClass('selected-row');
+          $(row).find('.row-checkbox5').prop('checked', true);
+        } else {
+          $(row).removeClass('selected-row');
+          $(row).find('.row-checkbox5').prop('checked', false);
+        }
+      },
+
+      drawCallback: function (settings) {
+        const api = this.api();
+        const info = api.page.info();
+
+        // 1. Footer Data Update
+        $('#totalRecordsText5').text(info.recordsDisplay);
+
+        // 2. Footer Prev/Next Button states
+        $('#btnPrev5').prop('disabled', info.page === 0);
+        $('#btnNext5').prop('disabled', info.page === info.pages - 1 || info.pages === 0);
+
+        syncSelectAllCheckbox5();
+        renderGridView5(api.rows({ page: 'current' }).data().toArray());
+      },
+    });
+
+    /* --- GRID RENDERER --- */
+    function renderGridView5(pageData) {
+      let html = '';
+      if (pageData.length === 0) {
+        html = `<div class="col-12 text-center tb5-text-light py-5">No records found</div>`;
+      } else {
+        pageData.forEach((row) => {
+          const isSelected = selectedLeads5.has(row.id.toString()) ? 'checked' : '';
+          const cardClass = isSelected ? 'selected-card' : '';
+          let badgeClass =
+            row.status === 'New' ? 'new' : row.status === 'Sold' ? 'sold' : 'in-progress';
+
+          html += `
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <div class="tb5-grid-card ${cardClass}" data-id="${row.id}">
+                <input type="checkbox" class="row-checkbox5 grid-card-checkbox yajra-checkbox" value="${row.id}" ${isSelected}>
+                
+                <div class="d-flex align-items-center gap-3 mb-3">
+                  <div class="tb-avatar">${row.initials}</div>
+                  <div><a href="#" class="tb-link">${row.name}</a><span class="tb-subtext">${row.time}</span></div>
+                </div>
+
+                <div class="mb-3">
+                  <div class="tb-maintext d-flex align-items-center gap-2 mb-1" style="font-size:13px"><i class="fa-regular fa-envelope tb5-text-light"></i> ${row.email}</div>
+                  <span class="tb-subtext d-flex align-items-center gap-2"><i class="fa-solid fa-phone tb5-text-light"></i> ${row.phone}</span>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-auto" style="border-color: var(--color-border) !important;">
+                  <span class="tb-badge ${badgeClass}">${row.status}</span>
+                  ${getActionMenuHtml()}
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
+      $('#gridItemsWrapper5').html(html);
+    }
+
+    function syncSelectAllCheckbox5() {
+      const allCheckboxes = $('#leadsTable5 tbody .row-checkbox5');
+      if (allCheckboxes.length > 0) {
+        const allChecked = allCheckboxes.length === allCheckboxes.filter(':checked').length;
+        $('#selectAll5').prop('checked', allChecked);
+      } else {
+        $('#selectAll5').prop('checked', false);
+      }
+    }
+
+    function updateBulkActionUI5() {
+      const count = selectedLeads5.size;
+      $('#selectedCount5').text(count);
+      if (count > 0)
+        $('#bulkActionsContainer5').removeClass('d-none').addClass('d-flex').hide().fadeIn(200);
+      else
+        $('#bulkActionsContainer5')
+          .removeClass('d-flex')
+          .fadeOut(200, function () {
+            $(this).addClass('d-none');
+          });
+    }
+
+    /* --- EVENTS --- */
+
+    // View Toggle
+    $('input[name="viewToggle5"]').on('change', function () {
+      currentView5 = $(this).val();
+      if (currentView5 === 'grid') {
+        $('#listViewContainer5').hide();
+        $('#gridViewContainer5').fadeIn(300);
+      } else {
+        $('#gridViewContainer5').hide();
+        $('#listViewContainer5').fadeIn(300);
+      }
+    });
+
+    // Custom Search
+    $('#customSearch5').on('keyup', function () {
+      table5.search(this.value).draw();
+    });
+
+    // Bottom Dropdown Page Length Change
+    $('#selectRows5').on('change', function () {
+      table5.page.len(parseInt($(this).val())).draw();
+    });
+
+    // Checkboxes Logic
+    $(document).on('change', '.row-checkbox5', function () {
+      const id = $(this).val();
+      if ($(this).is(':checked')) selectedLeads5.add(id);
+      else selectedLeads5.delete(id);
+      table5.draw(false);
+      updateBulkActionUI5();
+    });
+
+    $('#selectAll5').on('change', function () {
+      const isChecked = $(this).is(':checked');
+      $('#leadsTable5 tbody .row-checkbox5').each(function () {
+        const id = $(this).val();
+        if (isChecked) selectedLeads5.add(id);
+        else selectedLeads5.delete(id);
+      });
+      table5.draw(false);
+      updateBulkActionUI5();
+    });
+
+    $('#btnDelete5').on('click', function () {
+      alert(`${selectedLeads5.size} leads will be deleted.`);
+      selectedLeads5.clear();
+      table5.draw(false);
+      updateBulkActionUI5();
+    });
+
+    // BOTTOM Pagination Click Events
+    $('#btnPrev5').on('click', () => table5.page('previous').draw('page'));
+    $('#btnNext5').on('click', () => table5.page('next').draw('page'));
+
+    // Icon Actions (Top Right)
+    $('#btnSidebarToggle5').on('click', function () {
+      alert('Sidebar Action');
+    });
+
+    // RESET BUTTON (Rotate icon)
+    $('#btnResetTable5').on('click', function () {
+      $('#customSearch5').val('');
+      table5.search('').page.len(20);
+      $('#selectRows5').val('20');
+      selectedLeads5.clear();
+      table5.draw();
+      updateBulkActionUI5();
+    });
+  }
 });

@@ -241,9 +241,14 @@
 
         <div class="yajra-card position-relative overflow-visible">
           <div id="bulkActionBar4" class="bulk-action-bar">
-            <div class="fw-bold">
-              <i class="bi bi-check2-square me-2"></i>
-              <span id="selectedCount4">0</span> Leads Selected
+            <div class="fw-bold d-flex align-items-center">
+              <i
+                class="fa-solid fa-xmark me-3"
+                id="clearSelection4"
+                style="cursor: pointer; font-size: 1.2rem; opacity: 0.9"
+                title="Clear Selection"
+              ></i>
+              <span><span id="selectedCount4">0</span> Leads Selected</span>
             </div>
             <div class="d-flex gap-2">
               <button class="btn btn-sm btn-light text-dark fw-semibold">Change Stage</button>
@@ -299,6 +304,157 @@
                   <option value="50">50</option>
                 </select>
               </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fivth table   -->
+        <div class="ui-section-header mb-3 mt-5">
+          <h4>Table Style 5: Modern App View</h4>
+          <p>Fixed Mobile View, Search UI, and Bottom Pagination.</p>
+        </div>
+
+        <div class="yajra-card tb5-card">
+          <div
+            class="tb5-toolbar border-bottom d-flex flex-column flex-md-row justify-content-between align-items-md-center p-3 gap-3"
+          >
+            <div class="d-flex flex-column flex-sm-row gap-3 w-100 align-items-center">
+              <div class="tb5-view-toggle">
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="viewToggle5"
+                  id="listView5"
+                  value="list"
+                  checked
+                />
+                <label class="tb5-toggle-btn d-flex align-items-center gap-2" for="listView5">
+                  <i class="fa-solid fa-list-ul"></i> List
+                </label>
+
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="viewToggle5"
+                  id="gridView5"
+                  value="grid"
+                />
+                <label class="tb5-toggle-btn d-flex align-items-center gap-2" for="gridView5">
+                  <i class="fa-solid fa-grip"></i> Grid
+                </label>
+              </div>
+
+              <div class="tb5-search position-relative flex-grow-1" style="max-width: 350px">
+                <i
+                  class="fa-solid fa-search position-absolute tb5-text-light"
+                  style="top: 50%; left: 8px; transform: translateY(-50%); font-size: 12px"
+                ></i>
+                <input
+                  type="text"
+                  id="customSearch5"
+                  class="form-control form-control-sm ps-4 w-100"
+                  placeholder="Search leads..."
+                />
+              </div>
+            </div>
+
+            <div
+              class="d-flex flex-wrap align-items-center gap-3 justify-content-start justify-content-md-end w-100"
+            >
+              <div
+                id="bulkActionsContainer5"
+                class="d-flex align-items-center gap-2"
+                style="display: none !important"
+              >
+                <span class="tb5-text-light fw-semibold" style="font-size: 13px">
+                  <span id="selectedCount5">0</span> selected
+                </span>
+                <button
+                  class="btn btn-sm btn-danger py-1 px-2"
+                  id="btnDelete5"
+                  title="Delete Selected"
+                >
+                  <i class="fa-regular fa-trash-can"></i>
+                </button>
+                <button
+                  class="btn btn-sm btn-outline-primary py-1 px-2"
+                  id="btnBulk5"
+                  title="Bulk Action"
+                >
+                  <i class="fa-solid fa-bolt"></i>
+                </button>
+              </div>
+
+              <div
+                class="d-flex gap-2 tb5-icon-group border-start ps-3"
+                style="border-color: var(--color-border) !important"
+              >
+                <button class="tb5-icon-btn" id="btnSidebarToggle5" title="Toggle Sidebar">
+                  <i class="bi bi-layout-sidebar"></i>
+                </button>
+                <button class="tb5-icon-btn" id="btnResetTable5" title="Reset Table">
+                  <i class="fa-solid fa-rotate-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tb5-content-area position-relative">
+            <div id="listViewContainer5" class="yajra-table-wrapper" style="max-height: 550px">
+              <table id="leadsTable5" class="table yajra-table-main tb5-table">
+                <thead>
+                  <tr>
+                    <th style="width: 40px">
+                      <input type="checkbox" id="selectAll5" class="global-select-all" />
+                    </th>
+                    <th><i class="fa-regular fa-user me-2"></i>Profile</th>
+                    <th><i class="fa-regular fa-address-book me-2"></i>Contact</th>
+                    <th><i class="fa-regular fa-building me-2"></i>Company</th>
+                    <th><i class="fa-solid fa-chart-pie me-2"></i>Industry</th>
+                    <th><i class="fa-regular fa-heart me-2"></i>Status</th>
+                    <th><i class="fa-solid fa-bolt me-2"></i>Quick Action</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+
+            <div
+              id="gridViewContainer5"
+              class="p-4 bg-soft"
+              style="display: none; max-height: 550px; overflow-y: auto"
+            >
+              <div class="row g-4" id="gridItemsWrapper5"></div>
+            </div>
+          </div>
+
+          <div
+            class="tb5-footer d-flex flex-column flex-sm-row justify-content-between align-items-center p-3 border-top gap-3"
+            style="border-color: var(--color-border) !important"
+          >
+            <div
+              class="tb5-paging-info d-flex align-items-center gap-2 tb5-text-main fw-semibold"
+              style="font-size: 13px"
+            >
+              Showing
+              <select class="form-select yajra-select w-auto py-0" id="selectRows5">
+                <option value="10">10</option>
+                <option value="20" selected>20</option>
+                <option value="50">50</option>
+              </select>
+              of <span id="totalRecordsText5">0</span> results
+            </div>
+
+            <div class="d-flex gap-2">
+              <button
+                class="yajra-btn d-flex align-items-center gap-2 py-1 px-3"
+                id="btnPrev5"
+                disabled
+              >
+                <i class="fa-solid fa-chevron-left"></i> Prev
+              </button>
+              <button class="yajra-btn d-flex align-items-center gap-2 py-1 px-3" id="btnNext5">
+                Next <i class="fa-solid fa-chevron-right"></i>
+              </button>
             </div>
           </div>
         </div>
