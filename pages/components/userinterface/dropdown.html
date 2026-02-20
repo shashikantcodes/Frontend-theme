@@ -739,6 +739,499 @@
                 </div>
               </div>
             </div>
+            <!-- DROPDOWN 12:Basic buttons -->
+
+            <div class="col-12 mt-4" id="section-12-button-dropdowns">
+              <label class="fw-bold text-light-theme mb-3 fs-8 text-uppercase"
+                >12. Advanced Button Dropdowns & Forms</label
+              >
+
+              <div class="bg-card-theme border-theme rounded-3 p-4 shadow-sm">
+                <!-- ROW 1: Basic (Solid) -->
+                <div class="mb-4 pb-4 border-bottom border-theme">
+                  <span class="fs-8 text-light-theme d-block mb-3 fw-bold">Basic</span>
+                  <div class="d-flex flex-wrap gap-3">
+                    <!-- Primary -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-solid-primary dropdown-toggle-custom"
+                        data-target="dd-12-basic-primary"
+                      >
+                        Primary <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-basic-primary"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Another action
+                          </div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Something else here
+                          </div>
+                          <div class="border-top border-theme my-1"></div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Separated link
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Secondary -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-solid-secondary dropdown-toggle-custom"
+                        data-target="dd-12-basic-secondary"
+                      >
+                        Secondary <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-basic-secondary"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Another action
+                          </div>
+                          <div class="border-top border-theme my-1"></div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Separated link
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Success -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-solid-success dropdown-toggle-custom"
+                        data-target="dd-12-basic-success"
+                      >
+                        Success <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-basic-success"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Success Action
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Danger -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-solid-danger dropdown-toggle-custom"
+                        data-target="dd-12-basic-danger"
+                      >
+                        Danger <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-basic-danger"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Danger Action
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Warning -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-solid-warning dropdown-toggle-custom"
+                        data-target="dd-12-basic-warning"
+                      >
+                        Warning <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-basic-warning"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Warning Action
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-solid-info dropdown-toggle-custom"
+                        data-target="dd-12-basic-info"
+                      >
+                        Info <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-basic-info"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Info Action
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ROW 2: Label (Soft / Translucent) -->
+                <div class="mb-4 pb-4 border-bottom border-theme">
+                  <span class="fs-8 text-light-theme d-block mb-3 fw-bold">Label</span>
+                  <div class="d-flex flex-wrap gap-3">
+                    <!-- Primary -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-label-primary dropdown-toggle-custom"
+                        data-target="dd-12-label-primary"
+                      >
+                        Primary <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-label-primary"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Another action
+                          </div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Something else here
+                          </div>
+                          <div class="border-top border-theme my-1"></div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Separated link
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Secondary -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-label-secondary dropdown-toggle-custom"
+                        data-target="dd-12-label-secondary"
+                      >
+                        Secondary <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-label-secondary"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Success -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-label-success dropdown-toggle-custom"
+                        data-target="dd-12-label-success"
+                      >
+                        Success <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-label-success"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Danger -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-label-danger dropdown-toggle-custom"
+                        data-target="dd-12-label-danger"
+                      >
+                        Danger <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-label-danger"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Warning -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-label-warning dropdown-toggle-custom"
+                        data-target="dd-12-label-warning"
+                      >
+                        Warning <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-label-warning"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-label-info dropdown-toggle-custom"
+                        data-target="dd-12-label-info"
+                      >
+                        Info <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-label-info"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ROW 3: Outline -->
+                <div class="mb-4 pb-4 border-bottom border-theme">
+                  <span class="fs-8 text-light-theme d-block mb-3 fw-bold">Outline</span>
+                  <div class="d-flex flex-wrap gap-3">
+                    <!-- Primary -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-line-primary dropdown-toggle-custom"
+                        data-target="dd-12-line-primary"
+                      >
+                        Primary <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-line-primary"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Another action
+                          </div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Something else here
+                          </div>
+                          <div class="border-top border-theme my-1"></div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Separated link
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Secondary -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-line-secondary dropdown-toggle-custom"
+                        data-target="dd-12-line-secondary"
+                      >
+                        Secondary <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-line-secondary"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Success -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-line-success dropdown-toggle-custom"
+                        data-target="dd-12-line-success"
+                      >
+                        Success <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-line-success"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Danger -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-line-danger dropdown-toggle-custom"
+                        data-target="dd-12-line-danger"
+                      >
+                        Danger <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-line-danger"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Warning -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-line-warning dropdown-toggle-custom"
+                        data-target="dd-12-line-warning"
+                      >
+                        Warning <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-line-warning"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Info -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-line-info dropdown-toggle-custom"
+                        data-target="dd-12-line-info"
+                      >
+                        Info <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-line-info"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ROW 4: Split & Forms Menu -->
+                <div>
+                  <span class="fs-8 text-light-theme d-block mb-3 fw-bold"
+                    >Menu Content & Split</span
+                  >
+                  <div class="d-flex flex-wrap gap-4 align-items-start">
+                    <!-- Menu Content: FORMS (New Additon) -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <button
+                        class="btn-dd-custom btn-solid-primary dropdown-toggle-custom"
+                        data-target="dd-12-forms"
+                      >
+                        Forms <i class="bi bi-chevron-down"></i>
+                      </button>
+                      <div
+                        id="dd-12-forms"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 260px; width: auto; margin-top: 4px"
+                      >
+                        <div class="p-3">
+                          <div class="mb-3">
+                            <label class="dd-form-label">Email address</label>
+                            <input
+                              type="email"
+                              class="dd-form-input"
+                              placeholder="email@example.com"
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <label class="dd-form-label">Password</label>
+                            <input type="password" class="dd-form-input" placeholder="Password" />
+                          </div>
+                          <div class="mb-3">
+                            <label class="dd-form-check">
+                              <input type="checkbox" />
+                              Remember me
+                            </label>
+                          </div>
+                          <button
+                            type="button"
+                            class="btn-dd-custom btn-solid-primary"
+                            onclick="closeActionMenu(this)"
+                          >
+                            Sign in
+                          </button>
+                        </div>
+                        <div class="border-top border-theme my-1"></div>
+                        <div class="py-1">
+                          <a href="#" class="dd-form-link" onclick="closeActionMenu(this)"
+                            >New around here? Sign up</a
+                          >
+                          <a href="#" class="dd-form-link" onclick="closeActionMenu(this)"
+                            >Forgot password?</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Primary Split -->
+                    <div class="custom-dropdown d-inline-block w-auto">
+                      <div class="btn-group-split">
+                        <button class="btn-dd-custom btn-solid-primary btn-split-main">
+                          Primary
+                        </button>
+                        <button
+                          class="btn-dd-custom btn-solid-primary btn-split-icon dropdown-toggle-custom"
+                          data-target="dd-12-split-primary"
+                        >
+                          <i class="bi bi-chevron-down"></i>
+                        </button>
+                      </div>
+                      <div
+                        id="dd-12-split-primary"
+                        class="custom-menu shadow-sm"
+                        style="min-width: 160px; width: auto; margin-top: 4px"
+                      >
+                        <div class="py-1">
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">Action</div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Another action
+                          </div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Something else here
+                          </div>
+                          <div class="border-top border-theme my-1"></div>
+                          <div class="menu-item fs-7" onclick="closeActionMenu(this)">
+                            Separated link
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>

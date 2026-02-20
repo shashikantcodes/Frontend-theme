@@ -179,3 +179,17 @@ function removeAdvTag(e, val) {
     renderAdvTags();
   }
 }
+// === DROPDOWN 12: ADVANCED MULTI (TAGS) ===
+// 12th section ke action buttons par click hone par dropdown band karne ka logic
+function closeActionMenu(element) {
+  // Click hue item ke parent menu ko dhundo aur band karo
+  const menu = element.closest('.custom-menu');
+  if (menu) {
+    menu.classList.remove('show');
+  }
+  // Button icon ko rotate wapas krne ke liye active class remove karo
+  document.querySelectorAll('.dropdown-toggle-custom').forEach((t) => t.classList.remove('active'));
+
+  // Yahan par aap apni further action logic add kar sakte hain
+  // console.log(element.innerText + ' clicked!');
+}

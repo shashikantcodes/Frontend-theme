@@ -91,6 +91,7 @@
 .dropdown-toggle-custom:hover {
   background-color: var(--color-bg-soft);
   border-color: var(--color-secondary);
+  color: var(--color-text-main);
 }
 
 /* =========================================
@@ -574,4 +575,288 @@
   font-size: 0.7rem;
   font-family: monospace;
   color: var(--color-text-light);
+}
+/* ========================================= 
+           DROPDOWN 12: MULTI SELECT CSS  
+           ========================================= */
+
+/* Base Button Structure */
+.btn-dd-custom {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+.btn-dd-custom i {
+  font-size: 0.75rem;
+  transition: transform 0.3s ease;
+}
+.btn-dd-custom.active i {
+  transform: rotate(180deg);
+}
+
+/* 1. Solid Buttons (Basic / Split) - Fixed Color Contrast */
+.btn-solid-primary {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+  border-color: var(--color-primary);
+}
+.btn-solid-primary:hover,
+.btn-solid-primary.active {
+  filter: brightness(0.9);
+  color: var(--color-text-main);
+}
+
+.btn-solid-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-text-main);
+  border-color: var(--color-secondary);
+}
+.btn-solid-secondary:hover,
+.btn-solid-secondary.active {
+  filter: brightness(0.9);
+  color: var(--color-text-main);
+}
+
+.btn-solid-success {
+  background-color: var(--color-success);
+  color: var(--color-text-main);
+  border-color: var(--color-success);
+}
+.btn-solid-success:hover,
+.btn-solid-success.active {
+  filter: brightness(0.9);
+  color: var(--color-text-main);
+}
+
+.btn-solid-danger {
+  background-color: var(--color-danger);
+  color: var(--color-text-main);
+  border-color: var(--color-danger);
+}
+.btn-solid-danger:hover,
+.btn-solid-danger.active {
+  filter: brightness(0.9);
+  color: var(--color-text-main);
+}
+
+.btn-solid-warning {
+  background-color: var(--color-warning);
+  color: var(--color-text-main);
+  border-color: var(--color-warning);
+}
+.btn-solid-warning:hover,
+.btn-solid-warning.active {
+  filter: brightness(0.9);
+  color: var(--color-text-main);
+}
+
+.btn-solid-info {
+  background-color: var(--color-info);
+  color: var(--color-text-main);
+  border-color: var(--color-info);
+}
+.btn-solid-info:hover,
+.btn-solid-info.active {
+  filter: brightness(0.9);
+  color: var(--color-text-main);
+}
+
+/* 2. Label Buttons (Soft background using color-mix for automatic theme compatibility) */
+.btn-label-primary {
+  background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  color: var(--color-primary);
+}
+.btn-label-primary:hover,
+.btn-label-primary.active {
+  background: color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+.btn-label-secondary {
+  background: color-mix(in srgb, var(--color-secondary) 15%, transparent);
+  color: var(--color-secondary);
+}
+.btn-label-secondary:hover,
+.btn-label-secondary.active {
+  background: color-mix(in srgb, var(--color-secondary) 25%, transparent);
+}
+
+.btn-label-success {
+  background: color-mix(in srgb, var(--color-success) 15%, transparent);
+  color: var(--color-success);
+}
+.btn-label-success:hover,
+.btn-label-success.active {
+  background: color-mix(in srgb, var(--color-success) 25%, transparent);
+}
+
+.btn-label-danger {
+  background: color-mix(in srgb, var(--color-danger) 15%, transparent);
+  color: var(--color-danger);
+}
+.btn-label-danger:hover,
+.btn-label-danger.active {
+  background: color-mix(in srgb, var(--color-danger) 25%, transparent);
+}
+
+.btn-label-warning {
+  background: color-mix(in srgb, var(--color-warning) 15%, transparent);
+  color: var(--color-warning);
+}
+.btn-label-warning:hover,
+.btn-label-warning.active {
+  background: color-mix(in srgb, var(--color-warning) 25%, transparent);
+}
+
+.btn-label-info {
+  background: color-mix(in srgb, var(--color-info) 15%, transparent);
+  color: var(--color-info);
+}
+.btn-label-info:hover,
+.btn-label-info.active {
+  background: color-mix(in srgb, var(--color-info) 25%, transparent);
+}
+
+/* 3. Outline Buttons */
+.btn-line-primary {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+}
+.btn-line-primary:hover,
+.btn-line-primary.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-line-secondary {
+  border-color: var(--color-secondary);
+  color: var(--color-secondary);
+  background: transparent;
+}
+.btn-line-secondary:hover,
+.btn-line-secondary.active {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.btn-line-success {
+  border-color: var(--color-success);
+  color: var(--color-success);
+  background: transparent;
+}
+.btn-line-success:hover,
+.btn-line-success.active {
+  background: var(--color-success);
+  color: #fff;
+}
+
+.btn-line-danger {
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+  background: transparent;
+}
+.btn-line-danger:hover,
+.btn-line-danger.active {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.btn-line-warning {
+  border-color: var(--color-warning);
+  color: var(--color-warning);
+  background: transparent;
+}
+.btn-line-warning:hover,
+.btn-line-warning.active {
+  background: var(--color-warning);
+  color: #fff;
+}
+
+.btn-line-info {
+  border-color: var(--color-info);
+  color: var(--color-info);
+  background: transparent;
+}
+.btn-line-info:hover,
+.btn-line-info.active {
+  background: var(--color-info);
+  color: #fff;
+}
+
+/* 4. Split Button Formatting */
+.btn-group-split {
+  display: inline-flex;
+  border-radius: 6px;
+}
+.btn-group-split .btn-split-main {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 12px;
+}
+.btn-group-split .btn-split-icon {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* 5. Dropdown Forms CSS (New Addition) */
+.dd-form-label {
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+.dd-form-input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  outline: none;
+  background: var(--color-bg-card);
+  color: var(--color-text-main);
+  transition: border-color 0.2s;
+}
+.dd-form-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--btn-shadow-light);
+}
+.dd-form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--color-text-main);
+  user-select: none;
+}
+.dd-form-check input[type='checkbox'] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-primary);
+}
+.dd-form-link {
+  display: block;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  color: var(--color-text-main);
+  text-decoration: none;
+  transition: 0.2s;
+}
+.dd-form-link:hover {
+  color: var(--color-primary);
+  background-color: var(--hover-bg);
 }
