@@ -758,3 +758,200 @@ $(document).ready(function () {
     });
   }
 });
+// ============================================================
+//  STYLE 6: ENTERPRISE DATA GRID (COLUMN SEARCH) (#leadsTable6)
+// ============================================================
+
+const generateEnterpriseData = () => {
+  const names = [
+    'Aila Quailadis',
+    'Aili De Coursey',
+    'Alaric Beslier',
+    'Aliza MacElholm',
+    'Allyson Moakler',
+    'Alma Harvatt',
+    'Annetta Glozman',
+    'Babb Skirving',
+    'Bailie Coulman',
+    'Beatrix Longland',
+    'James Anderson',
+    'Sarah Connor',
+  ];
+  const domains = [
+    'prlog.org',
+    'etsy.com',
+    'zimbio.com',
+    'printfriendly.com',
+    'shareasale.com',
+    'addtoany.com',
+    'storify.com',
+    'cbsnews.com',
+    'yolasite.com',
+    'gizmodo.com',
+  ];
+  const roles = [
+    'Technical Writer',
+    'Environmental Specialist',
+    'Tax Accountant',
+    'VP Sales',
+    'Safety Technician',
+    'Administrative Assistant',
+    'Staff Accountant',
+    'Analyst Programmer',
+    'VP Quality Control',
+    'Software Engineer',
+  ];
+  const cities = [
+    'Shuangchahe',
+    'Lzay',
+    'Ocucaje',
+    'Sosnovyy Bor',
+    'Mogilany',
+    'Ulundi',
+    'Pendawanbaru',
+    'Balky',
+    'Hinigaran',
+    'Damu',
+    'New York',
+    'London',
+  ];
+  const statuses = ['Active', 'Pending', 'Suspended'];
+
+  return Array.from({ length: 100 }, (_, i) => {
+    const nameStr = names[i % names.length] + (i > 11 ? ` ${i}` : '');
+    const emailBase = nameStr.split(' ')[0].toLowerCase().replace(' ', '');
+    const domain = domains[i % domains.length];
+
+    const salary = 10000 + Math.random() * 80000;
+    const year = 2020 + (i % 5);
+    const month = String((i % 12) + 1).padStart(2, '0');
+    const day = String((i % 28) + 1).padStart(2, '0');
+
+    return {
+      name: nameStr,
+      email: `${emailBase}${i}@${domain}`,
+      role: roles[i % roles.length],
+      city: cities[i % cities.length],
+      date: `${month}/${day}/${year}`,
+      salary: new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(salary),
+      status: statuses[i % statuses.length],
+    };
+  });
+};
+
+$(document).ready(function () {
+  if (!$.fn.DataTable.isDataTable('#leadsTable6')) {
+    const table6 = $('#leadsTable6').DataTable({
+      dom: 't',
+      scrollX: false,
+      autoWidth: false, // <--- CRITICAL FIX: Stops DataTables from squishing columns
+      data: generateEnterpriseData(),
+      pageLength: 10,
+      ordering: true,
+      orderCellsTop: true, // Applies sorting arrows to Top row only
+      columns: [
+        { data: 'name', render: (d) => `<span class="tb-name-soft">${d}</span>` },
+        {
+          data: 'email',
+          render: (d) =>
+            `<a href="mailto:${d}" class="text-decoration-none" style="color: var(--color-primary);">${d}</a>`,
+        },
+        { data: 'role', render: (d) => `<span class="tb6-text-light fw-medium">${d}</span>` },
+        { data: 'city' },
+        { data: 'date', render: (d) => `<span class="tb6-text-light">${d}</span>` },
+        { data: 'salary', render: (d) => `<span class="fw-medium">${d}</span>` },
+        {
+          data: 'status',
+          render: (d) => {
+            const badgeClass =
+              d === 'Active'
+                ? 'tb6-badge-active'
+                : d === 'Pending'
+                  ? 'tb6-badge-pending'
+                  : 'tb6-badge-suspended';
+            return `<span class="tb6-badge ${badgeClass}">${d}</span>`;
+          },
+        },
+      ],
+      drawCallback: function (settings) {
+        const api = this.api();
+        const info = api.page.info();
+
+        // Footer Text Update
+        const startEntry = info.recordsDisplay === 0 ? 0 : info.start + 1;
+        $('#tb6-info-text').text(
+          `Showing ${startEntry} to ${info.end} of ${info.recordsDisplay} entries`
+        );
+
+        // Smart Pagination Update
+        renderTB6Pagination(info.page, info.pages);
+      },
+    });
+
+    // ------------------------------------------------------------
+    // EVENTS
+    // ------------------------------------------------------------
+
+    // 1. Column Search
+    $('.tb6-col-search').on('keyup change clear', function (e) {
+      e.stopPropagation();
+      const colIdx = $(this).data('column');
+      const val = $(this).val();
+
+      if ($(this).is('select')) {
+        table6
+          .column(colIdx)
+          .search(val ? `^${val}$` : '', true, false)
+          .draw();
+      } else {
+        table6.column(colIdx).search(val).draw();
+      }
+    });
+
+    $('.tb6-col-search').on('click', function (e) {
+      e.stopPropagation();
+    });
+
+    // Global Search
+    $('#tb6-global-search').on('keyup', function () {
+      table6.search(this.value).draw();
+    });
+
+    // Dropdown Length
+    $('#tb6-length-select').on('change', function () {
+      table6.page.len(parseInt($(this).val())).draw();
+    });
+
+    // Pagination Builder
+    function renderTB6Pagination(currentPage, totalPages) {
+      let html = '';
+      html += `<button class="tb6-page-btn" data-action="prev" ${currentPage === 0 ? 'disabled' : ''}><i class="fa-solid fa-chevron-left" style="font-size:11px;"></i></button>`;
+
+      let lastPushed = -1;
+      for (let i = 0; i < totalPages; i++) {
+        if (i === 0 || i === totalPages - 1 || (i >= currentPage - 1 && i <= currentPage + 1)) {
+          if (lastPushed !== -1 && i - lastPushed > 1) {
+            html += `<span class="tb6-page-dots">...</span>`;
+          }
+          let activeClass = i === currentPage ? 'active-page' : '';
+          html += `<button class="tb6-page-btn ${activeClass}" data-page="${i}">${i + 1}</button>`;
+          lastPushed = i;
+        }
+      }
+
+      html += `<button class="tb6-page-btn" data-action="next" ${currentPage === totalPages - 1 || totalPages === 0 ? 'disabled' : ''}><i class="fa-solid fa-chevron-right" style="font-size:11px;"></i></button>`;
+      $('#tb6-pagination-container').html(html);
+    }
+
+    // Pagination Clicks
+    $('#tb6-pagination-container').on('click', '.tb6-page-btn', function () {
+      if ($(this).hasClass('active-page') || $(this).prop('disabled')) return;
+      const action = $(this).data('action');
+      const page = $(this).data('page');
+
+      if (action === 'prev') table6.page('previous').draw('page');
+      else if (action === 'next') table6.page('next').draw('page');
+      else if (page !== undefined) table6.page(page).draw('page');
+    });
+  }
+});

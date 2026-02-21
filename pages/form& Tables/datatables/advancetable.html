@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cards-Advance</title>
-    <link rel="stylesheet" href="../../../assets/css/form&tables/table.css" />
+    <link rel="stylesheet" href="../../../assets/css/form&tables/datatable/advancetable.css" />
   </head>
   <body>
     <div id="sidebar-container"></div>
@@ -14,7 +14,7 @@
       <div class="ph-header">
         <h4 class="ph-title mb-0">
           Advance table
-          <i class="bi bi-play-circle ph-play pt-1"></i>
+          <i class="bi bi-table ph-play pt-1"></i>
         </h4>
 
         <div class="ph-actions">
@@ -87,7 +87,7 @@
               <span class="yajra-badge d-none" id="totalBadge1">Total Records: 0</span>
 
               <div
-                class="d-flex align-items-center gap-2 text-muted fw-semibold"
+                class="d-flex align-items-center gap-2 yajra-badge-text fw-semibold"
                 style="font-size: 12px"
               >
                 Rows:
@@ -151,7 +151,7 @@
               </button>
               <span class="yajra-badge d-none" id="totalBadge2">Total Records: 0</span>
               <div
-                class="d-flex align-items-center gap-2 text-muted fw-semibold"
+                class="d-flex align-items-center gap-2 yajra-badge-text fw-semibold"
                 style="font-size: 12px"
               >
                 Rows:
@@ -220,7 +220,7 @@
               <span class="yajra-badge d-none" id="totalBadge3">Total Records: 0</span>
 
               <div
-                class="d-flex align-items-center gap-2 text-muted fw-semibold"
+                class="d-flex align-items-center gap-2 yajra-badge-text fw-semibold"
                 style="font-size: 12px"
               >
                 Rows:
@@ -294,7 +294,7 @@
             <div class="footer-right d-flex flex-wrap align-items-center gap-3">
               <span class="yajra-badge" id="totalBadge4">Total Records: 0</span>
               <div
-                class="d-flex align-items-center gap-2 text-muted fw-semibold"
+                class="d-flex align-items-center gap-2 yajra-badge-text fw-semibold"
                 style="font-size: 12px"
               >
                 Rows:
@@ -456,6 +456,136 @@
                 Next <i class="fa-solid fa-chevron-right"></i>
               </button>
             </div>
+          </div>
+        </div>
+        <!-- Sixth Table   -->
+        <div class="ui-section-header mb-3 mt-5">
+          <h4>Table Style 6: Enterprise Data Grid</h4>
+          <p>Perfectly spaced columns, column-level search, and smart numbered pagination.</p>
+        </div>
+
+        <div class="yajra-card tb6-card">
+          <div
+            class="tb6-toolbar d-flex flex-column flex-md-row justify-content-between align-items-md-center p-3 border-bottom gap-3"
+          >
+            <div
+              class="d-flex align-items-center gap-2 tb6-text-light fw-medium"
+              style="font-size: 13px"
+            >
+              Show
+              <select class="form-select yajra-select w-auto py-0 tb6-input" id="tb6-length-select">
+                <option value="10" selected>10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+              entries
+            </div>
+
+            <div
+              class="d-flex align-items-center gap-2 w-100 w-md-auto justify-content-between justify-content-md-end"
+            >
+              <span class="tb6-text-light fw-medium" style="font-size: 13px">Search:</span>
+              <div class="position-relative flex-grow-1 flex-md-grow-0" style="max-width: 250px">
+                <input
+                  type="text"
+                  id="tb6-global-search"
+                  class="form-control form-control-sm tb6-input w-100"
+                  placeholder="Type to search..."
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="tb6-table-wrapper">
+            <table id="leadsTable6" class="table tb6-table">
+              <thead>
+                <tr class="tb6-header-row">
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Role / Post</th>
+                  <th>Location</th>
+                  <th>Join Date</th>
+                  <th>Salary</th>
+                  <th>Status</th>
+                </tr>
+                <tr class="tb6-filter-row">
+                  <th>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm tb6-col-search"
+                      data-column="0"
+                      placeholder="Search Name"
+                    />
+                  </th>
+                  <th>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm tb6-col-search"
+                      data-column="1"
+                      placeholder="Search Email"
+                    />
+                  </th>
+                  <th>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm tb6-col-search"
+                      data-column="2"
+                      placeholder="Search Role"
+                    />
+                  </th>
+                  <th>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm tb6-col-search"
+                      data-column="3"
+                      placeholder="Search City"
+                    />
+                  </th>
+                  <th>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm tb6-col-search"
+                      data-column="4"
+                      placeholder="Search Date"
+                    />
+                  </th>
+                  <th>
+                    <input
+                      type="text"
+                      class="form-control form-control-sm tb6-col-search"
+                      data-column="5"
+                      placeholder="Search Salary"
+                    />
+                  </th>
+                  <th>
+                    <select class="form-select form-select-sm tb6-col-search" data-column="6">
+                      <option value="">All Status</option>
+                      <option value="Active">Active</option>
+                      <option value="Pending">Pending</option>
+                      <option value="Suspended">Suspended</option>
+                    </select>
+                  </th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+
+          <div
+            class="tb6-footer d-flex flex-column flex-md-row justify-content-between align-items-center p-3 border-top gap-3"
+          >
+            <div
+              class="tb6-info tb6-text-light fw-medium"
+              style="font-size: 13px"
+              id="tb6-info-text"
+            >
+              Showing 1 to 10 of 100 entries
+            </div>
+            <div
+              class="tb6-pagination d-flex flex-wrap justify-content-center gap-1"
+              id="tb6-pagination-container"
+            ></div>
           </div>
         </div>
       </main>

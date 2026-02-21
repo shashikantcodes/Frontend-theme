@@ -233,7 +233,9 @@
   font-weight: 600;
   border: 1px solid var(--color-border);
 }
-
+.yajra-badge-text {
+  color: var(--color-text-main);
+}
 .yajra-select {
   background-color: var(--color-bg-card) !important;
   color: var(--color-text-main) !important;
@@ -632,4 +634,181 @@
     justify-content: space-between;
     margin-bottom: 10px;
   }
+}
+/* ============================================================
+   CSS FOR TABLE 6 (ENTERPRISE DATA GRID - FROM SCRATCH)
+   ============================================================ */
+
+.tb6-card {
+  overflow: hidden;
+  background-color: var(--color-bg-card);
+}
+.tb6-text-main {
+  color: var(--color-text-main) !important;
+}
+.tb6-text-light {
+  color: var(--color-text-light) !important;
+}
+table.dataTable {
+  border-collapse: none !important;
+}
+.tb6-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+/* Table Content */
+.tb6-table {
+  width: 100% !important;
+  min-width: 1200px;
+  margin-bottom: 0 !important;
+  background-color: var(--color-bg-card) !important;
+}
+
+.tb6-table td {
+  padding: 16px 24px !important;
+  color: var(--color-text-main) !important;
+  background-color: var(--color-bg-card) !important;
+  vertical-align: middle;
+  border-bottom: 1px solid var(--color-border) !important;
+  font-size: 13.5px;
+  white-space: nowrap !important;
+}
+
+/* Premium Hover Effect (Optional but recommended) */
+.tb6-table tbody tr:hover td {
+  background-color: var(--color-bg-soft) !important;
+}
+/* FIX: Sticky header setup specifically for Table 6 */
+.tb6-header-row th {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 700 !important;
+  letter-spacing: 0.5px;
+  color: var(--color-text-light) !important;
+  border-bottom: none !important;
+  padding: 16px 24px 8px 24px !important;
+  background-color: var(--color-bg-card) !important;
+  white-space: nowrap !important;
+  position: sticky !important;
+  top: 0 !important; /* Keep primary header sticky */
+  z-index: 100 !important;
+}
+
+.tb6-filter-row th {
+  padding: 8px 16px 16px 16px !important;
+  background-color: var(--color-bg-card) !important;
+  border-bottom: 2px solid var(--color-border) !important;
+  position: sticky !important;
+  top: 40px !important; /* Keep filter row sticky just below header */
+  z-index: 99 !important;
+}
+/* Filter Row & Input Boxes */
+.tb6-filter-row th {
+  padding: 8px 16px 16px 16px !important;
+  background-color: var(--color-bg-card) !important;
+  border-bottom: 2px solid var(--color-border) !important;
+}
+
+/* Remove DataTables default arrows from the input row */
+.tb6-filter-row th::before,
+.tb6-filter-row th::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Input Fields Styling - High Contrast for Dark Mode */
+.tb6-input,
+.tb6-col-search {
+  background-color: var(--search-input-bg) !important;
+  border: 1px solid var(--color-border) !important;
+  color: var(--color-text-main) !important;
+  font-size: 12px;
+  border-radius: 6px;
+  transition: all 0.2s;
+  width: 100% !important;
+  min-width: 140px; /* Ensures input box is never too small */
+  padding: 6px 12px;
+}
+.tb6-input::placeholder,
+.tb6-col-search::placeholder {
+  color: var(--color-text-light) !important;
+  opacity: 0.8 !important;
+}
+.tb6-input:focus,
+.tb6-col-search:focus {
+  border-color: var(--color-primary) !important;
+  background-color: var(--color-bg-card) !important;
+  box-shadow: 0 0 0 3px var(--btn-shadow-light) !important;
+  outline: none;
+}
+
+/* Name formatting */
+.tb-name-soft {
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+/* Status Badges */
+.tb6-badge {
+  padding: 5px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+}
+.tb6-badge-active {
+  background-color: rgba(22, 163, 74, 0.1);
+  color: var(--color-success);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+}
+.tb6-badge-pending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--color-warning);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+.tb6-badge-suspended {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--color-danger);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+/* Numbered Pagination */
+.tb6-page-btn {
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 34px;
+  text-align: center;
+}
+.tb6-page-btn:hover:not(:disabled) {
+  background-color: var(--color-bg-soft);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+.tb6-page-btn.active-page {
+  background-color: var(--color-primary) !important;
+  color: var(--text-on-primary) !important;
+  border-color: var(--color-primary) !important;
+  font-weight: 600;
+}
+.tb6-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: var(--color-bg-soft);
+}
+.tb6-page-dots {
+  padding: 6px 4px;
+  color: var(--color-text-light);
+  font-weight: bold;
 }
