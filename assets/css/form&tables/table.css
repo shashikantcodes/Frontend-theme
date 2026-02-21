@@ -196,10 +196,6 @@
 }
 
 @media (max-width: 992px) {
-  .yajra-footer {
-    flex-direction: column;
-    text-align: center;
-  }
   .yajra-footer .footer-right {
     justify-content: center !important;
   }
@@ -294,8 +290,43 @@
 /* Ensure footer responsive on mobile */
 @media (max-width: 768px) {
   .yajra-footer {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 18px;
+    padding: 15px;
+  }
+
+  .yajra-footer .footer-left,
+  .yajra-footer .footer-right {
+    width: 100%;
+    justify-content: center !important;
     flex-direction: column;
-    gap: 15px;
+    align-items: stretch !important;
+    gap: 12px;
+  }
+
+  .yajra-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .yajra-footer .footer-left .d-flex {
+    border: none !important;
+    padding: 0 !important;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  #btnShowTotal3 {
+    width: 100%;
+  }
+
+  .yajra-footer .footer-right > div {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .yajra-select {
+    min-width: 80px;
   }
 }
 /* ============================================================
@@ -542,21 +573,36 @@
   color: var(--color-primary);
   background: var(--color-bg-soft);
 }
+
 .tb5-dropdown-menu {
-  background-color: var(--color-bg-card);
+  background-color: var(--color-bg-card) !important;
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 180px;
+  box-shadow: 0 6px 18px var(--btn-shadow-light);
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+/* Items */
 .tb5-dropdown-menu .dropdown-item {
   color: var(--color-text-main);
   font-size: 13px;
   font-weight: 500;
+  padding: 9px 12px;
+  border-radius: 6px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
 }
+
+/* Hover */
 .tb5-dropdown-menu .dropdown-item:hover {
   background-color: var(--color-bg-soft);
   color: var(--color-primary);
 }
-
 /* Grid Cards */
 .tb5-grid-card {
   background-color: var(--color-bg-card);
