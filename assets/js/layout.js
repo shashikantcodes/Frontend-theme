@@ -207,6 +207,7 @@ function loadScriptsAndRun() {
 
           if (loadedScripts === scripts.length) {
             executeDashboardLogic();
+            document.dispatchEvent(new Event('dynamicScriptsLoaded'));
           }
         };
         document.body.appendChild(newScript);

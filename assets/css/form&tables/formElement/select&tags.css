@@ -1,0 +1,955 @@
+.ui-select {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.ui-select label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.375rem;
+  letter-spacing: 0.01em;
+}
+
+.ui-select .select-hint {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  margin-top: 0.25rem;
+}
+
+/* ==============================================================
+         NEW: Custom Chevron Arrow and Search Icons
+         ============================================================== */
+/* Select2 Chevron */
+.ui-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border: none !important;
+  width: 18px;
+  height: 18px;
+  top: 74%;
+  left: 0%;
+  margin: -7px 0 0 -7px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 0.2s ease;
+  filter: grayscale(1) opacity(0.5);
+}
+
+[data-theme='dark']
+  .ui-select
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  filter: invert(1) opacity(0.7);
+}
+
+.ui-select
+  .select2-container--default.select2-container--open
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  transform: rotate(180deg);
+}
+
+/* Select2 Search Icon */
+.select2-search--dropdown .select2-search__field {
+  padding-left: 32px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='gray' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: 8px center !important;
+  background-size: 16px !important;
+}
+
+/* Chosen Chevron */
+.ui-select .chosen-container-single .chosen-single div b {
+  background: none !important;
+  width: 18px;
+  height: 18px;
+  /* margin-top: 2px;
+         */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  transition: transform 0.2s ease;
+  filter: grayscale(1) opacity(0.5);
+  position: absolute;
+  top: 30%;
+  left: -7px;
+}
+
+[data-theme='dark'] .ui-select .chosen-container-single .chosen-single div b {
+  filter: invert(1) opacity(0.7);
+}
+
+.ui-select .chosen-container-active.chosen-with-drop .chosen-single div b {
+  transform: rotate(180deg);
+}
+
+/* Chosen Search Icon */
+.ui-select .chosen-container .chosen-search input[type='text'],
+.ui-select .chosen-container-multi .chosen-choices li.search-field input[type='text'] {
+  padding-left: 32px !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='gray' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.3-4.3'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: 8px center !important;
+  background-size: 16px !important;
+}
+
+/* Base Select2 Overrides */
+.ui-select .select2-container {
+  width: 100% !important;
+}
+
+.ui-select .select2-container--default .select2-selection--single,
+.ui-select .select2-container--default .select2-selection--multiple {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.ui-select .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--color-text-main);
+  line-height: 36px;
+}
+
+.ui-select .select2-container--default .select2-selection--single .select2-selection__placeholder {
+  color: var(--color-text-light);
+}
+
+.ui-select .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  border-color: var(--color-text-light) transparent transparent transparent;
+}
+
+.ui-select .select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+  border: none;
+}
+
+.ui-select
+  .select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove {
+  color: var(--text-on-primary);
+  margin-right: 4px;
+}
+
+.ui-select
+  .select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice__remove:hover {
+  color: var(--color-danger);
+}
+
+/* Base Chosen Overrides */
+.ui-select .chosen-container {
+  width: 100% !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+}
+
+.ui-select .chosen-container-single .chosen-single,
+.ui-select .chosen-container-multi .chosen-choices {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.ui-select .chosen-container-single .chosen-single span {
+  color: var(--color-text-main);
+}
+
+.ui-select .chosen-container .chosen-results li.highlighted {
+  background-color: var(--color-primary);
+  background-image: none;
+  color: var(--text-on-primary);
+}
+
+.ui-select .chosen-container-multi .chosen-choices li.search-choice {
+  background: var(--color-primary);
+  background-image: none;
+  color: var(--text-on-primary);
+  border: none;
+}
+
+.ui-select .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+  filter: brightness(10);
+}
+
+.ui-select .chosen-container .chosen-drop {
+  background: var(--color-bg-card);
+  border-color: var(--color-border);
+}
+
+.ui-select .chosen-container .chosen-search input[type='text'] {
+  background: var(--search-input-bg);
+  border-color: var(--color-border);
+  color: var(--color-text-main);
+}
+
+/* Select2 Dropdown Global */
+.select2-dropdown {
+  z-index: 9999;
+}
+
+.select2-search--dropdown .select2-search__field {
+  background: var(--search-input-bg);
+  border-color: var(--color-border);
+  color: var(--color-text-main);
+}
+
+.select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: var(--color-primary) !important;
+  color: var(--text-on-primary) !important;
+}
+
+.select2-results__option--selected {
+  background-color: var(--color-bg-soft) !important;
+}
+
+/* Icon and Avatar formatting */
+.select-option-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.select-option-icon .avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.select-option-double {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+  padding: 2px 0;
+}
+
+.select-option-double .main-text {
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+.select-option-double .sub-text {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+/* ==============================================================
+   STYLE 1 — ENTERPRISE MODERN (Includes Dropdown)
+   ============================================================== */
+.ui-select--style1 .select2-container--default .select2-selection--single,
+.ui-select--style1 .select2-container--default .select2-selection--multiple {
+  border-radius: 0.5rem;
+  min-height: 42px;
+  padding: 2px 6px;
+  box-shadow: 0 1px 3px var(--btn-shadow-dark);
+  border-color: var(--color-border);
+  background-color: var(--color-bg-card);
+}
+
+.ui-select--style1 .select2-container--default.select2-container--open .select2-selection--single,
+.ui-select--style1
+  .select2-container--default.select2-container--open
+  .select2-selection--multiple {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--btn-shadow-light);
+}
+
+.ui-select--style1
+  .select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  border-radius: 0.375rem;
+  padding: 3px 8px;
+  font-size: 0.8125rem;
+}
+
+.ui-select--style1 .chosen-container-single .chosen-single,
+.ui-select--style1 .chosen-container-multi .chosen-choices {
+  border-radius: 0.5rem;
+  min-height: 42px;
+  padding: 4px 10px;
+  box-shadow: 0 1px 3px var(--btn-shadow-dark);
+  line-height: 32px;
+}
+
+.ui-select--style1 .chosen-container-active .chosen-single,
+.ui-select--style1 .chosen-container-active .chosen-choices {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--btn-shadow-light);
+}
+
+.ui-select--style1 .chosen-container-multi .chosen-choices li.search-choice {
+  border-radius: 0.375rem;
+  padding: 3px 22px 3px 8px;
+  font-size: 0.8125rem;
+}
+
+/* Dropdown specific to Style 1 */
+.select2-container--open .select2-dropdown.select2-dropdown--style1 {
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px var(--btn-shadow-dark);
+  overflow: hidden;
+  margin-top: 4px;
+  background-color: var(--color-bg-card);
+}
+.ui-select--style1 .chosen-drop {
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px var(--btn-shadow-dark);
+  margin-top: 4px;
+}
+
+/* ==============================================================
+   STYLE 2 — MATERIAL FLOATING (Includes Dropdown)
+   ============================================================== */
+.ui-select--style2 {
+  padding-top: 1rem;
+}
+
+.ui-select--style2 label {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-size: 0.6875rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 1;
+}
+
+.ui-select--style2 .select2-container--default .select2-selection--single,
+.ui-select--style2 .select2-container--default .select2-selection--multiple {
+  border: none;
+  border-bottom: 2px solid var(--color-border);
+  border-radius: 0;
+  min-height: 40px;
+  background: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.ui-select--style2 .select2-container--default.select2-container--open .select2-selection--single,
+.ui-select--style2
+  .select2-container--default.select2-container--open
+  .select2-selection--multiple {
+  border-bottom-color: var(--color-primary);
+  box-shadow: 0 2px 0 0 var(--color-primary);
+}
+
+.ui-select--style2
+  .select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  border-radius: 1rem;
+  padding: 2px 10px;
+  font-size: 0.75rem;
+  background-color: var(--color-bg-soft);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+}
+
+.ui-select--style2 .chosen-container-single .chosen-single,
+.ui-select--style2 .chosen-container-multi .chosen-choices {
+  border: none;
+  border-bottom: 2px solid var(--color-border);
+  border-radius: 0;
+  min-height: 40px;
+  background: transparent;
+  line-height: 34px;
+}
+
+.ui-select--style2 .chosen-container-active .chosen-single,
+.ui-select--style2 .chosen-container-active .chosen-choices {
+  border-bottom-color: var(--color-primary);
+  box-shadow: 0 2px 0 0 var(--color-primary);
+}
+
+.ui-select--style2 .chosen-container-multi .chosen-choices li.search-choice {
+  border-radius: 1rem;
+  padding: 2px 22px 2px 10px;
+  font-size: 0.75rem;
+  background: var(--color-bg-soft);
+  background-image: none;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+}
+
+/* Dropdown specific to Style 2 */
+.select2-container--open .select2-dropdown.select2-dropdown--style2 {
+  border-radius: 0 0 4px 4px;
+  border: 1px solid var(--color-border);
+  border-top: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-bg-card);
+}
+.ui-select--style2 .chosen-drop {
+  border-radius: 0 0 4px 4px;
+  border: 1px solid var(--color-border);
+  border-top: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.select2-container--open .select2-dropdown.select2-dropdown--style2 .select2-results__option,
+.ui-select--style2 .chosen-results li {
+  transition: background-color 0.2s ease;
+}
+
+/* ==============================================================
+   STYLE 3 — GLASS PREMIUM (Includes Dropdown)
+   ============================================================== */
+.ui-select--style3 .select2-container--default .select2-selection--single,
+.ui-select--style3 .select2-container--default .select2-selection--multiple {
+  background: color-mix(in srgb, var(--color-bg-card) 70%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-radius: 0.75rem;
+  min-height: 44px;
+  padding: 2px 6px;
+}
+
+.ui-select--style3 .select2-container--default.select2-container--open .select2-selection--single,
+.ui-select--style3
+  .select2-container--default.select2-container--open
+  .select2-selection--multiple {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px var(--btn-shadow-light);
+}
+
+.ui-select--style3
+  .select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-radius: 1rem;
+  padding: 3px 10px;
+  font-size: 0.8125rem;
+  backdrop-filter: blur(4px);
+}
+
+.ui-select--style3 .chosen-container-single .chosen-single,
+.ui-select--style3 .chosen-container-multi .chosen-choices {
+  background: color-mix(in srgb, var(--color-bg-card) 70%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-radius: 0.75rem;
+  min-height: 44px;
+  line-height: 30px;
+  padding: 4px 10px;
+}
+
+.ui-select--style3 .chosen-container-active .chosen-single,
+.ui-select--style3 .chosen-container-active .chosen-choices {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 20px var(--btn-shadow-light);
+}
+
+.ui-select--style3 .chosen-container-multi .chosen-choices li.search-choice {
+  background: color-mix(in srgb, var(--color-primary) 15%, transparent);
+  background-image: none;
+  color: var(--color-primary);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border-radius: 1rem;
+  padding: 3px 22px 3px 10px;
+  font-size: 0.8125rem;
+}
+
+/* Dropdown specific to Style 3 */
+.select2-container--open .select2-dropdown.select2-dropdown--style3,
+.select2-container--open .select2-dropdown.select2-dropdown--style3.select2-dropdown--below,
+.select2-container--open .select2-dropdown.select2-dropdown--style3.select2-dropdown--above {
+  background: color-mix(in srgb, var(--color-bg-card) 75%, transparent) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent) !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 8px 32px var(--btn-shadow-light);
+  margin-top: 6px;
+  overflow: hidden;
+}
+.ui-select--style3 .chosen-drop {
+  background: color-mix(in srgb, var(--color-bg-card) 75%, transparent) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent) !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px var(--btn-shadow-light);
+  margin-top: 6px;
+}
+.select2-container--open .select2-dropdown.select2-dropdown--style3 .select2-search__field {
+  background-color: transparent !important;
+  outline: none;
+  border-radius: 10px;
+}
+
+/* ==============================================================
+   STYLE 4 — NEO BRUTALIST (Includes Dropdown)
+   ============================================================== */
+.ui-select--style4 label {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+}
+
+.ui-select--style4 .select2-container--default .select2-selection--single,
+.ui-select--style4 .select2-container--default .select2-selection--multiple {
+  border: 3px solid var(--color-text-main);
+  border-radius: 0;
+  min-height: 46px;
+  padding: 2px 6px;
+  box-shadow: 4px 4px 0 var(--color-text-main);
+  background-color: var(--color-bg-card);
+  font-weight: 600;
+}
+
+.ui-select--style4 .select2-container--default.select2-container--open .select2-selection--single,
+.ui-select--style4
+  .select2-container--default.select2-container--open
+  .select2-selection--multiple {
+  border-color: var(--color-primary);
+  box-shadow: 4px 4px 0 var(--color-primary);
+}
+
+.ui-select--style4
+  .select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  border-radius: 0;
+  border: 2px solid var(--color-text-main);
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+  font-weight: 700;
+  padding: 2px 8px;
+  font-size: 0.8125rem;
+}
+
+.ui-select--style4 .chosen-container-single .chosen-single,
+.ui-select--style4 .chosen-container-multi .chosen-choices {
+  border: 3px solid var(--color-text-main);
+  border-radius: 0;
+  min-height: 46px;
+  box-shadow: 4px 4px 0 var(--color-text-main);
+  background: var(--color-bg-card);
+  background-image: none;
+  font-weight: 600;
+  line-height: 36px;
+  padding: 2px 10px;
+}
+
+.ui-select--style4 .chosen-container-active .chosen-single,
+.ui-select--style4 .chosen-container-active .chosen-choices {
+  border-color: var(--color-primary);
+  box-shadow: 4px 4px 0 var(--color-primary);
+}
+
+.ui-select--style4 .chosen-container-multi .chosen-choices li.search-choice {
+  border-radius: 0;
+  border: 2px solid var(--color-text-main);
+  background: var(--color-primary);
+  background-image: none;
+  color: var(--text-on-primary);
+  font-weight: 700;
+  padding: 2px 22px 2px 8px;
+}
+
+/* Dropdown specific to Style 4 */
+.select2-container--open .select2-dropdown.select2-dropdown--style4 {
+  border: 3px solid var(--color-text-main) !important;
+  border-radius: 0 !important;
+  box-shadow: 4px 4px 0 var(--color-text-main);
+  margin-top: 4px;
+  background-color: var(--color-bg-card);
+}
+.select2-container--open
+  .select2-dropdown.select2-dropdown--style4
+  .select2-results__option--highlighted {
+  background-color: var(--color-text-main) !important;
+  color: var(--color-bg-card) !important;
+  border: none;
+}
+.ui-select--style4 .chosen-drop {
+  border: 3px solid var(--color-text-main) !important;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 var(--color-text-main);
+  margin-top: 4px;
+}
+.ui-select--style4 .chosen-results li.highlighted {
+  background-color: var(--color-text-main) !important;
+  color: var(--color-bg-card) !important;
+  background-image: none;
+}
+
+/* ==============================================================
+   STYLE 5 — SOFT MINIMAL SAAS (Includes Dropdown)
+   ============================================================== */
+.ui-select--style5 .select2-container--default .select2-selection--single,
+.ui-select--style5 .select2-container--default .select2-selection--multiple {
+  background-color: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 0.625rem;
+  min-height: 40px;
+  padding: 2px 6px;
+  box-shadow: none;
+}
+
+.ui-select--style5 .select2-container--default.select2-container--open .select2-selection--single,
+.ui-select--style5
+  .select2-container--default.select2-container--open
+  .select2-selection--multiple {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-card);
+}
+
+.ui-select--style5
+  .select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.ui-select--style5 .chosen-container-single .chosen-single,
+.ui-select--style5 .chosen-container-multi .chosen-choices {
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 0.625rem;
+  min-height: 40px;
+  line-height: 34px;
+  padding: 2px 10px;
+  box-shadow: none;
+}
+
+.ui-select--style5 .chosen-container-active .chosen-single,
+.ui-select--style5 .chosen-container-active .chosen-choices {
+  border-color: var(--color-primary);
+  background: var(--color-bg-card);
+}
+
+.ui-select--style5 .chosen-container-multi .chosen-choices li.search-choice {
+  background: var(--color-bg-card);
+  background-image: none;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+  padding: 2px 22px 2px 8px;
+  font-size: 0.75rem;
+}
+
+/* Dropdown specific to Style 5 */
+.select2-container--open .select2-dropdown.select2-dropdown--style5 {
+  border: 1px solid var(--color-border) !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 8px;
+  padding: 6px;
+  background-color: var(--color-bg-card) !important;
+}
+.select2-container--open .select2-dropdown.select2-dropdown--style5 .select2-results__option {
+  border-radius: 0.375rem;
+  margin-bottom: 2px;
+}
+.ui-select--style5 .chosen-drop {
+  border: 1px solid var(--color-border) !important;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  margin-top: 8px;
+  padding: 6px;
+  background-color: var(--color-bg-card) !important;
+}
+.ui-select--style5 .chosen-results li {
+  border-radius: 0.375rem;
+  margin-bottom: 2px;
+}
+
+/* ==============================================================
+   VALIDATION STATES
+   ============================================================== */
+.ui-select.is-valid .select2-container--default .select2-selection--single,
+.ui-select.is-valid .select2-container--default .select2-selection--multiple,
+.ui-select.is-valid .chosen-container-single .chosen-single,
+.ui-select.is-valid .chosen-container-multi .chosen-choices {
+  border-color: var(--color-success) !important;
+}
+
+.ui-select.is-valid .validation-msg {
+  color: var(--color-success);
+  font-size: 0.75rem;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.ui-select.is-invalid .select2-container--default .select2-selection--single,
+.ui-select.is-invalid .select2-container--default .select2-selection--multiple,
+.ui-select.is-invalid .chosen-container-single .chosen-single,
+.ui-select.is-invalid .chosen-container-multi .chosen-choices {
+  border-color: var(--color-danger) !important;
+}
+
+.ui-select.is-invalid .validation-msg {
+  color: var(--color-danger);
+  font-size: 0.75rem;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Disabled State */
+.ui-select.is-disabled .select2-container--default .select2-selection--single,
+.ui-select.is-disabled .select2-container--default .select2-selection--multiple,
+.ui-select.is-disabled .chosen-container-single .chosen-single,
+.ui-select.is-disabled .chosen-container-multi .chosen-choices {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: var(--color-bg-soft);
+}
+
+/* Loading State */
+.ui-select.is-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 2.5rem;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: ui-spin 0.6s linear infinite;
+  z-index: 5;
+}
+
+@keyframes ui-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ==============================================================
+   THEME COMPATIBILITY — UI COMPONENTS
+   ============================================================== */
+.showcase-header {
+  background-color: var(--color-bg-card);
+  border-bottom: 1px solid var(--color-border);
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px var(--btn-shadow-dark);
+}
+
+.showcase-header h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-text-main);
+  margin: 0;
+}
+
+.showcase-header .subtitle {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+}
+
+.style-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.style-card:hover {
+  box-shadow: 0 8px 24px var(--btn-shadow-dark);
+}
+
+.style-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin-bottom: 0.25rem;
+}
+
+.style-card-desc {
+  font-size: 0.8125rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.375rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Toolbar Buttons */
+.toolbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Inter', sans-serif;
+}
+
+.toolbar-btn:hover {
+  background-color: var(--color-bg-soft);
+  border-color: var(--color-primary);
+}
+
+.toolbar-btn.active {
+  background-color: var(--color-primary);
+  color: var(--text-on-primary);
+  border-color: var(--color-primary);
+}
+
+.toolbar-btn-group {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.style-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 1rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  background-color: var(--color-bg-soft);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  margin-left: 6px;
+}
+
+/* ==============================================================
+   RESPONSIVE
+   ============================================================== */
+@media (max-width: 768px) {
+  .style-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  .toolbar-btn-group {
+    flex-wrap: wrap;
+  }
+  .showcase-header h1 {
+    font-size: 1rem;
+  }
+  .select2-dropdown {
+    width: 100% !important;
+    min-width: auto !important;
+  }
+  .chosen-container .chosen-drop {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .style-card {
+    padding: 0.75rem;
+  }
+  .ui-select label {
+    font-size: 0.75rem;
+  }
+}
+/* ==============================================================
+   SEARCH BOX STYLING PER STYLE (THE FIX)
+   ============================================================== */
+
+/* Style 1 - Enterprise Modern */
+.select2-dropdown--style1 .select2-search__field,
+.ui-select--style1 .chosen-search input[type='text'] {
+  border-radius: 6px !important;
+  border: 1px solid var(--color-border) !important;
+  outline: none;
+}
+
+/* Style 2 - Material Floating (Only Bottom Border) */
+.select2-dropdown--style2 .select2-search__field,
+.ui-select--style2 .chosen-search input[type='text'] {
+  border: none !important;
+  border-bottom: 2px solid var(--color-border) !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+}
+.select2-dropdown--style2 .select2-search__field:focus,
+.ui-select--style2 .chosen-search input[type='text']:focus {
+  border-bottom-color: var(--color-primary) !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Style 3 - Glass Premium (Transparent & Glowing) */
+.select2-dropdown--style3 .select2-search__field,
+.ui-select--style3 .chosen-search input[type='text'] {
+  background: color-mix(in srgb, var(--color-bg-card) 40%, transparent) !important;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent) !important;
+  border-radius: 8px !important;
+  color: var(--color-text-main) !important;
+}
+
+/* Style 4 - Neo Brutalist (Thick Borders & Sharp Edges) */
+.select2-dropdown--style4 .select2-search__field,
+.ui-select--style4 .chosen-search input[type='text'] {
+  border: 2px solid var(--color-text-main) !important;
+  border-radius: 0 !important;
+  box-shadow: 2px 2px 0 var(--color-text-main) !important;
+  background-color: var(--color-bg-card) !important;
+  font-weight: 600;
+}
+
+/* Style 5 - Soft Minimal SaaS (Soft Background, No Harsh Borders) */
+.select2-dropdown--style5 .select2-search__field,
+.ui-select--style5 .chosen-search input[type='text'] {
+  background-color: var(--color-bg-soft) !important;
+  border: 1px solid transparent !important;
+  border-radius: 8px !important;
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+}
+.select2-dropdown--style5 .select2-search__field:focus,
+.ui-select--style5 .chosen-search input[type='text']:focus {
+  border-color: var(--color-primary) !important;
+  background-color: var(--color-bg-card) !important;
+  outline: none !important;
+}
