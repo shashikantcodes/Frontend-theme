@@ -17,6 +17,81 @@
   color: var(--color-text-light);
   margin-top: 0.25rem;
 }
+/* ==============================================================
+   GLOBAL PLUGIN OVERRIDES (SELECT2 & CHOSEN)
+   Note: Yeh code dono plugins ki default styling aur dark mode 
+   color combination ko fix karta hai. Ise Style 1, 2, 3 ke upar rakhein.
+   ============================================================== */
+
+/* ----- SELECT2 GLOBAL FIXES ----- */
+
+/* Dropdown container ka background */
+.select2-dropdown {
+  background-color: var(--color-bg-card) !important;
+  border-color: var(--color-border) !important;
+}
+
+/* Search input ka text aur border */
+.select2-search--dropdown .select2-search__field {
+  color: var(--color-text-main) !important;
+  background-color: var(--search-input-bg) !important;
+  border-color: var(--color-border) !important;
+}
+
+/* Un-selected List Item ka Text Color */
+.select2-container--default .select2-results__option {
+  color: var(--color-text-main) !important;
+}
+
+/* Hover/Selected List Item ka Color */
+.select2-container--default
+  .select2-results__option--highlighted.select2-results__option--selectable {
+  background-color: var(--color-primary) !important;
+  color: var(--text-on-primary) !important;
+}
+
+/* ----- CHOSEN GLOBAL FIXES ----- */
+
+/* Main Selection Box (Yeh white gradient issue ko fix karega) */
+.ui-select .chosen-container .chosen-single,
+.ui-select .chosen-container-multi .chosen-choices {
+  background: var(--color-bg-card) !important;
+  background-image: none !important; /* Default white gradient ko hatane ke liye */
+  border-color: var(--color-border) !important;
+  color: var(--color-text-main) !important;
+  box-shadow: none !important;
+}
+
+/* Main box ke andar ka text color */
+.ui-select .chosen-container .chosen-single span {
+  color: var(--color-text-main) !important;
+}
+
+/* Dropdown Panel ka background */
+.ui-select .chosen-container .chosen-drop {
+  background: var(--color-bg-card) !important;
+  border-color: var(--color-border) !important;
+  background-image: none !important;
+}
+
+/* Search input ka text */
+.ui-select .chosen-container .chosen-search input[type='text'] {
+  color: var(--color-text-main) !important;
+  background-color: var(--search-input-bg) !important;
+  border-color: var(--color-border) !important;
+}
+
+/* Un-selected List Item ka Text Color */
+.ui-select .chosen-container .chosen-results li {
+  color: var(--color-text-main) !important;
+}
+
+/* Hover/Selected List Item ka Color */
+.ui-select .chosen-container .chosen-results li.highlighted {
+  background-color: var(--color-primary) !important;
+  background-image: none !important;
+  color: var(--text-on-primary) !important;
+}
 
 /* ==============================================================
          NEW: Custom Chevron Arrow and Search Icons
@@ -137,6 +212,8 @@
   .select2-selection__choice__remove {
   color: var(--text-on-primary);
   margin-right: 4px;
+  border: none;
+  top: 1px;
 }
 
 .ui-select
@@ -180,7 +257,8 @@
 }
 
 .ui-select .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
-  filter: brightness(10);
+  /* filter: brightness(10); */
+  color: var(--color-text-main);
 }
 
 .ui-select .chosen-container .chosen-drop {
@@ -361,7 +439,7 @@
   .select2-selection--multiple
   .select2-selection__choice {
   border-radius: 1rem;
-  padding: 2px 10px;
+  padding: 2px 15px;
   font-size: 0.75rem;
   background-color: var(--color-bg-soft);
   color: var(--color-text-main);
@@ -376,6 +454,8 @@
   min-height: 40px;
   background: transparent;
   line-height: 34px;
+  display: flex;
+  align-items: center;
 }
 
 .ui-select--style2 .chosen-container-active .chosen-single,
@@ -484,9 +564,9 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent) !important;
-  border-radius: 0.75rem !important;
+  /* border-radius: 0.75rem !important; */
   box-shadow: 0 8px 32px var(--btn-shadow-light);
-  margin-top: 6px;
+  /* margin-top: 6px; */
   overflow: hidden;
 }
 .ui-select--style3 .chosen-drop {
@@ -666,9 +746,9 @@
 /* Dropdown specific to Style 5 */
 .select2-container--open .select2-dropdown.select2-dropdown--style5 {
   border: 1px solid var(--color-border) !important;
-  border-radius: 0.75rem !important;
+  /* border-radius: 0.75rem !important; */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  margin-top: 8px;
+  /* margin-top: 8px; */
   padding: 6px;
   background-color: var(--color-bg-card) !important;
 }
