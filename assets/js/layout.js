@@ -216,14 +216,7 @@ function loadScriptsAndRun() {
           console.error('❌ Script load fail ho gayi:', newScript.src);
           checkCompletion();
         };
-        newScript.onload = () => {
-          loadedScripts++;
 
-          if (loadedScripts === scripts.length) {
-            executeDashboardLogic();
-            document.dispatchEvent(new Event('dynamicScriptsLoaded'));
-          }
-        };
         document.body.appendChild(newScript);
       });
     });

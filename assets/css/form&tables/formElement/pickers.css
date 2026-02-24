@@ -87,7 +87,47 @@
 .advanced-pickers-page .is-invalid {
   border-color: #dc3545 !important;
 }
+/* ==========================================================
+   FLATPICKR TIME HOVER / FOCUS FIX (SCOPED)
+========================================================== */
 
+.advanced-pickers-page .flatpickr-time input:hover,
+.advanced-pickers-page .flatpickr-time .flatpickr-am-pm:hover,
+.advanced-pickers-page .flatpickr-time input:focus,
+.advanced-pickers-page .flatpickr-time .flatpickr-am-pm:focus {
+  background: var(--color-bg-soft) !important;
+  color: var(--color-text-main) !important;
+  outline: none !important;
+}
+/* ==========================================================
+   FLATPICKR CALENDAR ARROW FIX (SCOPED)
+========================================================== */
+
+.advanced-pickers-page .flatpickr-calendar:before {
+  border-bottom-color: var(--color-border) !important;
+}
+
+.advanced-pickers-page .flatpickr-calendar:after {
+  border-bottom-color: var(--color-bg-card) !important;
+}
+/* ==========================================================
+   FLATPICKR TIME ARROW FIX
+========================================================== */
+
+.advanced-pickers-page .flatpickr-time .numInputWrapper span.arrowUp:after {
+  border-bottom-color: var(--color-text-main) !important;
+}
+
+.advanced-pickers-page .flatpickr-time .numInputWrapper span.arrowDown:after {
+  border-top-color: var(--color-text-main) !important;
+}
+
+.advanced-pickers-page .flatpickr-time .numInputWrapper span:hover {
+  background: var(--color-bg-soft) !important;
+}
+.advanced-pickers-page .flatpickr-time .flatpickr-time-separator {
+  color: var(--color-text-main) !important;
+}
 /* ==========================================================
            3. OVERLAY FIX (MANDATORY & SCOPED)
         ========================================================== */
@@ -97,9 +137,22 @@
 .advanced-pickers-page .pcr-app,
 .advanced-pickers-page .picmo__popup,
 .advanced-pickers-page .tempus-dominus-widget {
-  z-index: 9999 !important;
+  /* z-index: 9999 !important; */
+}
+/* ==========================================================
+   PLACEHOLDER COLOR FIX (SCOPED + DARK SAFE)
+========================================================== */
+
+.advanced-pickers-page input::placeholder,
+.advanced-pickers-page textarea::placeholder {
+  color: var(--color-text-light) !important;
+  opacity: 1 !important; /* Safari fix */
 }
 
+.advanced-pickers-page .form-control::placeholder,
+.advanced-pickers-page .form-select::placeholder {
+  color: var(--color-text-light) !important;
+}
 /* ==========================================================
            4. GLOBAL THEME SYNC FOR 3RD PARTY PICKERS (SCOPED)
         ========================================================== */
@@ -144,6 +197,34 @@
   fill: var(--color-primary) !important;
 }
 
+/* ==========================================================
+   FLATPICKR MONTH SELECT - DARK MODE FIX (SCOPED)
+========================================================== */
+
+.advanced-pickers-page .flatpickr-monthSelect-month {
+  color: var(--color-text-main) !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+}
+
+.advanced-pickers-page .flatpickr-monthSelect-month:hover {
+  background: var(--color-bg-soft) !important;
+  border-color: var(--color-border) !important;
+  color: var(--color-text-main) !important;
+}
+
+.advanced-pickers-page .flatpickr-monthSelect-month.selected,
+.advanced-pickers-page .flatpickr-monthSelect-month.startRange,
+.advanced-pickers-page .flatpickr-monthSelect-month.endRange {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--text-on-primary) !important;
+}
+
+.advanced-pickers-page .flatpickr-monthSelect-month.inRange {
+  background: var(--color-bg-soft) !important;
+  color: var(--color-text-main) !important;
+}
 /* Litepicker */
 .advanced-pickers-page .litepicker {
   background-color: var(--color-bg-card) !important;
@@ -171,6 +252,34 @@
 .advanced-pickers-page .litepicker .container__months .button-previous-month,
 .advanced-pickers-page .litepicker .container__months .button-next-month {
   fill: var(--color-text-main) !important;
+}
+.advanced-pickers-page .litepicker {
+  background: var(--color-bg-card) !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+}
+
+.advanced-pickers-page .litepicker .container__months {
+  background: var(--color-bg-card) !important;
+}
+
+.advanced-pickers-page .litepicker .container__days {
+  background: var(--color-bg-card) !important;
+}
+
+.advanced-pickers-page .litepicker .day-item {
+  color: var(--color-text-main) !important;
+}
+
+.advanced-pickers-page .litepicker .day-item:hover {
+  background: var(--color-bg-soft) !important;
+}
+
+.advanced-pickers-page .litepicker .day-item.is-selected,
+.advanced-pickers-page .litepicker .day-item.is-start-date,
+.advanced-pickers-page .litepicker .day-item.is-end-date {
+  background: var(--color-primary) !important;
+  color: var(--text-on-primary) !important;
 }
 
 /* Tempus Dominus */
@@ -214,7 +323,11 @@
   --focus-indicator-color: var(--color-primary) !important;
   --hover-background: var(--color-bg-soft) !important;
 }
-
+.advanced-pickers-page .picmo__popup {
+  --background: var(--color-bg-card) !important;
+  --secondary-background: var(--color-bg-soft) !important;
+  --text-color: var(--color-text-main) !important;
+}
 /* ==========================================================
            5. CUSTOM PICKER STYLING (TomSelect, Rating, Icons)
         ========================================================== */
@@ -252,6 +365,35 @@
   border-radius: 4px;
 }
 
+.advanced-pickers-page .ts-dropdown {
+  background: var(--color-bg-card) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+.advanced-pickers-page .ts-dropdown .option {
+  background: transparent !important;
+  color: var(--color-text-main) !important;
+}
+
+.advanced-pickers-page .ts-dropdown .option:hover,
+.advanced-pickers-page .ts-dropdown .option.active {
+  background: var(--color-bg-soft) !important;
+  color: var(--color-primary) !important;
+}
+
+.advanced-pickers-page .ts-dropdown .optgroup-header {
+  background: var(--color-bg-soft) !important;
+  color: var(--color-text-light) !important;
+}
+.advanced-pickers-page .ts-control {
+  background: var(--color-bg-card) !important;
+  color: var(--color-text-main) !important;
+}
+
+.advanced-pickers-page .ts-control .item {
+  background: var(--color-bg-soft) !important;
+  color: var(--color-text-main) !important;
+}
 .ts-wrapper.is-loading .ts-control::before {
   content: '';
   position: absolute;
