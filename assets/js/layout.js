@@ -196,6 +196,7 @@ function loadScriptsAndRun() {
 
       scripts.forEach((oldScript) => {
         const newScript = document.createElement('script');
+        newScript.async = false;
         // Adjust script src paths if needed
         let scriptSrc = oldScript.src;
         if (scriptSrc && !scriptSrc.startsWith('http') && basePath) {

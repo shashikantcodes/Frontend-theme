@@ -1,0 +1,1838 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards-Advance</title>
+    <link rel="stylesheet" href="../../../assets/css/form&tables/formElement/basic-input.css" />
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+      <div class="ph-header">
+        <h4 class="ph-title mb-0">
+          Premium Basic Inputs
+          <i class="bi bi-caret-down-square ph-play pt-1"></i>
+        </h4>
+
+        <div class="ph-actions">
+          <div class="ph-search-container" id="phSearch">
+            <div class="ph-search-wrapper">
+              <button type="button" class="ph-search-trigger">
+                <i class="bi bi-search"></i>
+              </button>
+
+              <input type="text" class="ph-search-input" placeholder="Search leads..." />
+
+              <span class="ph-search-close">
+                <i class="bi bi-x"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="ph-tools">
+            <i class="bi bi-funnel ph-icon"></i>
+            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-three-dots-vertical ph-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <main class="content-area">
+        <div class="advanced-basic-inputs-page">
+          <div class="container">
+            <!-- ==========================================
+             SECTION 1: DEFAULT INPUTS
+        ========================================== -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0 fw-bold">
+                  <i class="bi bi-ui-checks text-primary me-2"></i> Section 1: Default Inputs
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-4">
+                  <!-- 1. Text -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp1">1. Text</label>
+                    <input
+                      type="text"
+                      id="inp1"
+                      class="form-control"
+                      placeholder="Enter standard text"
+                      aria-label="Text input"
+                    />
+                  </div>
+                  <!-- 2. Email -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp2">2. Email</label>
+                    <input
+                      type="email"
+                      id="inp2"
+                      class="form-control"
+                      placeholder="name@example.com"
+                      aria-label="Email input"
+                    />
+                  </div>
+                  <!-- 3. Password -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp3">3. Password</label>
+                    <div class="input-group">
+                      <input
+                        type="password"
+                        id="inp3"
+                        class="form-control js-password-input"
+                        placeholder="Enter password"
+                        aria-label="Password input"
+                      />
+                      <button
+                        class="btn btn-outline-secondary js-password-toggle px-3"
+                        type="button"
+                        aria-label="Toggle password visibility"
+                      >
+                        <i class="bi bi-eye" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- 4. Search -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp4">4. Search</label>
+                    <input
+                      type="search"
+                      id="inp4"
+                      class="form-control"
+                      placeholder="Search here..."
+                      aria-label="Search input"
+                    />
+                  </div>
+                  <!-- 5. URL -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp5">5. URL</label>
+                    <input
+                      type="url"
+                      id="inp5"
+                      class="form-control"
+                      placeholder="https://example.com"
+                      aria-label="URL input"
+                    />
+                  </div>
+                  <!-- 6. Phone -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp6">6. Phone</label>
+                    <input
+                      type="tel"
+                      id="inp6"
+                      class="form-control"
+                      placeholder="+1 000-000-0000"
+                      aria-label="Phone input"
+                    />
+                  </div>
+                  <!-- 7. Number -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp7">7. Number</label>
+                    <input
+                      type="number"
+                      id="inp7"
+                      class="form-control"
+                      placeholder="0"
+                      aria-label="Number input"
+                    />
+                  </div>
+                  <!-- 8. Readonly -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp8">8. Readonly</label>
+                    <input
+                      type="text"
+                      id="inp8"
+                      class="form-control"
+                      value="This value is readonly"
+                      readonly
+                      aria-readonly="true"
+                    />
+                  </div>
+                  <!-- 9. Disabled -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp9">9. Disabled</label>
+                    <input
+                      type="text"
+                      id="inp9"
+                      class="form-control"
+                      value="Disabled input box"
+                      disabled
+                      aria-disabled="true"
+                    />
+                  </div>
+                  <!-- 10. Floating Label -->
+                  <div class="col-md-4">
+                    <label class="form-label mb-1">10. Floating Label</label>
+                    <div class="form-floating">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="floatingInput"
+                        placeholder="name@example.com"
+                      />
+                      <label for="floatingInput" style="text-transform: none; font-weight: 400"
+                        >Floating Label</label
+                      >
+                    </div>
+                  </div>
+                  <!-- 11. Helper Text -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp11">11. Helper Text</label>
+                    <input type="text" id="inp11" class="form-control" aria-describedby="help11" />
+                    <div id="help11" class="form-text text-muted mt-2">
+                      Must be 8-20 characters long.
+                    </div>
+                  </div>
+                  <!-- 12. Error State -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp12">12. Error State</label>
+                    <input
+                      type="text"
+                      id="inp12"
+                      class="form-control is-invalid-custom"
+                      value="Invalid Entry"
+                      aria-invalid="true"
+                      aria-describedby="err12"
+                    />
+                    <div id="err12" class="invalid-feedback-custom">Please correct this error.</div>
+                  </div>
+                  <!-- 13. Success State -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp13">13. Success State</label>
+                    <input
+                      type="text"
+                      id="inp13"
+                      class="form-control is-valid-custom"
+                      value="Valid Entry"
+                      aria-invalid="false"
+                      aria-describedby="succ13"
+                    />
+                    <div id="succ13" class="valid-feedback-custom">Looks good!</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==========================================
+             SECTION 2: INPUT SIZES & SHAPES
+        ========================================== -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0 fw-bold">
+                  <i class="bi bi-aspect-ratio text-primary me-2"></i> Section 2: Input Sizes &
+                  Shapes
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-4 align-items-end">
+                  <!-- 14. Small -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp14">14. Small</label>
+                    <input
+                      type="text"
+                      id="inp14"
+                      class="form-control form-control-sm py-1"
+                      placeholder="Small input box"
+                    />
+                  </div>
+                  <!-- 15. Default -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp15">15. Default</label>
+                    <input
+                      type="text"
+                      id="inp15"
+                      class="form-control"
+                      placeholder="Default input box"
+                    />
+                  </div>
+                  <!-- 16. Large -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp16">16. Large</label>
+                    <input
+                      type="text"
+                      id="inp16"
+                      class="form-control form-control-lg py-3"
+                      placeholder="Large input box"
+                    />
+                  </div>
+                  <!-- 17. Rounded -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp17">17. Rounded</label>
+                    <input
+                      type="text"
+                      id="inp17"
+                      class="form-control rounded-3"
+                      placeholder="Rounded input"
+                    />
+                  </div>
+                  <!-- 18. Pill -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp18">18. Pill</label>
+                    <input
+                      type="text"
+                      id="inp18"
+                      class="form-control rounded-pill px-4"
+                      placeholder="Pill shape input"
+                    />
+                  </div>
+                  <!-- 19. Shadow Style -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp19">19. Shadow Style</label>
+                    <input
+                      type="text"
+                      id="inp19"
+                      class="form-control border-0"
+                      style="box-shadow: 0 4px 12px var(--btn-shadow-light)"
+                      placeholder="Soft shadow, no border"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==========================================
+             SECTION 3: INPUT GROUPS
+        ========================================== -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0 fw-bold">
+                  <i class="bi bi-box text-primary me-2"></i> Section 3: Input Groups
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-4">
+                  <!-- 20. Prefix Icon -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp20">20. Prefix Icon</label>
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="bi bi-person" aria-hidden="true"></i
+                      ></span>
+                      <input type="text" id="inp20" class="form-control" placeholder="Username" />
+                    </div>
+                  </div>
+                  <!-- 21. Suffix Icon -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp21">21. Suffix Icon</label>
+                    <div class="input-group">
+                      <input type="text" id="inp21" class="form-control" placeholder="Search" />
+                      <span class="input-group-text"
+                        ><i class="bi bi-search" aria-hidden="true"></i
+                      ></span>
+                    </div>
+                  </div>
+                  <!-- 22. Both Side Icon -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp22">22. Both Side Icon</label>
+                    <div class="input-group">
+                      <span class="input-group-text"
+                        ><i class="bi bi-currency-dollar" aria-hidden="true"></i
+                      ></span>
+                      <input type="text" id="inp22" class="form-control" placeholder="Amount" />
+                      <span class="input-group-text">.00</span>
+                    </div>
+                  </div>
+                  <!-- 23. Currency Input -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp23">23. Currency Input</label>
+                    <div class="input-group">
+                      <select
+                        class="form-select"
+                        style="max-width: 90px"
+                        aria-label="Currency type"
+                      >
+                        <option>USD</option>
+                        <option>EUR</option>
+                        <option>GBP</option>
+                      </select>
+                      <input type="number" id="inp23" class="form-control" placeholder="100.00" />
+                    </div>
+                  </div>
+                  <!-- 24. Percentage Input -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp24">24. Percentage</label>
+                    <div class="input-group">
+                      <input type="number" id="inp24" class="form-control" placeholder="15" />
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                  <!-- 25. Styled File Input -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp25">25. File Input</label>
+                    <input type="file" id="inp25" class="form-control" />
+                  </div>
+                  <!-- 26. Multiple File Input -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp26">26. Multiple File Input</label>
+                    <input type="file" id="inp26" class="form-control" multiple />
+                  </div>
+                  <!-- 28. Clearable Input -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp28">28. Clearable Input</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp28"
+                        class="form-control js-clearable-input"
+                        placeholder="Type to clear..."
+                      />
+                      <button
+                        class="btn btn-outline-secondary js-clear-btn"
+                        type="button"
+                        aria-label="Clear input"
+                      >
+                        <i class="bi bi-x-circle" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <!-- 27. Drag & Drop Upload -->
+                  <div class="col-md-12 mt-4">
+                    <label class="form-label">27. Drag & Drop Upload</label>
+                    <div
+                      class="drag-drop-zone js-drop-zone"
+                      tabindex="0"
+                      role="button"
+                      aria-label="Drag and drop file upload area"
+                    >
+                      <input
+                        type="file"
+                        class="js-drop-input"
+                        aria-label="File upload hidden input"
+                      />
+                      <i
+                        class="bi bi-cloud-arrow-up fs-1 text-primary mb-3 d-block"
+                        aria-hidden="true"
+                      ></i>
+                      <h6 class="mt-2 mb-1 fw-bold">Drag and drop file here</h6>
+                      <p class="text-muted small">or click here to browse</p>
+                      <p
+                        class="js-drop-file-name text-success fw-bold mt-3 mb-0"
+                        aria-live="polite"
+                      ></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==========================================
+             SECTION 4: ADVANCED INPUTS
+        ========================================== -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0 fw-bold">
+                  <i class="bi bi-gear text-primary me-2"></i> Section 4: Advanced Inputs
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-4">
+                  <!-- 29. Date -->
+                  <div class="col-md-3">
+                    <label class="form-label" for="inp29">29. Date</label>
+                    <input type="date" id="inp29" class="form-control" />
+                  </div>
+                  <!-- 30. Time -->
+                  <div class="col-md-3">
+                    <label class="form-label" for="inp30">30. Time</label>
+                    <input type="time" id="inp30" class="form-control" />
+                  </div>
+                  <!-- 31. Datetime-local -->
+                  <div class="col-md-3">
+                    <label class="form-label" for="inp31">31. Datetime</label>
+                    <input type="datetime-local" id="inp31" class="form-control" />
+                  </div>
+                  <!-- 32. Week -->
+                  <div class="col-md-3">
+                    <label class="form-label" for="inp32">32. Week</label>
+                    <input type="week" id="inp32" class="form-control" />
+                  </div>
+                  <!-- 33. Month -->
+                  <div class="col-md-3">
+                    <label class="form-label" for="inp33">33. Month</label>
+                    <input type="month" id="inp33" class="form-control" />
+                  </div>
+                  <!-- 34. Color Picker -->
+                  <div class="col-md-3">
+                    <label class="form-label" for="inp34">34. Color</label>
+                    <input
+                      type="color"
+                      id="inp34"
+                      class="form-control form-control-color w-100"
+                      value="#4f46e5"
+                    />
+                  </div>
+                  <!-- 35. Range Slider (Live Value) -->
+                  <div class="col-md-3 range-wrapper">
+                    <label class="form-label d-flex justify-content-between" for="inp35">
+                      <span>35. Live Range</span>
+                      <span class="js-range-value fw-bold text-primary" aria-live="polite">50</span>
+                    </label>
+                    <input
+                      type="range"
+                      id="inp35"
+                      class="form-range js-range-live mt-2"
+                      min="0"
+                      max="100"
+                      value="50"
+                    />
+                  </div>
+                  <!-- 36. Range with Min/Max -->
+                  <div class="col-md-3 range-wrapper">
+                    <label class="form-label d-flex justify-content-between" for="inp36">
+                      <span>36. Min/Max Range (10-20)</span>
+                      <span class="js-range-value fw-bold text-primary" aria-live="polite">15</span>
+                    </label>
+                    <input
+                      type="range"
+                      id="inp36"
+                      class="form-range js-range-live mt-2"
+                      min="10"
+                      max="20"
+                      step="1"
+                      value="15"
+                    />
+                  </div>
+
+                  <!-- 37. OTP 4-digit auto focus -->
+                  <div class="col-md-4">
+                    <label class="form-label">37. OTP Auto-Focus</label>
+                    <div class="d-flex gap-2 js-otp-container mt-1">
+                      <input
+                        type="text"
+                        class="form-control otp-input"
+                        maxlength="1"
+                        aria-label="OTP digit 1"
+                      />
+                      <input
+                        type="text"
+                        class="form-control otp-input"
+                        maxlength="1"
+                        aria-label="OTP digit 2"
+                      />
+                      <input
+                        type="text"
+                        class="form-control otp-input"
+                        maxlength="1"
+                        aria-label="OTP digit 3"
+                      />
+                      <input
+                        type="text"
+                        class="form-control otp-input"
+                        maxlength="1"
+                        aria-label="OTP digit 4"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 38. Tags Input -->
+                  <div class="col-md-8">
+                    <label class="form-label" for="inp38">38. Tags Input</label>
+                    <div class="tags-input-wrapper js-tags-wrapper mt-1">
+                      <input
+                        type="text"
+                        id="inp38"
+                        class="tags-input-element js-tags-input"
+                        placeholder="Type and press Enter..."
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 39. Character Counter Textarea -->
+                  <div class="col-md-6">
+                    <label class="form-label d-flex justify-content-between" for="inp39">
+                      <span>39. Character Counter</span>
+                      <span
+                        class="text-muted small js-char-counter text-lowercase"
+                        aria-live="polite"
+                        >0 / 100</span
+                      >
+                    </label>
+                    <textarea
+                      id="inp39"
+                      class="form-control js-char-textarea"
+                      rows="3"
+                      maxlength="100"
+                      placeholder="Type something..."
+                    ></textarea>
+                  </div>
+
+                  <!-- 40. Auto Resize Textarea -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp40">40. Auto Resize Textarea</label>
+                    <textarea
+                      id="inp40"
+                      class="form-control js-autoresize-textarea"
+                      rows="1"
+                      placeholder="Type multiple lines to see me grow..."
+                    ></textarea>
+                  </div>
+
+                  <!-- 41. Copy to Clipboard -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp41">41. Copy to Clipboard</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp41"
+                        class="form-control js-copy-input"
+                        value="COPY_THIS_KEY_123"
+                        readonly
+                      />
+                      <button
+                        class="btn btn-outline-secondary js-copy-btn px-3"
+                        type="button"
+                        aria-label="Copy to clipboard"
+                      >
+                        <i class="bi bi-clipboard" aria-hidden="true"></i>
+                      </button>
+                    </div>
+                    <div
+                      class="form-text text-success fw-medium d-none js-copy-feedback mt-2"
+                      aria-live="polite"
+                    >
+                      Copied!
+                    </div>
+                  </div>
+
+                  <!-- 42. Debounced Search -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp42">42. Debounced Search (500ms)</label>
+                    <input
+                      type="text"
+                      id="inp42"
+                      class="form-control js-debounce-input"
+                      placeholder="Type quickly..."
+                    />
+                    <div
+                      class="form-text text-info fw-medium js-debounce-feedback mt-2"
+                      aria-live="polite"
+                    >
+                      Waiting for typing...
+                    </div>
+                  </div>
+
+                  <!-- 43. Password Strength Indicator -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp43">43. Password Strength</label>
+                    <input
+                      type="password"
+                      id="inp43"
+                      class="form-control js-strength-input mb-3"
+                      placeholder="Enter secure password"
+                    />
+                    <div class="progress" style="height: 6px" aria-hidden="true">
+                      <div class="progress-bar js-strength-bar w-0" role="progressbar"></div>
+                    </div>
+                    <div class="form-text js-strength-text mt-2 fw-medium" aria-live="polite">
+                      Weak
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==========================================
+             SECTION 5: VALIDATION DEMO
+        ========================================== -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0 fw-bold">
+                  <i class="bi bi-shield-check text-primary me-2"></i> Section 5: Validation Demo
+                </h5>
+              </div>
+              <div class="card-body">
+                <form class="js-validation-form row g-4" novalidate>
+                  <!-- 44. Required Validation -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp44">44. Required Field</label>
+                    <input
+                      type="text"
+                      id="inp44"
+                      class="form-control"
+                      required
+                      placeholder="Must fill this"
+                    />
+                    <div class="invalid-feedback-custom d-none" aria-live="assertive">
+                      This field is required.
+                    </div>
+                  </div>
+
+                  <!-- 45. Pattern Validation -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp45">45. Pattern (Letters Only)</label>
+                    <input
+                      type="text"
+                      id="inp45"
+                      class="form-control"
+                      pattern="[A-Za-z]+"
+                      required
+                      placeholder="e.g. John"
+                    />
+                    <div class="invalid-feedback-custom d-none" aria-live="assertive">
+                      Only letters are allowed.
+                    </div>
+                  </div>
+
+                  <!-- 46. Live Validation Feedback -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp46">46. Live Validated Email</label>
+                    <input
+                      type="email"
+                      id="inp46"
+                      class="form-control js-live-email"
+                      required
+                      placeholder="Live check"
+                    />
+                    <div
+                      class="invalid-feedback-custom js-live-feedback d-none"
+                      aria-live="assertive"
+                    >
+                      Valid email format required.
+                    </div>
+                  </div>
+
+                  <!-- 47. Submit with Loading Spinner -->
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-primary js-submit-btn">
+                      <span class="js-submit-text">47. Submit Data</span>
+                      <span
+                        class="spinner-border spinner-border-sm d-none ms-2 js-submit-spinner"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- ==========================================
+             SECTION 6: ADVANCED CHECKBOXES
+        ========================================== -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0 fw-bold">
+                  <i class="bi bi-check2-square text-primary me-2"></i> Section 6: Advanced
+                  Checkboxes
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-4">
+                  <!-- 48. Default Checkbox -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">48. Default</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="chk48" />
+                      <label class="form-check-label" for="chk48">Standard Check</label>
+                    </div>
+                  </div>
+
+                  <!-- 49. Inline Checkbox Group -->
+                  <div class="col-md-4">
+                    <label class="fw-semibold-label">49. Inline Group</label>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="chk49a" />
+                      <label class="form-check-label" for="chk49a">Option 1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="chk49b" />
+                      <label class="form-check-label" for="chk49b">Option 2</label>
+                    </div>
+                  </div>
+
+                  <!-- 50. Description Text -->
+                  <div class="col-md-5">
+                    <label class="fw-semibold-label">50. With Description</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="chk50" />
+                      <label class="form-check-label d-flex flex-column" for="chk50">
+                        <span>Subscribe to newsletter</span>
+                        <small class="text-muted">Get weekly updates straight to your inbox.</small>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- 51. Checkbox with Icon -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">51. With Icon</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="chk51" />
+                      <label class="form-check-label" for="chk51"
+                        ><i class="bi bi-star-fill text-warning me-1"></i> Star</label
+                      >
+                    </div>
+                  </div>
+
+                  <!-- 52. Card-style Checkbox -->
+                  <div class="col-md-4">
+                    <label class="fw-semibold-label">52. Card Style</label>
+                    <input type="checkbox" class="d-none card-checkbox-input" id="chk52" />
+                    <label class="card-checkbox-label" for="chk52" tabindex="0">
+                      <i class="bi bi-laptop fs-4 me-3 text-primary"></i>
+                      <div>
+                        <span class="d-block fw-bold text-main">Pro Plan</span>
+                        <small class="text-muted">$29/month</small>
+                      </div>
+                    </label>
+                  </div>
+
+                  <!-- 53. Toggle-style Checkbox -->
+                  <div class="col-md-5">
+                    <label class="fw-semibold-label">53. Toggle Style (Button)</label>
+                    <input type="checkbox" class="btn-check" id="chk53" autocomplete="off" />
+                    <label class="btn btn-outline-primary" for="chk53" tabindex="0"
+                      >Toggle Option</label
+                    >
+                  </div>
+
+                  <!-- 54. Colored Checkboxes -->
+                  <div class="col-md-4">
+                    <label class="fw-semibold-label">54. Colored</label>
+                    <div class="d-flex gap-3">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input check-success"
+                          type="checkbox"
+                          checked
+                          aria-label="Success check"
+                        />
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input check-danger"
+                          type="checkbox"
+                          checked
+                          aria-label="Danger check"
+                        />
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input check-warning"
+                          type="checkbox"
+                          checked
+                          aria-label="Warning check"
+                        />
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input check-info"
+                          type="checkbox"
+                          checked
+                          aria-label="Info check"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 55. Rounded Checkbox -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">55. Rounded</label>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input checkbox-rounded"
+                        type="checkbox"
+                        id="chk55"
+                        checked
+                      />
+                      <label class="form-check-label" for="chk55">Circle Check</label>
+                    </div>
+                  </div>
+
+                  <!-- 56. Indeterminate Checkbox -->
+                  <div class="col-md-5">
+                    <label class="fw-semibold-label">56. Indeterminate State</label>
+                    <div class="form-check">
+                      <input class="form-check-input js-indeterminate" type="checkbox" id="chk56" />
+                      <label class="form-check-label" for="chk56"
+                        >Partial Selection (JS Driven)</label
+                      >
+                    </div>
+                  </div>
+
+                  <!-- 57. Disabled Checkbox -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">57. Disabled</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" disabled />
+                      <label class="form-check-label text-muted">Cannot select</label>
+                    </div>
+                  </div>
+
+                  <!-- 58. Select All Checkbox -->
+                  <div class="col-md-4">
+                    <label class="fw-semibold-label">58. Select All Group</label>
+                    <div class="form-check mb-2 border-bottom pb-2">
+                      <input
+                        class="form-check-input js-select-all-parent"
+                        type="checkbox"
+                        id="chk58-all"
+                      />
+                      <label class="form-check-label fw-bold" for="chk58-all">Select All</label>
+                    </div>
+                    <div class="ps-3 js-select-all-group">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input js-select-child"
+                          type="checkbox"
+                          id="chk58-1"
+                        />
+                        <label class="form-check-label" for="chk58-1">Item A</label>
+                      </div>
+                      <div class="form-check">
+                        <input
+                          class="form-check-input js-select-child"
+                          type="checkbox"
+                          id="chk58-2"
+                        />
+                        <label class="form-check-label" for="chk58-2">Item B</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 59. Animated Checkbox -->
+                  <div class="col-md-5">
+                    <label class="fw-semibold-label">59. Animated (Bump)</label>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input checkbox-animated"
+                        type="checkbox"
+                        id="chk59"
+                      />
+                      <label class="form-check-label" for="chk59">Watch me bounce</label>
+                    </div>
+                  </div>
+
+                  <!-- 60. Counter Badge -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">60. With Counter</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="chk60" />
+                      <label class="form-check-label d-flex align-items-center gap-2" for="chk60">
+                        Notifications <span class="badge bg-danger rounded-pill">4</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- 61. Grid Selectable Cards -->
+                  <div class="col-md-9">
+                    <label class="fw-semibold-label">61. Grid Selectable Cards</label>
+                    <div class="row g-2">
+                      <div class="col-4">
+                        <input type="checkbox" class="d-none card-checkbox-input" id="chk61a" />
+                        <label
+                          class="card-checkbox-label justify-content-center py-3"
+                          for="chk61a"
+                          tabindex="0"
+                          >Basic</label
+                        >
+                      </div>
+                      <div class="col-4">
+                        <input type="checkbox" class="d-none card-checkbox-input" id="chk61b" />
+                        <label
+                          class="card-checkbox-label justify-content-center py-3"
+                          for="chk61b"
+                          tabindex="0"
+                          >Plus</label
+                        >
+                      </div>
+                      <div class="col-4">
+                        <input type="checkbox" class="d-none card-checkbox-input" id="chk61c" />
+                        <label
+                          class="card-checkbox-label justify-content-center py-3"
+                          for="chk61c"
+                          tabindex="0"
+                          >Enterprise</label
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 62. Checkbox with Tooltip -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">62. With Tooltip</label>
+                    <div class="custom-tooltip-wrapper">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="chk62" />
+                        <label class="form-check-label cursor-pointer" for="chk62">Hover Me</label>
+                      </div>
+                      <span class="tooltip-text" role="tooltip">I am a helpful tooltip!</span>
+                    </div>
+                  </div>
+
+                  <!-- 63. Validation Error -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">63. Validation Error</label>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input is-invalid"
+                        type="checkbox"
+                        id="chk63"
+                        required
+                        aria-invalid="true"
+                      />
+                      <label class="form-check-label" for="chk63">Agree to terms</label>
+                    </div>
+                  </div>
+
+                  <!-- 64. Large Size -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">64. Large Size</label>
+                    <div class="form-check d-flex align-items-center gap-2">
+                      <input class="form-check-input checkbox-lg m-0" type="checkbox" id="chk64" />
+                      <label class="form-check-label" for="chk64">Large Option</label>
+                    </div>
+                  </div>
+
+                  <!-- 65. Small Size -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">65. Small Size</label>
+                    <div class="form-check d-flex align-items-center gap-2">
+                      <input class="form-check-input checkbox-sm m-0" type="checkbox" id="chk65" />
+                      <label class="form-check-label small" for="chk65">Small Option</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==========================================
+             SECTION 7: ADVANCED SWITCHES
+        ========================================== -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0 fw-bold">
+                  <i class="bi bi-toggle-on text-primary me-2"></i> Section 7: Advanced Switches
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-4">
+                  <!-- 66. Default Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">66. Default</label>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" id="sw66" />
+                      <label class="form-check-label" for="sw66">Standard Toggle</label>
+                    </div>
+                  </div>
+
+                  <!-- 67. Small Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">67. Small</label>
+                    <div class="form-check form-switch switch-sm">
+                      <input class="form-check-input" type="checkbox" role="switch" id="sw67" />
+                      <label class="form-check-label small" for="sw67">Small Toggle</label>
+                    </div>
+                  </div>
+
+                  <!-- 68. Large Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">68. Large</label>
+                    <div class="form-check form-switch switch-lg">
+                      <input class="form-check-input" type="checkbox" role="switch" id="sw68" />
+                      <label class="form-check-label ms-2 mt-1" for="sw68">Large Toggle</label>
+                    </div>
+                  </div>
+
+                  <!-- 69. Rounded Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">69. Rounded</label>
+                    <div class="form-check form-switch switch-rounded">
+                      <input class="form-check-input" type="checkbox" role="switch" id="sw69" />
+                      <label class="form-check-label" for="sw69">Square Edge</label>
+                    </div>
+                  </div>
+
+                  <!-- 70. Pill Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">70. Pill (Default Shape)</label>
+                    <div class="form-check form-switch switch-pill">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="sw70"
+                        checked
+                      />
+                      <label class="form-check-label" for="sw70">Pill Edge</label>
+                    </div>
+                  </div>
+
+                  <!-- 71. Icon Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">71. Icon Switch</label>
+                    <div class="form-check form-switch js-icon-switch-container">
+                      <input
+                        class="form-check-input js-icon-switch"
+                        type="checkbox"
+                        role="switch"
+                        id="sw71"
+                      />
+                      <label class="form-check-label" for="sw71">
+                        <i class="bi bi-moon js-switch-icon ms-1" aria-hidden="true"></i> Dark Mode
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- 72. Text Label Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">72. Text Inside</label>
+                    <div class="form-check form-switch switch-text-label">
+                      <input class="form-check-input" type="checkbox" role="switch" id="sw72" />
+                      <label class="form-check-label ms-1" for="sw72">Status</label>
+                    </div>
+                  </div>
+
+                  <!-- 73. Colored Switches -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">73. Colored</label>
+                    <div class="d-flex gap-3">
+                      <div class="form-check form-switch switch-success p-0 m-0 ps-5">
+                        <input
+                          class="form-check-input m-0 ms-n5"
+                          type="checkbox"
+                          role="switch"
+                          checked
+                          aria-label="Success Switch"
+                        />
+                      </div>
+                      <div class="form-check form-switch switch-warning p-0 m-0 ps-5">
+                        <input
+                          class="form-check-input m-0 ms-n5"
+                          type="checkbox"
+                          role="switch"
+                          checked
+                          aria-label="Warning Switch"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 74. Disabled Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">74. Disabled</label>
+                    <div class="form-check form-switch">
+                      <input class="form-check-input" type="checkbox" role="switch" disabled />
+                      <label class="form-check-label text-muted">Locked</label>
+                    </div>
+                  </div>
+
+                  <!-- 75. Loading Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">75. Async Loading</label>
+                    <div class="form-check form-switch d-flex align-items-center gap-2 ps-0">
+                      <div class="ps-5 position-relative">
+                        <input
+                          class="form-check-input m-0 ms-n5 js-loading-switch"
+                          type="checkbox"
+                          role="switch"
+                          id="sw75"
+                        />
+                      </div>
+                      <label class="form-check-label m-0" for="sw75">Sync Data</label>
+                      <span
+                        class="spinner-border spinner-border-sm text-primary d-none js-switch-spinner"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <!-- 76. Animated Smooth Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">76. Smooth Animation</label>
+                    <div class="form-check form-switch switch-smooth">
+                      <input class="form-check-input" type="checkbox" role="switch" id="sw76" />
+                      <label class="form-check-label" for="sw76">Slow Fade</label>
+                    </div>
+                  </div>
+
+                  <!-- 77. Confirmation Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">77. Requires Confirm</label>
+                    <div class="form-check form-switch position-relative">
+                      <input
+                        class="form-check-input js-confirm-switch"
+                        type="checkbox"
+                        role="switch"
+                        id="sw77"
+                      />
+                      <label class="form-check-label" for="sw77">Delete DB</label>
+                      <!-- Inline Confirmation Box -->
+                      <div
+                        class="js-confirm-box d-none position-absolute bg-white border rounded p-2 shadow-sm"
+                        style="z-index: 10; top: 100%; left: 0; min-width: 150px"
+                      >
+                        <p class="small mb-2">Are you sure?</p>
+                        <div class="d-flex gap-2">
+                          <button class="btn btn-sm btn-danger js-confirm-yes py-0" type="button">
+                            Yes
+                          </button>
+                          <button
+                            class="btn btn-sm btn-outline-secondary js-confirm-no py-0"
+                            type="button"
+                          >
+                            No
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 78. Live Status Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">78. Live Status</label>
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input js-status-switch"
+                        type="checkbox"
+                        role="switch"
+                        id="sw78"
+                      />
+                      <label
+                        class="form-check-label js-status-text text-danger fw-bold"
+                        for="sw78"
+                        aria-live="polite"
+                        >Offline</label
+                      >
+                    </div>
+                  </div>
+
+                  <!-- 79. Tooltip Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">79. With Tooltip</label>
+                    <div class="custom-tooltip-wrapper">
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="sw79" />
+                        <label class="form-check-label cursor-pointer" for="sw79"
+                          >Beta Features</label
+                        >
+                      </div>
+                      <span class="tooltip-text" role="tooltip">Enable experimental features</span>
+                    </div>
+                  </div>
+
+                  <!-- 80. Radio Behavior Switch Group -->
+                  <div class="col-md-6">
+                    <label class="fw-semibold-label">80. Switch Group (Radio Behavior)</label>
+                    <div class="d-flex gap-4 js-switch-group">
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input js-radio-switch"
+                          type="checkbox"
+                          role="switch"
+                          id="sw80a"
+                          checked
+                        />
+                        <label class="form-check-label" for="sw80a">Plan A</label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input js-radio-switch"
+                          type="checkbox"
+                          role="switch"
+                          id="sw80b"
+                        />
+                        <label class="form-check-label" for="sw80b">Plan B</label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input js-radio-switch"
+                          type="checkbox"
+                          role="switch"
+                          id="sw80c"
+                        />
+                        <label class="form-check-label" for="sw80c">Plan C</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 81. Vertical Switch Layout -->
+                  <div class="col-md-2">
+                    <label class="fw-semibold-label">81. Vertical</label>
+                    <div class="d-flex flex-column gap-2">
+                      <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" role="switch" id="sw81a" />
+                        <label class="form-check-label" for="sw81a">Wi-Fi</label>
+                      </div>
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          role="switch"
+                          id="sw81b"
+                          checked
+                        />
+                        <label class="form-check-label" for="sw81b">Bluetooth</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 82. Switch with Counter -->
+                  <div class="col-md-4">
+                    <label class="fw-semibold-label">82. Switch with Counter</label>
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input js-counter-switch"
+                        type="checkbox"
+                        role="switch"
+                        id="sw82"
+                      />
+                      <label class="form-check-label" for="sw82">
+                        Triggered
+                        <span class="badge bg-primary js-switch-counter-val" aria-live="polite"
+                          >0</span
+                        >
+                        times
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- 83. Validation Switch -->
+                  <div class="col-md-3">
+                    <label class="fw-semibold-label">83. Validation Error</label>
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input is-invalid"
+                        type="checkbox"
+                        role="switch"
+                        id="sw83"
+                        required
+                        aria-invalid="true"
+                      />
+                      <label class="form-check-label" for="sw83">Must agree</label>
+                    </div>
+                  </div>
+
+                  <!-- 84. JS API Switch -->
+                  <div class="col-md-9">
+                    <label class="fw-semibold-label">84. JS API Controlled Switch</label>
+                    <div class="d-flex align-items-center gap-4">
+                      <div class="form-check form-switch switch-lg">
+                        <input
+                          class="form-check-input js-api-switch-target"
+                          type="checkbox"
+                          role="switch"
+                          id="sw84"
+                        />
+                        <label class="form-check-label ms-2 mt-1" for="sw84"
+                          >Remote Controlled</label
+                        >
+                      </div>
+                      <div class="btn-group">
+                        <button class="btn btn-sm btn-outline-success js-api-turn-on" type="button">
+                          Turn ON
+                        </button>
+                        <button class="btn btn-sm btn-outline-danger js-api-turn-off" type="button">
+                          Turn OFF
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ==========================================
+             SECTION 8: ADVANCED INPUT GROUPS
+        ========================================== -->
+            <div class="card">
+              <div class="card-header">
+                <h5 class="mb-0 fw-bold">
+                  <i class="bi bi-input-cursor-text text-primary me-2"></i> Section 8: Advanced
+                  Input Groups
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="row g-4">
+                  <!-- 85. Button attached input (left button) -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp85">85. Button Left</label>
+                    <div class="input-group">
+                      <button class="btn btn-primary" type="button" aria-label="Action left">
+                        Action
+                      </button>
+                      <input
+                        type="text"
+                        id="inp85"
+                        class="form-control"
+                        placeholder="Input here..."
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 86. Button attached input (right button) -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp86">86. Button Right</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp86"
+                        class="form-control"
+                        placeholder="Recipient's username"
+                      />
+                      <button
+                        class="btn btn-outline-secondary"
+                        type="button"
+                        aria-label="Action right"
+                      >
+                        Button
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 87. Split dropdown button input group -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp87">87. Split Dropdown</label>
+                    <div class="input-group">
+                      <button type="button" class="btn btn-outline-secondary">Action</button>
+                      <button
+                        type="button"
+                        class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action 1</a></li>
+                        <li><a class="dropdown-item" href="#">Action 2</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                      </ul>
+                      <input
+                        type="text"
+                        id="inp87"
+                        class="form-control"
+                        placeholder="Enter value"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 88. Multi-addon input (prefix + suffix + button) -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp88">88. Multi-addon Group</label>
+                    <div class="input-group">
+                      <span class="input-group-text">$</span>
+                      <span class="input-group-text">0.00</span>
+                      <input
+                        type="text"
+                        id="inp88"
+                        class="form-control"
+                        aria-label="Dollar amount"
+                      />
+                      <button class="btn btn-primary" type="button">Process</button>
+                    </div>
+                  </div>
+
+                  <!-- 89. Country code dropdown + phone input -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp89">89. Country Code + Phone</label>
+                    <div class="input-group">
+                      <button
+                        class="btn btn-outline-secondary dropdown-toggle js-country-toggle"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        +1
+                      </button>
+                      <ul class="dropdown-menu js-country-menu">
+                        <li>
+                          <a class="dropdown-item js-country-option" href="#" data-code="+1"
+                            >USA (+1)</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item js-country-option" href="#" data-code="+44"
+                            >UK (+44)</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item js-country-option" href="#" data-code="+91"
+                            >IN (+91)</a
+                          >
+                        </li>
+                      </ul>
+                      <input
+                        type="tel"
+                        id="inp89"
+                        class="form-control"
+                        placeholder="Phone number"
+                        aria-label="Phone number with country code"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 90. Search input with live dropdown results -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp90">90. Search + Live Dropdown</label>
+                    <div class="position-relative">
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-search"></i></span>
+                        <input
+                          type="text"
+                          id="inp90"
+                          class="form-control js-live-search"
+                          placeholder="Search cities (e.g., New York, London)..."
+                          autocomplete="off"
+                          aria-expanded="false"
+                        />
+                      </div>
+                      <div class="live-search-results js-search-dropdown" aria-live="polite">
+                        <!-- Results appended via JS -->
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 91. Input with loading spinner -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp91">91. Dynamic Loading Spinner</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp91"
+                        class="form-control js-spinner-input"
+                        placeholder="Type to simulate save..."
+                      />
+                      <span class="input-group-text bg-white">
+                        <div
+                          class="spinner-border spinner-border-sm text-primary d-none js-input-spinner"
+                          role="status"
+                        >
+                          <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <i class="bi bi-check-circle text-success js-input-success"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- 92. Verification input + timer + verify button -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp92">92. Verification + Timer</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp92"
+                        class="form-control"
+                        placeholder="Enter OTP code"
+                      />
+                      <span class="input-group-text js-timer-display" style="min-width: 60px"
+                        >02:00</span
+                      >
+                      <button class="btn btn-primary js-verify-btn" type="button">Verify</button>
+                    </div>
+                  </div>
+
+                  <!-- 93. Input with dynamic status badge -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp93">93. Dynamic Status Badge</label>
+                    <div class="status-badge-container">
+                      <input
+                        type="text"
+                        id="inp93"
+                        class="form-control js-status-badge-input pe-5"
+                        placeholder="Enter 'admin' to verify"
+                      />
+                      <span class="badge bg-secondary status-badge js-status-badge">Pending</span>
+                    </div>
+                  </div>
+
+                  <!-- 94. Expandable input group -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp94">94. Expandable Group</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp94"
+                        class="form-control"
+                        placeholder="Primary email"
+                      />
+                      <button
+                        class="btn btn-outline-secondary js-expand-btn"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="expand94"
+                      >
+                        <i class="bi bi-chevron-down js-expand-icon"></i> Add CC
+                      </button>
+                    </div>
+                    <div id="expand94" class="expandable-content js-expand-content">
+                      <input type="text" class="form-control mt-2" placeholder="CC email address" />
+                    </div>
+                  </div>
+
+                  <!-- 95. Collapsible advanced filter input -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp95">95. Collapsible Filter</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp95"
+                        class="form-control"
+                        placeholder="Search keywords..."
+                      />
+                      <button
+                        class="btn btn-outline-secondary js-filter-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-controls="filter95"
+                      >
+                        <i class="bi bi-sliders"></i> Filters
+                      </button>
+                    </div>
+                    <div
+                      id="filter95"
+                      class="expandable-content js-filter-content card card-body mt-2 border p-3"
+                    >
+                      <div class="row g-2">
+                        <div class="col-6">
+                          <select class="form-select">
+                            <option>Any Category</option>
+                          </select>
+                        </div>
+                        <div class="col-6">
+                          <select class="form-select">
+                            <option>Any Date</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 96. Dynamic add/remove input fields -->
+                  <div class="col-md-6">
+                    <label class="form-label">96. Dynamic Add/Remove Fields</label>
+                    <div class="js-dynamic-fields-wrapper">
+                      <div class="input-group mb-2 dynamic-field-row">
+                        <input type="text" class="form-control" placeholder="Team member name" />
+                        <button
+                          class="btn btn-outline-success js-add-field"
+                          type="button"
+                          aria-label="Add field"
+                        >
+                          <i class="bi bi-plus-lg"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 97. Step-based input group -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp97">97. Step-based Inline</label>
+                    <div class="input-group">
+                      <button
+                        class="btn btn-outline-secondary js-step-minus"
+                        type="button"
+                        aria-label="Decrease value"
+                      >
+                        <i class="bi bi-dash"></i>
+                      </button>
+                      <input
+                        type="number"
+                        id="inp97"
+                        class="form-control input-step js-step-input"
+                        value="1"
+                        min="1"
+                        max="100"
+                      />
+                      <button
+                        class="btn btn-outline-secondary js-step-plus"
+                        type="button"
+                        aria-label="Increase value"
+                      >
+                        <i class="bi bi-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 98. Character limit input with progress bar -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp98">98. Char Limit Progress</label>
+                    <input
+                      type="text"
+                      id="inp98"
+                      class="form-control js-progress-input border-bottom-0"
+                      style="border-radius: 0.5rem 0.5rem 0 0"
+                      placeholder="Max 50 chars..."
+                      maxlength="50"
+                    />
+                    <div class="progress progress-limit w-100" aria-hidden="true">
+                      <div
+                        class="progress-bar js-input-progress-bar bg-success"
+                        role="progressbar"
+                        style="width: 0%"
+                      ></div>
+                    </div>
+                    <div class="text-end text-muted small mt-1 js-progress-text">0/50</div>
+                  </div>
+
+                  <!-- 99. Input with tooltip icon -->
+                  <div class="col-md-4">
+                    <label class="form-label" for="inp99">99. Input with Tooltip</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp99"
+                        class="form-control"
+                        placeholder="Server Hostname"
+                      />
+                      <span
+                        class="input-group-text js-tooltip-icon"
+                        data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="E.g., server1.domain.com"
+                        tabindex="0"
+                      >
+                        <i class="bi bi-info-circle text-info"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- 100. Copy + Clear dual action input -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp100">100. Dual Action (Copy + Clear)</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp100"
+                        class="form-control js-dual-input"
+                        value="Secret_API_Key_007"
+                      />
+                      <button
+                        class="btn btn-outline-secondary js-dual-copy"
+                        type="button"
+                        title="Copy"
+                      >
+                        <i class="bi bi-files"></i>
+                      </button>
+                      <button
+                        class="btn btn-outline-danger js-dual-clear"
+                        type="button"
+                        title="Clear"
+                      >
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 101. Password generator input group -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp101">101. Password Generator</label>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        id="inp101"
+                        class="form-control js-gen-input"
+                        placeholder="Generated password"
+                      />
+                      <button class="btn btn-primary js-gen-btn" type="button">
+                        <i class="bi bi-magic me-1"></i> Generate
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 102. Currency converter input group -->
+                  <div class="col-md-12">
+                    <label class="form-label">102. Currency Converter</label>
+                    <div class="input-group">
+                      <select class="form-select js-curr-from" style="max-width: 100px">
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                      </select>
+                      <input
+                        type="number"
+                        class="form-control js-curr-amount"
+                        placeholder="Amount"
+                        value="100"
+                      />
+                      <span class="input-group-text"><i class="bi bi-arrow-right-short"></i></span>
+                      <select class="form-select js-curr-to" style="max-width: 100px">
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                        <option value="GBP">GBP</option>
+                      </select>
+                      <input
+                        type="text"
+                        class="form-control js-curr-result bg-light fw-bold"
+                        readonly
+                        tabindex="-1"
+                        placeholder="Result"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- 103. Debounced API search group -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp103">103. Debounced API Simulation</label>
+                    <div class="input-group">
+                      <span class="input-group-text"><i class="bi bi-cloud-arrow-down"></i></span>
+                      <input
+                        type="text"
+                        id="inp103"
+                        class="form-control js-api-debounce-input"
+                        placeholder="Query remote API..."
+                      />
+                      <button class="btn btn-outline-secondary js-api-btn" type="button" disabled>
+                        <span
+                          class="spinner-border spinner-border-sm d-none js-api-spinner"
+                          role="status"
+                        ></span>
+                        <span class="js-api-text">Ready</span>
+                      </button>
+                    </div>
+                    <div
+                      class="form-text mt-1 text-primary js-api-feedback"
+                      aria-live="polite"
+                    ></div>
+                  </div>
+
+                  <!-- 104. Input with validation icon indicator -->
+                  <div class="col-md-6">
+                    <label class="form-label" for="inp104">104. Live Validation Icon</label>
+                    <div class="validation-icon-wrapper">
+                      <input
+                        type="email"
+                        id="inp104"
+                        class="form-control js-val-icon-input pe-5"
+                        placeholder="Enter valid email"
+                      />
+                      <i class="bi bi-x-circle-fill text-danger validation-icon js-val-icon"></i>
+                    </div>
+                  </div>
+
+                  <!-- 105. Taggable input group with add button -->
+                  <div class="col-md-12">
+                    <label class="form-label" for="inp105">105. Taggable Group + Button</label>
+                    <div class="input-group mb-2">
+                      <input
+                        type="text"
+                        id="inp105"
+                        class="form-control js-tag-group-input"
+                        placeholder="Add a new skill (e.g., JavaScript)"
+                      />
+                      <button class="btn btn-primary js-tag-group-btn" type="button">
+                        Add Tag
+                      </button>
+                    </div>
+                    <div
+                      class="tags-input-wrapper border-0 p-0 shadow-none min-h-0 js-tag-group-container"
+                    >
+                      <!-- Button-added tags go here -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../../../assets/js/pages/form&tables/formElement/basic-input.js"></script>
+    <script src="../../../assets/js/layout.js"></script>
+  </body>
+</html>

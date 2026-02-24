@@ -14,7 +14,7 @@
       <div class="ph-header">
         <h4 class="ph-title mb-0">
           Select & Tags
-          <i class="bi bi-table ph-play pt-1"></i>
+          <i class="bi bi-caret-down-square ph-play pt-1"></i>
         </h4>
 
         <div class="ph-actions">
@@ -1549,8 +1549,8 @@
     </div>
     <script>
       /* ==============================================================
-   GLOBAL CONFIG
-   ============================================================== */
+         GLOBAL CONFIG
+         ============================================================== */
       var AJAX_MOCK_DATA = [
         { id: 'user1', text: 'Alice Johnson', avatar: 'AJ' },
         { id: 'user2', text: 'Bob Williams', avatar: 'BW' },
@@ -1564,8 +1564,8 @@
 
       document.addEventListener('dynamicScriptsLoaded', function () {
         /* ==============================================================
-     SELECT2 MODULE
-     ============================================================== */
+           SELECT2 MODULE
+           ============================================================== */
         function formatSelectOption(option) {
           if (!option.id) return option.text;
           var el = option.element;
@@ -1707,9 +1707,34 @@
         }
 
         /* ==============================================================
-     CHOSEN MODULE
-     ============================================================== */
+           CHOSEN MODULE
+           ============================================================== */
         function initChosen() {
+          //MobileDetectio check
+          var isMobile =
+            window.innerWidth <= 768 ||
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              navigator.userAgent
+            );
+
+          // if is it mobile the convert all chossen to selct2
+          if (isMobile) {
+            console.log('📱 Mobile detected: Converting Chosen dropdowns to Select2 for better UX');
+            $('select.js-chosen').each(function () {
+              var $el = $(this);
+
+              // Configuration copy and run select 2
+              $el.select2({
+                width: '100%',
+                dropdownCssClass: getDropdownClass($el),
+                placeholder: $el.data('placeholder') || 'Select an option...',
+                allowClear: true,
+                dropdownParent: $el.parent(),
+                maximumSelectionLength: parseInt($el.data('max-selection')) || 0,
+              });
+            });
+            return;
+          }
           $('select.js-chosen').each(function () {
             var $el = $(this);
             if ($el.data('chosen')) return;
@@ -1750,79 +1775,10 @@
         }
 
         /* ==============================================================
-     THEME SWITCH HANDLER
-     ============================================================== */
-        $('#themeSwitcher').on('click', '.toolbar-btn', function () {
-          var theme = $(this).data('theme');
-          $('#themeSwitcher .toolbar-btn').removeClass('active');
-          $(this).addClass('active');
-
-          if (theme === 'light') {
-            document.documentElement.removeAttribute('data-theme');
-          } else {
-            document.documentElement.setAttribute('data-theme', theme);
-          }
-        });
-
-        /* ==============================================================
-     STYLE SWITCHER
-     ============================================================== */
-        $('#styleSwitcher').on('click', '.toolbar-btn', function () {
-          var styleNum = $(this).data('style');
-          $('#styleSwitcher .toolbar-btn').removeClass('active');
-          $(this).addClass('active');
-
-          if (styleNum === 0 || styleNum === '0') {
-            $('.style-section').show();
-          } else {
-            $('.style-section').hide();
-            $('.style-section[data-style-num="' + styleNum + '"]').show();
-          }
-
-          // Re-init visible selects
-          setTimeout(function () {
-            initAll();
-          }, 200);
-        });
-
-        /* ==============================================================
-     RESET HANDLER
-     ============================================================== */
-        $('#resetBtn').on('click', function () {
-          // Reset theme
-          document.documentElement.removeAttribute('data-theme');
-          $('#themeSwitcher .toolbar-btn').removeClass('active');
-          $('#themeSwitcher .toolbar-btn[data-theme="light"]').addClass('active');
-
-          // Reset style filter
-          $('#styleSwitcher .toolbar-btn').removeClass('active');
-          $('#styleSwitcher .toolbar-btn[data-style="0"]').addClass('active');
-          $('.style-section').show();
-
-          // Reset selects
-          $('select').each(function () {
-            this.selectedIndex = 0;
-          });
-
-          initAll();
-        });
-
-        /* ==============================================================
-     INITIAL INIT
-     ============================================================== */
+           INITIAL INIT
+           ============================================================== */
         initAll();
       });
-
-      /*
-  ✔ All 5 styles working
-  ✔ All 3 themes working
-  ✔ Select2 + Chosen parity verified
-  ✔ No console errors
-  ✔ Search works
-  ✔ AJAX works
-  ✔ Validation works
-  ✔ Responsive verified
-*/
     </script>
     <script src="../../../assets/js/layout.js"></script>
   </body>

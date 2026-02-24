@@ -1,0 +1,604 @@
+/* ==========================================
+           1. PAGE WRAPPER
+        ========================================== */
+.advanced-basic-inputs-page {
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+  min-height: 100vh;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.advanced-basic-inputs-page h2,
+.advanced-basic-inputs-page h5 {
+  color: var(--color-text-main);
+  letter-spacing: -0.025em;
+}
+
+.advanced-basic-inputs-page label.form-label,
+.advanced-basic-inputs-page .fw-semibold-label {
+  color: var(--color-secondary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.advanced-basic-inputs-page .text-muted {
+  color: var(--color-text-light) !important;
+}
+
+/* ==========================================
+           2. CARD STYLING
+        ========================================== */
+.advanced-basic-inputs-page .card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-shadow:
+    0 10px 25px -5px var(--btn-shadow-light),
+    0 8px 10px -6px var(--btn-shadow-light);
+  border-radius: 1rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  margin-bottom: 2.5rem;
+  overflow: visible; /* Changed to visible for dropdowns */
+}
+
+.advanced-basic-inputs-page .card:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 20px 25px -5px var(--btn-shadow-light),
+    0 10px 10px -5px var(--btn-shadow-light);
+}
+
+.advanced-basic-inputs-page .card-header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-border);
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+
+.advanced-basic-inputs-page .card-body {
+  padding: 1.5rem;
+}
+
+/* ==========================================
+           3. DEFAULT INPUTS
+        ========================================== */
+.advanced-basic-inputs-page .form-control,
+.advanced-basic-inputs-page .form-select {
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 1px 2px 0 var(--btn-shadow-light);
+}
+
+.advanced-basic-inputs-page .form-control::placeholder {
+  color: var(--color-text-light);
+  opacity: 0.7;
+}
+
+.advanced-basic-inputs-page .form-control:disabled,
+.advanced-basic-inputs-page .form-control[readonly] {
+  background-color: var(--color-bg-soft);
+  opacity: 1;
+  cursor: not-allowed;
+}
+
+.advanced-basic-inputs-page .input-group-text {
+  background-color: var(--color-bg-soft);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-border);
+  padding: 0.65rem 1rem;
+}
+
+/* ==========================================
+           4. INPUT FOCUS ANIMATION
+        ========================================== */
+.advanced-basic-inputs-page .form-control:focus,
+.advanced-basic-inputs-page .form-select:focus,
+.advanced-basic-inputs-page .form-check-input:focus,
+.advanced-basic-inputs-page .btn:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px var(--color-bg-soft);
+  outline: 0;
+  z-index: 3; /* For input groups */
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+}
+
+/* Buttons */
+.advanced-basic-inputs-page .btn {
+  padding: 0.65rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+}
+
+.advanced-basic-inputs-page .btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--text-on-primary);
+  box-shadow: 0 4px 6px -1px var(--btn-shadow-light);
+}
+
+.advanced-basic-inputs-page .btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 8px -1px var(--btn-shadow-light);
+}
+
+.advanced-basic-inputs-page .btn-outline-secondary {
+  color: var(--color-secondary);
+  border-color: var(--color-border);
+  background-color: var(--color-bg-card);
+}
+
+.advanced-basic-inputs-page .btn-outline-secondary:hover {
+  background-color: var(--color-bg-soft);
+  color: var(--color-text-main);
+  border-color: var(--color-border);
+}
+
+/* ==========================================
+           5. RANGE STYLING
+        ========================================== */
+.advanced-basic-inputs-page .form-range::-webkit-slider-thumb {
+  background: var(--color-primary);
+  box-shadow: 0 2px 4px var(--btn-shadow-light);
+}
+.advanced-basic-inputs-page .form-range::-moz-range-thumb {
+  background: var(--color-primary);
+  box-shadow: 0 2px 4px var(--btn-shadow-light);
+}
+
+/* ==========================================
+           6. DRAG & DROP ZONE
+        ========================================== */
+.advanced-basic-inputs-page .drag-drop-zone {
+  border: 2px dashed var(--color-border);
+  border-radius: 1rem;
+  background-color: var(--color-bg-soft);
+  text-align: center;
+  padding: 3.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.advanced-basic-inputs-page .drag-drop-zone:hover,
+.advanced-basic-inputs-page .drag-drop-zone.dragover {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-card);
+}
+
+.advanced-basic-inputs-page .drag-drop-zone input[type='file'] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* ==========================================
+           7. TAGS INPUT
+        ========================================== */
+.advanced-basic-inputs-page .tags-input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  min-height: calc(2em + 0.8rem + 2px);
+  cursor: text;
+  box-shadow: 0 1px 2px 0 var(--btn-shadow-light);
+  transition: all 0.2s ease-in-out;
+}
+
+.advanced-basic-inputs-page .tags-input-wrapper:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px var(--color-bg-soft);
+}
+
+.advanced-basic-inputs-page .tag-badge {
+  background-color: var(--color-bg-soft);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.35rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.advanced-basic-inputs-page .tag-remove {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  color: var(--color-secondary);
+  font-size: 1rem;
+}
+
+.advanced-basic-inputs-page .tag-remove:hover {
+  color: var(--color-danger);
+}
+
+.advanced-basic-inputs-page .tags-input-element {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--color-text-main);
+  flex-grow: 1;
+  min-width: 100px;
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+           8. OTP INPUTS
+        ========================================== */
+.advanced-basic-inputs-page .otp-input {
+  width: 3.5rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  background-color: var(--color-bg-soft);
+  border: 1px solid transparent;
+  color: var(--color-primary);
+}
+
+.advanced-basic-inputs-page .otp-input:focus {
+  background-color: var(--color-bg-card);
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px var(--btn-shadow-light);
+}
+
+/* ==========================================
+           9. VALIDATION STYLES
+        ========================================== */
+.advanced-basic-inputs-page .is-valid-custom {
+  border-color: var(--color-success) !important;
+  background-image: none !important;
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1) !important;
+}
+
+.advanced-basic-inputs-page .is-invalid-custom {
+  border-color: var(--color-danger) !important;
+  background-image: none !important;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1) !important;
+}
+
+.advanced-basic-inputs-page .valid-feedback-custom {
+  color: var(--color-success);
+  font-size: 0.85em;
+  font-weight: 500;
+  margin-top: 0.4rem;
+}
+
+.advanced-basic-inputs-page .invalid-feedback-custom {
+  color: var(--color-danger);
+  font-size: 0.85em;
+  font-weight: 500;
+  margin-top: 0.4rem;
+}
+
+/* ==========================================
+           10. ADVANCED CHECKBOXES STYLES
+        ========================================== */
+.advanced-basic-inputs-page .form-check-input {
+  background-color: var(--color-bg-card);
+  border-color: var(--color-border);
+}
+.advanced-basic-inputs-page .form-check-input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.advanced-basic-inputs-page .form-check-label {
+  color: var(--color-text-main);
+}
+
+.advanced-basic-inputs-page .card-checkbox-label {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--color-bg-card);
+}
+.advanced-basic-inputs-page .card-checkbox-input:checked + .card-checkbox-label {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-soft);
+  box-shadow: 0 4px 12px var(--btn-shadow-light);
+}
+
+.advanced-basic-inputs-page .check-success:checked {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+.advanced-basic-inputs-page .check-danger:checked {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+.advanced-basic-inputs-page .check-warning:checked {
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+.advanced-basic-inputs-page .check-info:checked {
+  background-color: var(--color-info);
+  border-color: var(--color-info);
+}
+
+.advanced-basic-inputs-page .checkbox-rounded {
+  border-radius: 50% !important;
+}
+.advanced-basic-inputs-page .checkbox-lg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.1rem;
+}
+.advanced-basic-inputs-page .checkbox-sm {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.advanced-basic-inputs-page .checkbox-animated {
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.advanced-basic-inputs-page .checkbox-animated:checked {
+  transform: scale(1.2);
+}
+
+.advanced-basic-inputs-page .custom-tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+}
+.advanced-basic-inputs-page .custom-tooltip-wrapper .tooltip-text {
+  visibility: hidden;
+  width: max-content;
+  background-color: var(--color-text-main);
+  color: var(--color-bg-card);
+  text-align: center;
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  z-index: 10;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.75rem;
+}
+.advanced-basic-inputs-page .custom-tooltip-wrapper:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* ==========================================
+           11. ADVANCED SWITCHES STYLES
+        ========================================== */
+.advanced-basic-inputs-page .switch-lg .form-check-input {
+  width: 3rem;
+  height: 1.5rem;
+}
+.advanced-basic-inputs-page .switch-sm .form-check-input {
+  width: 1.5rem;
+  height: 0.75rem;
+}
+
+.advanced-basic-inputs-page .switch-pill .form-check-input {
+  border-radius: 50rem;
+}
+.advanced-basic-inputs-page .switch-rounded .form-check-input {
+  border-radius: 0.25rem;
+}
+
+.advanced-basic-inputs-page .switch-success .form-check-input:checked {
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+}
+.advanced-basic-inputs-page .switch-danger .form-check-input:checked {
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+.advanced-basic-inputs-page .switch-warning .form-check-input:checked {
+  background-color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+.advanced-basic-inputs-page .switch-text-label .form-check-input {
+  position: relative;
+  width: 3.5rem;
+  height: 1.5rem;
+}
+.advanced-basic-inputs-page .switch-text-label .form-check-input::before {
+  content: 'OFF';
+  position: absolute;
+  right: 0.3rem;
+  top: 0.15rem;
+  font-size: 0.65rem;
+  color: var(--color-text-light);
+  font-weight: 700;
+}
+.advanced-basic-inputs-page .switch-text-label .form-check-input:checked::before {
+  content: 'ON';
+  left: 0.4rem;
+  right: auto;
+  color: var(--text-on-primary);
+}
+
+.advanced-basic-inputs-page .switch-smooth .form-check-input {
+  transition:
+    background-color 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* ==========================================
+           12. ADVANCED INPUT GROUPS STYLES (NEW)
+        ========================================== */
+
+/* Dropdown menus to respect themes */
+.advanced-basic-inputs-page .dropdown-menu {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  box-shadow: 0 4px 12px var(--btn-shadow-light);
+}
+.advanced-basic-inputs-page .dropdown-item {
+  color: var(--color-text-main);
+}
+.advanced-basic-inputs-page .dropdown-item:hover {
+  background-color: var(--color-bg-soft);
+  color: var(--color-primary);
+}
+
+/* Live Dropdown Results */
+.advanced-basic-inputs-page .live-search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-top: none;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 8px 16px var(--btn-shadow-light);
+  z-index: 1050;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none;
+}
+.advanced-basic-inputs-page .live-search-results.active {
+  display: block;
+}
+.advanced-basic-inputs-page .search-result-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: var(--color-text-main);
+}
+.advanced-basic-inputs-page .search-result-item:hover,
+.advanced-basic-inputs-page .search-result-item:focus {
+  background-color: var(--color-bg-soft);
+  color: var(--color-primary);
+  outline: none;
+}
+
+/* Progress Bar Input */
+.advanced-basic-inputs-page .progress-limit {
+  height: 4px;
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-top: -4px; /* Merge with input border visually */
+  background-color: var(--color-bg-soft);
+}
+
+/* Expandable & Collapsible */
+.advanced-basic-inputs-page .expandable-content {
+  transition:
+    max-height 0.3s ease-out,
+    opacity 0.3s ease-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+.advanced-basic-inputs-page .expandable-content.expanded {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+/* Dynamic Field Row */
+.advanced-basic-inputs-page .dynamic-field-row {
+  animation: slideDown 0.3s ease forwards;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Step Input Hide Arrows */
+.advanced-basic-inputs-page .input-step::-webkit-outer-spin-button,
+.advanced-basic-inputs-page .input-step::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.advanced-basic-inputs-page .input-step {
+  -moz-appearance: textfield;
+  text-align: center;
+}
+
+/* Validation Icon Indicator */
+.advanced-basic-inputs-page .validation-icon-wrapper {
+  position: relative;
+}
+.advanced-basic-inputs-page .validation-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.3s ease;
+}
+
+/* Status Badge Input */
+.advanced-basic-inputs-page .status-badge-container {
+  position: relative;
+}
+.advanced-basic-inputs-page .status-badge {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+/* Utilities */
+.advanced-basic-inputs-page .progress {
+  background-color: var(--color-bg-soft);
+  border-radius: 1rem;
+}
+.advanced-basic-inputs-page .bg-danger-var {
+  background-color: var(--color-danger) !important;
+}
+.advanced-basic-inputs-page .bg-warning-var {
+  background-color: var(--color-warning) !important;
+}
+.advanced-basic-inputs-page .bg-success-var {
+  background-color: var(--color-success) !important;
+}
+.advanced-basic-inputs-page .bg-primary-var {
+  background-color: var(--color-primary) !important;
+}
+
+.advanced-basic-inputs-page .d-none {
+  display: none !important;
+}
+.advanced-basic-inputs-page .cursor-pointer {
+  cursor: pointer;
+}
