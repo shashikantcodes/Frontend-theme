@@ -1638,6 +1638,7 @@
               dropdownCssClass: getDropdownClass($el),
               placeholder: $el.data('placeholder') || 'Select an option...',
               allowClear: true,
+              dropdownParent: $el.parent(),
               maximumSelectionLength: parseInt($el.data('max-selection')) || 0,
               language: {
                 noResults: function () {
@@ -1671,6 +1672,7 @@
               dropdownCssClass: getDropdownClass($el),
               placeholder: $el.data('placeholder') || 'Search users...',
               allowClear: true,
+              dropdownParent: $el.parent(),
               minimumInputLength: 0,
               ajax: {
                 delay: 300,

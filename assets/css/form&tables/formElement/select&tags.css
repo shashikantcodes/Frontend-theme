@@ -338,7 +338,7 @@
   border-radius: 0.5rem;
   min-height: 42px;
   padding: 2px 6px;
-  box-shadow: 0 1px 3px var(--btn-shadow-dark);
+  /* box-shadow: 0 1px 3px var(--btn-shadow-dark); */
   border-color: var(--color-border);
   background-color: var(--color-bg-card);
 }
@@ -347,8 +347,8 @@
 .ui-select--style1
   .select2-container--default.select2-container--open
   .select2-selection--multiple {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px var(--btn-shadow-light);
+  /* border-color: var(--color-primary); */
+  /* box-shadow: 0 0 0 3px var(--btn-shadow-light); */
 }
 
 .ui-select--style1
@@ -383,11 +383,13 @@
 
 /* Dropdown specific to Style 1 */
 .select2-container--open .select2-dropdown.select2-dropdown--style1 {
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   border: 1px solid var(--color-border);
-  box-shadow: 0 4px 20px var(--btn-shadow-dark);
+  /* box-shadow: 0 4px 20px var(--btn-shadow-dark); */
   overflow: hidden;
-  margin-top: 4px;
+  /* margin-top: 4px; */
   background-color: var(--color-bg-card);
 }
 .ui-select--style1 .chosen-drop {
