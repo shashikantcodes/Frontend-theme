@@ -1,0 +1,317 @@
+.advanced-pickers-page {
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  color: var(--color-text-main);
+  padding: 2rem 0;
+}
+
+.advanced-pickers-page .card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.advanced-pickers-page .card-header {
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--color-border);
+  border-radius: 12px 12px 0 0 !important;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.advanced-pickers-page .form-control,
+.advanced-pickers-page .form-select,
+.advanced-pickers-page .input-group-text {
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border-color: var(--color-border);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+}
+
+.advanced-pickers-page .input-group-text {
+  background-color: var(--color-bg-soft);
+}
+
+.advanced-pickers-page .form-control:focus,
+.advanced-pickers-page .form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(var(--color-primary), 0.25);
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+}
+
+.advanced-pickers-page .form-control:disabled {
+  background-color: var(--color-bg-soft);
+}
+
+.advanced-pickers-page .form-label {
+  font-weight: 500;
+  color: var(--color-text-light);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.advanced-pickers-page .btn-primary {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--text-on-primary);
+  box-shadow: var(--btn-shadow-light);
+}
+
+.advanced-pickers-page .btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+}
+
+.advanced-pickers-page .btn-clear {
+  background-color: var(--color-bg-card);
+  border-color: var(--color-border);
+  color: var(--color-text-light);
+}
+.advanced-pickers-page .btn-clear:hover {
+  background-color: var(--color-bg-soft);
+  color: var(--color-text-main);
+}
+
+.advanced-pickers-page .is-invalid {
+  border-color: #dc3545 !important;
+}
+
+/* ==========================================================
+           3. OVERLAY FIX (MANDATORY & SCOPED)
+        ========================================================== */
+.advanced-pickers-page .flatpickr-calendar,
+.advanced-pickers-page .litepicker,
+.advanced-pickers-page .ts-dropdown,
+.advanced-pickers-page .pcr-app,
+.advanced-pickers-page .picmo__popup,
+.advanced-pickers-page .tempus-dominus-widget {
+  z-index: 9999 !important;
+}
+
+/* ==========================================================
+           4. GLOBAL THEME SYNC FOR 3RD PARTY PICKERS (SCOPED)
+        ========================================================== */
+/* Flatpickr */
+.advanced-pickers-page .flatpickr-calendar {
+  background: var(--color-bg-card) !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+.advanced-pickers-page .flatpickr-day,
+.advanced-pickers-page .flatpickr-weekday,
+.advanced-pickers-page .flatpickr-current-month,
+.advanced-pickers-page .flatpickr-time input,
+.advanced-pickers-page .flatpickr-time .flatpickr-am-pm,
+.advanced-pickers-page .flatpickr-time .flatpickr-time-separator {
+  color: var(--color-text-main) !important;
+}
+.advanced-pickers-page .flatpickr-day:hover,
+.advanced-pickers-page .flatpickr-day.prevMonthDay:hover,
+.advanced-pickers-page .flatpickr-day.nextMonthDay:hover {
+  background: var(--color-bg-soft) !important;
+  border-color: var(--color-border) !important;
+}
+.advanced-pickers-page .flatpickr-day.selected,
+.advanced-pickers-page .flatpickr-day.startRange,
+.advanced-pickers-page .flatpickr-day.endRange {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--text-on-primary) !important;
+}
+.advanced-pickers-page .flatpickr-month,
+.advanced-pickers-page .flatpickr-weekdays {
+  fill: var(--color-text-main) !important;
+  color: var(--color-text-main) !important;
+}
+.advanced-pickers-page .flatpickr-months .flatpickr-prev-month,
+.advanced-pickers-page .flatpickr-months .flatpickr-next-month {
+  fill: var(--color-text-main) !important;
+}
+.advanced-pickers-page .flatpickr-months .flatpickr-prev-month:hover svg,
+.advanced-pickers-page .flatpickr-months .flatpickr-next-month:hover svg {
+  fill: var(--color-primary) !important;
+}
+
+/* Litepicker */
+.advanced-pickers-page .litepicker {
+  background-color: var(--color-bg-card) !important;
+  border: 1px solid var(--color-border) !important;
+}
+.advanced-pickers-page .litepicker .month-item-name,
+.advanced-pickers-page .litepicker .month-item-year,
+.advanced-pickers-page .litepicker .day-item {
+  color: var(--color-text-main) !important;
+}
+.advanced-pickers-page .litepicker .day-item:hover {
+  background-color: var(--color-bg-soft) !important;
+}
+.advanced-pickers-page .litepicker .day-item.is-selected,
+.advanced-pickers-page .litepicker .day-item.is-start-date,
+.advanced-pickers-page .litepicker .day-item.is-end-date {
+  background-color: var(--color-primary) !important;
+  color: var(--text-on-primary) !important;
+}
+.advanced-pickers-page .litepicker .day-item.is-in-range {
+  background-color: var(--color-bg-soft) !important;
+  color: var(--color-text-main) !important;
+  opacity: 0.8;
+}
+.advanced-pickers-page .litepicker .container__months .button-previous-month,
+.advanced-pickers-page .litepicker .container__months .button-next-month {
+  fill: var(--color-text-main) !important;
+}
+
+/* Tempus Dominus */
+.advanced-pickers-page .tempus-dominus-widget {
+  background-color: var(--color-bg-card) !important;
+  border: 1px solid var(--color-border) !important;
+  color: var(--color-text-main) !important;
+}
+.advanced-pickers-page .tempus-dominus-widget .toolbar {
+  color: var(--color-text-main) !important;
+}
+.advanced-pickers-page .tempus-dominus-widget .btn {
+  color: var(--color-text-main) !important;
+}
+.advanced-pickers-page .tempus-dominus-widget .btn:hover {
+  background-color: var(--color-bg-soft) !important;
+}
+.advanced-pickers-page .tempus-dominus-widget .btn.active {
+  background-color: var(--color-primary) !important;
+  color: var(--text-on-primary) !important;
+}
+
+/* Pickr */
+.advanced-pickers-page .pcr-app {
+  background: var(--color-bg-card) !important;
+  border: 1px solid var(--color-border) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+.advanced-pickers-page .pcr-app .pcr-interaction input {
+  background: var(--color-bg-soft) !important;
+  color: var(--color-text-main) !important;
+  border: 1px solid var(--color-border) !important;
+}
+
+/* Picmo */
+.advanced-pickers-page .picmo__popup {
+  --background: var(--color-bg-card) !important;
+  --secondary-background: var(--color-bg-soft) !important;
+  --text-color: var(--color-text-main) !important;
+  --border-color: var(--color-border) !important;
+  --focus-indicator-color: var(--color-primary) !important;
+  --hover-background: var(--color-bg-soft) !important;
+}
+
+/* ==========================================================
+           5. CUSTOM PICKER STYLING (TomSelect, Rating, Icons)
+        ========================================================== */
+.advanced-pickers-page .rating-star {
+  color: var(--color-border);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.advanced-pickers-page .rating-star.active,
+.advanced-pickers-page .rating-star:hover,
+.advanced-pickers-page .rating-star.hover {
+  color: var(--color-primary);
+}
+
+.advanced-pickers-page .ts-control {
+  background-color: var(--color-bg-card);
+  border-color: var(--color-border);
+  color: var(--color-text-main);
+  border-radius: 8px;
+}
+.advanced-pickers-page .ts-dropdown {
+  background-color: var(--color-bg-card);
+  color: var(--color-text-main);
+  border-color: var(--color-border);
+}
+.advanced-pickers-page .ts-dropdown .option.active {
+  background-color: var(--color-bg-soft);
+  color: var(--color-primary);
+}
+.advanced-pickers-page .ts-control .item {
+  background-color: var(--color-bg-soft);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
+
+.ts-wrapper.is-loading .ts-control::before {
+  content: '';
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: translateY(-50%) rotate(360deg);
+  }
+}
+
+.advanced-pickers-page .select-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.advanced-pickers-page .select-badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.advanced-pickers-page .icon-grid-dropdown {
+  display: none;
+  position: absolute;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px;
+  width: 250px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+}
+.advanced-pickers-page .icon-grid-dropdown.show {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+.advanced-pickers-page .icon-grid-item {
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  color: var(--color-text-main);
+}
+.advanced-pickers-page .icon-grid-item:hover,
+.advanced-pickers-page .icon-grid-item:focus {
+  background: var(--color-bg-soft);
+  color: var(--color-primary);
+  outline: none;
+}

@@ -203,6 +203,19 @@ function loadScriptsAndRun() {
           scriptSrc = basePath + scriptSrc;
         }
         newScript.src = scriptSrc;
+        const checkCompletion = () => {
+          loadedScripts++;
+          if (loadedScripts === scripts.length) {
+            executeDashboardLogic();
+            console.log('🔥 All Scripts Loaded! Dispatching Event...');
+            document.dispatchEvent(new Event('dynamicScriptsLoaded'));
+          }
+        };
+        newScript.onload = checkCompletion;
+        newScript.onerror = () => {
+          console.error('❌ Script load fail ho gayi:', newScript.src);
+          checkCompletion();
+        };
         newScript.onload = () => {
           loadedScripts++;
 

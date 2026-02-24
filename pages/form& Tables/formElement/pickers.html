@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards-Advance</title>
+    <link rel="stylesheet" href="../../../assets/css/form&tables/formElement/pickers.css" />
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+
+    <div id="main-wrapper">
+      <div id="topbar-container"></div>
+      <div class="ph-header">
+        <h4 class="ph-title mb-0">
+          Pickers
+          <i class="bi bi-calendar-event ph-play pt-1"></i>
+        </h4>
+
+        <div class="ph-actions">
+          <div class="ph-search-container" id="phSearch">
+            <div class="ph-search-wrapper">
+              <button type="button" class="ph-search-trigger">
+                <i class="bi bi-search"></i>
+              </button>
+
+              <input type="text" class="ph-search-input" placeholder="Search leads..." />
+
+              <span class="ph-search-close">
+                <i class="bi bi-x"></i>
+              </span>
+            </div>
+          </div>
+
+          <div class="ph-tools">
+            <i class="bi bi-funnel ph-icon"></i>
+            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-three-dots-vertical ph-icon"></i>
+          </div>
+        </div>
+      </div>
+
+      <main class="content-area">
+        <!-- COMPONENT WRAPPER: Use data-admin-pickers to enable auto-initialization -->
+        <div class="advanced-pickers-page" data-theme="light" data-admin-pickers>
+          <div class="container-fluid px-4">
+            <!-- Header & Top Controls -->
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+              <div>
+                <h2 class="mb-1" style="color: var(--color-text-main); font-weight: 700">
+                  Admin Pickers Components
+                </h2>
+                <p class="mb-0" style="color: var(--color-text-light)">
+                  Professional input selection components for SaaS dashboards
+                </p>
+              </div>
+              <div class="d-flex gap-2">
+                <!-- Theme Selector triggers global admin-theme-change event -->
+                <select
+                  data-action="theme-select"
+                  class="form-select form-select-sm"
+                  aria-label="Toggle Theme"
+                >
+                  <option value="light">Light Theme</option>
+                  <option value="dark">Dark Theme</option>
+                  <option value="yellow">Yellow Brand</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- MAIN PICKERS CONTENT (12 cols) -->
+              <div class="col-12">
+                <!-- ==========================================================
+                     SECTION 1: DATE PICKERS (FLATPICKR)
+                ========================================================== -->
+                <div class="col-12 mb-4">
+                  <h5 class="mb-3" style="color: var(--color-text-main)">
+                    1. Date Pickers (Flatpickr)
+                  </h5>
+                  <div class="row">
+                    <!-- Basic & Datetime -->
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-header">Standard Dates</div>
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <label class="form-label">Basic Date</label>
+                            <div class="input-group" data-picker="group-date-basic">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Select date..."
+                                data-input
+                              />
+                              <button
+                                class="btn btn-clear"
+                                type="button"
+                                data-clear
+                                aria-label="Clear basic date"
+                              >
+                                <i class="bi bi-x-circle"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Datetime Picker</label>
+                            <input
+                              type="text"
+                              data-picker="date-datetime"
+                              class="form-control"
+                              placeholder="Select date & time..."
+                            />
+                          </div>
+                          <div class="mb-0">
+                            <label class="form-label text-danger">Validation Demo (Required)</label>
+                            <input
+                              type="text"
+                              data-picker="date-validation"
+                              class="form-control is-invalid"
+                              placeholder="Please select a date..."
+                            />
+                            <div class="invalid-feedback">Date selection is strictly required.</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Multiple & Constraints -->
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-header">Advanced Selection</div>
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <label class="form-label">Date Range Picker</label>
+                            <input
+                              type="text"
+                              data-picker="date-range"
+                              class="form-control"
+                              placeholder="Select date range..."
+                            />
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Multiple Dates</label>
+                            <input
+                              type="text"
+                              data-picker="date-multiple"
+                              class="form-control"
+                              placeholder="Select multiple dates..."
+                            />
+                          </div>
+                          <div class="mb-0">
+                            <label class="form-label">Disabled Weekends & Min/Max</label>
+                            <input
+                              type="text"
+                              data-picker="date-disabled"
+                              class="form-control"
+                              placeholder="Only weekdays next 14 days..."
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Month, Year & Inline -->
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-header">Specialty Formats</div>
+                        <div class="card-body">
+                          <div class="row mb-3">
+                            <div class="col-6">
+                              <label class="form-label">Month Picker</label>
+                              <input
+                                type="text"
+                                data-picker="date-month"
+                                class="form-control"
+                                placeholder="Select month..."
+                              />
+                            </div>
+                            <div class="col-6">
+                              <label class="form-label">Year Picker</label>
+                              <input
+                                type="text"
+                                data-picker="date-year"
+                                class="form-control"
+                                placeholder="Select year..."
+                              />
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Inline Calendar</label>
+                            <input
+                              type="text"
+                              data-picker="date-inline"
+                              class="form-control d-none"
+                            />
+                          </div>
+                          <div class="mb-0">
+                            <label class="form-label">Timezone-Aware Simulation</label>
+                            <input
+                              type="text"
+                              data-picker="date-timezone"
+                              class="form-control"
+                              placeholder="E.g., Oct 14, 2023 (GMT+2)"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ==========================================================
+                     SECTION 2: PROFESSIONAL DATE RANGE (LITEPICKER)
+                ========================================================== -->
+                <div class="col-12 mb-4">
+                  <h5 class="mb-3" style="color: var(--color-text-main)">
+                    2. Date Range (Litepicker)
+                  </h5>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <label class="form-label">Analytics Reporting Range</label>
+                          <div class="input-group">
+                            <span class="input-group-text"><i class="bi bi-calendar3"></i></span>
+                            <input
+                              type="text"
+                              data-picker="litepicker-range"
+                              class="form-control"
+                              placeholder="Select reporting period..."
+                            />
+                            <button
+                              class="btn btn-clear"
+                              type="button"
+                              data-clear-target="litepicker-range"
+                              aria-label="Clear range"
+                            >
+                              <i class="bi bi-x-circle"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ==========================================================
+                     SECTION 3: TIME PICKERS
+                ========================================================== -->
+                <div class="col-12 mb-4">
+                  <h5 class="mb-3" style="color: var(--color-text-main)">
+                    3. Time Pickers (Flatpickr + Tempus Dominus)
+                  </h5>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <label class="form-label">24-Hour Format</label>
+                            <div class="input-group" data-picker="group-time-24hr">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="14:30"
+                                data-input
+                              />
+                              <button
+                                class="btn btn-clear"
+                                type="button"
+                                data-clear
+                                aria-label="Clear time"
+                              >
+                                <i class="bi bi-x-circle"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">12-Hour Format</label>
+                            <input
+                              type="text"
+                              data-picker="time-12hr"
+                              class="form-control"
+                              placeholder="02:30 PM"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <label class="form-label">Time Range Picker</label>
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                data-picker="time-range-start"
+                                class="form-control"
+                                placeholder="Start Time"
+                              />
+                              <span class="input-group-text">to</span>
+                              <input
+                                type="text"
+                                data-picker="time-range-end"
+                                class="form-control"
+                                placeholder="End Time"
+                              />
+                            </div>
+                          </div>
+                          <div class="mb-0">
+                            <label class="form-label">Min/Max Time (09:00 - 17:00)</label>
+                            <input
+                              type="text"
+                              data-picker="time-minmax"
+                              class="form-control"
+                              placeholder="Select business hours..."
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <label class="form-label">Tempus Dominus Scroll Picker</label>
+                          <div class="input-group" data-picker="td-scroll-container">
+                            <input
+                              type="text"
+                              data-picker="td-scroll-input"
+                              class="form-control"
+                              placeholder="Scroll to select time..."
+                            />
+                            <span
+                              class="input-group-text"
+                              data-action="td-toggle"
+                              style="cursor: pointer"
+                            >
+                              <i class="bi bi-clock"></i>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ==========================================================
+                     SECTION 4: COLOR PICKERS (PICKR)
+                ========================================================== -->
+                <div class="col-12 mb-4">
+                  <h5 class="mb-3" style="color: var(--color-text-main)">
+                    4. Color Pickers (Pickr)
+                  </h5>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-3 text-center mb-3 mb-md-0">
+                          <label class="form-label d-block">HEX + Opacity</label>
+                          <div data-picker-container="color-hex"></div>
+                        </div>
+                        <div class="col-md-3 text-center mb-3 mb-md-0">
+                          <label class="form-label d-block">RGBA Picker</label>
+                          <div data-picker-container="color-rgba"></div>
+                        </div>
+                        <div class="col-md-3 text-center mb-3 mb-md-0">
+                          <label class="form-label d-block">HSLA Picker</label>
+                          <div data-picker-container="color-hsla"></div>
+                        </div>
+                        <div class="col-md-3 text-center">
+                          <label class="form-label d-block">Brand Swatches</label>
+                          <div data-picker-container="color-swatches"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ==========================================================
+                     SECTION 5: ADVANCED SELECT PICKERS (TOMSELECT)
+                ========================================================== -->
+                <div class="col-12 mb-4">
+                  <h5 class="mb-3" style="color: var(--color-text-main)">
+                    5. Advanced Selects (TomSelect)
+                  </h5>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <label class="form-label">Searchable Select</label>
+                            <select
+                              data-picker="select-search"
+                              autocomplete="off"
+                              placeholder="Search countries..."
+                            >
+                              <option value="">Select a country...</option>
+                              <option value="US">United States</option>
+                              <option value="UK">United Kingdom</option>
+                              <option value="CA">Canada</option>
+                              <option value="AU">Australia</option>
+                              <option value="IN">India</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Optgroup Select</label>
+                            <select
+                              data-picker="select-optgroup"
+                              autocomplete="off"
+                              placeholder="Select tool..."
+                            >
+                              <optgroup label="Design">
+                                <option value="figma">Figma</option>
+                                <option value="sketch">Sketch</option>
+                              </optgroup>
+                              <optgroup label="Development">
+                                <option value="vscode">VS Code</option>
+                                <option value="intellij">IntelliJ</option>
+                              </optgroup>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <label class="form-label">Multi-select + Remove</label>
+                            <select
+                              data-picker="select-multi"
+                              multiple
+                              autocomplete="off"
+                              placeholder="Select roles..."
+                            >
+                              <option value="admin">Admin</option>
+                              <option value="editor">Editor</option>
+                              <option value="viewer">Viewer</option>
+                              <option value="billing">Billing</option>
+                            </select>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Async Search (Loading state)</label>
+                            <select
+                              data-picker="select-tags"
+                              multiple
+                              autocomplete="off"
+                              placeholder="Type to search API..."
+                            ></select>
+                            <small class="text-muted d-block mt-1" style="font-size: 0.75rem"
+                              >Simulates API search and dynamically renders spinner.</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="mb-3">
+                            <label class="form-label">Avatar Preview Render</label>
+                            <select
+                              data-picker="select-avatar"
+                              autocomplete="off"
+                              placeholder="Assign user..."
+                            ></select>
+                          </div>
+                          <div class="mb-3">
+                            <label class="form-label">Badge Preview Render</label>
+                            <select
+                              data-picker="select-badge"
+                              autocomplete="off"
+                              placeholder="Select status..."
+                            ></select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ==========================================================
+                     SECTION 6: SPECIAL PICKERS
+                ========================================================== -->
+                <div class="col-12 mb-4">
+                  <h5 class="mb-3" style="color: var(--color-text-main)">
+                    6. Emoji & Special (Picmo + Custom)
+                  </h5>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="mb-4">
+                            <label class="form-label">Emoji Picker (Picmo)</label>
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                data-picker="emoji-input"
+                                class="form-control"
+                                placeholder="Select an emoji..."
+                                aria-label="Emoji Selection"
+                              />
+                              <button
+                                class="btn btn-primary"
+                                data-action="emoji-trigger"
+                                type="button"
+                                aria-haspopup="dialog"
+                                aria-expanded="false"
+                              >
+                                <i class="bi bi-emoji-smile"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div>
+                            <label class="form-label">Status Color Selector</label>
+                            <select data-picker="special-status" autocomplete="off"></select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="mb-4">
+                            <label class="form-label">Rating Star Picker</label>
+                            <div
+                              class="d-flex align-items-center"
+                              role="radiogroup"
+                              aria-label="Rating"
+                            >
+                              <input type="hidden" data-picker="rating-input" value="0" />
+                              <i
+                                class="bi bi-star-fill rating-star mx-1"
+                                data-picker="rating-star"
+                                data-val="1"
+                                tabindex="0"
+                                role="radio"
+                                aria-checked="false"
+                              ></i>
+                              <i
+                                class="bi bi-star-fill rating-star mx-1"
+                                data-picker="rating-star"
+                                data-val="2"
+                                tabindex="0"
+                                role="radio"
+                                aria-checked="false"
+                              ></i>
+                              <i
+                                class="bi bi-star-fill rating-star mx-1"
+                                data-picker="rating-star"
+                                data-val="3"
+                                tabindex="0"
+                                role="radio"
+                                aria-checked="false"
+                              ></i>
+                              <i
+                                class="bi bi-star-fill rating-star mx-1"
+                                data-picker="rating-star"
+                                data-val="4"
+                                tabindex="0"
+                                role="radio"
+                                aria-checked="false"
+                              ></i>
+                              <i
+                                class="bi bi-star-fill rating-star mx-1"
+                                data-picker="rating-star"
+                                data-val="5"
+                                tabindex="0"
+                                role="radio"
+                                aria-checked="false"
+                              ></i>
+                              <span
+                                data-picker="rating-text"
+                                class="ms-3 fw-bold"
+                                style="color: var(--color-primary)"
+                                >0 / 5</span
+                              >
+                            </div>
+                          </div>
+                          <div>
+                            <label class="form-label">Icon Grid Picker</label>
+                            <div class="position-relative">
+                              <button
+                                class="btn btn-outline-secondary w-100 text-start d-flex justify-content-between align-items-center"
+                                data-picker="icon-grid-trigger"
+                                aria-haspopup="listbox"
+                                aria-expanded="false"
+                                style="
+                                  border-color: var(--color-border);
+                                  color: var(--color-text-main);
+                                  background: var(--color-bg-card);
+                                "
+                              >
+                                <span
+                                  ><i
+                                    data-picker="selected-icon-preview"
+                                    class="bi bi-app-indicator me-2"
+                                  ></i>
+                                  Select Icon...</span
+                                >
+                                <i class="bi bi-chevron-down"></i>
+                              </button>
+                              <input
+                                type="hidden"
+                                data-picker="icon-grid-input"
+                                value="bi-app-indicator"
+                              />
+                              <div
+                                class="icon-grid-dropdown"
+                                data-picker="icon-grid-dropdown"
+                                role="listbox"
+                              >
+                                <!-- Icons injected via JS -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card h-100">
+                        <div class="card-body">
+                          <div class="mb-4">
+                            <label class="form-label">Business Hours Scheduler</label>
+                            <div class="mb-2">
+                              <select
+                                class="form-select form-select-sm mb-2"
+                                aria-label="Select Day"
+                              >
+                                <option value="1">Monday</option>
+                                <option value="2">Tuesday</option>
+                                <option value="3">Wednesday</option>
+                                <option value="4">Thursday</option>
+                                <option value="5">Friday</option>
+                              </select>
+                            </div>
+                            <div class="input-group input-group-sm">
+                              <input
+                                type="text"
+                                data-picker="sched-time-start"
+                                class="form-control"
+                                placeholder="Start"
+                              />
+                              <span class="input-group-text">to</span>
+                              <input
+                                type="text"
+                                data-picker="sched-time-end"
+                                class="form-control"
+                                placeholder="End"
+                              />
+                            </div>
+                            <small class="text-muted mt-1 d-block" style="font-size: 0.75rem"
+                              >End time restricts dynamically based on start time.</small
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="../../../assets/js/layout.js"></script>
+
+    <script src="../../../assets/js/pages/form&tables/formElement/pickers.js"></script>
+  </body>
+</html>

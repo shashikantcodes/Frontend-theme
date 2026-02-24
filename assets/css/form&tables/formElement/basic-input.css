@@ -5,11 +5,6 @@
   background-color: var(--color-bg-main);
   color: var(--color-text-main);
   min-height: 100vh;
-  font-family:
-    'Inter',
-    system-ui,
-    -apple-system,
-    sans-serif;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
@@ -324,11 +319,13 @@
   cursor: pointer;
   transition: all 0.2s ease;
   background-color: var(--color-bg-card);
+  color: var(--color-text-main);
 }
 .advanced-basic-inputs-page .card-checkbox-input:checked + .card-checkbox-label {
   border-color: var(--color-primary);
   background-color: var(--color-bg-soft);
   box-shadow: 0 4px 12px var(--btn-shadow-light);
+  color: var(--color-primary);
 }
 
 .advanced-basic-inputs-page .check-success:checked {
