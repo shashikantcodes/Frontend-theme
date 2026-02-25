@@ -53,53 +53,39 @@
   --nested-dark-bg: #f8f9fa;
 }
 [data-theme='dark'] {
-  /* BACKGROUNDS */
-  --color-bg-main: #0f172a; /* Slate 900 */
-  --color-bg-card: #1e293b; /* Slate 800 */
-  --color-bg-soft: #263449; /* Slightly lighter */
-  --header-bg: #1e293b;
-
-  /* BRAND COLORS */
-  --color-primary: #6366f1;
-  --color-primary-hover: #4f46e5;
-  --btn-shadow-dark: rgba(0, 0, 0, 0.6);
-  --btn-shadow-light: rgba(99, 102, 241, 0.25); /* primary glow */
-  --color-secondary: #94a3b8;
-  --color-success: #22c55e;
-  --color-warning: #fbbf24;
-  --color-info: #22d3ee;
+  --color-bg-main: #0a0a0a;
+  --color-bg-card: #171717;
+  --color-bg-soft: #262626;
+  --header-bg: #171717;
+  --color-primary: #3b82f6;
+  --color-primary-hover: #60a5fa;
+  --btn-shadow-dark: rgba(0, 0, 0, 0.7);
+  --btn-shadow-light: rgba(59, 130, 246, 0.15);
+  --color-secondary: #737373;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-info: #0ea5e9;
   --color-danger: #ef4444;
-
-  /* TEXT */
-  --color-text-main: #f8fafc; /* Almost white */
-  --color-text-light: #cbd5e1; /* Light slate */
-
-  --text-on-primary: #ffffff; /* IMPORTANT FIX */
-
-  /* BORDER */
-  --color-border: #334155;
-
-  /* INPUT */
-  --search-input-bg: #1e293b;
-
-  /* SIDEBAR */
-  --sidebar-bg: #111827; /* Dark neutral */
-  --sidebar-hover: #1f2937;
-  --sidebar-text: #e2e8f0;
-  --sidebar-active: #f59e0b;
-  --sidebar-submenu-hover: #1e293b;
-
-  --nested-dark-bg: #1e293b;
+  --color-text-main: #f5f5f5;
+  --color-text-light: #a3a3a3;
+  --text-on-primary: #ffffff;
+  --color-border: #3f3f46;
+  --search-input-bg: #0a0a0a;
+  --sidebar-bg: #171717;
+  --sidebar-hover: #262626;
+  --sidebar-text: #d4d4d4;
+  --sidebar-active: #ffffff;
+  --sidebar-submenu-hover: #262626;
+  --nested-dark-bg: #0a0a0a;
 }
+
 [data-theme='dark'] .logo-img img {
-  filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1) opacity(0.85);
 }
-
 /* Yellow theme */
 [data-theme='yellow'] {
   --color-bg-main: #fffdf7;
   --color-bg-card: #ffffff;
-
   --color-primary: #ffbd2e;
   --color-primary-hover: #e6a800;
   --text-on-primary: #2f3e4e;
@@ -107,16 +93,13 @@
   --color-success: #16a34a;
   --color-warning: #f59e0b;
   --color-info: #06b6d4;
-
   --color-text-main: #2f3e4e;
   --color-text-light: #8b949e;
-
   --color-border: #f3e5c3;
   --color-bg-soft: #fff7e6;
   --header-bg: #fff3d6;
   --btn-shadow-light: rgba(255, 189, 46, 0.35);
   --search-input-bg: #fff3d6;
-
   /* SIDEBAR */
   --sidebar-bg: #ffffff;
   --sidebar-hover: #fff3d6;

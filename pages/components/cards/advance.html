@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Cards - Premium Dashboard</title>
+    <title>Advanced Cards</title>
 
     <link rel="stylesheet" href="../../../assets/css/component/cards/advance.css" />
-    <script src="../../../assets/js/layout.js" defer></script>
   </head>
   <body>
     <div id="sidebar-container"></div>
@@ -40,922 +39,774 @@
       </div>
 
       <main class="content-area">
-        <div class="container-xxl flex-grow-1 container-p-y">
-          <!-- Row 1: Employee List, Transactions, Shared Event -->
-          <div class="row g-6 mb-6">
-            <!-- [CARD 1] Employee List -->
-            <div class="col-md-6 col-xxl-4">
-              <div class="card h-100">
-                <div class="card-header d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0 me-2">Employee List</h5>
-                  <div class="dropdown">
-                    <button
-                      class="btn text-body-secondary p-0"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                    >
-                      <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a class="dropdown-item" href="javascript:void(0);">Featured Employees</a>
-                      <a class="dropdown-item" href="javascript:void(0);">Based on Task</a>
-                      <a class="dropdown-item" href="javascript:void(0);">See All</a>
-                    </div>
+        <div class="container">
+          <!-- ====================================================
+             SECTION A: KPI & OVERVIEW
+        ==================================================== -->
+          <h2 class="section-header mt-0">A. KPI & Overview</h2>
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <section class="card-section" data-component="01-smart-kpi">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-people"></i> Total Active Users</h3>
+                    <span class="ui-badge ui-badge--success js-badge">+12.5%</span>
                   </div>
+                  <div class="kpi-smart__val js-val" data-target="45231">0</div>
+                  <p class="text-xs   mt-2 m-0">Compared to 40,102 last month</p>
                 </div>
-                <div class="card-body pt-4">
-                  <ul class="p-0 m-0">
-                    <li class="d-flex align-items-center mb-6">
-                      <div class="avatar flex-shrink-0 me-3">
-                        <img
-                          src="https://i.pravatar.cc/150?u=alberta"
-                          alt="User"
-                          class="rounded"
-                          width="40"
-                        />
-                      </div>
-                      <div class="d-flex w-100 align-items-center gap-2 text-nowrap">
-                        <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
-                          <div>
-                            <h6 class="mb-0 fw-normal">Alberta</h6>
-                            <small class="text-muted">UI Designer</small>
-                          </div>
-                          <div class="user-progress d-flex align-items-center gap-1">
-                            <h6 class="mb-0 fw-normal">100h:</h6>
-                            <span class="text-body-secondary">138h</span>
-                          </div>
-                        </div>
-                        <div
-                          class="chart-progress-radial"
-                          data-series="85"
-                          data-color="#696cff"
-                        ></div>
-                      </div>
-                    </li>
-                    <li class="d-flex align-items-center mb-6">
-                      <div class="avatar flex-shrink-0 me-3">
-                        <img
-                          src="https://i.pravatar.cc/150?u=paul"
-                          alt="User"
-                          class="rounded"
-                          width="40"
-                        />
-                      </div>
-                      <div class="d-flex w-100 align-items-center gap-2 text-nowrap">
-                        <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
-                          <div>
-                            <h6 class="mb-0 fw-normal">Paul</h6>
-                            <small class="text-muted">Branding</small>
-                          </div>
-                          <div class="user-progress d-flex align-items-center gap-1">
-                            <h6 class="mb-0 fw-normal">121h:</h6>
-                            <span class="text-body-secondary">109h</span>
-                          </div>
-                        </div>
-                        <div
-                          class="chart-progress-radial"
-                          data-series="70"
-                          data-color="#ffab00"
-                        ></div>
-                      </div>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <div class="avatar flex-shrink-0 me-3">
-                        <img
-                          src="https://i.pravatar.cc/150?u=nannie"
-                          alt="User"
-                          class="rounded"
-                          width="40"
-                        />
-                      </div>
-                      <div class="d-flex w-100 align-items-center gap-2 text-nowrap">
-                        <div class="d-flex justify-content-between flex-grow-1 flex-wrap">
-                          <div>
-                            <h6 class="mb-0 fw-normal">Nannie</h6>
-                            <small class="text-muted">iOS Developer</small>
-                          </div>
-                          <div class="user-progress d-flex align-items-center gap-1">
-                            <h6 class="mb-0 fw-normal">112h:</h6>
-                            <span class="text-body-secondary">160h</span>
-                          </div>
-                        </div>
-                        <div
-                          class="chart-progress-radial"
-                          data-series="25"
-                          data-color="#696cff"
-                        ></div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              </section>
             </div>
 
-            <!-- [CARD 2] Transactions -->
-            <div class="col-md-6 col-xxl-4">
-              <div class="card h-100">
-                <div class="card-header d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0 me-2">Transactions</h5>
-                  <div class="dropdown">
-                    <button
-                      class="btn text-body-secondary p-0"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                    >
-                      <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-                      <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-                      <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
+            <div class="col-lg-4 col-md-6">
+              <section class="card-section" data-component="02-rev-proj">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title">
+                      <i class="bi bi-graph-up-arrow"></i> Projected MRR
+                    </h3>
+                    <div class="rev-proj__tabs js-tabs">
+                      <div class="rev-proj__tab active" data-mode="mo">Mo</div>
+                      <div class="rev-proj__tab" data-mode="yr">Yr</div>
                     </div>
                   </div>
+                  <div class="kpi-smart__val js-val" data-val-mo="124500" data-val-yr="1494000">
+                    $124,500
+                  </div>
+                  <div class="ui-prog-track mt-3">
+                    <div class="ui-prog-fill bg-info js-bar" style="width: 65%"></div>
+                  </div>
+                  <p class="text-xs   mt-2 m-0">65% of Q3 Target</p>
                 </div>
-                <div class="card-body pt-4">
-                  <ul class="p-0 m-0">
-                    <li class="d-flex align-items-center mb-6">
-                      <div class="avatar flex-shrink-0 me-3">
-                        <span class="avatar-initial rounded bg-label-primary p-2"
-                          ><i class="bx bxl-paypal fs-4"></i
-                        ></span>
-                      </div>
-                      <div
-                        class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2"
-                      >
-                        <div class="me-2">
-                          <small class="text-muted d-block">Paypal</small>
-                          <h6 class="fw-normal mb-0">Send money</h6>
-                        </div>
-                        <div class="user-progress d-flex align-items-center gap-1">
-                          <h6 class="fw-normal mb-0 text-success">+82.6</h6>
-                          <span class="text-body-secondary">USD</span>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="d-flex align-items-center mb-6">
-                      <div class="avatar flex-shrink-0 me-3">
-                        <span class="avatar-initial rounded bg-label-success p-2"
-                          ><i class="bx bx-wallet fs-4"></i
-                        ></span>
-                      </div>
-                      <div
-                        class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2"
-                      >
-                        <div class="me-2">
-                          <small class="text-muted d-block">Wallet</small>
-                          <h6 class="fw-normal mb-0">Mac'D</h6>
-                        </div>
-                        <div class="user-progress d-flex align-items-center gap-1">
-                          <h6 class="fw-normal mb-0 text-success">+270.69</h6>
-                          <span class="text-body-secondary">USD</span>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <div class="avatar flex-shrink-0 me-3">
-                        <span class="avatar-initial rounded bg-label-info p-2"
-                          ><i class="bx bx-chart fs-4"></i
-                        ></span>
-                      </div>
-                      <div
-                        class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2"
-                      >
-                        <div class="me-2">
-                          <small class="text-muted d-block">Transfer</small>
-                          <h6 class="fw-normal mb-0">Refund</h6>
-                        </div>
-                        <div class="user-progress d-flex align-items-center gap-1">
-                          <h6 class="fw-normal mb-0 text-success">+637.91</h6>
-                          <span class="text-body-secondary">USD</span>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              </section>
             </div>
 
-            <!-- [CARD 3] Shared Event -->
-            <div class="col-md-6 col-xxl-4">
-              <div class="card h-100 overflow-hidden">
-                <div class="card-header flex-grow-0 pt-4">
-                  <div class="d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <img
-                        src="https://i.pravatar.cc/150?u=olivia"
-                        alt="User"
-                        class="rounded-circle"
-                        width="40"
-                      />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap justify-content-between gap-1">
-                      <div class="me-2 text-nowrap">
-                        <h6 class="mb-0">Olivia Shared Event</h6>
-                        <small class="text-muted">07 Sep 2026 at 10:30 AM</small>
-                      </div>
-                      <div class="dropdown">
-                        <button
-                          class="btn text-body-secondary p-0"
-                          type="button"
-                          data-bs-toggle="dropdown"
-                        >
-                          <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                        </button>
-                      </div>
-                    </div>
+            <div class="col-lg-4 col-md-6">
+              <section class="card-section" data-component="03-live-vis">
+                <div class="ui-card text-center justify-content-center">
+                  <div class="ui-card__header justify-content-center">
+                    <h3 class="ui-card__title">
+                      <span class="live-vis__dot me-2"></span> Live Right Now
+                    </h3>
+                  </div>
+                  <div class="kpi-smart__val js-val transition-speed mt-2">342</div>
+                  <p class="text-xs   mt-2 m-0 js-status">Traffic is stable</p>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+              <section class="card-section" data-component="04-multi-kpi">
+                <div class="ui-card">
+                  <div class="ui-card__header border-0 pb-0 mb-2">
+                    <h3 class="ui-card__title"><i class="bi bi-pie-chart"></i> Core Metrics</h3>
+                  </div>
+                  <div class="multi-kpi__nav js-nav">
+                    <div class="multi-kpi__item active" data-k="signups">Signups</div>
+                    <div class="multi-kpi__item" data-k="churn">Churn Rate</div>
+                    <div class="multi-kpi__item" data-k="cac">CAC</div>
+                  </div>
+                  <div class="d-flex align-items-end gap-3 js-content anim-fade mt-auto mb-2">
+                    <div class="kpi-smart__val js-main">1,204</div>
+                    <div class="text-sm text-success fw-bold js-trend mb-1">+4.2%</div>
                   </div>
                 </div>
-                <div class="position-relative">
-                  <img
-                    class="img-fluid object-fit-cover w-100"
-                    src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80"
-                    alt="Event"
-                    height="150"
-                  />
-                  <div class="position-absolute start-0 bottom-0 mb-n4 ms-4">
-                    <span
-                      class="featured-date d-inline-block rounded shadow-lg text-center py-1 px-3 bg-white"
-                    >
-                      <span class="mb-0 h5 d-block">12</span>
-                      <span class="text-primary small fw-bold text-uppercase">Dec</span>
-                    </span>
+              </section>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+              <section class="card-section" data-component="05-goal-cmp">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-bullseye"></i> Campaign Goal</h3>
+                    <span class="text-sm fw-bold js-pct text-primary">0%</span>
+                  </div>
+                  <div class="goal-cmp__bar">
+                    <div class="goal-cmp__fill js-fill" style="width: 0%"></div>
+                  </div>
+                  <div class="d-flex gap-2 align-items-center mt-auto">
+                    <input
+                      type="number"
+                      class="ui-input form-control-sm js-inp"
+                      placeholder="Add volume"
+                    />
+                    <button class="ui-btn py-1 js-add">Add</button>
                   </div>
                 </div>
-                <div class="card-body mt-4">
-                  <h6 class="text-truncate mb-2">How To Excel In A Technical Terminology?</h6>
-                  <div class="d-flex gap-2 flex-wrap mb-4">
-                    <span class="badge bg-label-success small">Technical</span>
-                    <span class="badge bg-label-primary small">Excel</span>
-                    <span class="badge bg-label-info small">Account</span>
-                  </div>
-                  <div class="d-flex align-items-center justify-content-between mt-4">
-                    <div class="avatar-group d-flex align-items-center">
-                      <li class="avatar pull-up" style="width: 32px; height: 32px">
-                        <img
-                          class="rounded-circle border border-2 border-white"
-                          src="https://i.pravatar.cc/100?u=1"
-                          alt="Avatar"
-                        />
-                      </li>
-                      <li class="avatar pull-up" style="width: 32px; height: 32px">
-                        <img
-                          class="rounded-circle border border-2 border-white"
-                          src="https://i.pravatar.cc/100?u=2"
-                          alt="Avatar"
-                        />
-                      </li>
-                      <li class="avatar pull-up" style="width: 32px; height: 32px">
-                        <img
-                          class="rounded-circle border border-2 border-white"
-                          src="https://i.pravatar.cc/100?u=3"
-                          alt="Avatar"
-                        />
-                      </li>
-                    </div>
-                    <a href="javascript:;" class="btn btn-sm btn-primary">Join Now</a>
-                  </div>
-                </div>
-              </div>
+              </section>
             </div>
           </div>
 
-          <!-- Row 2: Payment Data, Business Sharks, Upgrade Plan -->
-          <div class="row g-6 mb-6">
-            <!-- [CARD 4] Payment Data -->
-            <div class="col-md-6 col-xxl-4">
-              <div class="card h-100">
-                <div class="card-header d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0 me-2">Payment Data</h5>
-                  <div class="dropdown">
-                    <button
-                      class="btn text-body-secondary p-0"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                    >
-                      <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                    </button>
+          <!-- ====================================================
+             SECTION B: DATA & TABLE
+        ==================================================== -->
+          <h2 class="section-header">B. Data & Table</h2>
+          <div class="row g-4">
+            <div class="col-lg-8">
+              <section class="card-section" data-component="06-adv-table">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title">
+                      <i class="bi bi-person-lines-fill"></i> Customers
+                    </h3>
+                    <input
+                      type="text"
+                      class="ui-input py-1 js-search"
+                      placeholder="Search..."
+                      style="width: 200px"
+                    />
                   </div>
-                </div>
-                <div class="card-body pt-3">
-                  <small class="text-muted d-block mb-1">Price</small>
-                  <div class="d-flex align-items-center mb-4">
-                    <h4 class="text-primary me-2 mb-0">$455.60</h4>
-                    <span class="badge bg-label-primary">35% OFF</span>
-                  </div>
-                  <form class="row g-4" onsubmit="return false;">
-                    <div class="col-12">
-                      <small class="d-block mb-2 fw-medium">Choose payment method:</small>
-                      <div class="row g-4">
-                        <div class="col-6">
-                          <div class="form-check custom-option custom-option-basic">
-                            <label
-                              class="form-check-label custom-option-content p-2"
-                              for="radioPaypal"
-                            >
-                              <input
-                                class="form-check-input"
-                                type="radio"
-                                name="payMethod"
-                                id="radioPaypal"
-                                checked
-                              />
-                              <span class="d-block text-center mt-1">Paypal</span>
-                            </label>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-check custom-option custom-option-basic">
-                            <label class="form-check-label custom-option-content p-2" for="radioCC">
-                              <input
-                                class="form-check-input"
-                                type="radio"
-                                name="payMethod"
-                                id="radioCC"
-                              />
-                              <span class="d-block text-center mt-1">Credit Card</span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12">
-                      <input type="text" class="form-control" placeholder="Card Number" />
-                    </div>
-                    <div class="col-12 text-center">
-                      <button type="submit" class="btn btn-primary w-100">Add Card</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <!-- [CARD 5] Business Sharks -->
-            <div class="col-md-6 col-xxl-4">
-              <div class="card h-100">
-                <div class="card-header d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0 me-2">Business Sharks</h5>
-                  <div class="dropdown">
-                    <button
-                      class="btn text-body-secondary p-0"
-                      type="button"
-                      data-bs-toggle="dropdown"
-                    >
-                      <i class="bx bx-dots-vertical-rounded fs-4"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="card-body">
-                  <p class="small text-muted mb-4">
-                    Focus on items and featured that we use in life without them.
-                  </p>
-                  <h6 class="fw-normal mb-3">Basic price is $30</h6>
-                  <div class="d-flex flex-column gap-3">
-                    <div
-                      class="form-check custom-option custom-option-basic px-3 py-2 border rounded"
-                    >
-                      <input class="form-check-input" type="checkbox" id="checkBrand" checked />
-                      <label
-                        class="form-check-label d-flex justify-content-between w-100 ms-2"
-                        for="checkBrand"
-                      >
-                        <span class="fw-medium">Branding</span>
-                        <span class="badge bg-label-success">+ $30</span>
-                      </label>
-                    </div>
-                    <div
-                      class="form-check custom-option custom-option-basic px-3 py-2 border rounded"
-                    >
-                      <input class="form-check-input" type="checkbox" id="checkApp" />
-                      <label
-                        class="form-check-label d-flex justify-content-between w-100 ms-2"
-                        for="checkApp"
-                      >
-                        <span class="fw-medium">App Building</span>
-                        <span class="badge bg-label-primary">+ $125</span>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="d-flex justify-content-between mt-5 mb-4 border-top pt-4">
-                    <span class="fw-medium">Total Amount</span>
-                    <span class="h5 text-primary mb-0">$99</span>
-                  </div>
-                  <button class="btn btn-primary w-100">Purchase</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- [CARD 6] Upgrade Plan -->
-            <div class="col-md-6 col-xxl-4">
-              <div class="card h-100">
-                <div class="card-header d-flex align-items-center justify-content-between">
-                  <h5 class="card-title m-0 me-2">Upgrade Your Plan</h5>
-                </div>
-                <div class="card-body text-center">
-                  <div
-                    class="avatar avatar-lg bg-label-primary mx-auto mb-4 p-4"
-                    style="width: 80px; height: 80px"
-                  >
-                    <i class="bx bx-rocket fs-1"></i>
-                  </div>
-                  <h4 class="mb-1">Premium</h4>
-                  <div class="d-flex justify-content-center align-items-start mb-4">
-                    <span class="h6 mt-1 me-1">$</span>
-                    <h1 class="mb-0 text-primary">2,124</h1>
-                    <sub class="ms-1 fw-normal text-muted small">/year</sub>
-                  </div>
-                  <ul class="list-unstyled text-start mb-4 ps-4">
-                    <li class="mb-2">
-                      <i class="bx bx-check text-success me-2"></i> 100GB Cloud Storage
-                    </li>
-                    <li class="mb-2">
-                      <i class="bx bx-check text-success me-2"></i> Priority Support
-                    </li>
-                    <li><i class="bx bx-check text-success me-2"></i> Custom Domain</li>
-                  </ul>
-                  <button class="btn btn-primary w-100">Upgrade Now</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 4: Statistics Table, Delivery Performance -->
-          <div class="row g-6 mb-6">
-            <!-- [CARD 13] Statistics Table -->
-            <div class="col-xl-8 col-lg-12">
-              <div class="card h-100">
-                <div class="card-body p-0">
-                  <div class="table-responsive text-nowrap">
-                    <table class="table table-hover align-middle mb-0">
+                  <div class="overflow-auto mb-3">
+                    <table class="adv-tbl">
                       <thead>
-                        <tr class="text-muted small fw-bold text-uppercase">
-                          <th class="ps-4">Country</th>
-                          <th>Users</th>
-                          <th>Transactions</th>
-                          <th>Progress</th>
-                          <th class="text-center">Bounce</th>
+                        <tr>
+                          <th data-col="id">ID <i class="bi bi-chevron-down text-xs ms-1"></i></th>
+                          <th data-col="name">
+                            Name <i class="bi bi-chevron-down text-xs ms-1"></i>
+                          </th>
+                          <th data-col="plan">
+                            Plan <i class="bi bi-chevron-down text-xs ms-1"></i>
+                          </th>
                         </tr>
                       </thead>
-                      <tbody class="table-border-bottom-0">
+                      <tbody class="js-tbody"></tbody>
+                    </table>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-auto text-xs  "
+                  >
+                    <button class="ui-btn ui-btn--outline py-1 px-2 js-prev">Prev</button>
+                    <span class="js-page">Page 1</span>
+                    <button class="ui-btn ui-btn--outline py-1 px-2 js-next">Next</button>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="07-edit-table">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-sliders"></i> Environment Vars</h3>
+                  </div>
+                  <table class="adv-tbl">
+                    <tbody class="js-tbody"></tbody>
+                  </table>
+                  <p class="text-xs   mt-auto mb-0">
+                    <i class="bi bi-info-circle"></i> Click any value to edit.
+                  </p>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-12">
+              <section class="card-section" data-component="08-col-toggle">
+                <div class="ui-card position-relative overflow-visible">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title">
+                      <i class="bi bi-layout-three-columns"></i> Server Logs
+                    </h3>
+                    <button class="ui-btn ui-btn--outline py-1 text-xs js-tog-btn">
+                      <i class="bi bi-columns"></i> Columns
+                    </button>
+                  </div>
+                  <div class="col-tog__menu js-menu"></div>
+                  <div class="overflow-auto">
+                    <table class="adv-tbl js-tbl">
+                      <thead>
                         <tr>
-                          <td class="ps-4">
-                            <div class="d-flex align-items-center">
-                              <span class="fs-4 me-2">🇺🇸</span>
-                              <h6 class="mb-0 fw-normal">USA</h6>
-                            </div>
-                          </td>
-                          <td>2.4k</td>
-                          <td>$13,500</td>
-                          <td style="width: 150px">
-                            <div class="premium-progress">
-                              <div class="premium-progress-bar bg-success" style="width: 85%"></div>
-                            </div>
-                          </td>
-                          <td class="text-center text-success fw-bold">12.5%</td>
+                          <th data-col="0">Time</th>
+                          <th data-col="1">Level</th>
+                          <th data-col="2">Event</th>
+                          <th data-col="3">IP</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-col="0">10:42</td>
+                          <td data-col="1">INFO</td>
+                          <td data-col="2">Auth Success</td>
+                          <td data-col="3">192.168.1.1</td>
                         </tr>
                         <tr>
-                          <td class="ps-4">
-                            <div class="d-flex align-items-center">
-                              <span class="fs-4 me-2">🇮🇳</span>
-                              <h6 class="mb-0 fw-normal">India</h6>
-                            </div>
-                          </td>
-                          <td>1.8k</td>
-                          <td>$8,200</td>
-                          <td>
-                            <div class="premium-progress">
-                              <div class="premium-progress-bar bg-primary" style="width: 65%"></div>
-                            </div>
-                          </td>
-                          <td class="text-center text-warning fw-bold">24.1%</td>
-                        </tr>
-                        <tr>
-                          <td class="ps-4">
-                            <div class="d-flex align-items-center">
-                              <span class="fs-4 me-2">🇧🇷</span>
-                              <h6 class="mb-0 fw-normal">Brazil</h6>
-                            </div>
-                          </td>
-                          <td>1.2k</td>
-                          <td>$5,100</td>
-                          <td>
-                            <div class="premium-progress">
-                              <div class="premium-progress-bar bg-info" style="width: 45%"></div>
-                            </div>
-                          </td>
-                          <td class="text-center text-danger fw-bold">32.8%</td>
+                          <td data-col="0">10:45</td>
+                          <td data-col="1" class="text-danger">ERR</td>
+                          <td data-col="2">DB Timeout</td>
+                          <td data-col="3">10.0.0.5</td>
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
-              </div>
+              </section>
             </div>
 
-            <!-- [CARD 14] Delivery Statistics -->
-            <div class="col-xl-4 col-lg-12">
-              <div class="card h-100">
-                <div class="card-header border-0 pb-0 d-flex justify-content-between">
-                  <h5 class="card-title mb-1">Delivery Performance</h5>
-                  <div class="dropdown">
-                    <button class="btn p-0" type="button" data-bs-toggle="dropdown">
-                      <i class="bx bx-dots-vertical-rounded fs-4"></i>
+            <div class="col-lg-4">
+              <section class="card-section" data-component="09-csv-export">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-filetype-csv"></i> Export Data</h3>
+                  </div>
+                  <div class="csv-exp__preview js-prev mb-3 mt-2">Loading preview...</div>
+                  <button class="ui-btn w-100 mt-auto js-btn">
+                    <i class="bi bi-download"></i> Download CSV
+                  </button>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-8">
+              <section class="card-section" data-component="10-filter-tag">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-funnel"></i> Invoices</h3>
+                    <select class="ui-input py-1 w-auto text-xs js-sel">
+                      <option value="">+ Add Filter</option>
+                      <option value="Paid">Status: Paid</option>
+                      <option value="Pending">Status: Pending</option>
+                    </select>
+                  </div>
+                  <div class="flt-tag__wrap js-tags mb-3 mt-2"></div>
+                  <table class="adv-tbl">
+                    <tbody class="js-tbody"></tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <!-- ====================================================
+             SECTION C: PRODUCTIVITY
+        ==================================================== -->
+          <h2 class="section-header">C. Productivity</h2>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <section class="card-section" data-component="11-task-mgr">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-list-check"></i> Todo List</h3>
+                  </div>
+                  <div class="d-flex gap-2 mb-3 mt-2">
+                    <input type="text" class="ui-input js-inp" placeholder="New task..." />
+                    <button class="ui-btn py-1 js-add"><i class="bi bi-plus"></i></button>
+                  </div>
+                  <div class="js-list overflow-auto" style="max-height: 200px"></div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-6">
+              <section class="card-section" data-component="12-dnd-list">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-arrows-move"></i> Priority Queue</h3>
+                  </div>
+                  <div class="js-list mt-2">
+                    <div class="dnd-list__item" draggable="true" data-id="1">
+                      <i class="bi bi-grip-vertical  "></i> <span>Setup CI/CD</span>
+                    </div>
+                    <div class="dnd-list__item" draggable="true" data-id="2">
+                      <i class="bi bi-grip-vertical  "></i> <span>Update Docs</span>
+                    </div>
+                    <div class="dnd-list__item" draggable="true" data-id="3">
+                      <i class="bi bi-grip-vertical  "></i> <span>Fix Navbar Bug</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-12">
+              <section class="card-section" data-component="13-mini-kanban">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-kanban"></i> Sprint Board</h3>
+                  </div>
+                  <div class="row g-3 mt-1">
+                    <div class="col-md-4">
+                      <div class="kanban__col js-col" data-status="todo">
+                        <div class="text-xs fw-bold  mb-2">TODO</div>
+                        <div class="js-items"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="kanban__col js-col" data-status="doing">
+                        <div class="text-xs fw-bold text-info mb-2">DOING</div>
+                        <div class="js-items"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="kanban__col js-col" data-status="done">
+                        <div class="text-xs fw-bold text-success mb-2">DONE</div>
+                        <div class="js-items"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="14-notes">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-journal-text"></i> Scratchpad</h3>
+                    <span
+                      class="text-xs text-success js-save-lbl"
+                      style="opacity: 0; transition: 0.3s"
+                      >Saved</span
+                    >
+                  </div>
+                  <textarea class="note__area js-area mt-2" placeholder="Write here..."></textarea>
+                  <div class="text-xs   text-end mt-2 js-count">0 chars</div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="15-focus-timer">
+                <div class="ui-card text-center">
+                  <div class="ui-card__header justify-content-center">
+                    <h3 class="ui-card__title"><i class="bi bi-stopwatch"></i> Focus Timer</h3>
+                  </div>
+                  <div class="pomo__ring mx-auto mb-3 mt-3">
+                    <svg viewBox="0 0 36 36" class="pomo__svg">
+                      <path
+                        class="pomo__bg"
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                      <path
+                        class="pomo__fill js-fill"
+                        stroke-dasharray="100, 100"
+                        d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+                      />
+                    </svg>
+                    <div class="pomo__time js-time">25:00</div>
+                  </div>
+                  <div class="d-flex gap-2 justify-content-center">
+                    <button class="ui-btn js-tgl">Start</button>
+                    <button class="ui-btn ui-btn--outline px-2 js-rst">
+                      <i class="bi bi-arrow-counterclockwise"></i>
                     </button>
                   </div>
                 </div>
-                <div class="card-body">
-                  <div class="d-flex justify-content-between align-items-center mb-4">
-                    <div>
-                      <h3 class="mb-0">94.2%</h3>
-                      <small class="text-muted">On-time Delivery</small>
-                    </div>
-                    <div class="text-end">
-                      <h3 class="mb-0">2.1k</h3>
-                      <small class="text-muted">Total Parcels</small>
-                    </div>
-                  </div>
-                  <div id="deliveryChart" style="min-height: 180px"></div>
-                </div>
-              </div>
+              </section>
             </div>
           </div>
 
-          <!-- Row 5: Recent Transactions, Website Stats, Top Products -->
-          <div class="row g-6 mb-6">
-            <!-- [CARD 15] Recent Transactions -->
-            <div class="col-xl-4 col-lg-6">
-              <div class="card h-100">
-                <div class="card-header d-flex justify-content-between align-items-center pb-2">
-                  <h5 class="card-title mb-0">Recent Transactions</h5>
-                  <button class="btn p-0"><i class="bx bx-dots-vertical-rounded fs-4"></i></button>
+          <!-- ====================================================
+             SECTION D: FINANCE & SYSTEM
+        ==================================================== -->
+          <h2 class="section-header">D. Finance & System</h2>
+          <div class="row g-4">
+            <div class="col-lg-6">
+              <section class="card-section" data-component="16-rev-chart">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-bar-chart"></i> Revenue</h3>
+                    <select class="ui-input py-1 text-xs w-auto js-sel">
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                    </select>
+                  </div>
+                  <div class="chart-sim js-chart mt-auto"></div>
+                  <div class="d-flex justify-content-between text-xs   mt-2 fw-bold">
+                    <span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <ul class="list-unstyled p-0 m-0">
-                    <li class="d-flex align-items-center mb-6">
-                      <div class="avatar flex-shrink-0 me-3">
-                        <img src="https://i.pravatar.cc/150?u=30" class="rounded-circle" />
-                      </div>
-                      <div
-                        class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2"
-                      >
-                        <div class="me-2">
-                          <h6 class="mb-0 fw-normal">John Doe</h6>
-                          <small class="text-muted">Purchased Premium</small>
-                        </div>
-                        <div class="user-progress text-success fw-bold">+$124.0</div>
-                      </div>
-                    </li>
-                    <li class="d-flex align-items-center mb-6">
-                      <div class="avatar flex-shrink-0 me-3">
-                        <img src="https://i.pravatar.cc/150?u=31" class="rounded-circle" />
-                      </div>
-                      <div
-                        class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2"
-                      >
-                        <div class="me-2">
-                          <h6 class="mb-0 fw-normal">Sarah K.</h6>
-                          <small class="text-muted">Refund Request</small>
-                        </div>
-                        <div class="user-progress text-danger fw-bold">-$45.2</div>
-                      </div>
-                    </li>
-                    <li class="d-flex align-items-center">
-                      <div class="avatar flex-shrink-0 me-3">
-                        <img src="https://i.pravatar.cc/150?u=32" class="rounded-circle" />
-                      </div>
-                      <div
-                        class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2"
-                      >
-                        <div class="me-2">
-                          <h6 class="mb-0 fw-normal">Mike Rose</h6>
-                          <small class="text-muted">Monthly Sub</small>
-                        </div>
-                        <div class="user-progress text-success fw-bold">+$29.9</div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              </section>
             </div>
 
-            <!-- [CARD 16] Website Statistics -->
-            <div class="col-xl-4 col-lg-6">
-              <div class="card h-100">
-                <div class="card-header d-flex justify-content-between align-items-center pb-0">
-                  <div>
-                    <h5 class="card-title mb-0">8.72%</h5>
-                    <small class="text-muted">Bounce Rate</small>
+            <div class="col-lg-6">
+              <section class="card-section" data-component="17-tx-log">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-receipt"></i> Recent Txns</h3>
+                    <button class="ui-btn py-1 text-xs js-add">Simulate Txn</button>
                   </div>
-                  <span class="text-success fw-medium"><i class="bx bx-chevron-up"></i> 12%</span>
+                  <div class="js-list overflow-auto mt-2" style="max-height: 180px"></div>
                 </div>
-                <div class="card-body p-0 overflow-hidden">
-                  <div id="websiteStatsChart" style="min-height: 180px"></div>
-                </div>
-              </div>
+              </section>
             </div>
 
-            <!-- [CARD 17] Top Products -->
-            <div class="col-xl-4 col-lg-6">
-              <div class="card h-100">
-                <div class="card-header d-flex justify-content-between align-items-center pb-2">
-                  <h5 class="card-title mb-0">Top Products</h5>
-                  <button class="btn p-0"><i class="bx bx-dots-vertical-rounded fs-4"></i></button>
+            <div class="col-lg-4">
+              <section class="card-section" data-component="18-api-tester">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-terminal"></i> API Console</h3>
+                  </div>
+                  <div class="d-flex gap-2 mb-2 mt-2">
+                    <select class="ui-input py-1 text-xs w-auto js-meth">
+                      <option>GET</option>
+                      <option>POST</option>
+                    </select>
+                    <input type="text" class="ui-input py-1 text-xs js-url" value="/v1/users" />
+                  </div>
+                  <button class="ui-btn w-100 py-1 text-xs mb-2 js-btn">Send Request</button>
+                  <div class="api-test__console js-res">// Ready</div>
                 </div>
-                <div class="card-body">
-                  <div class="d-flex align-items-center mb-6">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-primary"
-                        ><i class="bx bx-laptop"></i
-                      ></span>
-                    </div>
-                    <div
-                      class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2"
-                    >
-                      <div class="me-2">
-                        <h6 class="mb-0 fw-normal">MacBook Pro</h6>
-                        <small class="text-muted">45 Sold today</small>
-                      </div>
-                      <div class="user-progress fw-bold">$2,499</div>
-                    </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="19-sys-gauge">
+                <div class="ui-card text-center">
+                  <div class="ui-card__header justify-content-center">
+                    <h3 class="ui-card__title"><i class="bi bi-speedometer2"></i> Memory Usage</h3>
                   </div>
-                  <div class="d-flex align-items-center mb-6">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-success"
-                        ><i class="bx bx-phone"></i
-                      ></span>
-                    </div>
-                    <div
-                      class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2"
-                    >
-                      <div class="me-2">
-                        <h6 class="mb-0 fw-normal">iPhone 15</h6>
-                        <small class="text-muted">30 Sold today</small>
-                      </div>
-                      <div class="user-progress fw-bold">$999</div>
-                    </div>
+                  <div class="sys-gauge mx-auto mb-2 mt-4">
+                    <div class="sys-gauge__arc"></div>
+                    <div class="sys-gauge__fill js-fill"></div>
                   </div>
-                  <div class="d-flex align-items-center">
-                    <div class="avatar flex-shrink-0 me-3">
-                      <span class="avatar-initial rounded bg-label-info"
-                        ><i class="bx bx-watch"></i
-                      ></span>
-                    </div>
-                    <div
-                      class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2"
-                    >
-                      <div class="me-2">
-                        <h6 class="mb-0 fw-normal">Apple Watch</h6>
-                        <small class="text-muted">12 Sold today</small>
-                      </div>
-                      <div class="user-progress fw-bold">$399</div>
-                    </div>
-                  </div>
+                  <div class="font-monospace fs-3 fw-bold js-val">0%</div>
+                  <button class="ui-btn ui-btn--outline w-100 mt-auto js-btn">Run GC</button>
                 </div>
-              </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="20-err-log">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-bug"></i> Live Trace</h3>
+                    <span class="ui-badge ui-badge--danger"
+                      ><i class="bi bi-record-circle"></i> Rec</span
+                    >
+                  </div>
+                  <div class="err-log__box js-box mt-2"></div>
+                </div>
+              </section>
             </div>
           </div>
 
-          <!-- Row 6: Activity Timeline & Finance Summary -->
-          <div class="row g-6 mb-6">
-            <!-- [CARD 18] Activity Timeline -->
-            <div class="col-xl-4 col-lg-6">
-              <div class="card h-100">
-                <div class="card-header d-flex align-items-center justify-content-between pb-2">
-                  <h5 class="card-title mb-0">Activity Timeline</h5>
+          <!-- ====================================================
+             SECTION E: USER & CONTROL
+        ==================================================== -->
+          <h2 class="section-header">E. User & Control</h2>
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <section class="card-section" data-component="21-usr-dir">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-search"></i> Directory</h3>
+                  </div>
+                  <input
+                    type="text"
+                    class="ui-input py-1 text-sm mb-2 mt-2 js-inp"
+                    placeholder="Search users..."
+                  />
+                  <div class="js-list overflow-auto" style="max-height: 200px"></div>
                 </div>
-                <div class="card-body">
-                  <ul class="timeline">
-                    <li class="timeline-item timeline-item-transparent ps-4">
-                      <span class="timeline-point timeline-point-primary"></span>
-                      <div class="timeline-event">
-                        <div class="timeline-header mb-1">
-                          <h6 class="mb-0">Project meeting with team</h6>
-                          <small class="text-muted">12:30 PM</small>
-                        </div>
-                        <p class="mb-2">Discussing new design patterns for dashboard.</p>
-                      </div>
-                    </li>
-                    <li class="timeline-item timeline-item-transparent ps-4">
-                      <span class="timeline-point timeline-point-success"></span>
-                      <div class="timeline-event">
-                        <div class="timeline-header mb-1">
-                          <h6 class="mb-0">Client proposal sent</h6>
-                          <small class="text-muted">02:15 PM</small>
-                        </div>
-                        <p class="mb-0">Awaiting feedback on the premium plan.</p>
-                      </div>
-                    </li>
-                    <li class="timeline-item timeline-item-transparent ps-4 border-0">
-                      <span class="timeline-point timeline-point-warning"></span>
-                      <div class="timeline-event pb-0">
-                        <div class="timeline-header mb-1">
-                          <h6 class="mb-0">New design system review</h6>
-                          <small class="text-muted">04:00 PM</small>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              </section>
             </div>
 
-            <!-- [CARD 19] Finance Summary -->
-            <div class="col-xl-8 col-lg-12">
-              <div class="card h-100">
-                <div
-                  class="card-header border-0 pb-0 d-flex justify-content-between align-items-center"
-                >
-                  <h5 class="card-title mb-0">Finance Summary</h5>
-                  <div class="d-flex gap-3">
-                    <div class="text-end">
-                      <h6 class="mb-0">$12,456</h6>
-                      <small class="text-muted">Income</small>
-                    </div>
-                    <div class="text-end">
-                      <h6 class="mb-0">$8,720</h6>
-                      <small class="text-muted">Expense</small>
+            <div class="col-lg-4">
+              <section class="card-section" data-component="22-role-perm">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title">
+                      <i class="bi bi-shield-lock"></i> Global Policies
+                    </h3>
+                  </div>
+                  <div class="js-list flex-grow-1 mt-2"></div>
+                  <div class="text-xs   mt-3 js-msg">All changes saved automatically.</div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="23-feat-flag">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-toggle-on"></i> Beta Features</h3>
+                  </div>
+                  <div class="feat-flag__box mt-2">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="text-sm fw-bold">New UI Engine</span>
+                      <div class="ui-toggle js-tgl-master"></div>
                     </div>
                   </div>
+                  <div class="feat-flag__box disabled js-dep-box">
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="text-sm fw-bold">Advanced Animations</span>
+                      <div class="ui-toggle js-tgl-dep"></div>
+                    </div>
+                    <div class="text-xs   mt-1">Requires New UI Engine</div>
+                  </div>
                 </div>
-                <div class="card-body p-0">
-                  <div id="financeSummaryChart" style="min-height: 280px"></div>
+              </section>
+            </div>
+
+            <div class="col-lg-6">
+              <section class="card-section" data-component="24-maint-mode">
+                <div class="ui-card js-card">
+                  <div class="maint-banner js-banner mb-3">
+                    <i class="bi bi-exclamation-triangle"></i> System Offline for Maintenance
+                  </div>
+                  <div class="ui-card__header border-0 pb-0 mb-3">
+                    <h3 class="ui-card__title"><i class="bi bi-cone-striped"></i> System Status</h3>
+                  </div>
+                  <p class="text-sm   mb-4">
+                    Activating maintenance mode will disconnect all active user sessions.
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-auto p-3 border rounded"
+                  >
+                    <span class="font-monospace text-sm fw-bold">ALLOW_PUBLIC_TRAFFIC</span>
+                    <div class="ui-toggle active js-tgl"></div>
+                  </div>
                 </div>
-              </div>
+              </section>
+            </div>
+
+            <div class="col-lg-6">
+              <section class="card-section" data-component="25-notif-ctr">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-bell"></i> Alerts</h3>
+                    <div class="d-flex gap-2">
+                      <span class="ui-badge ui-badge--danger js-badge">0</span>
+                      <button class="ui-btn ui-btn--outline py-0 px-2 text-xs js-read-all">
+                        Read All
+                      </button>
+                    </div>
+                  </div>
+                  <div class="js-list overflow-auto mt-2" style="max-height: 180px"></div>
+                </div>
+              </section>
             </div>
           </div>
 
-          <!-- [CARD 20] Footer Stats -->
-          <div class="row">
-            <div class="col-12">
-              <div class="card bg-label-primary border-0 shadow-none">
-                <div
-                  class="card-body d-flex align-items-center justify-content-between flex-wrap gap-4"
-                >
-                  <div>
-                    <h5 class="mb-1 text-primary">Premium Performance Insights</h5>
-                    <p class="mb-0 text-primary">
-                      All data is synchronized in real-time with your cloud storage.
+          <!-- ====================================================
+             SECTION F: INTERACTION & UI
+        ==================================================== -->
+          <h2 class="section-header">F. Interaction & UI</h2>
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <section class="card-section" data-component="26-expandable">
+                <div class="ui-card exp-card js-card">
+                  <div
+                    class="ui-card__header cursor-pointer js-trig border-0 m-0 pb-0"
+                    role="button"
+                    aria-expanded="false"
+                  >
+                    <h3 class="ui-card__title">
+                      <i class="bi bi-arrows-expand"></i> Advanced Details
+                    </h3>
+                    <i class="bi bi-chevron-down exp-card__icon  "></i>
+                  </div>
+                  <div class="exp-card__body">
+                    <p class="text-sm    m-0">
+                      This content is hidden by default to save space. Smooth transition handles the
+                      height animation beautifully.
                     </p>
                   </div>
-                  <button class="btn btn-primary px-4">Download Full Report</button>
                 </div>
-              </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="27-tabs">
+                <div class="ui-card">
+                  <div class="d-flex gap-2 border-bottom pb-2 js-nav">
+                    <button
+                      class="ui-btn ui-btn--outline border-0 py-1 px-2 text-sm active js-tab"
+                      data-target="t1"
+                    >
+                      Profile
+                    </button>
+                    <button
+                      class="ui-btn ui-btn--outline border-0 py-1 px-2 text-sm js-tab"
+                      data-target="t2"
+                    >
+                      Security
+                    </button>
+                  </div>
+                  <div class="tabs-card__content active js-pane" id="t1">
+                    <p class="text-sm  m-0">User profile settings go here.</p>
+                  </div>
+                  <div class="tabs-card__content js-pane" id="t2">
+                    <p class="text-sm  m-0">Password and 2FA options reside here.</p>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="28-accordion">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-question-circle"></i> FAQ</h3>
+                  </div>
+                  <div class="js-wrap mt-2">
+                    <div class="acc-ui__item">
+                      <div class="acc-ui__head js-trig" tabindex="0">
+                        Setup Billing <i class="bi bi-plus"></i>
+                      </div>
+                      <div class="acc-ui__body">Go to settings > billing to add a card.</div>
+                    </div>
+                    <div class="acc-ui__item">
+                      <div class="acc-ui__head js-trig" tabindex="0">
+                        Invite Users <i class="bi bi-plus"></i>
+                      </div>
+                      <div class="acc-ui__body">Use the directory tab to send invites.</div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-12">
+              <section class="card-section" data-component="29-modal-trig">
+                <div class="ui-card align-items-center justify-content-center text-center p-5">
+                  <div class="ui-card__header border-0 justify-content-center">
+                    <h3 class="ui-card__title">
+                      <i class="bi bi-exclamation-octagon"></i> Destructive Action
+                    </h3>
+                  </div>
+                  <button class="ui-btn ui-btn--danger mt-2 js-open">Delete Workspace</button>
+                </div>
+                <div class="modal-ui__overlay js-overlay">
+                  <div class="modal-ui__box js-box">
+                    <h4 class="fw-bold mb-2">Are you absolutely sure?</h4>
+                    <p class="text-sm  mb-4">
+                      This action cannot be undone. All data will be permanently wiped.
+                    </p>
+                    <div class="d-flex gap-2 justify-content-end">
+                      <button class="ui-btn ui-btn--outline js-close">Cancel</button>
+                      <button class="ui-btn ui-btn--danger js-confirm">Yes, Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <!-- <div class="col-lg-6">
+              <section class="card-section" data-component="30-theme-sw">
+                <div class="ui-card align-items-center justify-content-center">
+                  <div class="ui-card__header border-0 justify-content-center">
+                    <h3 class="ui-card__title"><i class="bi bi-palette"></i> Appearance</h3>
+                  </div>
+                  <div class="theme-sw__wrap js-wrap mt-2">
+                    <div class="theme-sw__btn active js-btn" data-theme="light">
+                      <i class="bi bi-sun"></i> Light
+                    </div>
+                    <div class="theme-sw__btn js-btn" data-theme="dark">
+                      <i class="bi bi-moon"></i> Dark
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div> -->
+          </div>
+
+          <!-- ====================================================
+             SECTION G: ADVANCED
+        ==================================================== -->
+          <h2 class="section-header">G. Advanced</h2>
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <section class="card-section" data-component="31-file-up">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-cloud-upload"></i> Attachments</h3>
+                  </div>
+                  <div class="file-up__drop js-drop mb-3 mt-2">
+                    <i class="bi bi-cloud-upload fs-3  "></i>
+                    <div class="text-sm fw-bold mt-2">Click to browse</div>
+                    <input type="file" class="d-none js-inp" multiple />
+                  </div>
+                  <div
+                    class="js-list d-flex flex-column gap-2 overflow-auto"
+                    style="max-height: 120px"
+                  ></div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="32-up-prog">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title">
+                      <i class="bi bi-hourglass-split"></i> Processing Request
+                    </h3>
+                  </div>
+                  <div class="up-prog__item js-wrap mt-2" style="display: none">
+                    <div class="d-flex justify-content-between text-xs fw-bold mb-2">
+                      <span>dataset_v2.csv</span><span class="js-pct">0%</span>
+                    </div>
+                    <div class="ui-prog-track">
+                      <div
+                        class="ui-prog-fill js-bar"
+                        style="width: 0; transition: width 0.2s"
+                      ></div>
+                    </div>
+                  </div>
+                  <button class="ui-btn w-100 mt-auto js-btn">Start Upload</button>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-4">
+              <section class="card-section" data-component="33-ldr-bd">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-trophy"></i> Sales Reps</h3>
+                    <button class="ui-btn ui-btn--outline py-0 px-2 text-xs js-sort">
+                      <i class="bi bi-sort-down"></i>
+                    </button>
+                  </div>
+                  <div class="js-list mt-2"></div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-6">
+              <section class="card-section" data-component="34-act-feed">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title"><i class="bi bi-activity"></i> Audit Log</h3>
+                  </div>
+                  <div class="act-feed__box js-box mt-2"></div>
+                </div>
+              </section>
+            </div>
+
+            <div class="col-lg-6">
+              <section class="card-section" data-component="35-bdg-plan">
+                <div class="ui-card">
+                  <div class="ui-card__header">
+                    <h3 class="ui-card__title">
+                      <i class="bi bi-wallet2"></i> Q3 Budget ($10k Limit)
+                    </h3>
+                  </div>
+                  <div class="bdg-plan__stat mt-2">
+                    <span>Total Spend:</span><span class="fw-bold js-tot">$0</span>
+                  </div>
+                  <div class="ui-prog-track mb-3">
+                    <div class="ui-prog-fill js-bar" style="width: 0%"></div>
+                  </div>
+
+                  <div class="d-flex gap-2 mt-auto">
+                    <input type="text" class="ui-input form-control-sm js-lbl" placeholder="Item" />
+                    <input
+                      type="number"
+                      class="ui-input form-control-sm js-amt"
+                      placeholder="$"
+                      style="width: 100px"
+                    />
+                    <button class="ui-btn py-1 px-2 js-add">Add</button>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
-        <!-- End Container -->
       </main>
     </div>
     <!-- End Main Wrapper -->
-
-    <!-- Scripts Section -->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script>
-      $(function () {
-        console.log('Sneat Style Advanced Cards Initialized');
-
-        // 1. Radial Progress Charts (Employee List)
-        $('.chart-progress-radial').each(function () {
-          var series = parseInt($(this).data('series')) || 0;
-          var color = $(this).data('color') || '#696cff';
-          var options = {
-            series: [series],
-            chart: { height: 60, width: 45, type: 'radialBar', sparkline: { enabled: true } },
-            plotOptions: {
-              radialBar: {
-                hollow: { size: '30%' },
-                dataLabels: { show: false },
-                track: { background: 'rgba(0,0,0,0.05)' },
-              },
-            },
-            colors: [color],
-            stroke: { lineCap: 'round' },
-          };
-          new ApexCharts(this, options).render();
-        });
-
-        // 2. Order Statistics Chart (Donut)
-        var orderChartOptions = {
-          series: [45, 25, 30],
-          chart: { type: 'donut', height: 140 },
-          labels: ['Electronic', 'Fashion', 'Decor'],
-          colors: ['#696cff', '#71dd37', '#03c3ec'],
-          dataLabels: { enabled: false },
-          legend: { show: false },
-          plotOptions: {
-            pie: {
-              donut: {
-                size: '75%',
-                labels: {
-                  show: true,
-                  value: { fontSize: '1rem', fontWeight: '600', offsetY: -5 },
-                  total: { show: true, label: '38%', fontSize: '0.7rem' },
-                },
-              },
-            },
-          },
-        };
-        if ($('#orderStatisticsChart').length) {
-          new ApexCharts(
-            document.querySelector('#orderStatisticsChart'),
-            orderChartOptions
-          ).render();
-        }
-
-        // 3. Earning Reports Chart (Bar)
-        var earningOptions = {
-          series: [{ name: 'Earnings', data: [30, 45, 35, 50, 40, 60, 55] }],
-          chart: {
-            type: 'bar',
-            height: 140,
-            toolbar: { show: false },
-            sparkline: { enabled: true },
-          },
-          plotOptions: { bar: { borderRadius: 4, columnWidth: '50%', distributed: true } },
-          dataLabels: { enabled: false },
-          colors: ['#696cff', '#696cff', '#696cff', '#696cff', '#696cff', '#696cff', '#696cff'],
-          tooltip: { enabled: false },
-        };
-        if ($('#earningReportsChart').length) {
-          new ApexCharts(document.querySelector('#earningReportsChart'), earningOptions).render();
-        }
-
-        // 4. Delivery Statistics (Area)
-        var deliveryOptions = {
-          series: [{ name: 'Deliveries', data: [100, 200, 150, 300, 250, 400, 350] }],
-          chart: {
-            type: 'area',
-            height: 180,
-            toolbar: { show: false },
-            sparkline: { enabled: true },
-          },
-          colors: ['#696cff'],
-          fill: {
-            type: 'gradient',
-            gradient: { shadeIntensity: 1, opacityFrom: 0.4, opacityTo: 0.1 },
-          },
-          stroke: { curve: 'smooth', width: 2 },
-        };
-        if ($('#deliveryChart').length) {
-          new ApexCharts(document.querySelector('#deliveryChart'), deliveryOptions).render();
-        }
-
-        // 5. Website Stats (Line)
-        var websiteOptions = {
-          series: [{ name: 'Clicks', data: [10, 40, 30, 80, 50, 120, 70] }],
-          chart: {
-            type: 'line',
-            height: 180,
-            toolbar: { show: false },
-            sparkline: { enabled: true },
-          },
-          colors: ['#71dd37'],
-          stroke: { curve: 'smooth', width: 3, lineCap: 'round' },
-        };
-        if ($('#websiteStatsChart').length) {
-          new ApexCharts(document.querySelector('#websiteStatsChart'), websiteOptions).render();
-        }
-
-        // 6. Finance Summary (Area Stacked)
-        var financeOptions = {
-          series: [
-            {
-              name: 'Income',
-              data: [400, 600, 500, 900, 700, 1100, 800, 1200, 900, 1300, 1100, 1400],
-            },
-            {
-              name: 'Expense',
-              data: [300, 500, 400, 700, 600, 900, 700, 1000, 800, 1100, 900, 1200],
-            },
-          ],
-          chart: { type: 'area', height: 280, toolbar: { show: false } },
-          colors: ['#696cff', '#ff3e1d'],
-          dataLabels: { enabled: false },
-          stroke: { curve: 'smooth', width: 2 },
-          xaxis: {
-            categories: [
-              'Jan',
-              'Feb',
-              'Mar',
-              'Apr',
-              'May',
-              'Jun',
-              'Jul',
-              'Aug',
-              'Sep',
-              'Oct',
-              'Nov',
-              'Dec',
-            ],
-          },
-          grid: {
-            borderColor: 'rgba(0,0,0,0.05)',
-            padding: { top: 0, bottom: 0, left: 10, right: 10 },
-          },
-        };
-        if ($('#financeSummaryChart').length) {
-          new ApexCharts(document.querySelector('#financeSummaryChart'), financeOptions).render();
-        }
-      });
-    </script>
+    <script src="../../../assets/js/pages/component/cards/advance.js"></script>
+    <script src="../../../assets/js/layout.js"></script>
   </body>
 </html>
