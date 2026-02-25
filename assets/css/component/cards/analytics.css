@@ -1,0 +1,1267 @@
+/* MANDATORY REUSABLE BASE CLASS */
+.analytics-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px var(--btn-shadow-light);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 100%;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text-main);
+}
+.analytics-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px var(--btn-shadow-dark);
+}
+
+.section-heading {
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* ===============================
+           CARD 01 – REVENUE (CSS)
+        ================================ */
+.card-revenue .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-revenue .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-revenue .trend {
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-revenue .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-revenue .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 02 – PROFIT (CSS)
+        ================================ */
+.card-profit .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-profit .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-profit .trend {
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-profit .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-profit .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 03 – EXPENSES (CSS)
+        ================================ */
+.card-expenses .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-expenses .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-expenses .trend {
+  color: var(--color-danger);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-expenses .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-expenses .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 04 – ORDERS (CSS)
+        ================================ */
+.card-orders .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-orders .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-orders .trend {
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-orders .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-orders .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 05 – USERS (CSS)
+        ================================ */
+.card-users .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-users .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-users .trend {
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-users .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-users .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 06 – ACTIVE USERS (CSS)
+        ================================ */
+.card-active .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-active .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-active .trend {
+  color: var(--color-warning);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-active .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-active .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 07 – CONVERSION (CSS)
+        ================================ */
+.card-conv .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-conv .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-conv .trend {
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-conv .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-conv .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 08 – BOUNCE RATE (CSS)
+        ================================ */
+.card-bounce .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-bounce .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-bounce .trend {
+  color: var(--color-danger);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-bounce .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-bounce .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 09 – AVG ORDER (CSS)
+        ================================ */
+.card-avg .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-avg .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-avg .trend {
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-avg .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-avg .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 10 – NEW CUSTOMERS (CSS)
+        ================================ */
+.card-new .header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-new .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-new .trend {
+  color: var(--color-success);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.card-new .val {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.card-new .spark {
+  height: 60px;
+  width: 100%;
+  position: relative;
+}
+
+/* ===============================
+           CARD 11 – LINE CHART (CSS)
+        ================================ */
+.card-c11 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c11 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 12 – BAR CHART (CSS)
+        ================================ */
+.card-c12 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c12 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 13 – STACKED BAR (CSS)
+        ================================ */
+.card-c13 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c13 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 14 – AREA CHART (CSS)
+        ================================ */
+.card-c14 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c14 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 15 – RADAR CHART (CSS)
+        ================================ */
+.card-c15 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c15 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 16 – PIE CHART (CSS)
+        ================================ */
+.card-c16 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c16 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 17 – DONUT CHART (CSS)
+        ================================ */
+.card-c17 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c17 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 18 – MIXED CHART (CSS)
+        ================================ */
+.card-c18 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c18 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 19 – HEATMAP GRID (CSS)
+        ================================ */
+.card-c19 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c19 .heatmap {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+  width: 100%;
+  flex-grow: 1;
+}
+.card-c19 .cell {
+  border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+.card-c19 .cell:hover {
+  transform: scale(1.1);
+}
+
+/* ===============================
+           CARD 20 – COMPARISON CHART (CSS)
+        ================================ */
+.card-c20 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c20 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 21 – MONTHLY REVENUE (CSS)
+        ================================ */
+.card-c21 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c21 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 22 – QUARTERLY PROFIT (CSS)
+        ================================ */
+.card-c22 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c22 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 23 – EXPENSE BREAKDOWN (CSS)
+        ================================ */
+.card-c23 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c23 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 24 – CASH FLOW (CSS)
+        ================================ */
+.card-c24 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c24 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 25 – INVOICE STATUS (CSS)
+        ================================ */
+.card-c25 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c25 .lbl {
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+.card-c25 .track {
+  height: 8px;
+  background-color: var(--color-bg-soft);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 0.2rem;
+}
+.card-c25 .fill {
+  height: 100%;
+  border-radius: 4px;
+}
+.card-c25 .w-75 {
+  width: 75%;
+}
+.card-c25 .w-15 {
+  width: 15%;
+}
+.card-c25 .w-10 {
+  width: 10%;
+}
+.card-c25 .bg-success {
+  background-color: var(--color-success);
+}
+.card-c25 .bg-warning {
+  background-color: var(--color-warning);
+}
+.card-c25 .bg-danger {
+  background-color: var(--color-danger);
+}
+
+/* ===============================
+           CARD 26 – PAYMENT METHODS (CSS)
+        ================================ */
+.card-c26 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c26 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 27 – TAX OVERVIEW (CSS)
+        ================================ */
+.card-c27 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c27 .list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.card-c27 .item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+.card-c27 .item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+}
+.card-c27 .lbl {
+  color: var(--color-text-light);
+}
+.card-c27 .val {
+  color: var(--color-text-main);
+  font-weight: bold;
+}
+.card-c27 .total-lbl {
+  color: var(--color-text-main);
+}
+.card-c27 .total-val {
+  color: var(--color-danger);
+  font-weight: bold;
+}
+
+/* ===============================
+           CARD 28 – NET MARGIN (CSS)
+        ================================ */
+.card-c28 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c28 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 29 – SESSIONS (CSS)
+        ================================ */
+.card-c29 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c29 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 30 – PAGE VIEWS (CSS)
+        ================================ */
+.card-c30 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c30 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 31 – TOP PAGES TABLE (CSS)
+        ================================ */
+.card-c31 {
+  overflow-x: auto;
+}
+.card-c31 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+.card-c31 table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.card-c31 th {
+  color: var(--color-text-light);
+  padding: 0.75rem 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+.card-c31 td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-main);
+}
+.card-c31 tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===============================
+           CARD 32 – TRAFFIC SOURCE (CSS)
+        ================================ */
+.card-c32 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c32 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 33 – DEVICE DIST (CSS)
+        ================================ */
+.card-c33 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c33 .row-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.2rem;
+}
+.card-c33 .lbl {
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+}
+.card-c33 .val {
+  color: var(--color-text-main);
+  font-size: 0.85rem;
+}
+.card-c33 .track {
+  height: 8px;
+  background-color: var(--color-bg-soft);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.card-c33 .fill {
+  height: 100%;
+  border-radius: 4px;
+}
+.card-c33 .w-60 {
+  width: 60%;
+}
+.card-c33 .w-30 {
+  width: 30%;
+}
+.card-c33 .w-10 {
+  width: 10%;
+}
+.card-c33 .bg-primary {
+  background-color: var(--color-primary);
+}
+.card-c33 .bg-info {
+  background-color: var(--color-info);
+}
+.card-c33 .bg-warning {
+  background-color: var(--color-warning);
+}
+
+/* ===============================
+           CARD 34 – LIVE VISITORS (CSS)
+        ================================ */
+.card-c34 {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.card-c34 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  width: 100%;
+  text-align: left;
+}
+.card-c34 .pulse {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-danger);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5rem;
+  animation: p-anim 2s infinite;
+}
+@keyframes p-anim {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.4);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.card-c34 .live-lbl {
+  color: var(--color-danger);
+  font-weight: bold;
+}
+.card-c34 .val {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  line-height: 1;
+  margin: 0.5rem 0;
+}
+.card-c34 .sub {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+}
+
+/* ===============================
+           CARD 35 – ACTIVITY TIMELINE (CSS)
+        ================================ */
+.card-c35 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c35 .tl {
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-border);
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.card-c35 .tl-item {
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+.card-c35 .tl-item::before {
+  content: '';
+  position: absolute;
+  left: -1.85rem;
+  top: 0.25rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-bg-card);
+}
+.card-c35 .tl-content {
+  font-size: 0.875rem;
+  color: var(--color-text-main);
+  display: block;
+}
+.card-c35 .tl-time {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+}
+
+/* ===============================
+           CARD 36 – TOP PRODUCTS (CSS)
+        ================================ */
+.card-c36 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c36 .list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.card-c36 .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0.5rem;
+}
+.card-c36 .item:last-child {
+  border-bottom: none;
+}
+.card-c36 .nm {
+  color: var(--color-text-main);
+  font-size: 0.875rem;
+}
+.card-c36 .badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-on-primary);
+}
+.card-c36 .bg-success {
+  background-color: var(--color-success);
+}
+.card-c36 .bg-primary {
+  background-color: var(--color-primary);
+}
+.card-c36 .bg-info {
+  background-color: var(--color-info);
+}
+.card-c36 .bg-warning {
+  background-color: var(--color-warning);
+}
+
+/* ===============================
+           CARD 37 – SALES FUNNEL (CSS)
+        ================================ */
+.card-c37 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c37 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 38 – TARGET PROGRESS (CSS)
+        ================================ */
+.card-c38 {
+  text-align: center;
+}
+.card-c38 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  width: 100%;
+  text-align: left;
+}
+.card-c38 .val {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 1.5rem;
+}
+.card-c38 .sub {
+  color: var(--color-text-light);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.card-c38 .track {
+  height: 12px;
+  background-color: var(--color-bg-soft);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.card-c38 .fill {
+  height: 100%;
+  background-color: var(--color-primary);
+}
+.card-c38 .w-85 {
+  width: 85%;
+}
+
+/* ===============================
+           CARD 39 – REGION (CSS)
+        ================================ */
+.card-c39 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c39 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 40 – LEADERBOARD (CSS)
+        ================================ */
+.card-c40 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 0.5rem;
+}
+.card-c40 table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.card-c40 td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-main);
+}
+.card-c40 tr:last-child td {
+  border-bottom: none;
+}
+.card-c40 .badge {
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-weight: bold;
+  color: var(--text-on-primary);
+  margin-right: 0.5rem;
+}
+.card-c40 .bg-primary {
+  background-color: var(--color-primary);
+}
+.card-c40 .bg-secondary {
+  background-color: var(--color-secondary);
+}
+.card-c40 .bg-info {
+  background-color: var(--color-info);
+}
+.card-c40 .bg-light {
+  background-color: var(--color-text-light);
+}
+.card-c40 .text-right {
+  text-align: right;
+}
+.card-c40 .text-success {
+  color: var(--color-success);
+}
+
+/* ===============================
+           CARD 41 – RETENTION RATE (CSS)
+        ================================ */
+.card-c41 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c41 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 42 – GROWTH FORECAST (CSS)
+        ================================ */
+.card-c42 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+.card-c42 .canvas-wrapper {
+  width: 100%;
+  height: 220px;
+  position: relative;
+  flex-grow: 1;
+}
+
+/* ===============================
+           CARD 43 – COHORT GRID (CSS)
+        ================================ */
+.card-cohort {
+  overflow-x: auto;
+}
+.card-cohort table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.card-cohort th {
+  font-weight: normal;
+  color: var(--color-text-light);
+  padding: 0.75rem 0;
+  text-align: center;
+}
+.card-cohort th:first-child {
+  text-align: left;
+}
+.card-cohort td {
+  text-align: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--color-bg-soft);
+}
+.card-cohort td:first-child {
+  text-align: left;
+  font-weight: normal;
+  color: var(--color-text-main);
+}
+.card-cohort tr:last-child td {
+  border-bottom: none;
+}
+.card-cohort .pill {
+  border-radius: 4px;
+  padding: 0.35rem 0.75rem;
+  display: inline-block;
+  color: var(--text-on-primary);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.card-cohort .p-100 {
+  background-color: var(--color-info);
+}
+.card-cohort .p-80 {
+  background-color: var(--color-info);
+  opacity: 0.85;
+}
+.card-cohort .p-70 {
+  background-color: var(--color-info);
+  opacity: 0.75;
+}
+.card-cohort .p-60 {
+  background-color: var(--color-info);
+  opacity: 0.65;
+}
+.card-cohort .p-50 {
+  background-color: var(--color-info);
+  opacity: 0.55;
+}
+.card-cohort .empty {
+  color: var(--color-text-light);
+  opacity: 0.5;
+}
+.card-cohort .title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.card-cohort .title-light {
+  color: var(--color-text-light);
+}
+.card-cohort .subtitle {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+/* ===============================
+           CARD 44 – AI INSIGHTS (CSS)
+        ================================ */
+.card-ai-insights .title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-text-light);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem;
+}
+.card-ai-insights .subtitle {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.2rem;
+}
+.card-ai-insights .insight-item {
+  background-color: var(--color-bg-soft);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 2px var(--btn-shadow-light);
+}
+.card-ai-insights .insight-item:last-child {
+  margin-bottom: 0;
+}
+.card-ai-insights .insight-icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+.card-ai-insights .insight-text {
+  color: var(--color-text-main);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ===============================
+           CARD 45 – EXECUTIVE SUMMARY (CSS)
+        ================================ */
+.card-c45 {
+  justify-content: space-around;
+}
+.card-c45 .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+.card-c45 .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  text-align: center;
+  margin-top: 1rem;
+}
+.card-c45 .lbl {
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+}
+.card-c45 .val {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.card-c45 .v-arr {
+  color: var(--color-primary);
+}
+.card-c45 .v-cac {
+  color: var(--color-success);
+}
+.card-c45 .v-ltv {
+  color: var(--color-info);
+}
+.card-c45 .v-run {
+  color: var(--color-warning);
+}
