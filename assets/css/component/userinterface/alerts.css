@@ -110,7 +110,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-text-light); /* Uses theme variable for visibility */
+  color: var(--color-text-light);
   opacity: 0.6;
 }
 .dismiss-btn:hover {

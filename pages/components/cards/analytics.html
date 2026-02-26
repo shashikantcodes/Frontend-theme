@@ -23,18 +23,19 @@
               <button type="button" class="ph-search-trigger">
                 <i class="bi bi-search"></i>
               </button>
-
-              <input type="text" class="ph-search-input" placeholder="Search leads..." />
-
-              <span class="ph-search-close">
-                <i class="bi bi-x"></i>
-              </span>
+              <input type="text" class="ph-search-input" placeholder="Search cards..." />
+              <span class="ph-search-close"><i class="bi bi-x"></i></span>
             </div>
           </div>
-
           <div class="ph-tools">
-            <i class="bi bi-funnel ph-icon"></i>
-            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-funnel ph-icon" title="Filter"></i>
+            <i class="bi bi-arrow-clockwise ph-icon" title="Refresh"></i>
+            <i
+              class="bi bi-info-circle ph-icon"
+              title="Page Guide"
+              data-bs-toggle="modal"
+              data-bs-target="#globalInfoModal"
+            ></i>
             <i class="bi bi-three-dots-vertical ph-icon"></i>
           </div>
         </div>
@@ -763,6 +764,101 @@
         </div>
       </main>
     </div>
+
+    <!-- info page guided -->
+    <div id="page-specific-info" class="d-none" data-modal-title="How to Extract Analytics Cards">
+      <div class="docs-alert-box">
+        <strong
+          ><i class="bi bi-pie-chart-fill text-warning me-2"></i> Analytics Cards Guide:</strong
+        >
+        This page contains data-driven cards and charts. Since our project is highly modular, the
+        code is split across specific folders. Follow these 4 steps to copy a card without getting
+        <code>Chart is not defined</code> errors.
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-gear-fill"></i> Step 1: Global Setup & Chart.js (CRITICAL)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Ensure your project has the core files loaded. Check these components:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-danger">Scripts (components/scripts.html):</strong> You MUST have the
+          Chart.js CDN
+          <code>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</code>
+          included.
+        </li>
+        <li>
+          <strong class="text-primary">Head Resources (components/head-resources.html):</strong>
+          Ensure Bootstrap 5, Icons, and global stylesheets (<code>style.css</code>) are loaded
+          here.
+        </li>
+      </ul>
+
+      <hr style="border-color: var(--color-border); margin: 1.5rem 0" />
+
+      <h6 class="docs-step-title"><i class="bi bi-filetype-html"></i> Step 2: Copy the HTML</h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <code>pages/components/cards/analytics.html</code>. Find the card you want and copy its
+        wrapper. Notice that the base class here is <code>.analytics-card</code>.
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>&lt;!-- Example from analytics.html --&gt;
+&lt;div class="analytics-card card-revenue"&gt;
+  &lt;div class="header-row"&gt;...&lt;/div&gt;
+  &lt;div class="val"&gt;$1,284,500&lt;/div&gt;
+  &lt;div class="spark"&gt;&lt;canvas id="c-01"&gt;&lt;/canvas&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-css mt-3"></i> Step 3: Copy the CSS (Base + Specific)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        To prevent the layout from breaking, ensure you have both the base structural CSS and the
+        card-specific CSS:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-danger">A. Base CSS:</strong> Make sure the
+          <code>.analytics-card</code> class is present in your <code>analytics.css</code> or at the
+          top of your analytics CSS.
+        </li>
+        <li>
+          <strong class="text-primary">B. Specific CSS:</strong> Open
+          <code>assets/css/component/cards/analytics.css</code> and copy ONLY the block for your
+          chosen card.
+        </li>
+      </ul>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>/* Example from analytics.css */
+
+/* --- Card 01: REVENUE (CSS) --- */
+.card-revenue .header-row { display: flex; ... }
+.card-revenue .val { font-size: 1.75rem; ... }</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-js mt-3"></i> Step 4: Copy the Specific JavaScript
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <code>assets/js/pages/component/cards/analytics.js</code>. Copy the isolated IIFE block
+        matching your card. This handles the Chart rendering and Theme switching safely.
+      </p>
+      <div class="docs-code-block mb-0">
+        <pre class="m-0"><code>// Example from analytics.js
+
+/* ===== START CARD 01 – REVENUE (JS) ===== */
+(() =&gt; { 
+  const ctx = document.getElementById('c-01');
+  if (!ctx) return;
+  // Chart.js initialization code...
+})();
+/* ===== END CARD 01 ===== */</code></pre>
+      </div>
+    </div>
+    <!-- info page end -->
 
     <script src="../../../assets/js/layout.js"></script>
   </body>

@@ -22,18 +22,19 @@
               <button type="button" class="ph-search-trigger">
                 <i class="bi bi-search"></i>
               </button>
-
-              <input type="text" class="ph-search-input" placeholder="Search leads..." />
-
-              <span class="ph-search-close">
-                <i class="bi bi-x"></i>
-              </span>
+              <input type="text" class="ph-search-input" placeholder="Search cards..." />
+              <span class="ph-search-close"><i class="bi bi-x"></i></span>
             </div>
           </div>
-
           <div class="ph-tools">
-            <i class="bi bi-funnel ph-icon"></i>
-            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-funnel ph-icon" title="Filter"></i>
+            <i class="bi bi-arrow-clockwise ph-icon" title="Refresh"></i>
+            <i
+              class="bi bi-info-circle ph-icon"
+              title="Page Guide"
+              data-bs-toggle="modal"
+              data-bs-target="#globalInfoModal"
+            ></i>
             <i class="bi bi-three-dots-vertical ph-icon"></i>
           </div>
         </div>
@@ -1856,7 +1857,88 @@
         </div>
       </main>
     </div>
+    <!-- info page guided start -->
+    <div id="page-specific-info" class="d-none" data-modal-title="How to Extract & Use Basic Cards">
+      <div class="docs-alert-box">
+        <strong><i class="bi bi-magic text-warning me-2"></i> Pure UI Magic:</strong>
+        This page contains highly reusable, pure HTML/CSS card components. The best part?
+        <strong>No custom JavaScript is required!</strong> Follow these 3 simple steps to copy any
+        card.
+      </div>
 
+      <h6 class="docs-step-title">
+        <i class="bi bi-gear-fill"></i> Step 1: Global Base CSS (Mandatory)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        To make these cards work, you must have the Base CSS in your project. Do this once:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-danger">Part 1 - Base CSS:</strong> Open
+          <code>assets/css/component.css</code> and ensure you have copied the entire section
+          labeled <strong>"PART 1: GLOBAL BASE CSS"</strong>. This handles the main
+          <code>.ui-card</code>, typography, buttons, and badges.
+        </li>
+      </ul>
+
+      <hr style="border-color: var(--color-border); margin: 1.5rem 0" />
+
+      <h6 class="docs-step-title"><i class="bi bi-filetype-html"></i> Step 2: Copy the HTML</h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <code>pages/components/cards/basic.html</code>. Find the card layout you like and copy
+        its <code>.ui-card</code> wrapper. Example:
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>&lt;!-- Example from basic.html --&gt;
+&lt;div class="ui-card ui-card-compact"&gt;
+  &lt;div class="ui-card-content"&gt;
+    &lt;h5 class="ui-card-title"&gt;Card Title&lt;/h5&gt;
+    &lt;!-- Content --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-palette2 mt-3"></i> Step 3: Copy Specific Variation CSS (If any)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        If your card has a special layout (like Masonry, Colored Tiles, or Horizontal), you need its
+        specific CSS:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-primary">Part 2 - Specific CSS:</strong> Open
+          <code>assets/css/component.css</code>, scroll down to
+          <strong>"PART 2: SPECIFIC COMPONENT CSS"</strong>, and copy only the block you need (e.g.,
+          <code>/* --- Colored Tiles --- */</code>).
+        </li>
+      </ul>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>/* Example from component.css (PART 2) */
+
+/* --- Colored Tiles --- */
+.ui-tile { border: none; border-radius: 0.9rem; ... }
+.ui-tile-purple { background: linear-gradient(...); }</code></pre>
+      </div>
+
+      <div
+        class="mt-4 p-3 rounded"
+        style="
+          background-color: color-mix(in srgb, var(--color-success), transparent 90%);
+          border: 1px solid var(--color-success);
+        "
+      >
+        <h6 class="fw-bold m-0" style="color: var(--color-success)">
+          <i class="bi bi-check-circle-fill me-2"></i> Step 4: JavaScript?
+        </h6>
+        <p class="mb-0 mt-1" style="font-size: 0.85rem; color: var(--color-text-main)">
+          These are purely structural UI cards.
+          <strong>No specific JS extraction is needed!</strong> Just copy the HTML and CSS, and
+          you're good to go.
+        </p>
+      </div>
+    </div>
+    <!-- info page guided end -->
     <script src="../../../assets/js/layout.js"></script>
   </body>
 </html>

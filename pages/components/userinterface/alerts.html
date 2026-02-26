@@ -23,18 +23,19 @@
               <button type="button" class="ph-search-trigger">
                 <i class="bi bi-search"></i>
               </button>
-
-              <input type="text" class="ph-search-input" placeholder="Search leads..." />
-
-              <span class="ph-search-close">
-                <i class="bi bi-x"></i>
-              </span>
+              <input type="text" class="ph-search-input" placeholder="Search cards..." />
+              <span class="ph-search-close"><i class="bi bi-x"></i></span>
             </div>
           </div>
-
           <div class="ph-tools">
-            <i class="bi bi-funnel ph-icon"></i>
-            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-funnel ph-icon" title="Filter"></i>
+            <i class="bi bi-arrow-clockwise ph-icon" title="Refresh"></i>
+            <i
+              class="bi bi-info-circle ph-icon"
+              title="Page Guide"
+              data-bs-toggle="modal"
+              data-bs-target="#globalInfoModal"
+            ></i>
             <i class="bi bi-three-dots-vertical ph-icon"></i>
           </div>
         </div>
@@ -614,7 +615,103 @@
         </div>
       </main>
     </div>
+    <!-- Info modal Started -->
+    <div id="page-specific-info" class="d-none" data-modal-title="How to Extract & Use Alerts">
+      <div class="docs-alert-box">
+        <strong><i class="bi bi-bell-fill text-warning me-2"></i> Alerts Guide:</strong>
+        This page contains beautiful, highly-animated notification alerts. The best part?
+        <strong>Auto-dismiss & Progress Bars use PURE CSS!</strong> No custom JavaScript is needed.
+        Follow these 4 steps to copy them.
+      </div>
 
+      <h6 class="docs-step-title">
+        <i class="bi bi-gear-fill"></i> Step 1: Global Setup (Mandatory)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        To ensure alerts look correct and the close (×) buttons work, your project must have:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-danger">Bootstrap JS (scripts.html):</strong> You MUST have
+          Bootstrap's JS bundle loaded for the manual dismiss buttons to work.
+        </li>
+        <li>
+          <strong class="text-primary">Root Variables:</strong> Make sure your
+          <code>style.css</code> contains the theme colors (<code>--color-success</code>, etc.).
+        </li>
+      </ul>
+
+      <hr style="border-color: var(--color-border); margin: 1.5rem 0" />
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-css"></i> Step 2: Copy the "Global Alerts CSS" (Once per project)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <code>assets/css/component/userinterface/alerts.css</code>. At the very top, there is a
+        block between <code>/* Global css ---start */</code> and
+        <code>/* Global css ---end */</code>. This contains the magic animations
+        (<code>@keyframes</code>) for fade-ins and auto-dismiss timeouts.
+        <strong>Copy this block ONCE.</strong>
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>/* --- GLOBAL CSS FOR ALERTS --- */
+@keyframes slideInUpFade { ... }
+@keyframes autoFadeOut { ... }
+.alert-entrance { ... }
+.alert-timeout { ... }
+.dismiss-btn { ... }</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-html mt-3"></i> Step 3: Copy the HTML
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Find the alert style you want in <code>pages/components/userinterface/alerts.html</code> and
+        copy its wrapper. Notice classes like <code>.alert-entrance</code> or
+        <code>.alert-timeout</code> that trigger the CSS animations.
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>&lt;!-- Example from alerts.html --&gt;
+&lt;div class="alert alert-dismissible fade show alert-timeout p-0"&gt;
+  &lt;div class="al-12-cont"&gt;
+    &lt;!-- Alert Content Here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-palette2 mt-3"></i> Step 4: Copy Specific Variation CSS
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Go back to <code>alerts.css</code> and scroll down to your specific category block. Copy
+        ONLY the CSS needed for your chosen alert (e.g., <code>.al-12-cont</code>) to keep your
+        stylesheet clean.
+      </p>
+      <div class="docs-code-block mb-0">
+        <pre class="m-0"><code>/* Example Specific CSS */
+/* CATEGORY 1: AUTO-DISMISS & PROGRESS */
+.al-12-cont { ... }
+.al-12-top { ... }</code></pre>
+      </div>
+
+      <div
+        class="mt-4 p-3 rounded"
+        style="
+          background-color: color-mix(in srgb, var(--color-success), transparent 90%);
+          border: 1px solid var(--color-success);
+        "
+      >
+        <h6 class="fw-bold m-0" style="color: var(--color-success)">
+          <i class="bi bi-check-circle-fill me-2"></i> Custom JavaScript? None!
+        </h6>
+        <p class="mb-0 mt-1" style="font-size: 0.85rem; color: var(--color-text-main)">
+          Because you are using modern CSS <code>@keyframes</code> for the progress bars and
+          auto-hiding, you <strong>do not need to copy any custom JS</strong> for these alerts to
+          function!
+        </p>
+      </div>
+    </div>
+    <!-- info page guided end -->
     <script src="../../../assets/js/layout.js"></script>
   </body>
 </html>

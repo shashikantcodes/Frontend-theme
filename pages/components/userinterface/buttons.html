@@ -24,18 +24,19 @@
               <button type="button" class="ph-search-trigger">
                 <i class="bi bi-search"></i>
               </button>
-
-              <input type="text" class="ph-search-input" placeholder="Search leads..." />
-
-              <span class="ph-search-close">
-                <i class="bi bi-x"></i>
-              </span>
+              <input type="text" class="ph-search-input" placeholder="Search cards..." />
+              <span class="ph-search-close"><i class="bi bi-x"></i></span>
             </div>
           </div>
-
           <div class="ph-tools">
-            <i class="bi bi-funnel ph-icon"></i>
-            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-funnel ph-icon" title="Filter"></i>
+            <i class="bi bi-arrow-clockwise ph-icon" title="Refresh"></i>
+            <i
+              class="bi bi-info-circle ph-icon"
+              title="Page Guide"
+              data-bs-toggle="modal"
+              data-bs-target="#globalInfoModal"
+            ></i>
             <i class="bi bi-three-dots-vertical ph-icon"></i>
           </div>
         </div>
@@ -477,7 +478,83 @@
         </div>
       </main>
     </div>
+    <!-- info page guided start -->
+    <div id="page-specific-info" class="d-none" data-modal-title="How to Extract & Use Buttons">
+      <div class="docs-alert-box">
+        <strong><i class="bi bi-joystick text-warning me-2"></i> Buttons Guide:</strong>
+        This page contains standard and highly advanced CSS buttons. Everything is powered by
+        <strong>Pure CSS</strong>! No JavaScript is needed. Just follow these steps to copy what you
+        need.
+      </div>
 
+      <h6 class="docs-step-title">
+        <i class="bi bi-gear-fill"></i> Step 1: Global Setup (Mandatory)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        To make sure colors and icons work properly, ensure your project has:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-primary">Root Variables:</strong> Verify that
+          <code>style.css</code> contains your theme colors (<code>--color-primary</code>, etc.).
+        </li>
+        <li>
+          <strong class="text-primary">Boxicons:</strong> Many advanced buttons use Boxicons (<code
+            >&lt;i class="bx ..."&gt;&lt;/i&gt;</code
+          >). Make sure it's loaded in your <code>head-resources.html</code>.
+        </li>
+      </ul>
+
+      <hr style="border-color: var(--color-border); margin: 1.5rem 0" />
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-css"></i> Step 2: Copy the Base CSS (Only for Sections 1-10)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        If you are copying a button from <strong>Sections 1 to 10</strong>, you MUST copy the
+        <code>.btn</code> base class from the top of
+        <code>assets/css/component/userinterface/buttons.css</code>. <br /><em
+          >Note: If you are copying from Section 11 (Advanced Buttons), you can skip this step!</em
+        >
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>/* --- BUTTON BASE STYLES --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  /* ... copy full .btn block ... */
+}
+.btn:focus-visible { ... }
+.btn:active { ... }</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-html mt-3"></i> Step 3: Copy the HTML
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Find your button in <code>pages/components/userinterface/buttons.html</code>. Ignore the
+        <code>.custom-card</code> and <code>.custom-card-body</code> wrappers. Just copy the
+        <code>&lt;button&gt;</code> tag itself.
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>&lt;!-- Example: Neon Button --&gt;
+&lt;button class="btn btn-neon"&gt;Neon Glow&lt;/button&gt;</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-palette2 mt-3"></i> Step 4: Copy Specific Variation CSS
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <code>buttons.css</code>, scroll to your specific button class, and copy ONLY that
+        block.
+      </p>
+      <div class="docs-code-block mb-0">
+        <pre class="m-0"><code>/* Example Specific CSS */
+.btn-neon { background: transparent; ... }
+.btn-neon:hover { background: var(--color-primary); ... }</code></pre>
+      </div>
+    </div>
+    <!-- Info page guided end -->
     <script src="../../../assets/js/layout.js"></script>
   </body>
 </html>

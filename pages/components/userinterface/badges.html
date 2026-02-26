@@ -23,18 +23,19 @@
               <button type="button" class="ph-search-trigger">
                 <i class="bi bi-search"></i>
               </button>
-
-              <input type="text" class="ph-search-input" placeholder="Search leads..." />
-
-              <span class="ph-search-close">
-                <i class="bi bi-x"></i>
-              </span>
+              <input type="text" class="ph-search-input" placeholder="Search cards..." />
+              <span class="ph-search-close"><i class="bi bi-x"></i></span>
             </div>
           </div>
-
           <div class="ph-tools">
-            <i class="bi bi-funnel ph-icon"></i>
-            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-funnel ph-icon" title="Filter"></i>
+            <i class="bi bi-arrow-clockwise ph-icon" title="Refresh"></i>
+            <i
+              class="bi bi-info-circle ph-icon"
+              title="Page Guide"
+              data-bs-toggle="modal"
+              data-bs-target="#globalInfoModal"
+            ></i>
             <i class="bi bi-three-dots-vertical ph-icon"></i>
           </div>
         </div>
@@ -573,7 +574,90 @@
         </div>
       </main>
     </div>
+    <!-- info modal strtded  -->
+    <div id="page-specific-info" class="d-none" data-modal-title="How to Extract & Use Badges">
+      <div class="docs-alert-box">
+        <strong
+          ><i class="bi bi-chat-dots-fill text-warning me-2"></i> Badges & Notifications
+          Guide:</strong
+        >
+        This page contains beautiful badges, buttons, and notification icons. Everything here runs
+        entirely on <strong>Pure CSS</strong>! There is absolutely
+        <strong>No JavaScript required</strong>. Follow these 3 simple steps to copy them.
+      </div>
 
+      <h6 class="docs-step-title">
+        <i class="bi bi-gear-fill"></i> Step 1: Global Variables (Mandatory)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        To ensure the colors and shadows match perfectly, your project must have the Root Variables
+        (<code>:root { --color-primary... }</code>) defined in your global <code>style.css</code>.
+      </p>
+
+      <hr style="border-color: var(--color-border); margin: 1.5rem 0" />
+
+      <h6 class="docs-step-title"><i class="bi bi-filetype-html"></i> Step 2: Copy the HTML</h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <strong class="text-primary">pages/components/userinterface/badges.html</strong>.
+        Ignore the <code>.demo-box</code> and <code>.demo-preview-area</code> wrappers (they are
+        just for the showcase). Only copy the core HTML snippet inside them.
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>&lt;!-- Example: Animated Ringing Bell --&gt;
+&lt;div class="notif-wrapper"&gt;
+  &lt;i class="bi bi-bell-fill icon-base-5"&gt;&lt;/i&gt;
+  &lt;span class="badge-notif-5"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-css mt-3"></i> Step 3: Copy CSS (Base + Specific)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <strong class="text-primary">assets/css/component/userinterface/badges.css</strong>.
+        You need to copy two things to prevent the layout from breaking:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-danger">A. Base Utilities:</strong> Copy the base wrapper class from
+          the top of the CSS file (e.g., <code>.badge-base</code> for simple badges,
+          <code>.btn-wrapper</code> & <code>.btn-base</code> for buttons, or
+          <code>.notif-wrapper</code> for icons).
+        </li>
+        <li>
+          <strong class="text-info">B. Specific Style:</strong> Scroll down to the specific
+          badge/button you want and copy its dedicated CSS block (e.g., <code>.badge-glass</code> or
+          <code>.icon-base-5</code>).
+        </li>
+      </ul>
+      <div class="docs-code-block mb-0">
+        <pre class="m-0"><code>/* Example: Copying a Notification Icon */
+
+/* 1. Base Utility */
+.notif-wrapper { position: relative; display: inline-flex; ... }
+
+/* 2. Specific Style */
+.icon-base-5 { font-size: 1.5rem; ... }
+@keyframes swing { ... }</code></pre>
+      </div>
+
+      <div
+        class="mt-4 p-3 rounded"
+        style="
+          background-color: color-mix(in srgb, var(--color-success), transparent 90%);
+          border: 1px solid var(--color-success);
+        "
+      >
+        <h6 class="fw-bold m-0" style="color: var(--color-success)">
+          <i class="bi bi-check-circle-fill me-2"></i> No JavaScript Needed!
+        </h6>
+        <p class="mb-0 mt-1" style="font-size: 0.85rem; color: var(--color-text-main)">
+          Even the complex animations (like the ringing bell or glowing neon effects) are built
+          using CSS <code>@keyframes</code>. Simply copy the HTML and CSS, and it works instantly.
+        </p>
+      </div>
+    </div>
+    <!-- info page guided end -->
     <script src="../../../assets/js/layout.js"></script>
   </body>
 </html>

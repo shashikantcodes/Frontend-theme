@@ -23,18 +23,19 @@
               <button type="button" class="ph-search-trigger">
                 <i class="bi bi-search"></i>
               </button>
-
-              <input type="text" class="ph-search-input" placeholder="Search leads..." />
-
-              <span class="ph-search-close">
-                <i class="bi bi-x"></i>
-              </span>
+              <input type="text" class="ph-search-input" placeholder="Search cards..." />
+              <span class="ph-search-close"><i class="bi bi-x"></i></span>
             </div>
           </div>
-
           <div class="ph-tools">
-            <i class="bi bi-funnel ph-icon"></i>
-            <i class="bi bi-arrow-clockwise ph-icon"></i>
+            <i class="bi bi-funnel ph-icon" title="Filter"></i>
+            <i class="bi bi-arrow-clockwise ph-icon" title="Refresh"></i>
+            <i
+              class="bi bi-info-circle ph-icon"
+              title="Page Guide"
+              data-bs-toggle="modal"
+              data-bs-target="#globalInfoModal"
+            ></i>
             <i class="bi bi-three-dots-vertical ph-icon"></i>
           </div>
         </div>
@@ -668,7 +669,82 @@
         </div>
       </main>
     </div>
+    <!-- info page guided start -->
+    <div id="page-specific-info" class="d-none" data-modal-title="How to Extract & Use Accordions">
+      <div class="docs-alert-box">
+        <strong><i class="bi bi-ui-checks-grid text-warning me-2"></i> Accordion Guide:</strong>
+        This page contains 15 unique accordion styles. They run entirely on Bootstrap's native
+        collapse plugin + Custom CSS. <strong>No custom JS file is required!</strong> Follow these 4
+        steps to copy them perfectly.
+      </div>
 
+      <h6 class="docs-step-title">
+        <i class="bi bi-gear-fill"></i> Step 1: Global Setup (Bootstrap JS is Mandatory)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Accordions rely on JavaScript to open and close. Ensure your project has the core files
+        loaded:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-danger">Scripts:</strong> You MUST have Bootstrap's JS bundle
+          (<code>bootstrap.bundle.min.js</code>) loaded via your
+          <code>components/scripts.html</code>.
+        </li>
+        <li>
+          <strong class="text-primary">Head Resources:</strong> Bootstrap 5 CSS, Bootstrap Icons,
+          and Root Variables (<code>style.css</code>) must be loaded.
+        </li>
+      </ul>
+
+      <hr style="border-color: var(--color-border); margin: 1.5rem 0" />
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-css"></i> Step 2: Copy the "Common Utils" CSS (Once per project)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <code>assets/css/component/userinterface/accordians.css</code>. At the very top, there
+        is a section called <strong>COMMON UTILS & ANIMATIONS</strong>. This contains the magic for
+        the animated plus/minus icons (<code>.smart-icon</code>). Copy this block ONCE.
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>/* --- SMART ICON SYSTEM --- */
+.smart-icon { position: relative; ... }
+.accordion-button:not(.collapsed) .smart-icon { transform: rotate(180deg); }</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-html mt-3"></i> Step 3: Copy the HTML
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Find the accordion style you want and copy its HTML wrapper. Pay attention to the IDs (like
+        <code>#acc1</code> and <code>#c1_1</code>)—they must match for the accordion to work.
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>&lt;!-- Example from accordian.html --&gt;
+&lt;div class="acc-theme-saas style-process"&gt;
+  &lt;div class="accordion" id="acc1"&gt;
+    &lt;!-- Accordion Items Here --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-palette2 mt-3"></i> Step 4: Copy Specific Variation CSS
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Go back to <code>accordians.css</code> and scroll down to your specific style block. Copy
+        ONLY that block to keep your CSS clean.
+      </p>
+      <div class="docs-code-block mb-0">
+        <pre class="m-0"><code>/* =========================================
+   STYLE 1: WORKING PROCESS 
+   ========================================= */
+.acc-theme-saas.style-process .accordion-item { ... }
+.acc-theme-saas.style-process .accordion-button { ... }</code></pre>
+      </div>
+    </div>
+    <!-- info page guided end -->
     <script src="../../../assets/js/layout.js"></script>
   </body>
 </html>

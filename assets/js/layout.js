@@ -9,23 +9,53 @@ function executeDashboardLogic() {
 
   // 1. Sidebar Toggle (Desktop)
   $('#toggle-sidebar-desktop').on('click', function () {
+    // Remember whether sidebar was collapsed before toggling
+    const wasCollapsed = $('#sidebar').hasClass('collapsed');
+
+    // Toggle classes
     $('body').toggleClass('sidebar-is-collapsed');
     $('#sidebar').toggleClass('collapsed');
     $('#main-wrapper').toggleClass('expanded');
 
     if ($('#sidebar').hasClass('collapsed')) {
+      // Store current active link href so we can restore visual indicators later
+      const activeHref = $('#sidebar a.nav-link.active').first().attr('href') || '';
+      if (activeHref) {
+        $('body').data('sidebar-active-href', activeHref);
+      }
+
       $('.submenu').slideUp(0);
       $('.has-submenu').removeClass('open');
       // Clear active child indicators when collapsed
       $('.has-active-child').removeClass('has-active-child');
     } else {
       // Re-apply active child indicators when expanded
-      var currentPage = window.location.pathname.split('/').pop().split('.html')[0];
-      if (currentPage) {
-        var activeLink = $('#sidebar a[href*="' + currentPage + '"]');
-        if (activeLink.length > 0) {
-          activeLink.closest('.has-submenu').addClass('has-active-child');
+      const storedHref = $('body').data('sidebar-active-href');
+      let activeLink = $();
+
+      if (storedHref) {
+        // Try exact match first
+        activeLink = $('#sidebar a[href="' + storedHref + '"]');
+
+        // If not found, try matching by filename (handles ../ and absolute path differences)
+        if (activeLink.length === 0) {
+          const fileName = storedHref.split('/').pop();
+          activeLink = $('#sidebar a[href$="' + fileName + '"]');
         }
+      }
+
+      // Fallback: if nothing was stored, use any existing `.active` link in sidebar
+      if (activeLink.length === 0) {
+        activeLink = $('#sidebar a.nav-link.active');
+      }
+
+      if (activeLink.length > 0) {
+        // Open all parent menus and show their submenu lists
+        activeLink.parents('.has-submenu').each(function () {
+          $(this).addClass('open');
+          $(this).children('.submenu').slideDown(0);
+          $(this).addClass('has-active-child');
+        });
       }
     }
   });
