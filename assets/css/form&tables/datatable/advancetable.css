@@ -222,6 +222,7 @@
 .yajra-btn:disabled {
   opacity: 0.6;
   cursor: default;
+  cursor: not-allowed;
 }
 
 .yajra-badge {

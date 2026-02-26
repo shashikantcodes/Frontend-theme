@@ -33,6 +33,12 @@
           <div class="ph-tools">
             <i class="bi bi-funnel ph-icon" title="Filter"></i>
             <i class="bi bi-arrow-clockwise ph-icon" title="Refresh"></i>
+            <i
+              class="bi bi-info-circle ph-icon"
+              title="Page Guide"
+              data-bs-toggle="modal"
+              data-bs-target="#globalInfoModal"
+            ></i>
             <i class="bi bi-three-dots-vertical ph-icon"></i>
           </div>
         </div>
@@ -53,7 +59,7 @@
                     <span class="ui-badge ui-badge--success js-badge">+12.5%</span>
                   </div>
                   <div class="kpi-smart__val js-val" data-target="45231">0</div>
-                  <p class="text-xs   mt-2 m-0">Compared to 40,102 last month</p>
+                  <p class="text-xs mt-2 m-0">Compared to 40,102 last month</p>
                 </div>
               </section>
             </div>
@@ -76,7 +82,7 @@
                   <div class="ui-prog-track mt-3">
                     <div class="ui-prog-fill bg-info js-bar" style="width: 65%"></div>
                   </div>
-                  <p class="text-xs   mt-2 m-0">65% of Q3 Target</p>
+                  <p class="text-xs mt-2 m-0">65% of Q3 Target</p>
                 </div>
               </section>
             </div>
@@ -90,7 +96,7 @@
                     </h3>
                   </div>
                   <div class="kpi-smart__val js-val transition-speed mt-2">342</div>
-                  <p class="text-xs   mt-2 m-0 js-status">Traffic is stable</p>
+                  <p class="text-xs mt-2 m-0 js-status">Traffic is stable</p>
                 </div>
               </section>
             </div>
@@ -172,9 +178,7 @@
                       <tbody class="js-tbody"></tbody>
                     </table>
                   </div>
-                  <div
-                    class="d-flex justify-content-between align-items-center mt-auto text-xs  "
-                  >
+                  <div class="d-flex justify-content-between align-items-center mt-auto text-xs">
                     <button class="ui-btn ui-btn--outline py-1 px-2 js-prev">Prev</button>
                     <span class="js-page">Page 1</span>
                     <button class="ui-btn ui-btn--outline py-1 px-2 js-next">Next</button>
@@ -192,7 +196,7 @@
                   <table class="adv-tbl">
                     <tbody class="js-tbody"></tbody>
                   </table>
-                  <p class="text-xs   mt-auto mb-0">
+                  <p class="text-xs mt-auto mb-0">
                     <i class="bi bi-info-circle"></i> Click any value to edit.
                   </p>
                 </div>
@@ -303,13 +307,13 @@
                   </div>
                   <div class="js-list mt-2">
                     <div class="dnd-list__item" draggable="true" data-id="1">
-                      <i class="bi bi-grip-vertical  "></i> <span>Setup CI/CD</span>
+                      <i class="bi bi-grip-vertical"></i> <span>Setup CI/CD</span>
                     </div>
                     <div class="dnd-list__item" draggable="true" data-id="2">
-                      <i class="bi bi-grip-vertical  "></i> <span>Update Docs</span>
+                      <i class="bi bi-grip-vertical"></i> <span>Update Docs</span>
                     </div>
                     <div class="dnd-list__item" draggable="true" data-id="3">
-                      <i class="bi bi-grip-vertical  "></i> <span>Fix Navbar Bug</span>
+                      <i class="bi bi-grip-vertical"></i> <span>Fix Navbar Bug</span>
                     </div>
                   </div>
                 </div>
@@ -325,7 +329,7 @@
                   <div class="row g-3 mt-1">
                     <div class="col-md-4">
                       <div class="kanban__col js-col" data-status="todo">
-                        <div class="text-xs fw-bold  mb-2">TODO</div>
+                        <div class="text-xs fw-bold mb-2">TODO</div>
                         <div class="js-items"></div>
                       </div>
                     </div>
@@ -358,7 +362,7 @@
                     >
                   </div>
                   <textarea class="note__area js-area mt-2" placeholder="Write here..."></textarea>
-                  <div class="text-xs   text-end mt-2 js-count">0 chars</div>
+                  <div class="text-xs text-end mt-2 js-count">0 chars</div>
                 </div>
               </section>
             </div>
@@ -410,7 +414,7 @@
                     </select>
                   </div>
                   <div class="chart-sim js-chart mt-auto"></div>
-                  <div class="d-flex justify-content-between text-xs   mt-2 fw-bold">
+                  <div class="d-flex justify-content-between text-xs mt-2 fw-bold">
                     <span>Q1</span><span>Q2</span><span>Q3</span><span>Q4</span>
                   </div>
                 </div>
@@ -509,7 +513,7 @@
                     </h3>
                   </div>
                   <div class="js-list flex-grow-1 mt-2"></div>
-                  <div class="text-xs   mt-3 js-msg">All changes saved automatically.</div>
+                  <div class="text-xs mt-3 js-msg">All changes saved automatically.</div>
                 </div>
               </section>
             </div>
@@ -531,7 +535,7 @@
                       <span class="text-sm fw-bold">Advanced Animations</span>
                       <div class="ui-toggle js-tgl-dep"></div>
                     </div>
-                    <div class="text-xs   mt-1">Requires New UI Engine</div>
+                    <div class="text-xs mt-1">Requires New UI Engine</div>
                   </div>
                 </div>
               </section>
@@ -546,7 +550,7 @@
                   <div class="ui-card__header border-0 pb-0 mb-3">
                     <h3 class="ui-card__title"><i class="bi bi-cone-striped"></i> System Status</h3>
                   </div>
-                  <p class="text-sm   mb-4">
+                  <p class="text-sm mb-4">
                     Activating maintenance mode will disconnect all active user sessions.
                   </p>
                   <div
@@ -593,10 +597,10 @@
                     <h3 class="ui-card__title">
                       <i class="bi bi-arrows-expand"></i> Advanced Details
                     </h3>
-                    <i class="bi bi-chevron-down exp-card__icon  "></i>
+                    <i class="bi bi-chevron-down exp-card__icon"></i>
                   </div>
                   <div class="exp-card__body">
-                    <p class="text-sm    m-0">
+                    <p class="text-sm m-0">
                       This content is hidden by default to save space. Smooth transition handles the
                       height animation beautifully.
                     </p>
@@ -623,10 +627,10 @@
                     </button>
                   </div>
                   <div class="tabs-card__content active js-pane" id="t1">
-                    <p class="text-sm  m-0">User profile settings go here.</p>
+                    <p class="text-sm m-0">User profile settings go here.</p>
                   </div>
                   <div class="tabs-card__content js-pane" id="t2">
-                    <p class="text-sm  m-0">Password and 2FA options reside here.</p>
+                    <p class="text-sm m-0">Password and 2FA options reside here.</p>
                   </div>
                 </div>
               </section>
@@ -669,7 +673,7 @@
                 <div class="modal-ui__overlay js-overlay">
                   <div class="modal-ui__box js-box">
                     <h4 class="fw-bold mb-2">Are you absolutely sure?</h4>
-                    <p class="text-sm  mb-4">
+                    <p class="text-sm mb-4">
                       This action cannot be undone. All data will be permanently wiped.
                     </p>
                     <div class="d-flex gap-2 justify-content-end">
@@ -712,7 +716,7 @@
                     <h3 class="ui-card__title"><i class="bi bi-cloud-upload"></i> Attachments</h3>
                   </div>
                   <div class="file-up__drop js-drop mb-3 mt-2">
-                    <i class="bi bi-cloud-upload fs-3  "></i>
+                    <i class="bi bi-cloud-upload fs-3"></i>
                     <div class="text-sm fw-bold mt-2">Click to browse</div>
                     <input type="file" class="d-none js-inp" multiple />
                   </div>
@@ -806,6 +810,108 @@
       </main>
     </div>
     <!-- End Main Wrapper -->
+
+    <!-- Info hidden Content  -->
+    <div
+      id="page-specific-info"
+      class="d-none"
+      data-modal-title="How to Extract & Use Advanced Cards"
+    >
+      <div class="docs-alert-box">
+        <strong
+          ><i class="bi bi-lightbulb text-warning me-2"></i> Quick Guide for Beginners:</strong
+        >
+        This page contains 35 independent Advanced UI cards. Since our project is modular, the HTML,
+        CSS, and JS for these cards are kept in separate files. Follow these 4 steps to safely copy
+        any card without breaking the layout.
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-gear-fill"></i> Step 1: Global Setup (Mandatory)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Before copying a card, ensure your project has the core files loaded:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-primary">Head Resources:</strong> Ensure Bootstrap 5, Bootstrap Icons,
+          and Root Variables (<code>:root</code>) are loaded via
+          <code>components/head-resources.html</code>.
+        </li>
+        <li>
+          <strong class="text-primary">Scripts:</strong> Ensure base scripts (jQuery, Bootstrap JS)
+          are loaded via <code>components/scripts.html</code>.
+          <em>Note: Cards with charts or tables require their respective external CDNs.</em>
+        </li>
+      </ul>
+
+      <hr style="border-color: var(--color-border); margin: 1.5rem 0" />
+
+      <h6 class="docs-step-title"><i class="bi bi-filetype-html"></i> Step 2: Copy the HTML</h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <code>pages/components/cards/advance.html</code>. Find the specific card you want using
+        its <code>data-component</code> attribute and copy the entire section.
+      </p>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>&lt;!-- Example from advance.html --&gt;
+&lt;section class="card-section" data-component="01-smart-kpi"&gt;
+  &lt;div class="ui-card"&gt;
+    &lt;!-- Card Content --&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-css mt-3"></i> Step 3: Copy the CSS (Base + Specific)
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        To prevent the layout from breaking, you must ensure <strong>TWO</strong> types of CSS are
+        present in your project:
+      </p>
+      <ul style="color: var(--color-text-main); font-size: 0.9rem">
+        <li>
+          <strong class="text-danger">A. Base UI CSS (Required):</strong> Make sure you have the
+          global structural classes like <code>.ui-card</code>, <code>.ui-card__header</code>,
+          <code>.ui-btn</code>, <code>.ui-badge</code>, and <code>.ui-input</code>. These are
+          usually located in your <code>advance.css</code> or at the top of your stylesheet.
+        </li>
+        <li>
+          <strong class="text-primary">B. Card Specific CSS:</strong> Open
+          <code>assets/css/component/cards/advance.css</code>. Search for your card's comment block
+          and copy ONLY that specific code.
+        </li>
+      </ul>
+      <div class="docs-code-block">
+        <pre class="m-0"><code>/* Example from advance.css */
+
+/* --- Card 01: Smart KPI --- */
+.kpi-smart__val { 
+  font-size: 2rem; 
+  font-weight: 700; 
+}</code></pre>
+      </div>
+
+      <h6 class="docs-step-title">
+        <i class="bi bi-filetype-js mt-3"></i> Step 4: Copy the Specific JavaScript
+      </h6>
+      <p style="color: var(--color-text-light); font-size: 0.9rem">
+        Open <code>assets/js/pages/component/cards/advance.js</code>. Copy the isolated IIFE block
+        matching your card so its functionality works perfectly without conflicting with other
+        components.
+      </p>
+      <div class="docs-code-block mb-0">
+        <pre class="m-0"><code>// Example from advance.js
+
+/* ===== START CARD 01 ===== */
+(() =&gt; { 
+  document.querySelectorAll('[data-component="01-smart-kpi"]').forEach((c) =&gt; {
+     // Card specific logic...
+  });
+})();
+/* ===== END CARD 01 ===== */</code></pre>
+      </div>
+    </div>
+    <!-- End Info -->
     <script src="../../../assets/js/pages/component/cards/advance.js"></script>
     <script src="../../../assets/js/layout.js"></script>
   </body>

@@ -40,3 +40,41 @@ document.addEventListener('click', function (e) {
     container.classList.remove('active');
   }
 });
+// Jab topbar, sidebar aur sabhi scripts load ho jayein
+document.addEventListener('dynamicScriptsLoaded', function () {
+  const infoModalElement = document.getElementById('globalInfoModal');
+
+  if (infoModalElement) {
+    // Modal open hone se thik pehle trigger hoga
+    infoModalElement.addEventListener('show.bs.modal', function () {
+      const modalBody = document.getElementById('globalInfoBody');
+      const modalTitle = document.getElementById('globalInfoTitle');
+
+      // Current page me hidden info div dhundho
+      const hiddenContent = document.getElementById('page-specific-info');
+
+      if (hiddenContent) {
+        // 1. Content Copy karo
+        modalBody.innerHTML = hiddenContent.innerHTML;
+
+        // 2. Title update karo (agar data attribute set hai)
+        const customTitle = hiddenContent.getAttribute('data-modal-title');
+        if (customTitle) {
+          modalTitle.textContent = customTitle;
+        } else {
+          modalTitle.textContent = 'Page Guide';
+        }
+      } else {
+        // Agar page par info div nahi banaya hai to default message
+        modalTitle.textContent = 'Information';
+        modalBody.innerHTML = `
+          <div class="text-center py-5 text-muted">
+            <i class="bi bi-info-circle display-4 mb-3 d-block opacity-50"></i>
+            <h5>No Guide Available</h5>
+            <p>Documentation for this page has not been added yet.</p>
+          </div>
+        `;
+      }
+    });
+  }
+});
